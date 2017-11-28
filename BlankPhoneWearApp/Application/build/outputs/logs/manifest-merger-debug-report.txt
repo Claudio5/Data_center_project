@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:2:1-26:12
+ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:2:1-25:12
 	package
 		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:3:5-44
 	android:versionName
@@ -12,7 +12,7 @@ ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_pro
 		INJECTED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml
 application
-ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:5:5-25:19
+ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:5:5-24:19
 MERGED from [BlankPhoneWearApp:commons:unspecified] C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\commons\build\intermediates\bundles\default\AndroidManifest.xml:11:5-20
 MERGED from [com.google.android.gms:play-services-wearable:8.4.0] C:\Users\claud\.android\build-cache\8427475f8c5426d34ce9611b4916e7031db4c41f\output\AndroidManifest.xml:19:5-20
 MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\claud\.android\build-cache\e33b5fc896675d9263c693a0d399bc4a577a90ae\output\AndroidManifest.xml:20:5-24:19
@@ -61,10 +61,6 @@ category#android.intent.category.LAUNCHER
 ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:21:17-77
 	android:name
 		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:21:27-74
-activity#ch.epfl.esl.blankphonewearapp.ValidationActivity
-ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:24:9-56
-	android:name
-		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:24:19-53
 uses-sdk
 INJECTED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [BlankPhoneWearApp:commons:unspecified] C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\commons\build\intermediates\bundles\default\AndroidManifest.xml:7:5-9:41
