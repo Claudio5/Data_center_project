@@ -5,6 +5,8 @@ dependencies {
 
     wearApp project(':Wearable')
     compile project(path: ':commons')
+    compile 'com.android.support:design:25.3.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
 }
 
 android {
