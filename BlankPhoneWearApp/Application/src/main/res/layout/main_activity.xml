@@ -14,10 +14,10 @@
         android:layout_alignParentTop="true"
         android:layout_marginEnd="51dp"
         android:layout_marginTop="160dp"
-        android:background="@color/common_action_bar_splitter" />
+        android:background="@android:drawable/btn_dropdown"/>
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imageDataCenter"
         android:layout_width="500dp"
         android:layout_height="600dp"
         android:layout_alignParentStart="true"
@@ -35,7 +35,19 @@
         app:fabSize="mini"
         app:srcCompat="@android:drawable/ic_input_add"
         android:layout_marginBottom="37dp"
-        android:layout_alignBottom="@+id/imageView2"
+        android:layout_alignBottom="@+id/imageDataCenter"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="29dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:textSize="50dp"
+        android:background="@android:color/holo_orange_dark"
+        android:text="@string/app_name" />
+
 </android.widget.RelativeLayout>

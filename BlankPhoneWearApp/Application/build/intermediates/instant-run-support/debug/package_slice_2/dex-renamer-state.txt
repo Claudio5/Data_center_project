@@ -1,4 +1,4 @@
-#Tue Nov 28 16:31:21 CET 2017
+#Sun Dec 03 13:39:09 CET 2017
 base.0=C\:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_2
 renamed.0=classes.dex
 file.0=C\:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_2\\classes.dex

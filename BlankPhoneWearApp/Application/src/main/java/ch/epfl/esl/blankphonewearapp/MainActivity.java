@@ -9,6 +9,8 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.util.Log;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -34,6 +36,7 @@ import com.google.android.gms.wearable.Wearable;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
 import java.util.HashSet;
@@ -77,6 +80,29 @@ public class MainActivity extends Activity implements
                 .addConnectionCallbacks(this)
                 .addOnConnectionFailedListener(this)
                 .build();
+
+        buildSpinner();
+
+    }
+
+    // Build the main spinner with the names for the data centers
+    private void buildSpinner(){
+
+        //String dataCenters[]= {"test1","test2"};
+
+        Spinner spinner = findViewById(R.id.spinner);
+
+        // Create an ArrayAdapter using the string array and a default spinner layout with strings.xml
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                R.array.dataCenter_array, android.R.layout.simple_spinner_item);
+
+        // Optional idea
+        // ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,   android.R.layout.simple_spinner_item, dataCenters);
+
+        // Specify the layout to use when the list of choices appears
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        // Apply the adapter to the spinner
+        spinner.setAdapter(adapter);
     }
 
     @Override

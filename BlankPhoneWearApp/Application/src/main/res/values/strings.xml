@@ -1,4 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">BlankPhoneWearApp</string>
+    <string name="app_name">Data Center Control</string>
+
+
+    <string-array name="dataCenter_array">
+        <item>Data Center 1</item>
+        <item>Data Center 2</item>
+        <item>Data Center 3</item>
+        <item>Data Center 4</item>
+        <item>Data Center 5</item>
+        <item>Data Center 6</item>
+        <item>Data Center 7</item>
+        <item>Data Center 8</item>
+    </string-array>
+
 </resources>

@@ -1,7 +1,7 @@
-#Tue Nov 28 16:39:40 CET 2017
-base.0=C\:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_8775ef1df2326d6a29710de1f6eca48c387610b8
-renamed.1=classes.dex
-renamed.0=classes2.dex
-file.1=C\:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_8eb12f979d66567f50ffcabf544dbe2338a12e03\\classes.dex
-base.1=C\:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_8eb12f979d66567f50ffcabf544dbe2338a12e03
-file.0=C\:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_8775ef1df2326d6a29710de1f6eca48c387610b8\\classes.dex
+#Sun Dec 03 13:39:09 CET 2017
+base.0=C\:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_8eb12f979d66567f50ffcabf544dbe2338a12e03
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=C\:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_8775ef1df2326d6a29710de1f6eca48c387610b8\\classes.dex
+base.1=C\:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_8775ef1df2326d6a29710de1f6eca48c387610b8
+file.0=C\:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_8eb12f979d66567f50ffcabf544dbe2338a12e03\\classes.dex
