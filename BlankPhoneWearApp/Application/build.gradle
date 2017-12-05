@@ -7,6 +7,8 @@ dependencies {
     compile project(path: ':commons')
     compile 'com.android.support:design:25.3.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile "com.androidplot:androidplot-core:1.5.1"
+
 }
 
 android {

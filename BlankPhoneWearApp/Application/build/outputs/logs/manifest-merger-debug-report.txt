@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:2:1-25:12
+ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:2:1-29:12
 	package
 		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:3:5-44
 	android:versionName
@@ -12,7 +12,7 @@ ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_pro
 		INJECTED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml
 application
-ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:5:5-24:19
+ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:5:5-28:19
 MERGED from [BlankPhoneWearApp:commons:unspecified] C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\commons\build\intermediates\bundles\default\AndroidManifest.xml:11:5-20
 MERGED from [com.google.android.gms:play-services-wearable:8.4.0] C:\Users\claud\.android\build-cache\8427475f8c5426d34ce9611b4916e7031db4c41f\output\AndroidManifest.xml:19:5-20
 MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\claud\.android\build-cache\e33b5fc896675d9263c693a0d399bc4a577a90ae\output\AndroidManifest.xml:20:5-24:19
@@ -61,6 +61,10 @@ category#android.intent.category.LAUNCHER
 ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:21:17-77
 	android:name
 		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:21:27-74
+activity#ch.epfl.esl.blankphonewearapp.SecondActivity
+ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:25:9-27:20
+	android:name
+		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:26:13-43
 uses-sdk
 INJECTED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [BlankPhoneWearApp:commons:unspecified] C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\commons\build\intermediates\bundles\default\AndroidManifest.xml:7:5-9:41
@@ -80,6 +84,8 @@ MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\claud\.android
 MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\claud\.android\build-cache\a833165182693ab2b4480cabdc2c21e042b0d679\output\AndroidManifest.xml:21:5-23:61
 MERGED from [com.android.support:support-compat:25.3.1] C:\Users\claud\.android\build-cache\190741dfc7afeabfc8560571d51122eb959464e7\output\AndroidManifest.xml:21:5-23:58
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\claud\.android\build-cache\c4b2de3e7e224dd71d3924c2ca0d4b0a1d061ae8\output\AndroidManifest.xml:5:5-7:41
+MERGED from [com.androidplot:androidplot-core:1.5.1] C:\Users\claud\.android\build-cache\a39f7c14806fdf9a31cbb302174ac04224f53b0a\output\AndroidManifest.xml:26:5-28:41
+MERGED from [com.halfhp.fig:figlib:1.0.3] C:\Users\claud\.android\build-cache\11621769f8675f62fdef1aab8e931c0ce54cc4a9\output\AndroidManifest.xml:7:5-9:41
 	tools:overrideLibrary
 		ADDED from [com.android.support:design:25.3.1] C:\Users\claud\.android\build-cache\28893a0c8bdd7a8aa703f47ed687b35b8477588e\output\AndroidManifest.xml:23:9-59
 	android:targetSdkVersion

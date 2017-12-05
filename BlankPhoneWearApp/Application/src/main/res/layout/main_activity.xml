@@ -2,19 +2,21 @@
 
 <android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context="ch.epfl.esl.blankphonewearapp.MainActivity" >
 
 
     <Spinner
         android:id="@+id/spinner"
         android:layout_width="280dp"
         android:layout_height="40dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginEnd="51dp"
-        android:layout_marginTop="160dp"
-        android:background="@android:drawable/btn_dropdown"/>
+        android:layout_marginEnd="76dp"
+        android:layout_marginTop="62dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:layout_below="@+id/textView"
+        android:layout_toStartOf="@+id/send_fltbtn" />
 
     <ImageView
         android:id="@+id/imageDataCenter"
@@ -49,5 +51,16 @@
         android:textSize="50dp"
         android:background="@android:color/holo_orange_dark"
         android:text="@string/app_name" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/send_fltbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:backgroundTint="@android:color/holo_purple"
+        app:fabSize="mini"
+        app:srcCompat="@android:drawable/ic_menu_send"
+        android:layout_above="@+id/imageDataCenter"
+        android:layout_alignStart="@+id/floatingActionButton2" />
 
 </android.widget.RelativeLayout>
