@@ -30,7 +30,7 @@
         android:src = "@drawable/data_center" />
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/floatingActionButton2"
+        android:id="@+id/add_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
@@ -60,7 +60,9 @@
         android:backgroundTint="@android:color/holo_purple"
         app:fabSize="mini"
         app:srcCompat="@android:drawable/ic_menu_send"
-        android:layout_above="@+id/imageDataCenter"
-        android:layout_alignStart="@+id/floatingActionButton2" />
+        android:layout_alignTop="@+id/spinner"
+        android:layout_alignEnd="@+id/add_button"
+        android:layout_marginEnd="14dp"
+        android:layout_marginTop="11dp" />
 
 </android.widget.RelativeLayout>

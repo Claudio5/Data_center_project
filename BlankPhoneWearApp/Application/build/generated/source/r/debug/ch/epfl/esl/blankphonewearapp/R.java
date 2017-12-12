@@ -4641,6 +4641,7 @@ containing a value of this type.
         public static final int actions=0x7f0e00c0;
         public static final int activity_chooser_view_content=0x7f0e0071;
         public static final int add=0x7f0e004b;
+        public static final int add_button=0x7f0e00b0;
         public static final int adjust_height=0x7f0e0060;
         public static final int adjust_width=0x7f0e0061;
         public static final int alertTitle=0x7f0e0085;
@@ -4688,7 +4689,6 @@ containing a value of this type.
         public static final int fill_horizontal=0x7f0e005c;
         public static final int fill_vertical=0x7f0e0056;
         public static final int fixed=0x7f0e006c;
-        public static final int floatingActionButton2=0x7f0e00b0;
         public static final int home=0x7f0e0004;
         public static final int homeAsUp=0x7f0e0041;
         public static final int icon=0x7f0e0076;

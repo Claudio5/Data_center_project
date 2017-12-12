@@ -953,6 +953,7 @@ int id action_text 0x7f0e00b3
 int id actions 0x7f0e00c0
 int id activity_chooser_view_content 0x7f0e0071
 int id add 0x7f0e004b
+int id add_button 0x7f0e00b0
 int id adjust_height 0x7f0e0060
 int id adjust_width 0x7f0e0061
 int id alertTitle 0x7f0e0085
@@ -1000,7 +1001,6 @@ int id fill 0x7f0e001c
 int id fill_horizontal 0x7f0e005c
 int id fill_vertical 0x7f0e0056
 int id fixed 0x7f0e006c
-int id floatingActionButton2 0x7f0e00b0
 int id home 0x7f0e0004
 int id homeAsUp 0x7f0e0041
 int id icon 0x7f0e0076

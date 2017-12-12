@@ -99,6 +99,18 @@ public class MainActivity extends Activity implements
             }
         });
 
+        FloatingActionButton launchWEB = (FloatingActionButton) findViewById(R.id.add_button);
+        launchWEB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                String url = "http://10.0.2.2:5002/racks";
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(url));
+                startActivity(intent);
+            }
+
+        });
+
     }
 
 
