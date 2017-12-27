@@ -228,7 +228,7 @@ public class SecondActivity extends Activity implements
         Calendar rightNow = Calendar.getInstance();
         int currentHour = rightNow.get(Calendar.HOUR_OF_DAY);
         int currentMinutes = rightNow.get(Calendar.MINUTE);
-
+        
         final String[] labels = new String[5];
 
         for(int i=0;i<5;i++){
@@ -241,7 +241,11 @@ public class SecondActivity extends Activity implements
             }
         }
 
+        //Fix the divisions of the X-Axis
         plot.setDomainStep(StepMode.SUBDIVIDE, 5);
+        // Fix the range of the Y-Axis
+        plot.setRangeBoundaries(0,20,BoundaryMode.FIXED);
+        plot.setRangeStep(StepMode.INCREMENT_BY_VAL,2);
 
 
         Log.e(TAG,Arrays.toString(labels));

@@ -4,12 +4,16 @@
         "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\drawable-tvdpi\\common_google_signin_btn_icon_dark_focused.9.png"
     },
     {
+        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project-Cem\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\common_plus_signin_btn_text_light_pressed.9.png",
+        "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\drawable-tvdpi\\common_plus_signin_btn_text_light_pressed.9.png"
+    },
+    {
         "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project-Cem\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\common_plus_signin_btn_icon_dark_normal.9.png",
         "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\drawable-tvdpi\\common_plus_signin_btn_icon_dark_normal.9.png"
     },
     {
-        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project-Cem\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\common_plus_signin_btn_text_light_pressed.9.png",
-        "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\drawable-tvdpi\\common_plus_signin_btn_text_light_pressed.9.png"
+        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\common_google_signin_btn_icon_dark_normal.9.png",
+        "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\drawable-tvdpi\\common_google_signin_btn_icon_dark_normal.9.png"
     },
     {
         "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project-Cem\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\common_google_signin_btn_text_dark_normal.9.png",
@@ -24,12 +28,20 @@
         "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\drawable-tvdpi\\common_plus_signin_btn_icon_dark_pressed.9.png"
     },
     {
+        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\common_plus_signin_btn_icon_light_disabled.9.png",
+        "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\drawable-tvdpi\\common_plus_signin_btn_icon_light_disabled.9.png"
+    },
+    {
         "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project-Cem\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\common_google_signin_btn_text_dark_focused.9.png",
         "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\drawable-tvdpi\\common_google_signin_btn_text_dark_focused.9.png"
     },
     {
         "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project-Cem\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\common_google_signin_btn_text_light_pressed.9.png",
         "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\drawable-tvdpi\\common_google_signin_btn_text_light_pressed.9.png"
+    },
+    {
+        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\common_plus_signin_btn_icon_light_focused.9.png",
+        "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\drawable-tvdpi\\common_plus_signin_btn_icon_light_focused.9.png"
     },
     {
         "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project-Cem\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\common_plus_signin_btn_icon_light_focused.9.png",
@@ -44,8 +56,20 @@
         "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\drawable-tvdpi\\common_plus_signin_btn_text_dark_normal.9.png"
     },
     {
-        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project-Cem\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\common_google_signin_btn_text_dark_disabled.9.png",
-        "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\drawable-tvdpi\\common_google_signin_btn_text_dark_disabled.9.png"
+        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\common_plus_signin_btn_icon_dark_normal.9.png",
+        "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\drawable-tvdpi\\common_plus_signin_btn_icon_dark_normal.9.png"
+    },
+    {
+        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\common_plus_signin_btn_icon_dark_pressed.9.png",
+        "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\drawable-tvdpi\\common_plus_signin_btn_icon_dark_pressed.9.png"
+    },
+    {
+        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\common_google_signin_btn_text_dark_normal.9.png",
+        "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\drawable-tvdpi\\common_google_signin_btn_text_dark_normal.9.png"
+    },
+    {
+        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\common_plus_signin_btn_text_dark_normal.9.png",
+        "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\drawable-tvdpi\\common_plus_signin_btn_text_dark_normal.9.png"
     },
     {
         "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project-Cem\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\common_plus_signin_btn_icon_light_normal.9.png",
@@ -56,16 +80,20 @@
         "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\drawable-tvdpi\\common_google_signin_btn_icon_light_focused.9.png"
     },
     {
-        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project-Cem\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\common_google_signin_btn_icon_light_pressed.9.png",
-        "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\drawable-tvdpi\\common_google_signin_btn_icon_light_pressed.9.png"
-    },
-    {
-        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project-Cem\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\common_plus_signin_btn_text_dark_focused.9.png",
-        "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\drawable-tvdpi\\common_plus_signin_btn_text_dark_focused.9.png"
+        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\common_plus_signin_btn_icon_light_normal.9.png",
+        "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\drawable-tvdpi\\common_plus_signin_btn_icon_light_normal.9.png"
     },
     {
         "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project-Cem\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\common_google_signin_btn_icon_dark_normal.9.png",
         "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\drawable-tvdpi\\common_google_signin_btn_icon_dark_normal.9.png"
+    },
+    {
+        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\common_plus_signin_btn_text_dark_pressed.9.png",
+        "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\drawable-tvdpi\\common_plus_signin_btn_text_dark_pressed.9.png"
+    },
+    {
+        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\common_google_signin_btn_icon_light_disabled.9.png",
+        "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\drawable-tvdpi\\common_google_signin_btn_icon_light_disabled.9.png"
     },
     {
         "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project-Cem\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\common_google_signin_btn_text_light_normal.9.png",
@@ -76,16 +104,100 @@
         "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\drawable-tvdpi\\common_full_open_on_phone.png"
     },
     {
-        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project-Cem\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\common_google_signin_btn_text_light_focused.9.png",
+        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project-Cem\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\common_plus_signin_btn_icon_dark_focused.9.png",
+        "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\drawable-tvdpi\\common_plus_signin_btn_icon_dark_focused.9.png"
+    },
+    {
+        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\common_plus_signin_btn_icon_light_pressed.9.png",
+        "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\drawable-tvdpi\\common_plus_signin_btn_icon_light_pressed.9.png"
+    },
+    {
+        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\common_google_signin_btn_icon_light_pressed.9.png",
+        "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\drawable-tvdpi\\common_google_signin_btn_icon_light_pressed.9.png"
+    },
+    {
+        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project-Cem\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\common_plus_signin_btn_text_dark_disabled.9.png",
+        "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\drawable-tvdpi\\common_plus_signin_btn_text_dark_disabled.9.png"
+    },
+    {
+        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project-Cem\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\common_plus_signin_btn_text_light_disabled.9.png",
+        "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\drawable-tvdpi\\common_plus_signin_btn_text_light_disabled.9.png"
+    },
+    {
+        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\common_google_signin_btn_text_dark_focused.9.png",
+        "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\drawable-tvdpi\\common_google_signin_btn_text_dark_focused.9.png"
+    },
+    {
+        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project-Cem\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\common_plus_signin_btn_icon_light_disabled.9.png",
+        "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\drawable-tvdpi\\common_plus_signin_btn_icon_light_disabled.9.png"
+    },
+    {
+        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\common_plus_signin_btn_text_light_normal.9.png",
+        "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\drawable-tvdpi\\common_plus_signin_btn_text_light_normal.9.png"
+    },
+    {
+        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\common_plus_signin_btn_text_light_focused.9.png",
+        "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\drawable-tvdpi\\common_plus_signin_btn_text_light_focused.9.png"
+    },
+    {
+        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\common_google_signin_btn_text_light_normal.9.png",
+        "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\drawable-tvdpi\\common_google_signin_btn_text_light_normal.9.png"
+    },
+    {
+        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\common_google_signin_btn_text_light_focused.9.png",
         "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\drawable-tvdpi\\common_google_signin_btn_text_light_focused.9.png"
+    },
+    {
+        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\common_google_signin_btn_icon_dark_disabled.9.png",
+        "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\drawable-tvdpi\\common_google_signin_btn_icon_dark_disabled.9.png"
+    },
+    {
+        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\common_google_signin_btn_text_dark_pressed.9.png",
+        "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\drawable-tvdpi\\common_google_signin_btn_text_dark_pressed.9.png"
+    },
+    {
+        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\common_google_signin_btn_text_light_disabled.9.png",
+        "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\drawable-tvdpi\\common_google_signin_btn_text_light_disabled.9.png"
+    },
+    {
+        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\common_plus_signin_btn_icon_dark_disabled.9.png",
+        "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\drawable-tvdpi\\common_plus_signin_btn_icon_dark_disabled.9.png"
+    },
+    {
+        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\common_google_signin_btn_icon_light_normal.9.png",
+        "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\drawable-tvdpi\\common_google_signin_btn_icon_light_normal.9.png"
+    },
+    {
+        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project-Cem\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\common_google_signin_btn_text_dark_disabled.9.png",
+        "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\drawable-tvdpi\\common_google_signin_btn_text_dark_disabled.9.png"
+    },
+    {
+        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\common_google_signin_btn_icon_dark_pressed.9.png",
+        "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\drawable-tvdpi\\common_google_signin_btn_icon_dark_pressed.9.png"
+    },
+    {
+        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project-Cem\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\common_google_signin_btn_icon_light_pressed.9.png",
+        "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\drawable-tvdpi\\common_google_signin_btn_icon_light_pressed.9.png"
+    },
+    {
+        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project-Cem\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\common_plus_signin_btn_text_dark_focused.9.png",
+        "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\drawable-tvdpi\\common_plus_signin_btn_text_dark_focused.9.png"
+    },
+    {
+        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\common_google_signin_btn_icon_dark_focused.9.png",
+        "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\drawable-tvdpi\\common_google_signin_btn_icon_dark_focused.9.png"
+    },
+    {
+        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\common_plus_signin_btn_text_dark_focused.9.png",
+        "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\drawable-tvdpi\\common_plus_signin_btn_text_dark_focused.9.png"
     },
     {
         "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project-Cem\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\common_google_signin_btn_text_dark_pressed.9.png",
         "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\drawable-tvdpi\\common_google_signin_btn_text_dark_pressed.9.png"
     },
     {
-        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project-Cem\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\common_plus_signin_btn_icon_dark_focused.9.png",
-        "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\drawable-tvdpi\\common_plus_signin_btn_icon_dark_focused.9.png"
+        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project-Cem\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\common_google_signin_btn_text_light_focused.9.png",
+        "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\drawable-tvdpi\\common_google_signin_btn_text_light_focused.9.png"
     },
     {
         "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project-Cem\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\common_google_signin_btn_icon_dark_disabled.9.png",
@@ -104,16 +216,8 @@
         "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\drawable-tvdpi\\common_google_signin_btn_icon_light_disabled.9.png"
     },
     {
-        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project-Cem\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\common_plus_signin_btn_text_dark_disabled.9.png",
+        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\common_plus_signin_btn_text_dark_disabled.9.png",
         "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\drawable-tvdpi\\common_plus_signin_btn_text_dark_disabled.9.png"
-    },
-    {
-        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project-Cem\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\common_plus_signin_btn_text_light_disabled.9.png",
-        "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\drawable-tvdpi\\common_plus_signin_btn_text_light_disabled.9.png"
-    },
-    {
-        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project-Cem\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\common_plus_signin_btn_icon_light_disabled.9.png",
-        "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\drawable-tvdpi\\common_plus_signin_btn_icon_light_disabled.9.png"
     },
     {
         "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project-Cem\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\common_plus_signin_btn_icon_dark_disabled.9.png",
@@ -124,11 +228,39 @@
         "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\drawable-tvdpi\\common_plus_signin_btn_icon_light_pressed.9.png"
     },
     {
+        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\common_plus_signin_btn_icon_dark_focused.9.png",
+        "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\drawable-tvdpi\\common_plus_signin_btn_icon_dark_focused.9.png"
+    },
+    {
         "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project-Cem\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\common_plus_signin_btn_text_light_focused.9.png",
         "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\drawable-tvdpi\\common_plus_signin_btn_text_light_focused.9.png"
     },
     {
+        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\common_google_signin_btn_icon_light_focused.9.png",
+        "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\drawable-tvdpi\\common_google_signin_btn_icon_light_focused.9.png"
+    },
+    {
+        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\common_plus_signin_btn_text_light_disabled.9.png",
+        "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\drawable-tvdpi\\common_plus_signin_btn_text_light_disabled.9.png"
+    },
+    {
+        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\common_plus_signin_btn_text_light_pressed.9.png",
+        "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\drawable-tvdpi\\common_plus_signin_btn_text_light_pressed.9.png"
+    },
+    {
         "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project-Cem\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\common_google_signin_btn_icon_dark_pressed.9.png",
         "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\drawable-tvdpi\\common_google_signin_btn_icon_dark_pressed.9.png"
+    },
+    {
+        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\common_full_open_on_phone.png",
+        "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\drawable-tvdpi\\common_full_open_on_phone.png"
+    },
+    {
+        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\common_google_signin_btn_text_dark_disabled.9.png",
+        "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\drawable-tvdpi\\common_google_signin_btn_text_dark_disabled.9.png"
+    },
+    {
+        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\common_google_signin_btn_text_light_pressed.9.png",
+        "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\drawable-tvdpi\\common_google_signin_btn_text_light_pressed.9.png"
     }
 ]

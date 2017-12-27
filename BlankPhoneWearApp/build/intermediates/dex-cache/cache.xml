@@ -3,6 +3,24 @@
 
     <item
         is-multidex="true"
+        jar="C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project-Cem\BlankPhoneWearApp\Application\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="bc63615de3bb2f05abd1301ec40d13ff56d1d311">
+        <dex dex="C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project-Cem\BlankPhoneWearApp\Application\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_2f5aa9839d14439159b082805820691574de3a45\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Application\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Application\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_8775ef1df2326d6a29710de1f6eca48c387610b8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project-Cem\BlankPhoneWearApp\Application\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
@@ -12,12 +30,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project-Cem\BlankPhoneWearApp\Application\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jar="C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Application\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="26.0.2"
-        sha1="bc63615de3bb2f05abd1301ec40d13ff56d1d311">
-        <dex dex="C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project-Cem\BlankPhoneWearApp\Application\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_2f5aa9839d14439159b082805820691574de3a45\classes.dex" />
+        sha1="1a6c378eef627a9ca5eef2d412479a965cfe0cdc">
+        <dex dex="C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Application\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_8eb12f979d66567f50ffcabf544dbe2338a12e03\classes.dex" />
     </item>
 
 </items>
