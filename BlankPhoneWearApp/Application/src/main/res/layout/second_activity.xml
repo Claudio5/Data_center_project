@@ -23,10 +23,22 @@
 
     <com.androidplot.xy.XYPlot
         android:id="@+id/plotxy"
-        android:layout_width="600dp"
-        android:layout_height="400dp"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="85dp"
-        android:layout_marginTop="150dp" />
+        android:layout_width="400dp"
+        android:layout_height="500dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="0dp"
+        app:legendTextSize="15sp"
+        app:legendAnchor="right_bottom"
+        app:legendHeight="50dp"
+        app:graphHeight="30dp"
+        app:graphHeightMode="fill"
+        app:graphWidth="0dp"
+        app:graphWidthMode="fill"
+        app:lineLabels="left|bottom"
+        app:title="Power"
+        style="@style/APDefacto.Dark"
+        androidplot.renderMode="use_background_thread"/>
 
 </android.widget.RelativeLayout>

@@ -11,9 +11,11 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.DashPathEffect;
+import android.graphics.Paint;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.util.Log;
 import ch.epfl.esl.blankphonewearapp.XYplotSeriesList;
@@ -22,11 +24,13 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 
+import com.androidplot.Plot;
 import com.androidplot.util.PixelUtils;
 import com.androidplot.xy.BoundaryMode;
 import com.androidplot.xy.CatmullRomInterpolator;
 import com.androidplot.xy.LineAndPointFormatter;
 import com.androidplot.xy.SimpleXYSeries;
+import com.androidplot.xy.StepMode;
 import com.androidplot.xy.XYGraphWidget;
 import com.androidplot.xy.XYPlot;
 import com.androidplot.xy.XYSeries;
@@ -48,6 +52,10 @@ import com.google.android.gms.wearable.PutDataMapRequest;
 import com.google.android.gms.wearable.PutDataRequest;
 import com.google.android.gms.wearable.Wearable;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.text.DecimalFormat;
@@ -55,12 +63,18 @@ import java.text.FieldPosition;
 import java.text.Format;
 import java.text.ParsePosition;
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.Collection;
 import java.util.Date;
 import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Observable;
+import java.util.Observer;
+import java.util.Random;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
+import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.TimeUnit;
 
 import ch.epfl.esl.commons.DataLayerCommons;
@@ -84,6 +98,18 @@ public class SecondActivity extends Activity implements
     private ScheduledExecutorService mGeneratorExecutor;
     private ScheduledFuture<?> mDataItemGeneratorFuture;
 
+    private Handler handler = new Handler();
+    private Runnable runnable = new Runnable() {
+        @Override
+        public void run() {
+
+            Number[] serie =generateData();
+            Log.e(TAG,Arrays.toString(serie));
+            plotUpdate(serie);
+            handler.postDelayed(this, 60000);
+        }
+    };
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -100,18 +126,135 @@ public class SecondActivity extends Activity implements
                 .addOnConnectionFailedListener(this)
                 .build();
 
+        Bundle bundle = getIntent().getExtras();
+        String url = bundle.getString("url");
 
+        Log.e(TAG,url);
+
+        //new SecondActivity.GetRacks().execute(url);
+
+        Number[] series1Numbers = {1, 4, 2, 8, 4};
+
+        plotUpdate(series1Numbers);
+
+        handler.postDelayed(runnable, 60000);
+
+
+
+    }
+
+
+    /* Class that gets the actual data of the racks and update the plot accordingly
+     (needs to be called with GetRacks.execute(String url))*/
+    private class GetRacks extends AsyncTask<String, Void, String[]> {
+
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+        }
+
+        @Override
+        protected String[] doInBackground(String... url) {
+            urlHandler sh = new urlHandler();
+
+            String jsonStr = sh.getjsonstring(url[0]);
+
+            Log.e(TAG, "Response from url: " + jsonStr);
+
+            if(jsonStr!=null) {
+                try {
+                    JSONObject jsonObject = new JSONObject(jsonStr);
+
+                    //for (int i = 0; i < jsonObject.length(); i++) {
+                    Iterator<String> iterator = jsonObject.keys();
+                    String name = iterator.next();
+
+                    JSONArray racks = jsonObject.getJSONArray(name);
+                    String [] powerArray= new String[racks.length()];
+                    for (int j = 0; j < racks.length(); j++) {
+                        powerArray[j]=racks.getString(j);
+                        Log.e(TAG, "power: " + racks.getString(j));
+                    }
+                    //String racks = jsonObject.getString("racks");
+
+
+                    //}
+
+                    return powerArray;
+                }
+                catch (final JSONException e) {
+                    Log.e(TAG, "Json parsing error: " + e.getMessage());
+
+                }
+            }
+            else {
+                Log.e(TAG, "No response");
+            }
+
+
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(String[] result) {
+
+            Number[] val = new Number[result.length];
+            for(int i=0;i<result.length;i++) {
+                int value = Integer.parseInt(result[i]);
+                val[i]=value;
+            }
+            plotUpdate(val);
+
+        }
+
+    }
+
+    private Number[] generateData(){
+        Number[] series1Numbers = {0, 0, 0, 0, 0};
+
+        for (int i=0;i<5;i++){
+            int randomNum = ThreadLocalRandom.current().nextInt(1, 9 + 1);
+            series1Numbers[i]=randomNum;
+        }
+        return series1Numbers;
+    }
+
+    /* Enter an array of Number and it updates the plot accordingly the values entered */
+    public void plotUpdate(Number[] series1Numbers) {
         XYPlot plot = (XYPlot) findViewById(R.id.plotxy);
+        plot.clear();
+
+        Calendar rightNow = Calendar.getInstance();
+        int currentHour = rightNow.get(Calendar.HOUR_OF_DAY);
+        int currentMinutes = rightNow.get(Calendar.MINUTE);
+
+        final String[] labels = new String[5];
+
+        for(int i=0;i<5;i++){
+
+            labels[4-i] = Integer.toString(currentHour) + ":" + Integer.toString(currentMinutes);
+            currentMinutes--;
+            if(currentMinutes < 0){
+                currentHour--;
+                currentMinutes = 59;
+            }
+        }
+
+        plot.setDomainStep(StepMode.SUBDIVIDE, 5);
+
+
+        Log.e(TAG,Arrays.toString(labels));
 
         // create a couple arrays of y-values to plot:
-        final Number[] domainLabels = {1, 2, 3, 6, 7, 8, 9, 10, 13, 14};
-        Number[] series1Numbers = {1, 4, 2, 8, 4, 16, 8, 32, 16, 64};
-        Number[] series2Numbers = {5, 2, 10, 5, 20, 10, 40, 20, 80, 40};
+        Number[] series2Numbers = {5, 2, 10, 5, 20};
+
 
         // turn the above arrays into XYSeries':
         // (Y_VALS_ONLY means use the element index as the x value)
         XYSeries series1 = new SimpleXYSeries(
                 Arrays.asList(series1Numbers), SimpleXYSeries.ArrayFormat.Y_VALS_ONLY, "Series1");
+
         XYSeries series2 = new SimpleXYSeries(
                 Arrays.asList(series2Numbers), SimpleXYSeries.ArrayFormat.Y_VALS_ONLY, "Series2");
 
@@ -143,8 +286,9 @@ public class SecondActivity extends Activity implements
         plot.getGraph().getLineLabelStyle(XYGraphWidget.Edge.BOTTOM).setFormat(new Format() {
             @Override
             public StringBuffer format(Object obj, StringBuffer toAppendTo, FieldPosition pos) {
-                int i = Math.round(((Number) obj).floatValue());
-                return toAppendTo.append(domainLabels[i]);
+                //int i = Math.round(((Number) obj).floatValue());
+                int i = Math.round(Float.parseFloat(obj.toString()));
+                return toAppendTo.append(labels[i]);
             }
             @Override
             public Object parseObject(String source, ParsePosition pos) {
@@ -152,32 +296,7 @@ public class SecondActivity extends Activity implements
             }
         });
 
-
-
-
-    }
-
-    private void configurePlot(XYPlot xyplot, int min, int max, int numberPoints, String label) {
-        // Set background colors
-        xyplot.setBorderPaint(null);
-        xyplot.setBackgroundPaint(null);
-        xyplot.getGraph().getBackgroundPaint().setColor(Color.BLACK);
-        xyplot.getGraph().setGridBackgroundPaint(null);
-
-        // Set the grid and subgrid color
-        xyplot.getGraph().getRangeGridLinePaint().setColor(Color.GRAY);
-        xyplot.getGraph().getDomainGridLinePaint().setColor(Color.GRAY);
-
-        // Set the axes colors
-        xyplot.getGraph().getRangeOriginLinePaint().setColor(Color.GRAY);
-        xyplot.getGraph().getDomainOriginLinePaint().setColor(Color.GRAY);
-
-        // Set the XY axis
-        xyplot.setRangeBoundaries(min,max, BoundaryMode.FIXED);
-        xyplot.setDomainBoundaries(0,numberPoints-1,BoundaryMode.FIXED);
-        xyplot.setRangeStepValue(9); // 9 values 40 60 ... 200
-        xyplot.getGraph().getLineLabelStyle(XYGraphWidget.Edge.LEFT).setFormat(new DecimalFormat("#")); //This line is to force the Axis to be integer
-        xyplot.setRangeLabel(label);
+        plot.redraw();
     }
 
 
@@ -199,10 +318,12 @@ public class SecondActivity extends Activity implements
         if(mGoogleApiClient.isConnected()) {
             new SendMessageTask(DataLayerCommons.START_ACTIVITY_PATH).execute();
         }
+
     }
 
     @Override
     public void onPause() {
+
         super.onPause();
         // User is leaving the app, stop the fake data generator
         mDataItemGeneratorFuture.cancel(true /* mayInterruptIfRunning */);
@@ -413,3 +534,4 @@ public class SecondActivity extends Activity implements
         }
     }
 }
+

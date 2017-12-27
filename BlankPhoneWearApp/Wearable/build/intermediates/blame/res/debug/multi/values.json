@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\Wearable\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+        "outputFile": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project-Cem\\BlankPhoneWearApp\\Wearable\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
         "map": [
             {
                 "to": {
@@ -353,7 +353,7 @@
                     "endOffset": 2479
                 },
                 "from": {
-                    "file": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\Wearable\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project-Cem\\BlankPhoneWearApp\\Wearable\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,

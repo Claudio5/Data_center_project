@@ -38,6 +38,10 @@ import com.google.android.gms.wearable.PutDataMapRequest;
 import com.google.android.gms.wearable.PutDataRequest;
 import com.google.android.gms.wearable.Wearable;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.util.Collection;
@@ -92,8 +96,24 @@ public class MainActivity extends Activity implements
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
+                Spinner spinnerDC=(Spinner) findViewById(R.id.spinnerDC);
+                String textDC = spinnerDC.getSelectedItem().toString();
 
+                Spinner spinnerR=(Spinner) findViewById(R.id.spinnerR);
+                String textR = spinnerR.getSelectedItem().toString();
+
+                Spinner spinnerS=(Spinner) findViewById(R.id.spinnerS);
+                String textS = spinnerS.getSelectedItem().toString();
+
+                Spinner spinnerCP=(Spinner) findViewById(R.id.spinnerCP);
+                String textCP = spinnerCP.getSelectedItem().toString();
+
+                String url= urlCreate(textDC,textR,textS,textCP);
+
+                //Log.e(TAG,"url : "+url);
+
+                Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
+                intent.putExtra("url",url);
                 startActivity(intent);
 
             }
@@ -103,23 +123,55 @@ public class MainActivity extends Activity implements
         launchWEB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
-                String url = "http://10.0.2.2:5002/racks";
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse(url));
-                startActivity(intent);
+                //String url = "http://10.0.2.2:5002/racks";
+                //String url = "http://0.0.0.0:5002/racks";
+
+
+
+                new GetRacks().execute("http://128.179.195.18:5002/rack01/s01/power/last5min");
+
+                //Intent intent = new Intent(Intent.ACTION_VIEW);
+                //intent.setData(Uri.parse(url));
+                //startActivity(intent);
             }
 
         });
 
+
+
     }
 
+    private String urlCreate(String textDC,String textR,String textS,String textCP) {
+        String strR="rack0"+textR.substring(textR.length() - 1);
+        String strS="s0"+textS.substring(textS.length() - 1);
+        if(textCP.contains("Power")) {
+            return "http://128.179.195.18:5002/" + strR + "/" + strS + "/power/last5min";
+        }else {
+            String strCP = "cpu0" + textS.substring(textS.length() - 1);
+            return "http://128.179.195.18:5002/" + strR + "/" + strS + "/" + strCP;
+
+        }
+    }
+
+    private void updatePlot(String[] array) {
+
+        Log.e(TAG,array[0]);
+
+        Number[] val = new Number[array.length];
+        for(int i=0;i<array.length;i++) {
+            int value = Integer.parseInt(array[i]);
+            val[i]=value;
+        }
+        Number[] series2Numbers = {5, 2, 10, 5, 20};
+
+    }
 
     // Build the main spinner with the names for the data centers
     private void buildSpinner(){
 
         //String dataCenters[]= {"test1","test2"};
 
-        Spinner spinner = findViewById(R.id.spinner);
+        Spinner spinner = findViewById(R.id.spinnerDC);
 
         // Create an ArrayAdapter using the string array and a default spinner layout with strings.xml
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
@@ -132,6 +184,48 @@ public class MainActivity extends Activity implements
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // Apply the adapter to the spinner
         spinner.setAdapter(adapter);
+
+        Spinner spinnerR = findViewById(R.id.spinnerR);
+
+        // Create an ArrayAdapter using the string array and a default spinner layout with strings.xml
+        ArrayAdapter<CharSequence> adapterR = ArrayAdapter.createFromResource(this,
+                R.array.Racks_array, android.R.layout.simple_spinner_item);
+
+        // Optional idea
+        // ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,   android.R.layout.simple_spinner_item, dataCenters);
+
+        // Specify the layout to use when the list of choices appears
+        //adapterR.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        // Apply the adapter to the spinner
+        spinnerR.setAdapter(adapterR);
+
+        Spinner spinnerS = findViewById(R.id.spinnerS);
+
+        // Create an ArrayAdapter using the string array and a default spinner layout with strings.xml
+        ArrayAdapter<CharSequence> adapterS = ArrayAdapter.createFromResource(this,
+                R.array.Servers_array, android.R.layout.simple_spinner_item);
+
+        // Optional idea
+        // ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,   android.R.layout.simple_spinner_item, dataCenters);
+
+        // Specify the layout to use when the list of choices appears
+        //adapterS.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        // Apply the adapter to the spinner
+        spinnerS.setAdapter(adapterS);
+
+        Spinner spinnerCP = findViewById(R.id.spinnerCP);
+
+        // Create an ArrayAdapter using the string array and a default spinner layout with strings.xml
+        ArrayAdapter<CharSequence> adapterCP = ArrayAdapter.createFromResource(this,
+                R.array.CP_array, android.R.layout.simple_spinner_item);
+
+        // Optional idea
+        // ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,   android.R.layout.simple_spinner_item, dataCenters);
+
+        // Specify the layout to use when the list of choices appears
+        //adapterCP.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        // Apply the adapter to the spinner
+        spinnerCP.setAdapter(adapterCP);
     }
 
     @Override
@@ -246,6 +340,70 @@ public class MainActivity extends Activity implements
                                 .isSuccess());
                     }
                 });
+    }
+
+    private class GetRacks extends AsyncTask<String, Void, String[]> {
+
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+
+
+        }
+
+
+        @Override
+        protected String[] doInBackground(String... url) {
+            urlHandler sh = new urlHandler();
+
+            String jsonStr = sh.getjsonstring(url[0]);
+
+            Log.e(TAG, "Response from url: " + jsonStr);
+
+            if(jsonStr!=null) {
+                try {
+                    JSONObject jsonObject = new JSONObject(jsonStr);
+
+                    //for (int i = 0; i < jsonObject.length(); i++) {
+
+                        JSONArray racks = jsonObject.getJSONArray("s01");
+                        String [] powerArray= new String[racks.length()];
+                        for (int j = 0; j < racks.length(); j++) {
+                            powerArray[j]=racks.getString(j);
+                            Log.e(TAG, "power: " + racks.getString(j));
+                        }
+                        //String racks = jsonObject.getString("racks");
+
+
+                    //}
+
+                    return powerArray;
+                }
+                catch (final JSONException e) {
+                    Log.e(TAG, "Json parsing error: " + e.getMessage());
+
+
+
+                }
+            }
+            else {
+                Log.e(TAG, "No response");
+            }
+
+
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(String[] result) {
+
+            updatePlot(result);
+
+        }
+
+
+
     }
 
     private class SendMessageTask extends AsyncTask<Void, Void, Void> {

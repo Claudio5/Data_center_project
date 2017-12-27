@@ -8,61 +8,141 @@
     tools:context="ch.epfl.esl.blankphonewearapp.MainActivity" >
 
 
+    <TextView
+        android:id="@+id/SrvView"
+        android:layout_width="240dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        android:layout_below="@+id/rackView"
+        android:layout_toLeftOf="@+id/spinnerCP"
+        android:text="Choose a server"
+        android:textAppearance="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Large"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/rackView"
+        android:layout_width="240dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        android:layout_below="@+id/DCView"
+        android:layout_toLeftOf="@+id/spinnerR"
+        android:text="Choose a rack"
+        android:textAppearance="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Large"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/DCView"
+        android:layout_width="240dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/titleview"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="38dp"
+        android:layout_toLeftOf="@+id/spinnerDC"
+        android:text="Choose a Data Center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Large"
+        android:textSize="23sp" />
+
     <Spinner
-        android:id="@+id/spinner"
+        android:id="@+id/spinnerDC"
         android:layout_width="280dp"
         android:layout_height="40dp"
         android:layout_marginEnd="76dp"
-        android:layout_marginTop="62dp"
+        android:layout_marginTop="40dp"
         android:background="@android:drawable/btn_dropdown"
-        android:layout_below="@+id/textView"
-        android:layout_toStartOf="@+id/send_fltbtn" />
+        android:layout_below="@+id/titleview"
+        android:layout_toLeftOf="@+id/send_fltbtn" />
+
+    <Spinner
+        android:id="@+id/spinnerR"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="76dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:layout_below="@+id/spinnerDC"
+        android:layout_toLeftOf="@+id/send_fltbtn"
+        android:layout_marginTop = "40dp" />
+
+
+    <Spinner
+        android:id="@+id/spinnerS"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:layout_marginRight="76dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:layout_below="@+id/spinnerCP"
+        android:layout_toLeftOf="@+id/send_fltbtn"
+        android:layout_marginTop="40dp" />
+
+    <Spinner
+        android:id="@+id/spinnerCP"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:layout_marginRight="76dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/spinnerR"
+        android:layout_toLeftOf="@+id/send_fltbtn" />
 
     <ImageView
         android:id="@+id/imageDataCenter"
-        android:layout_width="500dp"
-        android:layout_height="600dp"
+        android:layout_width="300dp"
+        android:layout_height="400dp"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/spinner"
-        android:layout_marginStart="67dp"
-        android:layout_marginTop="61dp"
+        android:layout_marginStart="32dp"
         android:contentDescription="Data_Center"
-        android:src = "@drawable/data_center" />
+        android:src="@drawable/data_center" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/add_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="29dp"
+        android:layout_marginEnd="27dp"
         android:clickable="true"
+        app:elevation="0dp"
         app:fabSize="mini"
         app:srcCompat="@android:drawable/ic_input_add"
-        android:layout_marginBottom="37dp"
-        android:layout_alignBottom="@+id/imageDataCenter"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="29dp" />
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/titleview"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:gravity="center"
-        android:textSize="50dp"
         android:background="@android:color/holo_orange_dark"
-        android:text="@string/app_name" />
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textColor="@color/ap_white"
+        android:textSize="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/send_fltbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:clickable="true"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:backgroundTint="@android:color/holo_purple"
+        android:clickable="true"
+        android:layout_marginTop="280dp"
+        android:layout_marginRight="30dp"
         app:fabSize="mini"
         app:srcCompat="@android:drawable/ic_menu_send"
-        android:layout_alignTop="@+id/spinner"
-        android:layout_alignEnd="@+id/add_button"
-        android:layout_marginEnd="14dp"
-        android:layout_marginTop="11dp" />
+        android:layout_alignParentRight= "true"
+        android:layout_below="@+id/titleview" />
+
+    <TextView
+        android:id="@+id/CPUView"
+        android:layout_width="240dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        android:layout_below="@+id/SrvView"
+        android:layout_toLeftOf="@+id/spinnerS"
+        android:text="Choose a CPU"
+        android:textAppearance="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Large"
+        android:textSize="25sp" />
 
 </android.widget.RelativeLayout>

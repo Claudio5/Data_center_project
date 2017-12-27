@@ -1,5 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2" xmlns:ns2="http://schemas.android.com/tools">
+    <string-array name="CP_array">
+        <item>CPU 1</item>
+        <item>CPU 2</item>
+        <item>CPU 3</item>
+        <item>CPU 4</item>
+        <item>CPU 5</item>
+        <item>CPU 6</item>
+        <item>CPU 7</item>
+        <item>CPU 8</item>
+        <item>Power</item>
+
+    </string-array>
+    <string-array name="Racks_array">
+        <item>Rack 1</item>
+        <item>Rack 2</item>
+        <item>Rack 3</item>
+        <item>Rack 4</item>
+        <item>Rack 5</item>
+        <item>Rack 6</item>
+        <item>Rack 7</item>
+        <item>Rack 8</item>
+    </string-array>
+    <string-array name="Servers_array">
+        <item>Server 1</item>
+        <item>Server 2</item>
+        <item>Server 3</item>
+        <item>Server 4</item>
+        <item>Server 5</item>
+        <item>Server 6</item>
+        <item>Server 7</item>
+        <item>Server 8</item>
+    </string-array>
     <string-array name="dataCenter_array">
         <item>Data Center 1</item>
         <item>Data Center 2</item>
