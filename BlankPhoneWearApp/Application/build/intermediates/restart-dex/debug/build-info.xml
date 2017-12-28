@@ -6,48 +6,30 @@
     density="xhdpi"
     format="10"
     plugin-version="2.3.3"
-    timestamp="1514481122557"
+    timestamp="1514482772888"
     token="-524044871339806778"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="1797" />
+        duration="1177" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="211" />
+        duration="84" />
     <task
         name="verifier"
-        duration="80" />
+        duration="48" />
 
-    <artifact
-        location="C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Application\build\intermediates\split-apk\debug\slices\slice_0.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Application\build\intermediates\split-apk\debug\slices\slice_3.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Application\build\intermediates\split-apk\debug\slices\slice_2.apk"
-        type="SPLIT" />
     <artifact
         location="C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Application\build\intermediates\split-apk\debug\slices\slice_4.apk"
         type="SPLIT" />
-    <artifact
-        location="C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Application\build\intermediates\split-apk\debug\slices\slice_5.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Application\build\intermediates\split-apk\debug\slices\slice_9.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Application\build\outputs\apk\Application-debug.apk"
-        type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        timestamp="1514477677734"
+        timestamp="1514482333996"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Application\build\intermediates\split-apk\debug\slices\slice_1.apk"
@@ -88,29 +70,11 @@
     </build>
     <build
         build-mode="COLD"
-        timestamp="1514481122557"
+        timestamp="1514482772888"
         verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Application\build\intermediates\split-apk\debug\slices\slice_0.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Application\build\intermediates\split-apk\debug\slices\slice_3.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Application\build\intermediates\split-apk\debug\slices\slice_2.apk"
-            type="SPLIT" />
         <artifact
             location="C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Application\build\intermediates\split-apk\debug\slices\slice_4.apk"
             type="SPLIT" />
-        <artifact
-            location="C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Application\build\intermediates\split-apk\debug\slices\slice_5.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Application\build\intermediates\split-apk\debug\slices\slice_9.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Application\build\outputs\apk\Application-debug.apk"
-            type="SPLIT_MAIN" />
     </build>
 
 </instant-run>

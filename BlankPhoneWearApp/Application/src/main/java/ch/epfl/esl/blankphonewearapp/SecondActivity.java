@@ -364,6 +364,7 @@ public class SecondActivity extends Activity implements
             mGoogleApiClient.disconnect();
         }
         super.onStop();
+        handler.removeCallbacksAndMessages(null);
     }
 
     @Override
