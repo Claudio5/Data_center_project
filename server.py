@@ -55,7 +55,7 @@ class CPUPowerLast5min(Resource):
         if rack_name == 'rack01':
             if server_name == 's01':
                 if cpu_name == 'cpu01':
-                    result = {'cpu01': ['1','2','3','4','5']}
+                    result = {'cpu01': ['1','2','3','10','5']}
 
         return jsonify(result)
 
@@ -67,4 +67,4 @@ api.add_resource(ServerPowerLast5min,'/<rack_name>/<server_name>/power/last5min'
 api.add_resource(CPUPowerLast5min,'/<rack_name>/<server_name>/<cpu_name>')
 
 if __name__ == '__main__':
-     app.run(host='128.179.195.18',port='5002')
+     app.run(host='127.0.0.1',port='5002')

@@ -23,22 +23,57 @@
 
     <com.androidplot.xy.XYPlot
         android:id="@+id/plotxy"
+        style="@style/APDefacto.Dark"
+        androidplot.renderMode="use_background_thread"
         android:layout_width="400dp"
-        android:layout_height="500dp"
+        android:layout_height="420dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:layout_below="@+id/textView2"
         android:layout_marginTop="0dp"
-        app:legendTextSize="15sp"
-        app:legendAnchor="right_bottom"
-        app:legendHeight="50dp"
         app:graphHeight="30dp"
         app:graphHeightMode="fill"
         app:graphWidth="0dp"
         app:graphWidthMode="fill"
+        app:legendAnchor="right_bottom"
+        app:legendHeight="50dp"
+        app:legendTextSize="15sp"
         app:lineLabels="left|bottom"
-        app:title="Power"
-        style="@style/APDefacto.Dark"
-        androidplot.renderMode="use_background_thread"/>
+        app:title="Power" />
+
+    <RelativeLayout
+        android:id="@+id/power_lay"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/plotxy"
+        android:background="@drawable/background1">
+
+        <TextView
+            android:id="@+id/pwrAvgNmbview"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="52dp"
+            android:layout_marginTop="67dp"
+            android:layout_toRightOf="@+id/pwrAvgview"
+            android:gravity="center"
+            android:text="Power"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="45sp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/pwrAvgview"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="34dp"
+            android:layout_marginTop="67dp"
+            android:text="Average power"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="45sp" />
+    </RelativeLayout>
 
 </android.widget.RelativeLayout>

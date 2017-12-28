@@ -23,6 +23,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import com.androidplot.Plot;
 import com.androidplot.util.PixelUtils;
@@ -98,14 +99,15 @@ public class SecondActivity extends Activity implements
     private ScheduledExecutorService mGeneratorExecutor;
     private ScheduledFuture<?> mDataItemGeneratorFuture;
 
+    private String url;
     private Handler handler = new Handler();
     private Runnable runnable = new Runnable() {
         @Override
         public void run() {
 
-            Number[] serie =generateData();
-            Log.e(TAG,Arrays.toString(serie));
-            plotUpdate(serie);
+            Log.e(TAG,"Every 60 seconds");
+            new SecondActivity.GetRacks().execute(url);
+
             handler.postDelayed(this, 60000);
         }
     };
@@ -127,22 +129,19 @@ public class SecondActivity extends Activity implements
                 .build();
 
         Bundle bundle = getIntent().getExtras();
-        String url = bundle.getString("url");
+        url = bundle.getString("url");
 
         Log.e(TAG,url);
 
-        //new SecondActivity.GetRacks().execute(url);
+        new SecondActivity.GetRacks().execute(url);
 
-        Number[] series1Numbers = {1, 4, 2, 8, 4};
+        //Number[] series1Numbers = {1, 4, 2, 8, 4};
 
-        plotUpdate(series1Numbers);
+        //plotUpdate(series1Numbers);
 
         handler.postDelayed(runnable, 60000);
 
-
-
     }
-
 
     /* Class that gets the actual data of the racks and update the plot accordingly
      (needs to be called with GetRacks.execute(String url))*/
@@ -198,20 +197,34 @@ public class SecondActivity extends Activity implements
 
         @Override
         protected void onPostExecute(String[] result) {
-
+            Float[] valF = new Float[result.length];
             Number[] val = new Number[result.length];
             for(int i=0;i<result.length;i++) {
                 int value = Integer.parseInt(result[i]);
                 val[i]=value;
+                valF[i]= (float)value;
             }
             plotUpdate(val);
+            setPowerAvgTxtView(valF);
 
         }
 
     }
 
+    // Calculates the average power of the 5 last values
+    private void setPowerAvgTxtView(Float[] pwr){
+        TextView pwrAvgView = (TextView)findViewById(R.id.pwrAvgNmbview);
+        float sum=0;
+        float avg=0;
+        for (int i=0;i<pwr.length;i++){
+            sum += pwr[i];
+        }
+        avg=sum/pwr.length;
+        pwrAvgView.setText(Float.toString(avg));
+    }
+
     private Number[] generateData(){
-        Number[] series1Numbers = {0, 0, 0, 0, 0};
+        Number[] series1Numbers = new Number[5];
 
         for (int i=0;i<5;i++){
             int randomNum = ThreadLocalRandom.current().nextInt(1, 9 + 1);
@@ -228,16 +241,25 @@ public class SecondActivity extends Activity implements
         Calendar rightNow = Calendar.getInstance();
         int currentHour = rightNow.get(Calendar.HOUR_OF_DAY);
         int currentMinutes = rightNow.get(Calendar.MINUTE);
-        
+
         final String[] labels = new String[5];
 
         for(int i=0;i<5;i++){
-
             labels[4-i] = Integer.toString(currentHour) + ":" + Integer.toString(currentMinutes);
+            if(currentMinutes<10){
+                labels[4-i] = Integer.toString(currentHour) + ":" + "0"+Integer.toString(currentMinutes);
+            }
+            if(currentHour<10){
+                labels[4-i] = "0"+Integer.toString(currentHour) + ":" +Integer.toString(currentMinutes);
+            }
+
             currentMinutes--;
             if(currentMinutes < 0){
                 currentHour--;
                 currentMinutes = 59;
+                if(currentHour < 0){
+                    currentHour = 23;
+                }
             }
         }
 
@@ -290,7 +312,6 @@ public class SecondActivity extends Activity implements
         plot.getGraph().getLineLabelStyle(XYGraphWidget.Edge.BOTTOM).setFormat(new Format() {
             @Override
             public StringBuffer format(Object obj, StringBuffer toAppendTo, FieldPosition pos) {
-                //int i = Math.round(((Number) obj).floatValue());
                 int i = Math.round(Float.parseFloat(obj.toString()));
                 return toAppendTo.append(labels[i]);
             }

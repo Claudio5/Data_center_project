@@ -142,13 +142,15 @@ public class MainActivity extends Activity implements
     }
 
     private String urlCreate(String textDC,String textR,String textS,String textCP) {
+        //String baseUrl = "http://128.179.195.18:5002/";
+        String baseUrl = "http://10.0.2.2:5002/";
         String strR="rack0"+textR.substring(textR.length() - 1);
         String strS="s0"+textS.substring(textS.length() - 1);
         if(textCP.contains("Power")) {
-            return "http://128.179.195.18:5002/" + strR + "/" + strS + "/power/last5min";
+            return baseUrl + strR + "/" + strS + "/power/last5min";
         }else {
             String strCP = "cpu0" + textS.substring(textS.length() - 1);
-            return "http://128.179.195.18:5002/" + strR + "/" + strS + "/" + strCP;
+            return baseUrl + strR + "/" + strS + "/" + strCP;
 
         }
     }
