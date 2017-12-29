@@ -9,7 +9,7 @@ import java.util.List;
  * Created by Claudio on 05.12.2017.
  */
 
-
+//Not really used
 public class XYplotSeriesList {
 
     private ArrayList<Integer[]> xList = new ArrayList<>();

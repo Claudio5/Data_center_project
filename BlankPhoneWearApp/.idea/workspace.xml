@@ -10,12 +10,118 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="warn" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="408aa5fe-2531-48bf-8065-8c97d1a05142" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../README.md" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/src/main/java/ch/epfl/esl/blankphonewearapp/Alarm.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/src/main/java/ch/epfl/esl/blankphonewearapp/GetRacks.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/src/main/java/ch/epfl/esl/blankphonewearapp/MyService.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/ch/epfl/esl/blankphonewearapp/SecondActivity$GetRacks.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/ch/epfl/esl/blankphonewearapp/SecondActivity$GetRacks.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/ch/epfl/esl/blankphonewearapp/SecondActivity$GetRacks.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/ch/epfl/esl/blankphonewearapp/SecondActivity$GetRacks.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.4.1/fileContent/fileContent.lock" afterPath="$PROJECT_DIR$/.gradle/3.4.1/fileContent/fileContent.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.4.1/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/3.4.1/javaCompile/classAnalysis.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.4.1/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/3.4.1/javaCompile/javaCompile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.4.1/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/3.4.1/javaCompile/taskHistory.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.4.1/taskHistory/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/3.4.1/taskHistory/fileHashes.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.4.1/taskHistory/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/3.4.1/taskHistory/fileSnapshots.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.4.1/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/3.4.1/taskHistory/taskHistory.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.4.1/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/3.4.1/taskHistory/taskHistory.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/ch/epfl/esl/blankphonewearapp/MainActivity$1.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/ch/epfl/esl/blankphonewearapp/MainActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/ch/epfl/esl/blankphonewearapp/MainActivity$2.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/ch/epfl/esl/blankphonewearapp/MainActivity$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/ch/epfl/esl/blankphonewearapp/MainActivity$3.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/ch/epfl/esl/blankphonewearapp/MainActivity$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/ch/epfl/esl/blankphonewearapp/MainActivity$DataItemGenerator$1.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/ch/epfl/esl/blankphonewearapp/MainActivity$DataItemGenerator$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/ch/epfl/esl/blankphonewearapp/MainActivity$DataItemGenerator.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/ch/epfl/esl/blankphonewearapp/MainActivity$DataItemGenerator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/ch/epfl/esl/blankphonewearapp/MainActivity$GetRacks.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/ch/epfl/esl/blankphonewearapp/MainActivity$GetRacks.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/ch/epfl/esl/blankphonewearapp/MainActivity$SendMessageTask$1.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/ch/epfl/esl/blankphonewearapp/MainActivity$SendMessageTask$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/ch/epfl/esl/blankphonewearapp/MainActivity$SendMessageTask.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/ch/epfl/esl/blankphonewearapp/MainActivity$SendMessageTask.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/ch/epfl/esl/blankphonewearapp/MainActivity.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/ch/epfl/esl/blankphonewearapp/MainActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/ch/epfl/esl/blankphonewearapp/SecondActivity$1.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/ch/epfl/esl/blankphonewearapp/SecondActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/ch/epfl/esl/blankphonewearapp/SecondActivity$2.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/ch/epfl/esl/blankphonewearapp/SecondActivity$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/ch/epfl/esl/blankphonewearapp/SecondActivity$3.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/ch/epfl/esl/blankphonewearapp/SecondActivity$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/ch/epfl/esl/blankphonewearapp/SecondActivity$DataItemGenerator$1.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/ch/epfl/esl/blankphonewearapp/SecondActivity$DataItemGenerator$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/ch/epfl/esl/blankphonewearapp/SecondActivity$DataItemGenerator.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/ch/epfl/esl/blankphonewearapp/SecondActivity$DataItemGenerator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/ch/epfl/esl/blankphonewearapp/SecondActivity$SendMessageTask$1.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/ch/epfl/esl/blankphonewearapp/SecondActivity$SendMessageTask$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/ch/epfl/esl/blankphonewearapp/SecondActivity$SendMessageTask.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/ch/epfl/esl/blankphonewearapp/SecondActivity$SendMessageTask.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/ch/epfl/esl/blankphonewearapp/SecondActivity.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/ch/epfl/esl/blankphonewearapp/SecondActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/ch/epfl/esl/blankphonewearapp/MainActivity$1.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/ch/epfl/esl/blankphonewearapp/MainActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/ch/epfl/esl/blankphonewearapp/MainActivity$2.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/ch/epfl/esl/blankphonewearapp/MainActivity$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/ch/epfl/esl/blankphonewearapp/MainActivity$3.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/ch/epfl/esl/blankphonewearapp/MainActivity$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/ch/epfl/esl/blankphonewearapp/MainActivity$DataItemGenerator$1.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/ch/epfl/esl/blankphonewearapp/MainActivity$DataItemGenerator$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/ch/epfl/esl/blankphonewearapp/MainActivity$DataItemGenerator.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/ch/epfl/esl/blankphonewearapp/MainActivity$DataItemGenerator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/ch/epfl/esl/blankphonewearapp/MainActivity$GetRacks.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/ch/epfl/esl/blankphonewearapp/MainActivity$GetRacks.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/ch/epfl/esl/blankphonewearapp/MainActivity$SendMessageTask$1.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/ch/epfl/esl/blankphonewearapp/MainActivity$SendMessageTask$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/ch/epfl/esl/blankphonewearapp/MainActivity$SendMessageTask.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/ch/epfl/esl/blankphonewearapp/MainActivity$SendMessageTask.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/ch/epfl/esl/blankphonewearapp/MainActivity.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/ch/epfl/esl/blankphonewearapp/MainActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/ch/epfl/esl/blankphonewearapp/SecondActivity$1.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/ch/epfl/esl/blankphonewearapp/SecondActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/ch/epfl/esl/blankphonewearapp/SecondActivity$2.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/ch/epfl/esl/blankphonewearapp/SecondActivity$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/ch/epfl/esl/blankphonewearapp/SecondActivity$3.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/ch/epfl/esl/blankphonewearapp/SecondActivity$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/ch/epfl/esl/blankphonewearapp/SecondActivity$DataItemGenerator$1.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/ch/epfl/esl/blankphonewearapp/SecondActivity$DataItemGenerator$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/ch/epfl/esl/blankphonewearapp/SecondActivity$DataItemGenerator.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/ch/epfl/esl/blankphonewearapp/SecondActivity$DataItemGenerator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/ch/epfl/esl/blankphonewearapp/SecondActivity$SendMessageTask$1.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/ch/epfl/esl/blankphonewearapp/SecondActivity$SendMessageTask$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/ch/epfl/esl/blankphonewearapp/SecondActivity$SendMessageTask.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/ch/epfl/esl/blankphonewearapp/SecondActivity$SendMessageTask.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/ch/epfl/esl/blankphonewearapp/SecondActivity.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/ch/epfl/esl/blankphonewearapp/SecondActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental/packageDebug/zip-cache/2JZYudy2yv8oVhkWA1F6tApygUQ=" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental/packageDebug/zip-cache/2JZYudy2yv8oVhkWA1F6tApygUQ=" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental/packageInstantRunResourcesDebug/zip-cache/2JZYudy2yv8oVhkWA1F6tApygUQ=" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental/packageInstantRunResourcesDebug/zip-cache/2JZYudy2yv8oVhkWA1F6tApygUQ=" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/instant-run-resources/resources-debug.ir.ap_" afterPath="$PROJECT_DIR$/Application/build/intermediates/instant-run-resources/resources-debug.ir.ap_" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/Application/build/intermediates/res/resources-debug.ap_" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/split-apk/debug/slices/slice_4.apk" afterPath="$PROJECT_DIR$/Application/build/intermediates/split-apk/debug/slices/slice_4.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/ch/epfl/esl/blankphonewearapp/MainActivity$1.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/ch/epfl/esl/blankphonewearapp/MainActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/ch/epfl/esl/blankphonewearapp/MainActivity$2.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/ch/epfl/esl/blankphonewearapp/MainActivity$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/ch/epfl/esl/blankphonewearapp/MainActivity$3.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/ch/epfl/esl/blankphonewearapp/MainActivity$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/ch/epfl/esl/blankphonewearapp/MainActivity$DataItemGenerator$1.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/ch/epfl/esl/blankphonewearapp/MainActivity$DataItemGenerator$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/ch/epfl/esl/blankphonewearapp/MainActivity$DataItemGenerator.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/ch/epfl/esl/blankphonewearapp/MainActivity$DataItemGenerator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/ch/epfl/esl/blankphonewearapp/MainActivity$GetRacks.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/ch/epfl/esl/blankphonewearapp/MainActivity$GetRacks.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/ch/epfl/esl/blankphonewearapp/MainActivity$SendMessageTask$1.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/ch/epfl/esl/blankphonewearapp/MainActivity$SendMessageTask$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/ch/epfl/esl/blankphonewearapp/MainActivity$SendMessageTask.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/ch/epfl/esl/blankphonewearapp/MainActivity$SendMessageTask.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/ch/epfl/esl/blankphonewearapp/MainActivity.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/ch/epfl/esl/blankphonewearapp/MainActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/ch/epfl/esl/blankphonewearapp/SecondActivity$1.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/ch/epfl/esl/blankphonewearapp/SecondActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/ch/epfl/esl/blankphonewearapp/SecondActivity$2.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/ch/epfl/esl/blankphonewearapp/SecondActivity$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/ch/epfl/esl/blankphonewearapp/SecondActivity$3.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/ch/epfl/esl/blankphonewearapp/SecondActivity$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/ch/epfl/esl/blankphonewearapp/SecondActivity$DataItemGenerator$1.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/ch/epfl/esl/blankphonewearapp/SecondActivity$DataItemGenerator$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/ch/epfl/esl/blankphonewearapp/SecondActivity$DataItemGenerator.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/ch/epfl/esl/blankphonewearapp/SecondActivity$DataItemGenerator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/ch/epfl/esl/blankphonewearapp/SecondActivity$SendMessageTask$1.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/ch/epfl/esl/blankphonewearapp/SecondActivity$SendMessageTask$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/ch/epfl/esl/blankphonewearapp/SecondActivity$SendMessageTask.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/ch/epfl/esl/blankphonewearapp/SecondActivity$SendMessageTask.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/ch/epfl/esl/blankphonewearapp/SecondActivity.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/ch/epfl/esl/blankphonewearapp/SecondActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/ch/epfl/esl/blankphonewearapp/MainActivity$1.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/ch/epfl/esl/blankphonewearapp/MainActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/ch/epfl/esl/blankphonewearapp/MainActivity$2.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/ch/epfl/esl/blankphonewearapp/MainActivity$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/ch/epfl/esl/blankphonewearapp/MainActivity$3.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/ch/epfl/esl/blankphonewearapp/MainActivity$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/ch/epfl/esl/blankphonewearapp/MainActivity$DataItemGenerator$1.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/ch/epfl/esl/blankphonewearapp/MainActivity$DataItemGenerator$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/ch/epfl/esl/blankphonewearapp/MainActivity$DataItemGenerator.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/ch/epfl/esl/blankphonewearapp/MainActivity$DataItemGenerator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/ch/epfl/esl/blankphonewearapp/MainActivity$GetRacks.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/ch/epfl/esl/blankphonewearapp/MainActivity$GetRacks.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/ch/epfl/esl/blankphonewearapp/MainActivity$SendMessageTask$1.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/ch/epfl/esl/blankphonewearapp/MainActivity$SendMessageTask$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/ch/epfl/esl/blankphonewearapp/MainActivity$SendMessageTask.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/ch/epfl/esl/blankphonewearapp/MainActivity$SendMessageTask.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/ch/epfl/esl/blankphonewearapp/MainActivity.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/ch/epfl/esl/blankphonewearapp/MainActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/ch/epfl/esl/blankphonewearapp/SecondActivity$1.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/ch/epfl/esl/blankphonewearapp/SecondActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/ch/epfl/esl/blankphonewearapp/SecondActivity$2.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/ch/epfl/esl/blankphonewearapp/SecondActivity$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/ch/epfl/esl/blankphonewearapp/SecondActivity$3.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/ch/epfl/esl/blankphonewearapp/SecondActivity$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/ch/epfl/esl/blankphonewearapp/SecondActivity$DataItemGenerator$1.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/ch/epfl/esl/blankphonewearapp/SecondActivity$DataItemGenerator$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/ch/epfl/esl/blankphonewearapp/SecondActivity$DataItemGenerator.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/ch/epfl/esl/blankphonewearapp/SecondActivity$DataItemGenerator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/ch/epfl/esl/blankphonewearapp/SecondActivity$SendMessageTask$1.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/ch/epfl/esl/blankphonewearapp/SecondActivity$SendMessageTask$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/ch/epfl/esl/blankphonewearapp/SecondActivity$SendMessageTask.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/ch/epfl/esl/blankphonewearapp/SecondActivity$SendMessageTask.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/ch/epfl/esl/blankphonewearapp/SecondActivity.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/ch/epfl/esl/blankphonewearapp/SecondActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/outputs/apk/Application-debug.apk" afterPath="$PROJECT_DIR$/Application/build/outputs/apk/Application-debug.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental/packageDebug/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental/packageDebug/dex-renamer-state.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental/packageInstantRunResourcesDebug/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental/packageInstantRunResourcesDebug/dex-renamer-state.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/instant-run-support/debug/manifest.crc" afterPath="$PROJECT_DIR$/Application/build/intermediates/instant-run-support/debug/manifest.crc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/instant-run-support/debug/manifest.xml" afterPath="$PROJECT_DIR$/Application/build/intermediates/instant-run-support/debug/manifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/instant-run-support/debug/package_slice_4/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/Application/build/intermediates/instant-run-support/debug/package_slice_4/dex-renamer-state.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/manifests/full/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/Application/build/intermediates/manifests/full/debug/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/manifests/instant-run/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/Application/build/intermediates/manifests/instant-run/debug/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/restart-dex/debug/build-info.xml" afterPath="$PROJECT_DIR$/Application/build/intermediates/restart-dex/debug/build-info.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/buildId.txt" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/buildId.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/outputs/logs/manifest-merger-debug-report.txt" afterPath="$PROJECT_DIR$/Application/build/outputs/logs/manifest-merger-debug-report.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/src/main/java/ch/epfl/esl/blankphonewearapp/MainActivity.java" afterPath="$PROJECT_DIR$/Application/src/main/java/ch/epfl/esl/blankphonewearapp/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/src/main/java/ch/epfl/esl/blankphonewearapp/SecondActivity.java" afterPath="$PROJECT_DIR$/Application/src/main/java/ch/epfl/esl/blankphonewearapp/SecondActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/src/main/java/ch/epfl/esl/blankphonewearapp/XYplotSeriesList.java" afterPath="$PROJECT_DIR$/Application/src/main/java/ch/epfl/esl/blankphonewearapp/XYplotSeriesList.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
     </list>
     <ignored path="BlankPhoneWearApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -50,8 +156,8 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/src/main/java/ch/epfl/esl/blankphonewearapp/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-770">
-              <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+            <state relative-caret-position="440">
+              <caret line="144" column="8" selection-start-line="144" selection-start-column="8" selection-end-line="144" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -60,33 +166,65 @@
       <file leaf-file-name="SecondActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Application/src/main/java/ch/epfl/esl/blankphonewearapp/SecondActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="704">
-              <caret line="380" column="13" selection-start-line="380" selection-start-column="13" selection-end-line="380" selection-end-column="13" />
+            <state relative-caret-position="-374">
+              <caret line="104" column="39" selection-start-line="104" selection-start-column="39" selection-end-line="104" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="second_activity.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/src/main/res/layout/second_activity.xml">
-          <provider selected="true" editor-type-id="android-designer2">
+      <file leaf-file-name="GetRacks.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/src/main/java/ch/epfl/esl/blankphonewearapp/GetRacks.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="726">
+              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#692#693#0" expanded="true" />
+                <element signature="e#715#716#0" expanded="true" />
+                <element signature="e#749#750#0" expanded="true" />
+                <element signature="e#780#781#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml">
+          <provider editor-type-id="android-manifest">
             <state />
           </provider>
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="1408">
-              <caret line="64" column="43" selection-start-line="64" selection-start-column="43" selection-end-line="64" selection-end-column="43" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urlHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/src/main/java/ch/epfl/esl/blankphonewearapp/urlHandler.java">
+      <file leaf-file-name="Alarm.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/src/main/java/ch/epfl/esl/blankphonewearapp/Alarm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="616">
-              <caret line="38" column="55" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="55" />
+            <state relative-caret-position="308">
+              <caret line="81" column="21" selection-start-line="81" selection-start-column="21" selection-end-line="81" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/src/main/java/ch/epfl/esl/blankphonewearapp/MyService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
               <folding>
-                <element signature="imports" expanded="false" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#445#446#0" expanded="true" />
+                <element signature="e#477#478#0" expanded="true" />
+                <element signature="e#781#782#0" expanded="true" />
+                <element signature="e#824#825#0" expanded="true" />
+                <element signature="e#882#883#0" expanded="true" />
+                <element signature="e#909#910#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -3589,7 +3727,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Application/src/main/java/ch/epfl/esl/blankphonewearapp/XYplotSeriesList.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/commons/build.gradle" />
         <option value="$PROJECT_DIR$/Application/build.gradle" />
@@ -3600,9 +3737,17 @@
         <option value="$PROJECT_DIR$/Application/src/main/res/layout/main_activity.xml" />
         <option value="$PROJECT_DIR$/Application/src/main/java/ch/epfl/esl/blankphonewearapp/SampleDynamicSeries.java" />
         <option value="$PROJECT_DIR$/Application/src/main/java/ch/epfl/esl/blankphonewearapp/SampleDynamicXYDatasource.java" />
-        <option value="$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/Application/src/main/java/ch/epfl/esl/blankphonewearapp/MainActivity.java" />
         <option value="$PROJECT_DIR$/Application/src/main/res/layout/second_activity.xml" />
+        <option value="$PROJECT_DIR$/Application/src/main/java/ch/epfl/esl/blankphonewearapp/ServiceReceiver.java" />
+        <option value="$PROJECT_DIR$/Application/src/main/java/ch/epfl/esl/blankphonewearapp/BootReceiver.java" />
+        <option value="$PROJECT_DIR$/Application/src/main/java/AutoStart.java" />
+        <option value="$PROJECT_DIR$/Application/src/main/java/ch/epfl/esl/blankphonewearapp/AutoStart.java" />
+        <option value="$PROJECT_DIR$/Application/src/main/java/ch/epfl/esl/blankphonewearapp/MainActivity.java" />
+        <option value="$PROJECT_DIR$/Application/src/main/java/ch/epfl/esl/blankphonewearapp/XYplotSeriesList.java" />
+        <option value="$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/Application/src/main/java/ch/epfl/esl/blankphonewearapp/Alarm.java" />
+        <option value="$PROJECT_DIR$/Application/src/main/java/ch/epfl/esl/blankphonewearapp/MyService.java" />
+        <option value="$PROJECT_DIR$/Application/src/main/java/ch/epfl/esl/blankphonewearapp/GetRacks.java" />
         <option value="$PROJECT_DIR$/Application/src/main/java/ch/epfl/esl/blankphonewearapp/SecondActivity.java" />
       </list>
     </option>
@@ -3639,9 +3784,9 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane" />
-      <pane id="Scope" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -3669,46 +3814,6 @@
               <option name="myItemId" value="Application" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BlankPhoneWearApp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Application" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BlankPhoneWearApp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Application" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drawable" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -3728,16 +3833,6 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BlankPhoneWearApp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Application" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -3747,6 +3842,11 @@
     <property name="device.picker.selection" value="Nexus_9_API_25" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="ch.epfl.esl.blankphonewearapp" />
+    </key>
   </component>
   <component name="RunManager" selected="Android App.Application">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
@@ -4142,10 +4242,9 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42" sideWeight="0.5327605" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33529413" sideWeight="0.46723953" order="11" side_tool="false" content_ui="tabs" x="1564" y="928" width="1177" height="559" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32867885" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33529413" sideWeight="0.46723953" order="11" side_tool="false" content_ui="tabs" x="1564" y="928" width="1177" height="559" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32705882" sideWeight="0.48120302" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3281471" sideWeight="0.4828326" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32705882" sideWeight="0.4828326" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41315135" sideWeight="0.46781117" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -4164,6 +4263,7 @@
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956687" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32867885" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3282353" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -4185,15 +4285,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Application/src/main/java/ch/epfl/esl/blankphonewearapp/MainActivity.java" />
-    <entry file="file://$PROJECT_DIR$/Application/src/main/java/ch/epfl/esl/blankphonewearapp/SecondActivity.java" />
-    <entry file="file://$PROJECT_DIR$/Application/src/main/java/ch/epfl/esl/blankphonewearapp/XYplotSeriesList.java" />
-    <entry file="file://$PROJECT_DIR$/Application/src/main/res/layout/main_activity.xml" />
-    <entry file="file://$PROJECT_DIR$/Application/src/main/res/layout/second_activity.xml" />
-    <entry file="file://$PROJECT_DIR$/Application/src/main/java/ch/epfl/esl/blankphonewearapp/MainActivity.java" />
-    <entry file="file://$PROJECT_DIR$/Application/src/main/java/ch/epfl/esl/blankphonewearapp/SecondActivity.java" />
-    <entry file="file://$PROJECT_DIR$/Application/src/main/java/ch/epfl/esl/blankphonewearapp/XYplotSeriesList.java" />
-    <entry file="file://$PROJECT_DIR$/Application/src/main/res/layout/main_activity.xml" />
     <entry file="file://$PROJECT_DIR$/Application/src/main/res/layout/second_activity.xml" />
     <entry file="file://$PROJECT_DIR$/Application/src/main/java/ch/epfl/esl/blankphonewearapp/MainActivity.java" />
     <entry file="file://$PROJECT_DIR$/Application/src/main/java/ch/epfl/esl/blankphonewearapp/SecondActivity.java" />
@@ -4258,29 +4349,7 @@
     <entry file="file://$PROJECT_DIR$/Application/src/main/res/layout/main_activity.xml" />
     <entry file="file://$PROJECT_DIR$/Application/src/main/java/ch/epfl/esl/blankphonewearapp/SampleDynamicSeries.java" />
     <entry file="file://$PROJECT_DIR$/Application/src/main/java/ch/epfl/esl/blankphonewearapp/SampleDynamicXYDatasource.java" />
-    <entry file="file://$PROJECT_DIR$/Application/src/main/java/ch/epfl/esl/blankphonewearapp/XYplotSeriesList.java" />
     <entry file="file://$PROJECT_DIR$/Application/src/main/java/ch/epfl/esl/blankphonewearapp/PlotXY.java" />
-    <entry file="file://$PROJECT_DIR$/Application/src/main/java/ch/epfl/esl/blankphonewearapp/urlHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="38" column="55" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="72" selection-start-line="8" selection-start-column="72" selection-end-line="8" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/src/main/res/drawable/background1.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -4297,18 +4366,119 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/ch/epfl/esl/blankphonewearapp/ServiceReceiver.java" />
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/ch/epfl/esl/blankphonewearapp/AutoStart.java" />
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/ch/epfl/esl/blankphonewearapp/urlHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="488">
+          <caret line="38" column="55" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-26/android/os/Handler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-26/android/app/Activity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="864" column="18" selection-start-line="864" selection-start-column="18" selection-end-line="864" selection-end-column="18" />
+          <folding>
+            <element signature="e#40825#40826#0" expanded="true" />
+            <element signature="e#40855#40856#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-26/android/app/Service.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="382" column="28" selection-start-line="382" selection-start-column="28" selection-end-line="382" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Application/src/main/java/ch/epfl/esl/blankphonewearapp/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-770">
-          <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+        <state relative-caret-position="440">
+          <caret line="144" column="8" selection-start-line="144" selection-start-column="8" selection-end-line="144" selection-end-column="8" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/ch/epfl/esl/blankphonewearapp/BootReceiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/ch/epfl/esl/blankphonewearapp/XYplotSeriesList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-88">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/ch/epfl/esl/blankphonewearapp/Alarm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="81" column="21" selection-start-line="81" selection-start-column="21" selection-end-line="81" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/ch/epfl/esl/blankphonewearapp/MyService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#445#446#0" expanded="true" />
+            <element signature="e#477#478#0" expanded="true" />
+            <element signature="e#781#782#0" expanded="true" />
+            <element signature="e#824#825#0" expanded="true" />
+            <element signature="e#882#883#0" expanded="true" />
+            <element signature="e#909#910#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/ch/epfl/esl/blankphonewearapp/GetRacks.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="726">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#692#693#0" expanded="true" />
+            <element signature="e#715#716#0" expanded="true" />
+            <element signature="e#749#750#0" expanded="true" />
+            <element signature="e#780#781#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/src/main/java/ch/epfl/esl/blankphonewearapp/SecondActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="704">
-          <caret line="380" column="13" selection-start-line="380" selection-start-column="13" selection-end-line="380" selection-end-column="13" />
+        <state relative-caret-position="-374">
+          <caret line="104" column="39" selection-start-line="104" selection-start-column="39" selection-end-line="104" selection-end-column="39" />
           <folding />
         </state>
       </provider>

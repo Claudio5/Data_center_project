@@ -101,12 +101,28 @@ public class SecondActivity extends Activity implements
 
     private String url;
     private Handler handler = new Handler();
+
+    // This will be called every minute
     private Runnable runnable = new Runnable() {
         @Override
         public void run() {
 
             Log.e(TAG,"Every 60 seconds");
-            new SecondActivity.GetRacks().execute(url);
+            new GetRacks(){
+                @Override
+                protected void onPostExecute(String[] result) {
+                    Float[] valF = new Float[result.length];
+                    Number[] val = new Number[result.length];
+                    for(int i=0;i<result.length;i++) {
+                        int value = Integer.parseInt(result[i]);
+                        val[i]=value;
+                        valF[i]= (float)value;
+                    }
+                    plotUpdate(val);
+                    setPowerAvgTxtView(valF);
+
+                }
+            }.execute(url);
 
             handler.postDelayed(this, 60000);
         }
@@ -133,83 +149,31 @@ public class SecondActivity extends Activity implements
 
         Log.e(TAG,url);
 
-        new SecondActivity.GetRacks().execute(url);
+        new GetRacks(){
+            @Override
+            protected void onPostExecute(String[] result) {
+                Float[] valF = new Float[result.length];
+                Number[] val = new Number[result.length];
+                for(int i=0;i<result.length;i++) {
+                    int value = Integer.parseInt(result[i]);
+                    val[i]=value;
+                    valF[i]= (float)value;
+                }
+                plotUpdate(val);
+                setPowerAvgTxtView(valF);
+
+            }
+        }.execute(url);
 
         //Number[] series1Numbers = {1, 4, 2, 8, 4};
 
         //plotUpdate(series1Numbers);
 
+        // Update the xyPlot every minute
         handler.postDelayed(runnable, 60000);
 
     }
 
-    /* Class that gets the actual data of the racks and update the plot accordingly
-     (needs to be called with GetRacks.execute(String url))*/
-    private class GetRacks extends AsyncTask<String, Void, String[]> {
-
-
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-        }
-
-        @Override
-        protected String[] doInBackground(String... url) {
-            urlHandler sh = new urlHandler();
-
-            String jsonStr = sh.getjsonstring(url[0]);
-
-            Log.e(TAG, "Response from url: " + jsonStr);
-
-            if(jsonStr!=null) {
-                try {
-                    JSONObject jsonObject = new JSONObject(jsonStr);
-
-                    //for (int i = 0; i < jsonObject.length(); i++) {
-                    Iterator<String> iterator = jsonObject.keys();
-                    String name = iterator.next();
-
-                    JSONArray racks = jsonObject.getJSONArray(name);
-                    String [] powerArray= new String[racks.length()];
-                    for (int j = 0; j < racks.length(); j++) {
-                        powerArray[j]=racks.getString(j);
-                        Log.e(TAG, "power: " + racks.getString(j));
-                    }
-                    //String racks = jsonObject.getString("racks");
-
-
-                    //}
-
-                    return powerArray;
-                }
-                catch (final JSONException e) {
-                    Log.e(TAG, "Json parsing error: " + e.getMessage());
-
-                }
-            }
-            else {
-                Log.e(TAG, "No response");
-            }
-
-
-            return null;
-        }
-
-        @Override
-        protected void onPostExecute(String[] result) {
-            Float[] valF = new Float[result.length];
-            Number[] val = new Number[result.length];
-            for(int i=0;i<result.length;i++) {
-                int value = Integer.parseInt(result[i]);
-                val[i]=value;
-                valF[i]= (float)value;
-            }
-            plotUpdate(val);
-            setPowerAvgTxtView(valF);
-
-        }
-
-    }
 
     // Calculates the average power of the 5 last values
     private void setPowerAvgTxtView(Float[] pwr){
@@ -238,30 +202,7 @@ public class SecondActivity extends Activity implements
         XYPlot plot = (XYPlot) findViewById(R.id.plotxy);
         plot.clear();
 
-        Calendar rightNow = Calendar.getInstance();
-        int currentHour = rightNow.get(Calendar.HOUR_OF_DAY);
-        int currentMinutes = rightNow.get(Calendar.MINUTE);
-
-        final String[] labels = new String[5];
-
-        for(int i=0;i<5;i++){
-            labels[4-i] = Integer.toString(currentHour) + ":" + Integer.toString(currentMinutes);
-            if(currentMinutes<10){
-                labels[4-i] = Integer.toString(currentHour) + ":" + "0"+Integer.toString(currentMinutes);
-            }
-            if(currentHour<10){
-                labels[4-i] = "0"+Integer.toString(currentHour) + ":" +Integer.toString(currentMinutes);
-            }
-
-            currentMinutes--;
-            if(currentMinutes < 0){
-                currentHour--;
-                currentMinutes = 59;
-                if(currentHour < 0){
-                    currentHour = 23;
-                }
-            }
-        }
+        final String[] xlabels = generateHourMinute();
 
         //Fix the divisions of the X-Axis
         plot.setDomainStep(StepMode.SUBDIVIDE, 5);
@@ -270,7 +211,7 @@ public class SecondActivity extends Activity implements
         plot.setRangeStep(StepMode.INCREMENT_BY_VAL,2);
 
 
-        Log.e(TAG,Arrays.toString(labels));
+        Log.e(TAG,Arrays.toString(xlabels));
 
         // create a couple arrays of y-values to plot:
         Number[] series2Numbers = {5, 2, 10, 5, 20};
@@ -313,7 +254,7 @@ public class SecondActivity extends Activity implements
             @Override
             public StringBuffer format(Object obj, StringBuffer toAppendTo, FieldPosition pos) {
                 int i = Math.round(Float.parseFloat(obj.toString()));
-                return toAppendTo.append(labels[i]);
+                return toAppendTo.append(xlabels[i]);
             }
             @Override
             public Object parseObject(String source, ParsePosition pos) {
@@ -322,6 +263,35 @@ public class SecondActivity extends Activity implements
         });
 
         plot.redraw();
+    }
+
+    private String[] generateHourMinute(){
+        Calendar rightNow = Calendar.getInstance();
+        int currentHour = rightNow.get(Calendar.HOUR_OF_DAY);
+        int currentMinutes = rightNow.get(Calendar.MINUTE);
+        String[] labels = new String[5];
+        for(int i=0;i<5;i++){
+            labels[4-i] = Integer.toString(currentHour) + ":" + Integer.toString(currentMinutes);
+            if(currentMinutes<10){
+                labels[4-i] = Integer.toString(currentHour) + ":" + "0"+Integer.toString(currentMinutes);
+            }
+            if(currentHour<10){
+                labels[4-i] = "0"+Integer.toString(currentHour) + ":" +Integer.toString(currentMinutes);
+            }
+            if(currentHour<10 && currentMinutes<10){
+                labels[4-i] = "0"+Integer.toString(currentHour) + ":" +"0"+Integer.toString(currentMinutes);
+            }
+
+            currentMinutes--;
+            if(currentMinutes < 0){
+                currentHour--;
+                currentMinutes = 59;
+                if(currentHour < 0){
+                    currentHour = 23;
+                }
+            }
+        }
+        return labels;
     }
 
 

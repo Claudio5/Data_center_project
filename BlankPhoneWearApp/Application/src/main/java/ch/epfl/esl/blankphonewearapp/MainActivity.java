@@ -64,6 +64,9 @@ public class MainActivity extends Activity implements
     // Tag for Logcat
     private static final String TAG = "MainActivity";
 
+    //Service
+    //private MyService service = new MyService();
+
     // Members used for the Wear API
     private GoogleApiClient mGoogleApiClient;
     private boolean mResolvingError = false;
@@ -137,7 +140,10 @@ public class MainActivity extends Activity implements
 
         });
 
-
+        //Intent servInt = new Intent(this,MyService.class);
+        Intent servInt = new Intent(this,MyService.class);
+        servInt.putExtra("url","http://10.0.2.2:5002/rack01/s01/cpu01");
+        startService(servInt);
 
     }
 
