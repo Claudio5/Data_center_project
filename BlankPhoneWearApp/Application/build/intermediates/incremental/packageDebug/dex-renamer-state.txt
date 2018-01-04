@@ -1,7 +1,7 @@
-#Fri Dec 29 12:40:01 CET 2017
-base.0=C\:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_8775ef1df2326d6a29710de1f6eca48c387610b8
+#Thu Jan 04 18:26:47 GMT+01:00 2018
+base.0=C\:\\Users\\fouco\\AndroidStudioProjects\\tp2_tablet\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_daf0fb86d489c2f14f21719e5f0511b5f7cf59b6
 renamed.1=classes.dex
 renamed.0=classes2.dex
-file.1=C\:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_8eb12f979d66567f50ffcabf544dbe2338a12e03\\classes.dex
-base.1=C\:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_8eb12f979d66567f50ffcabf544dbe2338a12e03
-file.0=C\:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_8775ef1df2326d6a29710de1f6eca48c387610b8\\classes.dex
+file.1=C\:\\Users\\fouco\\AndroidStudioProjects\\tp2_tablet\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_bfb7fe90a552d3be2e263f3274bddd0283b3a7d3\\classes.dex
+base.1=C\:\\Users\\fouco\\AndroidStudioProjects\\tp2_tablet\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_bfb7fe90a552d3be2e263f3274bddd0283b3a7d3
+file.0=C\:\\Users\\fouco\\AndroidStudioProjects\\tp2_tablet\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_daf0fb86d489c2f14f21719e5f0511b5f7cf59b6\\classes.dex

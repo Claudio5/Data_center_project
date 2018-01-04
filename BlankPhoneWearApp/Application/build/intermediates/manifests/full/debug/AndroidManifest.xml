@@ -31,14 +31,6 @@
             android:name="ch.epfl.esl.blankphonewearapp.Alarm"
             android:process=":remote" />
 
-        <!--
-        <receiver android:name=".AutoStart">
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED"></action>
-            </intent-filter>
-        </receiver>
-        -->
-
         <service
             android:name="ch.epfl.esl.blankphonewearapp.MyService"
             android:enabled="true"

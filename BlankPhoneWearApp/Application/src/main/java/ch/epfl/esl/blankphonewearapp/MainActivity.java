@@ -131,7 +131,7 @@ public class MainActivity extends Activity implements
 
 
 
-                new GetRacks().execute("http://128.179.195.18:5002/rack01/s01/power/last5min");
+                new GetRacks().execute("http:/128.179.190.28:5002/rack01/s01/power/last5min");
 
                 //Intent intent = new Intent(Intent.ACTION_VIEW);
                 //intent.setData(Uri.parse(url));
@@ -142,14 +142,14 @@ public class MainActivity extends Activity implements
 
         //Intent servInt = new Intent(this,MyService.class);
         Intent servInt = new Intent(this,MyService.class);
-        servInt.putExtra("url","http://10.0.2.2:5002/rack01/s01/cpu01");
+        servInt.putExtra("url","http://128.179.190.28:5002/rack01/s01/cpu01");
         startService(servInt);
 
     }
 
     private String urlCreate(String textDC,String textR,String textS,String textCP) {
         //String baseUrl = "http://128.179.195.18:5002/";
-        String baseUrl = "http://10.0.2.2:5002/";
+        String baseUrl = "http://128.179.190.28:5002/";
         String strR="rack0"+textR.substring(textR.length() - 1);
         String strS="s0"+textS.substring(textS.length() - 1);
         if(textCP.contains("Power")) {
