@@ -45,6 +45,7 @@ ADDED from C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\B
 		ADDED from C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:12:22-65
 application
 ADDED from C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:13:5-44:19
+MERGED from [com.android.support:cardview-v7:25.3.1] C:\Users\fouco\.android\build-cache\55c829f05ad4eedd6ff330d202b080dd5c5e5f61\output\AndroidManifest.xml:26:5-20
 MERGED from [BlankPhoneWearApp:commons:unspecified] C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\BlankPhoneWearApp\commons\build\intermediates\bundles\default\AndroidManifest.xml:11:5-20
 MERGED from [com.google.android.gms:play-services-wearable:8.4.0] C:\Users\fouco\.android\build-cache\285ed3840534f79c5368eb1e4fa96abfbc5f2218\output\AndroidManifest.xml:19:5-20
 MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\fouco\.android\build-cache\b9e1a42dd73d2f381217961f594137b48a1f18f7\output\AndroidManifest.xml:20:5-24:19
@@ -113,6 +114,7 @@ ADDED from C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\B
 		ADDED from C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:42:13-43
 uses-sdk
 INJECTED from C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:cardview-v7:25.3.1] C:\Users\fouco\.android\build-cache\55c829f05ad4eedd6ff330d202b080dd5c5e5f61\output\AndroidManifest.xml:20:5-43
 MERGED from [BlankPhoneWearApp:commons:unspecified] C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\BlankPhoneWearApp\commons\build\intermediates\bundles\default\AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.android.gms:play-services-wearable:8.4.0] C:\Users\fouco\.android\build-cache\285ed3840534f79c5368eb1e4fa96abfbc5f2218\output\AndroidManifest.xml:18:5-42
 MERGED from [com.google.android.gms:play-services-base:8.4.0] C:\Users\fouco\.android\build-cache\de279d5fb086ec0b4984b0a31a2ce210c3127cd5\output\AndroidManifest.xml:18:5-42
@@ -141,7 +143,8 @@ MERGED from [com.halfhp.fig:figlib:1.0.3] C:\Users\fouco\.android\build-cache\1c
 		INJECTED from C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml
 meta-data#android.support.VERSION
-ADDED from [com.android.support:design:25.3.1] C:\Users\fouco\.android\build-cache\5264c7fa0292c4db6e5b5486c9980fa1dd45778b\output\AndroidManifest.xml:25:5-27:34
+ADDED from [com.android.support:cardview-v7:25.3.1] C:\Users\fouco\.android\build-cache\55c829f05ad4eedd6ff330d202b080dd5c5e5f61\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:design:25.3.1] C:\Users\fouco\.android\build-cache\5264c7fa0292c4db6e5b5486c9980fa1dd45778b\output\AndroidManifest.xml:25:5-27:34
 MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\fouco\.android\build-cache\1d4d44068dbffdae84979780eb426e5bedeb08dd\output\AndroidManifest.xml:25:5-27:34
 MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\fouco\.android\build-cache\114edccbf9d7220570c51098c36c5cb08c510c0a\output\AndroidManifest.xml:22:5-24:34
 MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\fouco\.android\build-cache\219b3e4c79b7dc742e6f48bc8ec3368f0ff5abb0\output\AndroidManifest.xml:22:5-24:34
@@ -154,6 +157,6 @@ MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\fouco\.android
 MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\fouco\.android\build-cache\3b8624d0fddd3e1896e0d02edad605ddf6d284c0\output\AndroidManifest.xml:25:5-27:34
 MERGED from [com.android.support:support-compat:25.3.1] C:\Users\fouco\.android\build-cache\d765844a10c60020ebef4ba69367c73f08c524cb\output\AndroidManifest.xml:25:5-27:34
 	android:value
-		ADDED from [com.android.support:design:25.3.1] C:\Users\fouco\.android\build-cache\5264c7fa0292c4db6e5b5486c9980fa1dd45778b\output\AndroidManifest.xml:27:9-31
+		ADDED from [com.android.support:cardview-v7:25.3.1] C:\Users\fouco\.android\build-cache\55c829f05ad4eedd6ff330d202b080dd5c5e5f61\output\AndroidManifest.xml:24:9-31
 	android:name
-		ADDED from [com.android.support:design:25.3.1] C:\Users\fouco\.android\build-cache\5264c7fa0292c4db6e5b5486c9980fa1dd45778b\output\AndroidManifest.xml:26:9-47
+		ADDED from [com.android.support:cardview-v7:25.3.1] C:\Users\fouco\.android\build-cache\55c829f05ad4eedd6ff330d202b080dd5c5e5f61\output\AndroidManifest.xml:23:9-47

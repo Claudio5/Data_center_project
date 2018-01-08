@@ -1,16 +1,20 @@
-/**
+package ch.epfl.esl.blankphonewearapp; /**
  * Created by fouco on 1/7/18.
  */
-package ch.epfl.esl.blankphonewearapp;
 
 import android.content.Context;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.androidplot.ui.LayoutManager;
+import com.androidplot.ui.VerticalPosition;
 
 import java.util.ArrayList;
 
@@ -26,6 +30,7 @@ public class serverItemAdapter extends RecyclerView.Adapter<serverItemAdapter.Si
 
     @Override
     public SingleItemColumnHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
+
         View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.serveritem, null);
         SingleItemColumnHolder mh = new SingleItemColumnHolder(v);
         return mh;
@@ -34,9 +39,14 @@ public class serverItemAdapter extends RecyclerView.Adapter<serverItemAdapter.Si
     @Override
     public void onBindViewHolder(SingleItemColumnHolder holder, int i) {
 
+        final CharSequence sectionNum = itemsList.get(i).getName();
+
         serverItem singleItem = itemsList.get(i);
 
-        holder.tvTitle.setText(singleItem.getNum());
+        holder.serverTitle.setText(sectionNum);
+
+
+        //holder.tvTitle.setText("aaaaaa");//singleItem.getNum());
 
 
    /* Glide.with(mContext)
@@ -52,25 +62,40 @@ public class serverItemAdapter extends RecyclerView.Adapter<serverItemAdapter.Si
         return (null != itemsList ? itemsList.size() : 0);
     }
 
+    private boolean setSelect(CharSequence name){
+        int i=0;
+        while(name != itemsList.get(i).getName() || i>itemsList.size() ){
+            i++;
+        }
+        itemsList.get(i).setSelect(!itemsList.get(i).getSelect());
+        return itemsList.get(i).getSelect();
+    }
+
     public class SingleItemColumnHolder extends RecyclerView.ViewHolder {
 
-        protected TextView tvTitle;
+        protected TextView serverTitle;
+
 
         protected ImageView itemImage;
 
-
+        protected CharSequence a;
+        protected boolean bool;
         public SingleItemColumnHolder(View view) {
             super(view);
 
             this.itemImage = (ImageView) view.findViewById(R.id.itemImage);
-
-
+            this.serverTitle = (TextView) view.findViewById(R.id.serverTitle);
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    itemImage.setImageResource(R.drawable.rack_full);
-                    Toast.makeText(v.getContext(), tvTitle.getText(), Toast.LENGTH_SHORT).show();
-
+                    //itemsList.get(i).setSelect(true);
+                    bool= setSelect(serverTitle.getText());
+                    a = serverTitle.getText();
+                    if(bool)
+                        itemImage.setImageResource(R.drawable.rack_green);
+                    else
+                        itemImage.setImageResource(R.drawable.rack_black);
+                    //itemsList[itemTitle.get]
                 }
             });
 

@@ -1,4 +1,4 @@
-#Thu Jan 04 18:26:47 GMT+01:00 2018
+#Mon Jan 08 16:47:54 GMT+01:00 2018
 base.0=C\:\\Users\\fouco\\AndroidStudioProjects\\tp2_tablet\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_daf0fb86d489c2f14f21719e5f0511b5f7cf59b6
 renamed.1=classes.dex
 renamed.0=classes2.dex

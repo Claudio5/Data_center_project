@@ -1,4 +1,4 @@
-#Thu Jan 04 16:14:40 GMT+01:00 2018
+#Sun Jan 07 18:56:49 GMT+01:00 2018
 base.0=C\:\\Users\\fouco\\AndroidStudioProjects\\tp2_tablet\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_7
 renamed.0=classes.dex
 file.0=C\:\\Users\\fouco\\AndroidStudioProjects\\tp2_tablet\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_7\\classes.dex

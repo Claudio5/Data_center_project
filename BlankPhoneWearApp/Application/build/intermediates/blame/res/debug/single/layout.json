@@ -32,12 +32,20 @@
         "source": "C:\\Users\\fouco\\.android\\build-cache\\1d4d44068dbffdae84979780eb426e5bedeb08dd\\output\\res\\layout\\select_dialog_singlechoice_material.xml"
     },
     {
+        "merged": "C:\\Users\\fouco\\AndroidStudioProjects\\tp2_tablet\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\rackitem.xml",
+        "source": "C:\\Users\\fouco\\AndroidStudioProjects\\tp2_tablet\\Data_center_project\\BlankPhoneWearApp\\Application\\src\\main\\res\\layout\\rackitem.xml"
+    },
+    {
         "merged": "C:\\Users\\fouco\\AndroidStudioProjects\\tp2_tablet\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",
         "source": "C:\\Users\\fouco\\.android\\build-cache\\1d4d44068dbffdae84979780eb426e5bedeb08dd\\output\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
     },
     {
         "merged": "C:\\Users\\fouco\\AndroidStudioProjects\\tp2_tablet\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\abc_dialog_title_material.xml",
         "source": "C:\\Users\\fouco\\.android\\build-cache\\1d4d44068dbffdae84979780eb426e5bedeb08dd\\output\\res\\layout\\abc_dialog_title_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\fouco\\AndroidStudioProjects\\tp2_tablet\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\serveritem.xml",
+        "source": "C:\\Users\\fouco\\AndroidStudioProjects\\tp2_tablet\\Data_center_project\\BlankPhoneWearApp\\Application\\src\\main\\res\\layout\\serveritem.xml"
     },
     {
         "merged": "C:\\Users\\fouco\\AndroidStudioProjects\\tp2_tablet\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
@@ -160,12 +168,20 @@
         "source": "C:\\Users\\fouco\\.android\\build-cache\\1d4d44068dbffdae84979780eb426e5bedeb08dd\\output\\res\\layout\\notification_template_media.xml"
     },
     {
+        "merged": "C:\\Users\\fouco\\AndroidStudioProjects\\tp2_tablet\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\server_cell.xml",
+        "source": "C:\\Users\\fouco\\AndroidStudioProjects\\tp2_tablet\\Data_center_project\\BlankPhoneWearApp\\Application\\src\\main\\res\\layout\\server_cell.xml"
+    },
+    {
         "merged": "C:\\Users\\fouco\\AndroidStudioProjects\\tp2_tablet\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_bar.xml",
         "source": "C:\\Users\\fouco\\.android\\build-cache\\1d4d44068dbffdae84979780eb426e5bedeb08dd\\output\\res\\layout\\abc_action_mode_bar.xml"
     },
     {
         "merged": "C:\\Users\\fouco\\AndroidStudioProjects\\tp2_tablet\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\design_bottom_sheet_dialog.xml",
         "source": "C:\\Users\\fouco\\.android\\build-cache\\5264c7fa0292c4db6e5b5486c9980fa1dd45778b\\output\\res\\layout\\design_bottom_sheet_dialog.xml"
+    },
+    {
+        "merged": "C:\\Users\\fouco\\AndroidStudioProjects\\tp2_tablet\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\rack_cell.xml",
+        "source": "C:\\Users\\fouco\\AndroidStudioProjects\\tp2_tablet\\Data_center_project\\BlankPhoneWearApp\\Application\\src\\main\\res\\layout\\rack_cell.xml"
     },
     {
         "merged": "C:\\Users\\fouco\\AndroidStudioProjects\\tp2_tablet\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",

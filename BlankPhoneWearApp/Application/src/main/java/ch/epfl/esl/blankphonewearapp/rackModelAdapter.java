@@ -11,23 +11,21 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import ch.epfl.esl.blankphonewearapp.serverItemAdapter;
-
 import java.util.ArrayList;
 
-public class dataAdapter extends RecyclerView.Adapter<dataAdapter.ItemColumnHolder> {
+public class rackModelAdapter extends RecyclerView.Adapter<rackModelAdapter.ItemColumnHolder> {
 
     private ArrayList<rackModel> dataList;
     private Context mContext;
 
-    public dataAdapter(Context context, ArrayList<rackModel> dataList) {
+    public rackModelAdapter(Context context, ArrayList<rackModel> dataList) {
         this.dataList = dataList;
         this.mContext = context;
     }
 
     @Override
     public ItemColumnHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-        View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.serveritem, null);
+        View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.rackitem, null);
         ItemColumnHolder mh = new ItemColumnHolder(v);
         return mh;
     }
@@ -43,8 +41,7 @@ public class dataAdapter extends RecyclerView.Adapter<dataAdapter.ItemColumnHold
 
         serverItemAdapter itemListDataAdapter = new serverItemAdapter(mContext, singleSectionItems);
 
-        itemColumnHolder.recycler_view_list.setHasFixedSize(true);
-        itemColumnHolder.recycler_view_list.setLayoutManager(new LinearLayoutManager(mContext, LinearLayoutManager.HORIZONTAL, false));
+        itemColumnHolder.recycler_view_list.setLayoutManager(new LinearLayoutManager(mContext, LinearLayoutManager.VERTICAL, false));
         itemColumnHolder.recycler_view_list.setAdapter(itemListDataAdapter);
 
 
@@ -86,9 +83,7 @@ public class dataAdapter extends RecyclerView.Adapter<dataAdapter.ItemColumnHold
             this.itemTitle = (TextView) view.findViewById(R.id.itemTitle);
             this.recycler_view_list = (RecyclerView) view.findViewById(R.id.recycler_view_list);
 
-
         }
-
     }
 }
 

@@ -1,5 +1,4 @@
 package ch.epfl.esl.blankphonewearapp;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.content.IntentSender;
@@ -12,9 +11,23 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.Spinner;
+import android.widget.Spinner;;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
+
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -41,6 +54,7 @@ import com.google.android.gms.wearable.Wearable;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import java.util.ArrayList;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -53,6 +67,8 @@ import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
 import ch.epfl.esl.commons.DataLayerCommons;
+import ch.epfl.esl.blankphonewearapp.rackModel;
+import ch.epfl.esl.blankphonewearapp.serverItem;
 
 public class MainActivity extends Activity implements
         CapabilityApi.CapabilityListener,
@@ -91,14 +107,16 @@ public class MainActivity extends Activity implements
                 .addOnConnectionFailedListener(this)
                 .build();
 
-        buildSpinner();
+       // buildSpinner();
+       // buildScroll();
+        buildServerScroll();
 
         FloatingActionButton launchActivityTwoButton = (FloatingActionButton) findViewById(R.id.send_fltbtn);
         launchActivityTwoButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-
+/*
                 Spinner spinnerDC=(Spinner) findViewById(R.id.spinnerDC);
                 String textDC = spinnerDC.getSelectedItem().toString();
 
@@ -112,9 +130,9 @@ public class MainActivity extends Activity implements
                 String textCP = spinnerCP.getSelectedItem().toString();
 
                 String url= urlCreate(textDC,textR,textS,textCP);
-
+*/
                 //Log.e(TAG,"url : "+url);
-
+                String url="";
                 Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
                 intent.putExtra("url",url);
                 startActivity(intent);
@@ -126,18 +144,9 @@ public class MainActivity extends Activity implements
         launchWEB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
-                //String url = "http://10.0.2.2:5002/racks";
-                //String url = "http://0.0.0.0:5002/racks";
-
-
-
+                listsSelectedServer();
                 new GetRacks().execute("http:/128.179.190.28:5002/rack01/s01/power/last5min");
-
-                //Intent intent = new Intent(Intent.ACTION_VIEW);
-                //intent.setData(Uri.parse(url));
-                //startActivity(intent);
             }
-
         });
 
         //Intent servInt = new Intent(this,MyService.class);
@@ -174,19 +183,73 @@ public class MainActivity extends Activity implements
 
     }
 
+    private LinearLayout myLayout;
+    private LinearLayout myLayout2;
+
+    // this is an array that holds the IDs of the drawables ...
+    private int[] images ;
+
+    private View serverCell;
+    private View rackCell;
+    private int nbServer[]={3,1,5,15};
+    private int nbRack=4;
+    private int nbCPU;
+    private TextView text;
+
+    ArrayList<rackModel> rackDataList;
+
+    private void buildServerScroll(){
+
+        serverDataFill();
+
+        RecyclerView my_recycler_view = (RecyclerView) findViewById(R.id.my_recycler_view);
+        my_recycler_view.setHasFixedSize(true);
+
+        rackModelAdapter adapter = new rackModelAdapter(this, rackDataList);
+
+        my_recycler_view.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+
+        my_recycler_view.setAdapter(adapter);
+    }
+
+    private void serverDataFill(){
+        rackDataList = new ArrayList<rackModel>();
+
+        for (int i = 0; i < nbRack; i++) {
+
+            rackModel data = new rackModel();
+
+            data.setHeaderTitle("Rack " + i);
+
+            ArrayList<serverItem> singleItem = new ArrayList<serverItem>();
+            for (int j = 0; j < nbServer[i]; j++) {
+                singleItem.add(new serverItem("Server "+j,nbCPU,"Rack "+(i+1) ));
+            }
+
+            data.setServers(singleItem);
+
+            rackDataList.add(data);
+        }
+    }
+
+    private void listsSelectedServer(){
+        for (int i=0; i< nbRack;i++)
+            for (int j=0;j<nbServer[i];j++){
+                if(rackDataList.get(i).getAllItemsInSection().get(j).getSelect())
+                    Log.v(TAG, "Rack: "+ i +" Server: "+j);
+            }
+
+    }
     // Build the main spinner with the names for the data centers
-    private void buildSpinner(){
+   /* private void buildSpinner(){
 
         //String dataCenters[]= {"test1","test2"};
 
-        Spinner spinner = findViewById(R.id.spinnerDC);
+        //Spinner spinner = findViewById(R.id.spinnerDC);
 
         // Create an ArrayAdapter using the string array and a default spinner layout with strings.xml
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.dataCenter_array, android.R.layout.simple_spinner_item);
-
-        // Optional idea
-        // ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,   android.R.layout.simple_spinner_item, dataCenters);
 
         // Specify the layout to use when the list of choices appears
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -198,9 +261,6 @@ public class MainActivity extends Activity implements
         // Create an ArrayAdapter using the string array and a default spinner layout with strings.xml
         ArrayAdapter<CharSequence> adapterR = ArrayAdapter.createFromResource(this,
                 R.array.Racks_array, android.R.layout.simple_spinner_item);
-
-        // Optional idea
-        // ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,   android.R.layout.simple_spinner_item, dataCenters);
 
         // Specify the layout to use when the list of choices appears
         //adapterR.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -235,7 +295,7 @@ public class MainActivity extends Activity implements
         // Apply the adapter to the spinner
         spinnerCP.setAdapter(adapterCP);
     }
-
+*/
     @Override
     protected void onStart() {
         super.onStart();
@@ -409,8 +469,6 @@ public class MainActivity extends Activity implements
             updatePlot(result);
 
         }
-
-
 
     }
 

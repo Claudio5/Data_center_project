@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\fouco\\AndroidStudioProjects\\tp2_tablet\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\common_plus_signin_btn_text_dark_disabled.9.png",
-        "source": "C:\\Users\\fouco\\.android\\build-cache\\de279d5fb086ec0b4984b0a31a2ce210c3127cd5\\output\\res\\drawable-hdpi\\common_plus_signin_btn_text_dark_disabled.9.png"
-    },
-    {
         "merged": "C:\\Users\\fouco\\AndroidStudioProjects\\tp2_tablet\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\common_plus_signin_btn_text_dark_pressed.9.png",
         "source": "C:\\Users\\fouco\\.android\\build-cache\\de279d5fb086ec0b4984b0a31a2ce210c3127cd5\\output\\res\\drawable-hdpi\\common_plus_signin_btn_text_dark_pressed.9.png"
+    },
+    {
+        "merged": "C:\\Users\\fouco\\AndroidStudioProjects\\tp2_tablet\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\common_plus_signin_btn_text_dark_disabled.9.png",
+        "source": "C:\\Users\\fouco\\.android\\build-cache\\de279d5fb086ec0b4984b0a31a2ce210c3127cd5\\output\\res\\drawable-hdpi\\common_plus_signin_btn_text_dark_disabled.9.png"
     },
     {
         "merged": "C:\\Users\\fouco\\AndroidStudioProjects\\tp2_tablet\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\common_google_signin_btn_icon_light_disabled.9.png",

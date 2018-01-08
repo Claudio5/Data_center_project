@@ -8,6 +8,10 @@
         "source": "C:\\Users\\fouco\\.android\\build-cache\\1d4d44068dbffdae84979780eb426e5bedeb08dd\\output\\res\\drawable\\abc_item_background_holo_light.xml"
     },
     {
+        "merged": "C:\\Users\\fouco\\AndroidStudioProjects\\tp2_tablet\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\res\\merged\\debug\\drawable\\rack_full.png",
+        "source": "C:\\Users\\fouco\\AndroidStudioProjects\\tp2_tablet\\Data_center_project\\BlankPhoneWearApp\\Application\\src\\main\\res\\drawable\\rack_full.png"
+    },
+    {
         "merged": "C:\\Users\\fouco\\AndroidStudioProjects\\tp2_tablet\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_dark.xml",
         "source": "C:\\Users\\fouco\\.android\\build-cache\\de279d5fb086ec0b4984b0a31a2ce210c3127cd5\\output\\res\\drawable\\common_google_signin_btn_text_dark.xml"
     },
@@ -48,12 +52,12 @@
         "source": "C:\\Users\\fouco\\AndroidStudioProjects\\tp2_tablet\\Data_center_project\\BlankPhoneWearApp\\Application\\src\\main\\res\\drawable\\data_center.png"
     },
     {
-        "merged": "C:\\Users\\fouco\\AndroidStudioProjects\\tp2_tablet\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_light.xml",
-        "source": "C:\\Users\\fouco\\.android\\build-cache\\de279d5fb086ec0b4984b0a31a2ce210c3127cd5\\output\\res\\drawable\\common_google_signin_btn_text_light.xml"
-    },
-    {
         "merged": "C:\\Users\\fouco\\AndroidStudioProjects\\tp2_tablet\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_check_material.xml",
         "source": "C:\\Users\\fouco\\.android\\build-cache\\1d4d44068dbffdae84979780eb426e5bedeb08dd\\output\\res\\drawable\\abc_btn_check_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\fouco\\AndroidStudioProjects\\tp2_tablet\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_light.xml",
+        "source": "C:\\Users\\fouco\\.android\\build-cache\\de279d5fb086ec0b4984b0a31a2ce210c3127cd5\\output\\res\\drawable\\common_google_signin_btn_text_light.xml"
     },
     {
         "merged": "C:\\Users\\fouco\\AndroidStudioProjects\\tp2_tablet\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\res\\merged\\debug\\drawable\\background1.png",
@@ -104,6 +108,10 @@
         "source": "C:\\Users\\fouco\\.android\\build-cache\\1d4d44068dbffdae84979780eb426e5bedeb08dd\\output\\res\\drawable\\abc_list_selector_holo_light.xml"
     },
     {
+        "merged": "C:\\Users\\fouco\\AndroidStudioProjects\\tp2_tablet\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\res\\merged\\debug\\drawable\\data_center_blank.png",
+        "source": "C:\\Users\\fouco\\AndroidStudioProjects\\tp2_tablet\\Data_center_project\\BlankPhoneWearApp\\Application\\src\\main\\res\\drawable\\data_center_blank.png"
+    },
+    {
         "merged": "C:\\Users\\fouco\\AndroidStudioProjects\\tp2_tablet\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_radio_material.xml",
         "source": "C:\\Users\\fouco\\.android\\build-cache\\1d4d44068dbffdae84979780eb426e5bedeb08dd\\output\\res\\drawable\\abc_btn_radio_material.xml"
     },
@@ -124,6 +132,14 @@
         "source": "C:\\Users\\fouco\\.android\\build-cache\\1d4d44068dbffdae84979780eb426e5bedeb08dd\\output\\res\\drawable\\abc_ic_menu_overflow_material.xml"
     },
     {
+        "merged": "C:\\Users\\fouco\\AndroidStudioProjects\\tp2_tablet\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\res\\merged\\debug\\drawable\\data_center1.png",
+        "source": "C:\\Users\\fouco\\AndroidStudioProjects\\tp2_tablet\\Data_center_project\\BlankPhoneWearApp\\Application\\src\\main\\res\\drawable\\data_center1.png"
+    },
+    {
+        "merged": "C:\\Users\\fouco\\AndroidStudioProjects\\tp2_tablet\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\res\\merged\\debug\\drawable\\rack_green.png",
+        "source": "C:\\Users\\fouco\\AndroidStudioProjects\\tp2_tablet\\Data_center_project\\BlankPhoneWearApp\\Application\\src\\main\\res\\drawable\\rack_green.png"
+    },
+    {
         "merged": "C:\\Users\\fouco\\AndroidStudioProjects\\tp2_tablet\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_borderless_material.xml",
         "source": "C:\\Users\\fouco\\.android\\build-cache\\1d4d44068dbffdae84979780eb426e5bedeb08dd\\output\\res\\drawable\\abc_btn_borderless_material.xml"
     },
@@ -134,6 +150,10 @@
     {
         "merged": "C:\\Users\\fouco\\AndroidStudioProjects\\tp2_tablet\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_tick_mark_material.xml",
         "source": "C:\\Users\\fouco\\.android\\build-cache\\1d4d44068dbffdae84979780eb426e5bedeb08dd\\output\\res\\drawable\\abc_seekbar_tick_mark_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\fouco\\AndroidStudioProjects\\tp2_tablet\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\res\\merged\\debug\\drawable\\rack_black.png",
+        "source": "C:\\Users\\fouco\\AndroidStudioProjects\\tp2_tablet\\Data_center_project\\BlankPhoneWearApp\\Application\\src\\main\\res\\drawable\\rack_black.png"
     },
     {
         "merged": "C:\\Users\\fouco\\AndroidStudioProjects\\tp2_tablet\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_internal_bg.xml",
