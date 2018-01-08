@@ -1,21 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/ap_transparent"
 
-    <FrameLayout
-        android:id="@+id/rack_cell_layout"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
+    android:orientation="vertical"
+    android:padding="5dp">
 
+    <TextView
+        android:id="@+id/itemTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageDataCenter"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="26dp"
+        android:text="Sample title"
+        android:textColor="@android:color/black"
+        android:textSize="24sp" />
 
-    <ImageView
-        android:id="@+id/imageRack"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:contentDescription="rack"
-        android:src="@drawable/rack_black" />
-</FrameLayout>
-</android.support.constraint.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="600dp"
+        android:layout_height="600dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageDataCenter"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:contentDescription="Data_Center"
+            android:layout_centerVertical="true"
+            android:src="@drawable/data_center_blank" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view_list"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_vertical" />
+    </RelativeLayout>
+</LinearLayout>
