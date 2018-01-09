@@ -1,7 +1,10 @@
 package ch.epfl.esl.blankphonewearapp;
+import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.IntentSender;
+import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
@@ -9,11 +12,13 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v4.app.ActivityCompat;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;;
 import android.os.Bundle;
 import android.view.View;
@@ -91,6 +96,9 @@ public class MainActivity extends Activity implements
     private ScheduledExecutorService mGeneratorExecutor;
     private ScheduledFuture<?> mDataItemGeneratorFuture;
 
+    private static final int MY_PERMISSIONS_REQUEST_CALL_PHONE = 1234;
+    private String ip = "10.19.0.116";
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -109,7 +117,10 @@ public class MainActivity extends Activity implements
 
        // buildSpinner();
        // buildScroll();
-        buildServerScroll();
+        new GetJSON_Param().execute("http://"+ip+":5002");
+        //Log.e(TAG,"nbracks "+nbRack);
+
+
 
         FloatingActionButton launchActivityTwoButton = (FloatingActionButton) findViewById(R.id.send_fltbtn);
         launchActivityTwoButton.setOnClickListener(new View.OnClickListener() {
@@ -132,9 +143,11 @@ public class MainActivity extends Activity implements
                 String url= urlCreate(textDC,textR,textS,textCP);
 */
                 //Log.e(TAG,"url : "+url);
-                String url="";
+                String list = listsSelectedServer();
+                //Log.e(TAG,list);
+                //String url="";
                 Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
-                intent.putExtra("url",url);
+                intent.putExtra("url",list);
                 startActivity(intent);
 
             }
@@ -145,20 +158,89 @@ public class MainActivity extends Activity implements
             @Override
             public void onClick(View v){
                 listsSelectedServer();
-                new GetRacks().execute("http:/128.179.190.28:5002/rack01/s01/power/last5min");
+                new GetRacks().execute("http:/"+ip+":5002/rack01/s01/power/last5min");
             }
         });
 
+        FloatingActionButton save_phone = (FloatingActionButton) findViewById(R.id.save_nb);
+        save_phone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //String url = "http://10.0.2.2:5002/racks";
+                //String url = "http://0.0.0.0:5002/racks";
+
+
+                //Context context = getApplicationContext();
+                EditText text = (EditText) findViewById(R.id.hotline_nb);
+                String phone_number = text.getText().toString();
+                SharedPreferences sharedPref = getSharedPreferences("id",0);
+                SharedPreferences.Editor editor = sharedPref.edit();
+                editor.putString("phone", phone_number);
+                editor.commit();
+
+
+            }
+
+        });
+
+        FloatingActionButton call = (FloatingActionButton) findViewById(R.id.call_fltbtn);
+        call.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                SharedPreferences settings = getSharedPreferences("id",0);
+                String phone = settings.getString("phone", "");
+                EditText edit = (EditText) findViewById(R.id.hotline_nb);
+                if(phone==null){
+                    //Log.e(TAG,"number null");
+                    phone=edit.getText().toString();
+                }
+                //String phone = edit.getText().toString();
+
+                Intent callIntent = new Intent(Intent.ACTION_CALL);
+                String phone_nb = "tel:" + phone;
+                callIntent.setData(Uri.parse(phone_nb));
+                if (ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+
+                    ActivityCompat.requestPermissions(MainActivity.this,
+                            new String[]{Manifest.permission.CALL_PHONE},
+                            MY_PERMISSIONS_REQUEST_CALL_PHONE);
+                    return;
+                }
+                startActivity(callIntent);
+
+            }
+
+        });
+
+
+
         //Intent servInt = new Intent(this,MyService.class);
         Intent servInt = new Intent(this,MyService.class);
-        servInt.putExtra("url","http://128.179.190.28:5002/rack01/s01/cpu01");
+        servInt.putExtra("url","http://"+ip+":5002/rack01/s01/cpu01");
         startService(servInt);
+
+    }
+
+    private String listsSelectedServer(){
+        String url="";
+        for (int i=0; i< nbRack;i++)
+            for (int j=0;j<nbServer[i];j++){
+                if(rackDataList.get(i).getAllItemsInSection().get(j).getSelect()) {
+                    Log.v(TAG, "Rack: "+ i +" Server: "+j);
+                    url=url+urlCreate("",Integer.toString(i+1),Integer.toString(j+1),"Power")+"#end#";
+                }
+
+
+            }
+
+        return url;
 
     }
 
     private String urlCreate(String textDC,String textR,String textS,String textCP) {
         //String baseUrl = "http://128.179.195.18:5002/";
-        String baseUrl = "http://128.179.190.28:5002/";
+        String baseUrl = "http://"+ip+":5002/";
         String strR="rack0"+textR.substring(textR.length() - 1);
         String strS="s0"+textS.substring(textS.length() - 1);
         if(textCP.contains("Power")) {
@@ -198,6 +280,93 @@ public class MainActivity extends Activity implements
 
     ArrayList<rackModel> rackDataList;
 
+    private class GetJSON_Param extends AsyncTask<String, Void, String[]> {
+
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+
+
+        }
+
+
+        @Override
+        protected String[] doInBackground(String... url) {
+            urlHandler sh = new urlHandler();
+
+            String jsonStr = sh.getjsonstring(url[0]+"/racks");
+
+            //Log.e(TAG, "Response from url: " + jsonStr);
+
+            if(jsonStr!=null) {
+                try {
+                    JSONObject jsonObject = new JSONObject(jsonStr);
+
+                    //for (int i = 0; i < jsonObject.length(); i++) {
+
+                    JSONArray racks = jsonObject.getJSONArray("racks");
+                    String [] nb_servers= new String[racks.length()];
+                    for (int j = 0; j < racks.length(); j++) {
+                        String url_srv = url[0]+"/rack0"+Integer.toString(j+1)+"/servers";
+                        urlHandler servers_h = new urlHandler();
+                        String jsonStr_srv = servers_h.getjsonstring(url_srv);
+
+                        if(jsonStr_srv!=null){
+                            try{
+                                JSONObject jsonObject_srv = new JSONObject(jsonStr_srv);
+                                JSONArray servers = jsonObject_srv.getJSONArray("servers");
+
+                                nb_servers[j]= Integer.toString(servers.length());
+                            }
+                            catch(final JSONException e) {
+                                Log.e(TAG, "Json parsing error2: " + e.getMessage());
+                            }
+                        }
+
+                        //Log.e(TAG, "power: " + racks.getString(j));
+                    }
+                    //String racks = jsonObject.getString("racks");
+
+
+
+                    //}
+
+
+                    return nb_servers;
+                }
+                catch (final JSONException e) {
+                    Log.e(TAG, "Json parsing error: " + e.getMessage());
+
+
+
+                }
+            }
+            else {
+                Log.e(TAG, "No response");
+            }
+
+
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(String[] result) {
+
+            //updatePlot(result);
+
+            nbRack=result.length;
+            Log.e(TAG,"this is what I get : "+nbRack);
+            for(int i=0;i<nbRack;i++){
+                nbServer[i]=Integer.parseInt(result[i]);
+            }
+
+            buildServerScroll();
+
+        }
+
+    }
+
     private void buildServerScroll(){
 
         serverDataFill();
@@ -232,14 +401,7 @@ public class MainActivity extends Activity implements
         }
     }
 
-    private void listsSelectedServer(){
-        for (int i=0; i< nbRack;i++)
-            for (int j=0;j<nbServer[i];j++){
-                if(rackDataList.get(i).getAllItemsInSection().get(j).getSelect())
-                    Log.v(TAG, "Rack: "+ i +" Server: "+j);
-            }
 
-    }
     // Build the main spinner with the names for the data centers
    /* private void buildSpinner(){
 
@@ -410,67 +572,7 @@ public class MainActivity extends Activity implements
                 });
     }
 
-    private class GetRacks extends AsyncTask<String, Void, String[]> {
 
-
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-
-
-        }
-
-
-        @Override
-        protected String[] doInBackground(String... url) {
-            urlHandler sh = new urlHandler();
-
-            String jsonStr = sh.getjsonstring(url[0]);
-
-            Log.e(TAG, "Response from url: " + jsonStr);
-
-            if(jsonStr!=null) {
-                try {
-                    JSONObject jsonObject = new JSONObject(jsonStr);
-
-                    //for (int i = 0; i < jsonObject.length(); i++) {
-
-                        JSONArray racks = jsonObject.getJSONArray("s01");
-                        String [] powerArray= new String[racks.length()];
-                        for (int j = 0; j < racks.length(); j++) {
-                            powerArray[j]=racks.getString(j);
-                            Log.e(TAG, "power: " + racks.getString(j));
-                        }
-                        //String racks = jsonObject.getString("racks");
-
-
-                    //}
-
-                    return powerArray;
-                }
-                catch (final JSONException e) {
-                    Log.e(TAG, "Json parsing error: " + e.getMessage());
-
-
-
-                }
-            }
-            else {
-                Log.e(TAG, "No response");
-            }
-
-
-            return null;
-        }
-
-        @Override
-        protected void onPostExecute(String[] result) {
-
-            updatePlot(result);
-
-        }
-
-    }
 
     private class SendMessageTask extends AsyncTask<Void, Void, Void> {
         // Asynchronous background task to send a message through the Wear API

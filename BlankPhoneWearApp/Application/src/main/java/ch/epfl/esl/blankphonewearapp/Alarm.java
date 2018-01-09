@@ -19,7 +19,7 @@ import java.util.concurrent.TimeUnit;
 
 public class Alarm extends BroadcastReceiver {
 
-    private final int threshold = 4;
+    private final int threshold = 1000;
     private boolean alarmOn = false;
     private final static String TAG = "Alarm";
 
@@ -40,16 +40,18 @@ public class Alarm extends BroadcastReceiver {
             protected void onPostExecute(String[] result) {
                 float sum = 0;
 
-                for (int i = 0; i < result.length; i++) {
-                    sum += Float.parseFloat(result[i]);
-                }
-                float avg = sum / result.length;
-                checkThreshold(avg);
+                if(result!=null) {
+                    for (int i = 0; i < result.length; i++) {
+                        sum += Float.parseFloat(result[i]);
+                    }
+                    float avg = sum / result.length;
+                    checkThreshold(avg);
 
-                if (alarmOn) {
-                    Toast.makeText(getContext(), "Above threshold !!!!!!!", Toast.LENGTH_LONG).show();
-                } else {
-                    Toast.makeText(getContext(), "Below threshold", Toast.LENGTH_LONG).show();
+                    if (alarmOn) {
+                        Toast.makeText(getContext(), "Above threshold !!!!!!!", Toast.LENGTH_LONG).show();
+                    } else {
+                        Toast.makeText(getContext(), "Below threshold", Toast.LENGTH_LONG).show();
+                    }
                 }
 
 

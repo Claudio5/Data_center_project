@@ -1,162 +1,166 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:2:1-45:12
+ADDED from /Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:2:1-46:12
 	package
-		ADDED from C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:3:5-44
+		ADDED from /Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:3:5-44
 	android:versionName
-		INJECTED from C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml
+		INJECTED from /Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml
+		INJECTED from /Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:2:11-69
+		ADDED from /Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:2:11-69
 	android:versionCode
-		INJECTED from C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml
+		INJECTED from /Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml
+		INJECTED from /Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:4:5-67
+ADDED from /Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:4:5-67
 	android:name
-		ADDED from C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:4:22-64
+		ADDED from /Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:4:22-64
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:5:5-80
+ADDED from /Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:5:5-80
 	android:name
-		ADDED from C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:5:22-78
+		ADDED from /Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:5:22-78
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:6:5-79
+ADDED from /Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:6:5-79
 	android:name
-		ADDED from C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:6:22-77
+		ADDED from /Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:6:22-77
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:8:5-78
+ADDED from /Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:8:5-78
 	android:name
-		ADDED from C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:8:22-76
+		ADDED from /Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:8:22-76
 uses-permission#android.permission.READ_PHONE_STATE
-ADDED from C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:9:5-74
+ADDED from /Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:9:5-74
 	android:name
-		ADDED from C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:9:22-72
+		ADDED from /Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:9:22-72
 uses-permission#android.permission.DOWNLOAD_WITHOUT_NOTIFICATION
-ADDED from C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:10:5-88
+ADDED from /Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:10:5-88
 	android:name
-		ADDED from C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:10:22-85
+		ADDED from /Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:10:22-85
 uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
-ADDED from C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:11:5-81
+ADDED from /Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:11:5-81
 	android:name
-		ADDED from C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:11:22-78
+		ADDED from /Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:11:22-78
 uses-permission#android.permission.WAKE_LOCK
-ADDED from C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:12:5-67
+ADDED from /Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:12:5-67
 	android:name
-		ADDED from C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:12:22-65
+		ADDED from /Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:12:22-65
+uses-permission#android.permission.CALL_PHONE
+ADDED from /Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:13:5-69
+	android:name
+		ADDED from /Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:13:22-66
 application
-ADDED from C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:13:5-44:19
-MERGED from [com.android.support:cardview-v7:25.3.1] C:\Users\fouco\.android\build-cache\55c829f05ad4eedd6ff330d202b080dd5c5e5f61\output\AndroidManifest.xml:26:5-20
-MERGED from [BlankPhoneWearApp:commons:unspecified] C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\BlankPhoneWearApp\commons\build\intermediates\bundles\default\AndroidManifest.xml:11:5-20
-MERGED from [com.google.android.gms:play-services-wearable:8.4.0] C:\Users\fouco\.android\build-cache\285ed3840534f79c5368eb1e4fa96abfbc5f2218\output\AndroidManifest.xml:19:5-20
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\fouco\.android\build-cache\b9e1a42dd73d2f381217961f594137b48a1f18f7\output\AndroidManifest.xml:20:5-24:19
-MERGED from [com.android.support:design:25.3.1] C:\Users\fouco\.android\build-cache\5264c7fa0292c4db6e5b5486c9980fa1dd45778b\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\fouco\.android\build-cache\1d4d44068dbffdae84979780eb426e5bedeb08dd\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\fouco\.android\build-cache\114edccbf9d7220570c51098c36c5cb08c510c0a\output\AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\fouco\.android\build-cache\219b3e4c79b7dc742e6f48bc8ec3368f0ff5abb0\output\AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:transition:25.3.1] C:\Users\fouco\.android\build-cache\08d413019bc09fafd785453934cea9d510aeaa25\output\AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:support-v4:25.3.1] C:\Users\fouco\.android\build-cache\e0976e011d4cc8dfe1341b11d415cd7757f09d78\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\fouco\.android\build-cache\5f2e4bf4e88a268700f9983e0861b689892550df\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\fouco\.android\build-cache\6e95cf48d3222cd7fccc3bd777f86487c50ce5f0\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\fouco\.android\build-cache\e70032091c7fa9f96a5aad245d5ae85c00b8973f\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\fouco\.android\build-cache\3b8624d0fddd3e1896e0d02edad605ddf6d284c0\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-compat:25.3.1] C:\Users\fouco\.android\build-cache\d765844a10c60020ebef4ba69367c73f08c524cb\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\fouco\.android\build-cache\a19e3296cd0618f0c8a713846e6aba5281630149\output\AndroidManifest.xml:9:5-20
+ADDED from /Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:14:5-45:19
+MERGED from [com.android.support:cardview-v7:25.3.1] /Users/musluoglucem/.android/build-cache/2fcb6c1d9d66fc9e1d550ce70c62cfa8d8c3baa5/output/AndroidManifest.xml:26:5-20
+MERGED from [BlankPhoneWearApp:commons:unspecified] /Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/commons/build/intermediates/bundles/default/AndroidManifest.xml:11:5-20
+MERGED from [com.google.android.gms:play-services-wearable:8.4.0] /Users/musluoglucem/.android/build-cache/a71d77ba944132ed52a236b4c627f6399a171d65/output/AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] /Users/musluoglucem/.android/build-cache/dd751d9fab1928a48403c8efd7996092e3c53b54/output/AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:design:25.3.1] /Users/musluoglucem/.android/build-cache/8fcc9193c6f2f0a0c6b81b97f8e0a0bac6fc19f5/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/musluoglucem/.android/build-cache/1ad4b6bfd150bc212fd655184f580b4739b82aa1/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/musluoglucem/.android/build-cache/d427c398e5171abfb1cf24c9d172bf09820b8e87/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/musluoglucem/.android/build-cache/06f938b79efdb8f980df135588fdced2b0c76fdd/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:transition:25.3.1] /Users/musluoglucem/.android/build-cache/76d6b2bea877420e5ff6f054c499fd781e9dde71/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-v4:25.3.1] /Users/musluoglucem/.android/build-cache/574c7b5394eb66e18ee0dbef180f83d2872de4f4/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/musluoglucem/.android/build-cache/c5ac78fef3667d78f81bf9ee81bcd2a83d74916a/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/musluoglucem/.android/build-cache/da5c52829451100a1d221410db663c75c3cacf64/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/musluoglucem/.android/build-cache/6536d185a8ba57f9c70bb162279d5c86c4eadc1c/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/musluoglucem/.android/build-cache/3cfab5a8c70074b76188e41fd6c7bb80f49cacf8/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] /Users/musluoglucem/.android/build-cache/5814756e60143a21e5d6e33152f350686f6d6ed9/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/musluoglucem/.android/build-cache/618c6203b6777b90257224ae3153250154e48014/output/AndroidManifest.xml:9:5-20
 	android:label
-		ADDED from C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:16:9-41
+		ADDED from /Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:17:9-41
 	android:allowBackup
-		ADDED from C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:14:9-35
+		ADDED from /Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:15:9-35
 	android:icon
-		ADDED from C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:15:9-43
+		ADDED from /Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:16:9-43
 	android:theme
-		ADDED from C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:17:9-62
+		ADDED from /Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:18:9-62
 receiver#ch.epfl.esl.blankphonewearapp.Alarm
-ADDED from C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:19:9-68
+ADDED from /Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:20:9-68
 	android:process
-		ADDED from C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:19:19-44
+		ADDED from /Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:20:19-44
 	android:name
-		ADDED from C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:19:45-66
+		ADDED from /Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:20:45-66
 service#ch.epfl.esl.blankphonewearapp.MyService
-ADDED from C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:21:9-25:19
+ADDED from /Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:22:9-26:19
 	android:enabled
-		ADDED from C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:23:13-35
+		ADDED from /Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:24:13-35
 	android:process
-		ADDED from C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:24:13-42
+		ADDED from /Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:25:13-42
 	android:name
-		ADDED from C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:22:13-38
+		ADDED from /Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:23:13-38
 meta-data#com.google.android.gms.version
-ADDED from C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:27:9-29:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\fouco\.android\build-cache\b9e1a42dd73d2f381217961f594137b48a1f18f7\output\AndroidManifest.xml:21:9-23:69
+ADDED from /Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:28:9-30:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] /Users/musluoglucem/.android/build-cache/dd751d9fab1928a48403c8efd7996092e3c53b54/output/AndroidManifest.xml:21:9-23:69
 	android:value
-		ADDED from C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:29:13-66
+		ADDED from /Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:30:13-66
 	android:name
-		ADDED from C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:28:13-58
+		ADDED from /Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:29:13-58
 activity#ch.epfl.esl.blankphonewearapp.MainActivity
-ADDED from C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:31:9-39:20
+ADDED from /Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:32:9-40:20
 	android:label
-		ADDED from C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:33:13-45
+		ADDED from /Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:34:13-45
 	android:launchMode
-		ADDED from C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:34:13-44
+		ADDED from /Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:35:13-44
 	android:name
-		ADDED from C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:32:13-41
+		ADDED from /Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:33:13-41
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:35:13-38:29
+ADDED from /Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:36:13-39:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:36:17-69
+ADDED from /Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:37:17-69
 	android:name
-		ADDED from C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:36:25-66
+		ADDED from /Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:37:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:37:17-77
+ADDED from /Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:38:17-77
 	android:name
-		ADDED from C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:37:27-74
+		ADDED from /Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:38:27-74
 activity#ch.epfl.esl.blankphonewearapp.SecondActivity
-ADDED from C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:41:9-43:20
+ADDED from /Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:42:9-44:20
 	android:name
-		ADDED from C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:42:13-43
+		ADDED from /Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:43:13-43
 uses-sdk
-INJECTED from C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.android.support:cardview-v7:25.3.1] C:\Users\fouco\.android\build-cache\55c829f05ad4eedd6ff330d202b080dd5c5e5f61\output\AndroidManifest.xml:20:5-43
-MERGED from [BlankPhoneWearApp:commons:unspecified] C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\BlankPhoneWearApp\commons\build\intermediates\bundles\default\AndroidManifest.xml:7:5-9:41
-MERGED from [com.google.android.gms:play-services-wearable:8.4.0] C:\Users\fouco\.android\build-cache\285ed3840534f79c5368eb1e4fa96abfbc5f2218\output\AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-base:8.4.0] C:\Users\fouco\.android\build-cache\de279d5fb086ec0b4984b0a31a2ce210c3127cd5\output\AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\fouco\.android\build-cache\b9e1a42dd73d2f381217961f594137b48a1f18f7\output\AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:design:25.3.1] C:\Users\fouco\.android\build-cache\5264c7fa0292c4db6e5b5486c9980fa1dd45778b\output\AndroidManifest.xml:21:5-23:62
-MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\fouco\.android\build-cache\1d4d44068dbffdae84979780eb426e5bedeb08dd\output\AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\fouco\.android\build-cache\114edccbf9d7220570c51098c36c5cb08c510c0a\output\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\fouco\.android\build-cache\219b3e4c79b7dc742e6f48bc8ec3368f0ff5abb0\output\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\fouco\.android\build-cache\ab3ae439a553bead40158d4872c2d0fd0ef10a56\output\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:transition:25.3.1] C:\Users\fouco\.android\build-cache\08d413019bc09fafd785453934cea9d510aeaa25\output\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:25.3.1] C:\Users\fouco\.android\build-cache\e0976e011d4cc8dfe1341b11d415cd7757f09d78\output\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\fouco\.android\build-cache\5f2e4bf4e88a268700f9983e0861b689892550df\output\AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\fouco\.android\build-cache\6e95cf48d3222cd7fccc3bd777f86487c50ce5f0\output\AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\fouco\.android\build-cache\e70032091c7fa9f96a5aad245d5ae85c00b8973f\output\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\fouco\.android\build-cache\3b8624d0fddd3e1896e0d02edad605ddf6d284c0\output\AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-compat:25.3.1] C:\Users\fouco\.android\build-cache\d765844a10c60020ebef4ba69367c73f08c524cb\output\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\fouco\.android\build-cache\a19e3296cd0618f0c8a713846e6aba5281630149\output\AndroidManifest.xml:5:5-7:41
-MERGED from [com.androidplot:androidplot-core:1.5.1] C:\Users\fouco\.android\build-cache\d3df3e2cbb595a3694dcba3a4e9560a50eb7cb01\output\AndroidManifest.xml:26:5-28:41
-MERGED from [com.halfhp.fig:figlib:1.0.3] C:\Users\fouco\.android\build-cache\1c46fc7c98f962ed5cb8233a3a8d71a3b01576d6\output\AndroidManifest.xml:7:5-9:41
+INJECTED from /Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:cardview-v7:25.3.1] /Users/musluoglucem/.android/build-cache/2fcb6c1d9d66fc9e1d550ce70c62cfa8d8c3baa5/output/AndroidManifest.xml:20:5-43
+MERGED from [BlankPhoneWearApp:commons:unspecified] /Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/commons/build/intermediates/bundles/default/AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.android.gms:play-services-wearable:8.4.0] /Users/musluoglucem/.android/build-cache/a71d77ba944132ed52a236b4c627f6399a171d65/output/AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-base:8.4.0] /Users/musluoglucem/.android/build-cache/8677393234856d76a22ece98c7329a834c2564cb/output/AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] /Users/musluoglucem/.android/build-cache/dd751d9fab1928a48403c8efd7996092e3c53b54/output/AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:design:25.3.1] /Users/musluoglucem/.android/build-cache/8fcc9193c6f2f0a0c6b81b97f8e0a0bac6fc19f5/output/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/musluoglucem/.android/build-cache/1ad4b6bfd150bc212fd655184f580b4739b82aa1/output/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/musluoglucem/.android/build-cache/d427c398e5171abfb1cf24c9d172bf09820b8e87/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/musluoglucem/.android/build-cache/06f938b79efdb8f980df135588fdced2b0c76fdd/output/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:25.3.1] /Users/musluoglucem/.android/build-cache/642a8abfed45fe0ba25052bd16c862c9b712e9ba/output/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:transition:25.3.1] /Users/musluoglucem/.android/build-cache/76d6b2bea877420e5ff6f054c499fd781e9dde71/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:25.3.1] /Users/musluoglucem/.android/build-cache/574c7b5394eb66e18ee0dbef180f83d2872de4f4/output/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/musluoglucem/.android/build-cache/c5ac78fef3667d78f81bf9ee81bcd2a83d74916a/output/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/musluoglucem/.android/build-cache/da5c52829451100a1d221410db663c75c3cacf64/output/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/musluoglucem/.android/build-cache/6536d185a8ba57f9c70bb162279d5c86c4eadc1c/output/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/musluoglucem/.android/build-cache/3cfab5a8c70074b76188e41fd6c7bb80f49cacf8/output/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:25.3.1] /Users/musluoglucem/.android/build-cache/5814756e60143a21e5d6e33152f350686f6d6ed9/output/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/musluoglucem/.android/build-cache/618c6203b6777b90257224ae3153250154e48014/output/AndroidManifest.xml:5:5-7:41
+MERGED from [com.androidplot:androidplot-core:1.5.1] /Users/musluoglucem/.android/build-cache/4c9c9bb57baffc6fad5ca214db9d21800131272d/output/AndroidManifest.xml:26:5-28:41
+MERGED from [com.halfhp.fig:figlib:1.0.3] /Users/musluoglucem/.android/build-cache/adb3afb92830ea66bf07ed23528d63f3c3a86826/output/AndroidManifest.xml:7:5-9:41
 	tools:overrideLibrary
-		ADDED from [com.android.support:design:25.3.1] C:\Users\fouco\.android\build-cache\5264c7fa0292c4db6e5b5486c9980fa1dd45778b\output\AndroidManifest.xml:23:9-59
+		ADDED from [com.android.support:design:25.3.1] /Users/musluoglucem/.android/build-cache/8fcc9193c6f2f0a0c6b81b97f8e0a0bac6fc19f5/output/AndroidManifest.xml:23:9-59
 	android:targetSdkVersion
-		INJECTED from C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml
+		INJECTED from /Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml
+		INJECTED from /Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\fouco\AndroidStudioProjects\tp2_tablet\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml
+		INJECTED from /Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml
+		INJECTED from /Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml
 meta-data#android.support.VERSION
-ADDED from [com.android.support:cardview-v7:25.3.1] C:\Users\fouco\.android\build-cache\55c829f05ad4eedd6ff330d202b080dd5c5e5f61\output\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:design:25.3.1] C:\Users\fouco\.android\build-cache\5264c7fa0292c4db6e5b5486c9980fa1dd45778b\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\fouco\.android\build-cache\1d4d44068dbffdae84979780eb426e5bedeb08dd\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\fouco\.android\build-cache\114edccbf9d7220570c51098c36c5cb08c510c0a\output\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\fouco\.android\build-cache\219b3e4c79b7dc742e6f48bc8ec3368f0ff5abb0\output\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\fouco\.android\build-cache\ab3ae439a553bead40158d4872c2d0fd0ef10a56\output\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:transition:25.3.1] C:\Users\fouco\.android\build-cache\08d413019bc09fafd785453934cea9d510aeaa25\output\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:support-v4:25.3.1] C:\Users\fouco\.android\build-cache\e0976e011d4cc8dfe1341b11d415cd7757f09d78\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\fouco\.android\build-cache\5f2e4bf4e88a268700f9983e0861b689892550df\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\fouco\.android\build-cache\6e95cf48d3222cd7fccc3bd777f86487c50ce5f0\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\fouco\.android\build-cache\e70032091c7fa9f96a5aad245d5ae85c00b8973f\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\fouco\.android\build-cache\3b8624d0fddd3e1896e0d02edad605ddf6d284c0\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-compat:25.3.1] C:\Users\fouco\.android\build-cache\d765844a10c60020ebef4ba69367c73f08c524cb\output\AndroidManifest.xml:25:5-27:34
+ADDED from [com.android.support:cardview-v7:25.3.1] /Users/musluoglucem/.android/build-cache/2fcb6c1d9d66fc9e1d550ce70c62cfa8d8c3baa5/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:design:25.3.1] /Users/musluoglucem/.android/build-cache/8fcc9193c6f2f0a0c6b81b97f8e0a0bac6fc19f5/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/musluoglucem/.android/build-cache/1ad4b6bfd150bc212fd655184f580b4739b82aa1/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/musluoglucem/.android/build-cache/d427c398e5171abfb1cf24c9d172bf09820b8e87/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/musluoglucem/.android/build-cache/06f938b79efdb8f980df135588fdced2b0c76fdd/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:recyclerview-v7:25.3.1] /Users/musluoglucem/.android/build-cache/642a8abfed45fe0ba25052bd16c862c9b712e9ba/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:transition:25.3.1] /Users/musluoglucem/.android/build-cache/76d6b2bea877420e5ff6f054c499fd781e9dde71/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-v4:25.3.1] /Users/musluoglucem/.android/build-cache/574c7b5394eb66e18ee0dbef180f83d2872de4f4/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/musluoglucem/.android/build-cache/c5ac78fef3667d78f81bf9ee81bcd2a83d74916a/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/musluoglucem/.android/build-cache/da5c52829451100a1d221410db663c75c3cacf64/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/musluoglucem/.android/build-cache/6536d185a8ba57f9c70bb162279d5c86c4eadc1c/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/musluoglucem/.android/build-cache/3cfab5a8c70074b76188e41fd6c7bb80f49cacf8/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] /Users/musluoglucem/.android/build-cache/5814756e60143a21e5d6e33152f350686f6d6ed9/output/AndroidManifest.xml:25:5-27:34
 	android:value
-		ADDED from [com.android.support:cardview-v7:25.3.1] C:\Users\fouco\.android\build-cache\55c829f05ad4eedd6ff330d202b080dd5c5e5f61\output\AndroidManifest.xml:24:9-31
+		ADDED from [com.android.support:cardview-v7:25.3.1] /Users/musluoglucem/.android/build-cache/2fcb6c1d9d66fc9e1d550ce70c62cfa8d8c3baa5/output/AndroidManifest.xml:24:9-31
 	android:name
-		ADDED from [com.android.support:cardview-v7:25.3.1] C:\Users\fouco\.android\build-cache\55c829f05ad4eedd6ff330d202b080dd5c5e5f61\output\AndroidManifest.xml:23:9-47
+		ADDED from [com.android.support:cardview-v7:25.3.1] /Users/musluoglucem/.android/build-cache/2fcb6c1d9d66fc9e1d550ce70c62cfa8d8c3baa5/output/AndroidManifest.xml:23:9-47

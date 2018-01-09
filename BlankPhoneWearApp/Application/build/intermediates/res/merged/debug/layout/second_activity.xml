@@ -20,6 +20,24 @@
         android:textColor="@color/common_google_signin_btn_text_dark_default"
         android:textSize="60dp" />
 
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/call_fltbtn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="700dp"
+        android:clickable="true"
+        app:fabSize="mini"
+        app:srcCompat="@android:drawable/ic_menu_call" />
+
+    <TextView
+        android:id="@+id/hotline2"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="700dp"
+        android:textSize="25dp"
+        android:text="Call Hotline" />
 
     <com.androidplot.xy.XYPlot
         android:id="@+id/plotxy"

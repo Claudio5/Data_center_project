@@ -271,5 +271,51 @@
         android:layout_alignParentRight= "true"
         android:layout_below="@+id/titleview" />
 
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/call_fltbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/send_fltbtn"
+        android:layout_alignEnd="@+id/add_button"
+        android:layout_marginEnd="550dp"
+        android:layout_marginTop="400dp"
+        android:clickable="true"
+        app:fabSize="mini"
+        app:srcCompat="@android:drawable/ic_menu_call" />
+
+    <TextView
+        android:id="@+id/hotline"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@+id/call_fltbtn"
+        android:layout_alignEnd="@+id/call_fltbtn"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:textSize="25dp"
+        android:text="Call Hotline" />
+
+    <EditText
+        android:id="@+id/hotline_nb"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="phone"
+        android:layout_marginEnd="200dp"
+        android:layout_marginTop="850dp"
+        android:text="Phone Number" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/save_nb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:fabSize="mini"
+        android:layout_alignTop="@+id/hotline_nb"
+        android:layout_alignEnd="@+id/hotline_nb"
+        android:layout_marginEnd="-50dp"
+        android:layout_marginTop="0dp"
+        android:backgroundTint="@android:color/holo_blue_light"
+        app:srcCompat="@android:drawable/ic_menu_save" />
+
 
 </android.widget.RelativeLayout>

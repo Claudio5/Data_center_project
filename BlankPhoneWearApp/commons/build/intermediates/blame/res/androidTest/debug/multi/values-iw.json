@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\commons\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-iw\\values-iw.xml",
+        "outputFile": "/Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/commons/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-iw/values-iw.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 338
                 },
                 "from": {
-                    "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-iw\\base_strings.xml",
+                    "file": "/Users/musluoglucem/.android/build-cache/8677393234856d76a22ece98c7329a834c2564cb/output/res/values-iw/base_strings.xml",
                     "position": {
                         "startLine": 24,
                         "startColumn": 4,
@@ -30,7 +30,7 @@
                     "endOffset": 466
                 },
                 "from": {
-                    "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-iw\\base_strings.xml",
+                    "file": "/Users/musluoglucem/.android/build-cache/8677393234856d76a22ece98c7329a834c2564cb/output/res/values-iw/base_strings.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
@@ -49,7 +49,7 @@
                     "endOffset": 652
                 },
                 "from": {
-                    "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-iw\\base_strings.xml",
+                    "file": "/Users/musluoglucem/.android/build-cache/8677393234856d76a22ece98c7329a834c2564cb/output/res/values-iw/base_strings.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
@@ -68,7 +68,7 @@
                     "endOffset": 779
                 },
                 "from": {
-                    "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-iw\\base_strings.xml",
+                    "file": "/Users/musluoglucem/.android/build-cache/8677393234856d76a22ece98c7329a834c2564cb/output/res/values-iw/base_strings.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -87,7 +87,7 @@
                     "endOffset": 907
                 },
                 "from": {
-                    "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-iw\\base_strings.xml",
+                    "file": "/Users/musluoglucem/.android/build-cache/8677393234856d76a22ece98c7329a834c2564cb/output/res/values-iw/base_strings.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -106,7 +106,7 @@
                     "endOffset": 1115
                 },
                 "from": {
-                    "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-iw\\base_strings.xml",
+                    "file": "/Users/musluoglucem/.android/build-cache/8677393234856d76a22ece98c7329a834c2564cb/output/res/values-iw/base_strings.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -125,7 +125,7 @@
                     "endOffset": 1324
                 },
                 "from": {
-                    "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-iw\\base_strings.xml",
+                    "file": "/Users/musluoglucem/.android/build-cache/8677393234856d76a22ece98c7329a834c2564cb/output/res/values-iw/base_strings.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -144,7 +144,7 @@
                     "endOffset": 1451
                 },
                 "from": {
-                    "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-iw\\base_strings.xml",
+                    "file": "/Users/musluoglucem/.android/build-cache/8677393234856d76a22ece98c7329a834c2564cb/output/res/values-iw/base_strings.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -163,7 +163,7 @@
                     "endOffset": 1605
                 },
                 "from": {
-                    "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-iw\\base_strings.xml",
+                    "file": "/Users/musluoglucem/.android/build-cache/8677393234856d76a22ece98c7329a834c2564cb/output/res/values-iw/base_strings.xml",
                     "position": {
                         "startLine": 19,
                         "startColumn": 4,
@@ -182,7 +182,7 @@
                     "endOffset": 1724
                 },
                 "from": {
-                    "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-iw\\base_strings.xml",
+                    "file": "/Users/musluoglucem/.android/build-cache/8677393234856d76a22ece98c7329a834c2564cb/output/res/values-iw/base_strings.xml",
                     "position": {
                         "startLine": 18,
                         "startColumn": 4,
@@ -201,7 +201,7 @@
                     "endOffset": 1880
                 },
                 "from": {
-                    "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-iw\\base_strings.xml",
+                    "file": "/Users/musluoglucem/.android/build-cache/8677393234856d76a22ece98c7329a834c2564cb/output/res/values-iw/base_strings.xml",
                     "position": {
                         "startLine": 17,
                         "startColumn": 4,
@@ -220,7 +220,7 @@
                     "endOffset": 1996
                 },
                 "from": {
-                    "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-iw\\base_strings.xml",
+                    "file": "/Users/musluoglucem/.android/build-cache/8677393234856d76a22ece98c7329a834c2564cb/output/res/values-iw/base_strings.xml",
                     "position": {
                         "startLine": 16,
                         "startColumn": 4,
@@ -239,7 +239,7 @@
                     "endOffset": 2129
                 },
                 "from": {
-                    "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-iw\\base_strings.xml",
+                    "file": "/Users/musluoglucem/.android/build-cache/8677393234856d76a22ece98c7329a834c2564cb/output/res/values-iw/base_strings.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -258,7 +258,7 @@
                     "endOffset": 2280
                 },
                 "from": {
-                    "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-iw\\base_strings.xml",
+                    "file": "/Users/musluoglucem/.android/build-cache/8677393234856d76a22ece98c7329a834c2564cb/output/res/values-iw/base_strings.xml",
                     "position": {
                         "startLine": 28,
                         "startColumn": 4,
@@ -277,7 +277,7 @@
                     "endOffset": 2404
                 },
                 "from": {
-                    "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-iw\\base_strings.xml",
+                    "file": "/Users/musluoglucem/.android/build-cache/8677393234856d76a22ece98c7329a834c2564cb/output/res/values-iw/base_strings.xml",
                     "position": {
                         "startLine": 27,
                         "startColumn": 4,
@@ -296,7 +296,7 @@
                     "endOffset": 2563
                 },
                 "from": {
-                    "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-iw\\base_strings.xml",
+                    "file": "/Users/musluoglucem/.android/build-cache/8677393234856d76a22ece98c7329a834c2564cb/output/res/values-iw/base_strings.xml",
                     "position": {
                         "startLine": 26,
                         "startColumn": 4,
@@ -315,7 +315,7 @@
                     "endOffset": 2683
                 },
                 "from": {
-                    "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-iw\\base_strings.xml",
+                    "file": "/Users/musluoglucem/.android/build-cache/8677393234856d76a22ece98c7329a834c2564cb/output/res/values-iw/base_strings.xml",
                     "position": {
                         "startLine": 25,
                         "startColumn": 4,
@@ -334,7 +334,7 @@
                     "endOffset": 2900
                 },
                 "from": {
-                    "file": "C:\\Users\\claud\\.android\\build-cache\\e33b5fc896675d9263c693a0d399bc4a577a90ae\\output\\res\\values-iw\\common_strings.xml",
+                    "file": "/Users/musluoglucem/.android/build-cache/dd751d9fab1928a48403c8efd7996092e3c53b54/output/res/values-iw/common_strings.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -353,7 +353,7 @@
                     "endOffset": 3129
                 },
                 "from": {
-                    "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-iw\\base_strings.xml",
+                    "file": "/Users/musluoglucem/.android/build-cache/8677393234856d76a22ece98c7329a834c2564cb/output/res/values-iw/base_strings.xml",
                     "position": {
                         "startLine": 21,
                         "startColumn": 4,
@@ -372,7 +372,7 @@
                     "endOffset": 3252
                 },
                 "from": {
-                    "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-iw\\base_strings.xml",
+                    "file": "/Users/musluoglucem/.android/build-cache/8677393234856d76a22ece98c7329a834c2564cb/output/res/values-iw/base_strings.xml",
                     "position": {
                         "startLine": 20,
                         "startColumn": 4,
@@ -391,7 +391,7 @@
                     "endOffset": 3357
                 },
                 "from": {
-                    "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-iw\\base_strings.xml",
+                    "file": "/Users/musluoglucem/.android/build-cache/8677393234856d76a22ece98c7329a834c2564cb/output/res/values-iw/base_strings.xml",
                     "position": {
                         "startLine": 22,
                         "startColumn": 4,
@@ -410,7 +410,7 @@
                     "endOffset": 3543
                 },
                 "from": {
-                    "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-iw\\base_strings.xml",
+                    "file": "/Users/musluoglucem/.android/build-cache/8677393234856d76a22ece98c7329a834c2564cb/output/res/values-iw/base_strings.xml",
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,
@@ -429,7 +429,7 @@
                     "endOffset": 3668
                 },
                 "from": {
-                    "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-iw\\base_strings.xml",
+                    "file": "/Users/musluoglucem/.android/build-cache/8677393234856d76a22ece98c7329a834c2564cb/output/res/values-iw/base_strings.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
@@ -448,7 +448,7 @@
                     "endOffset": 3861
                 },
                 "from": {
-                    "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-iw\\base_strings.xml",
+                    "file": "/Users/musluoglucem/.android/build-cache/8677393234856d76a22ece98c7329a834c2564cb/output/res/values-iw/base_strings.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
@@ -467,7 +467,7 @@
                     "endOffset": 3991
                 },
                 "from": {
-                    "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-iw\\base_strings.xml",
+                    "file": "/Users/musluoglucem/.android/build-cache/8677393234856d76a22ece98c7329a834c2564cb/output/res/values-iw/base_strings.xml",
                     "position": {
                         "startLine": 14,
                         "startColumn": 4,
@@ -486,7 +486,7 @@
                     "endOffset": 4166
                 },
                 "from": {
-                    "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-iw\\base_strings.xml",
+                    "file": "/Users/musluoglucem/.android/build-cache/8677393234856d76a22ece98c7329a834c2564cb/output/res/values-iw/base_strings.xml",
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,
@@ -505,7 +505,7 @@
                     "endOffset": 4255
                 },
                 "from": {
-                    "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-iw\\base_strings.xml",
+                    "file": "/Users/musluoglucem/.android/build-cache/8677393234856d76a22ece98c7329a834c2564cb/output/res/values-iw/base_strings.xml",
                     "position": {
                         "startLine": 23,
                         "startColumn": 4,
@@ -524,7 +524,7 @@
                     "endOffset": 4345
                 },
                 "from": {
-                    "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-iw\\base_strings.xml",
+                    "file": "/Users/musluoglucem/.android/build-cache/8677393234856d76a22ece98c7329a834c2564cb/output/res/values-iw/base_strings.xml",
                     "position": {
                         "startLine": 29,
                         "startColumn": 4,
@@ -543,7 +543,7 @@
                     "endOffset": 4456
                 },
                 "from": {
-                    "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-iw\\base_strings.xml",
+                    "file": "/Users/musluoglucem/.android/build-cache/8677393234856d76a22ece98c7329a834c2564cb/output/res/values-iw/base_strings.xml",
                     "position": {
                         "startLine": 30,
                         "startColumn": 4,
