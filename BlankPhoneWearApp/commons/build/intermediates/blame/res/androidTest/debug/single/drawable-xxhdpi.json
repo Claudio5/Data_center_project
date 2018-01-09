@@ -56,16 +56,16 @@
         "source": "/Users/musluoglucem/.android/build-cache/8677393234856d76a22ece98c7329a834c2564cb/output/res/drawable-xxhdpi/common_google_signin_btn_text_dark_pressed.9.png"
     },
     {
-        "merged": "/Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/commons/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi/common_google_signin_btn_icon_dark_disabled.9.png",
-        "source": "/Users/musluoglucem/.android/build-cache/8677393234856d76a22ece98c7329a834c2564cb/output/res/drawable-xxhdpi/common_google_signin_btn_icon_dark_disabled.9.png"
-    },
-    {
         "merged": "/Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/commons/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi/common_google_signin_btn_icon_light_pressed.9.png",
         "source": "/Users/musluoglucem/.android/build-cache/8677393234856d76a22ece98c7329a834c2564cb/output/res/drawable-xxhdpi/common_google_signin_btn_icon_light_pressed.9.png"
     },
     {
         "merged": "/Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/commons/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi/common_google_signin_btn_text_dark_focused.9.png",
         "source": "/Users/musluoglucem/.android/build-cache/8677393234856d76a22ece98c7329a834c2564cb/output/res/drawable-xxhdpi/common_google_signin_btn_text_dark_focused.9.png"
+    },
+    {
+        "merged": "/Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/commons/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi/common_google_signin_btn_icon_dark_disabled.9.png",
+        "source": "/Users/musluoglucem/.android/build-cache/8677393234856d76a22ece98c7329a834c2564cb/output/res/drawable-xxhdpi/common_google_signin_btn_icon_dark_disabled.9.png"
     },
     {
         "merged": "/Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/commons/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi/common_google_signin_btn_text_light_focused.9.png",

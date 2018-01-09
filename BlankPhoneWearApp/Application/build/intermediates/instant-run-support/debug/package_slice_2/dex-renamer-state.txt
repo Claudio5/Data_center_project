@@ -1,4 +1,4 @@
-#Tue Jan 09 00:19:25 CET 2018
+#Tue Jan 09 14:52:16 CET 2018
 base.0=/Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/build/intermediates/transforms/dex/debug/folders/1000/5/slice_2
 renamed.0=classes.dex
 file.0=/Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/build/intermediates/transforms/dex/debug/folders/1000/5/slice_2/classes.dex

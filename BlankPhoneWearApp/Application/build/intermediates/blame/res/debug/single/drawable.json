@@ -164,12 +164,12 @@
         "source": "/Users/musluoglucem/.android/build-cache/1ad4b6bfd150bc212fd655184f580b4739b82aa1/output/res/drawable/abc_tab_indicator_material.xml"
     },
     {
-        "merged": "/Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_dark.xml",
-        "source": "/Users/musluoglucem/.android/build-cache/1ad4b6bfd150bc212fd655184f580b4739b82aa1/output/res/drawable/abc_list_selector_background_transition_holo_dark.xml"
-    },
-    {
         "merged": "/Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/build/intermediates/res/merged/debug/drawable/panels_swt.png",
         "source": "/Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/src/main/res/drawable/panels_swt.png"
+    },
+    {
+        "merged": "/Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_dark.xml",
+        "source": "/Users/musluoglucem/.android/build-cache/1ad4b6bfd150bc212fd655184f580b4739b82aa1/output/res/drawable/abc_list_selector_background_transition_holo_dark.xml"
     },
     {
         "merged": "/Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/build/intermediates/res/merged/debug/drawable/abc_btn_radio_material.xml",

@@ -97,7 +97,7 @@ public class MainActivity extends Activity implements
     private ScheduledFuture<?> mDataItemGeneratorFuture;
 
     private static final int MY_PERMISSIONS_REQUEST_CALL_PHONE = 1234;
-    private String ip = "10.19.0.116";
+    private String ip = "128.179.198.237";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -119,6 +119,11 @@ public class MainActivity extends Activity implements
        // buildScroll();
         new GetJSON_Param().execute("http://"+ip+":5002");
         //Log.e(TAG,"nbracks "+nbRack);
+
+        SharedPreferences settings = getSharedPreferences("id",0);
+        String phone_nb = settings.getString("phone", "");
+        EditText text_phone = (EditText) findViewById(R.id.hotline_nb);
+        text_phone.setText("Phone : "+phone_nb);
 
 
 
@@ -470,6 +475,10 @@ public class MainActivity extends Activity implements
     public void onResume() {
         super.onResume();
         // Whenever we resume the app, restart the fake data generator
+        SharedPreferences settings = getSharedPreferences("id",0);
+        String phone_nb = settings.getString("phone", "");
+        EditText text_phone = (EditText) findViewById(R.id.hotline_nb);
+        text_phone.setText("Phone : "+phone_nb);
         mDataItemGeneratorFuture = mGeneratorExecutor.scheduleWithFixedDelay(
                 new DataItemGenerator(), 1, 3, TimeUnit.SECONDS);
         // If we are connected to the Wear API, force open the app

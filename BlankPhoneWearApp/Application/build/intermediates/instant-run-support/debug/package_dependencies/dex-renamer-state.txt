@@ -1,4 +1,4 @@
-#Tue Jan 09 00:19:24 CET 2018
+#Tue Jan 09 14:52:16 CET 2018
 file.2=/Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/build/intermediates/transforms/dex/debug/folders/1000/10/classes_51fb1cd7af2e8a6c69d816d8b3dad1bfbc68505d/classes.dex
 base.2=/Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/build/intermediates/transforms/dex/debug/folders/1000/10/classes_51fb1cd7af2e8a6c69d816d8b3dad1bfbc68505d
 file.1=/Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/build/intermediates/transforms/dex/debug/folders/1000/10/classes_491c8e4c52841b121a9ae31559be504365251c61/classes.dex

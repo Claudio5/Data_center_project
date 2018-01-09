@@ -88,6 +88,8 @@ import java.util.regex.Pattern;
 
 import ch.epfl.esl.commons.DataLayerCommons;
 
+import static java.lang.Integer.max;
+
 
 public class SecondActivity extends Activity implements
         CapabilityApi.CapabilityListener,
@@ -145,7 +147,50 @@ public class SecondActivity extends Activity implements
             //    new GetJSON_Val().execute(urls[i]+Integer.toString(i));
             //}
             //plotUpdate();
-            new GetJSON_Val().execute(url);
+            new GetJSON_val(){
+                @Override
+                protected void onPostExecute(String[] result) {
+
+                    //updatePlot(result);
+
+                    if(result!=null) {
+                        Float[] valF = new Float[string2nbr(result[0]).length];
+                        //Log.e(TAG,"result length = "+result.length);
+                        for (int i = 0; i < java.lang.Math.min(result.length,5); i++) {
+
+
+                            Number[] val = string2nbr(result[i]);
+                            series_update(val, i);
+                            Log.e(TAG,"series i "+ series[i]);
+                            for (int j = 0; j < val.length; j++) {
+                                int value = val[j].intValue();
+
+
+                                //val[j] = value;
+                                if (i == 0)
+                                    valF[j] = (float) value;
+                            }
+                        }
+                        plotUpdate();
+                        setPowerAvgTxtView(valF);
+                        if(result.length>5) {
+
+                            Toast.makeText(getApplicationContext(), "Only the first 5 are plotted", Toast.LENGTH_LONG).show();
+                            //Number[] val = new Number[result.length];
+
+                            //series=result;
+                            //series_update(val,id);
+
+                        }
+                    }
+                    else {
+                        Toast.makeText(getApplicationContext(),"False URL, please try other options", Toast.LENGTH_LONG).show();
+                        kill_activity();
+                    }
+
+
+                }
+            }.execute(url);
             handler.postDelayed(this, 60000);
         }
     };
@@ -169,15 +214,57 @@ public class SecondActivity extends Activity implements
         Bundle bundle = getIntent().getExtras();
         url = bundle.getString("url");
         String [] urls = decode_list(url);
-
-
+        Log.e(TAG,"the url : "+url);
 
 
         //for(int i=0;i<urls.length;i++){
         //    new GetJSON_Val().execute(urls[i]+Integer.toString(i));
         //}
         //plotUpdate();
-        new GetJSON_Val().execute(url);
+        new GetJSON_val(){
+            @Override
+            protected void onPostExecute(String[] result) {
+
+                //updatePlot(result);
+
+                if(result!=null) {
+                    Float[] valF = new Float[string2nbr(result[0]).length];
+                    //Log.e(TAG,"result length = "+result.length);
+                    for (int i = 0; i < java.lang.Math.min(result.length,5); i++) {
+
+
+                        Number[] val = string2nbr(result[i]);
+                        series_update(val, i);
+                        Log.e(TAG,"series i "+ series[i]);
+                        for (int j = 0; j < val.length; j++) {
+                            int value = val[j].intValue();
+
+
+                            //val[j] = value;
+                            if (i == 0)
+                                valF[j] = (float) value;
+                        }
+                    }
+                    plotUpdate();
+                    setPowerAvgTxtView(valF);
+                    if(result.length>5) {
+
+                        Toast.makeText(getApplicationContext(), "Only the first 5 are plotted", Toast.LENGTH_LONG).show();
+                        //Number[] val = new Number[result.length];
+
+                        //series=result;
+                        //series_update(val,id);
+
+                    }
+                }
+                else {
+                    Toast.makeText(getApplicationContext(),"False URL, please try other options", Toast.LENGTH_LONG).show();
+                    kill_activity();
+                }
+
+
+            }
+        }.execute(url);
 
 
         /*
@@ -240,6 +327,7 @@ public class SecondActivity extends Activity implements
 
     }
 
+    /*
     private class GetJSON_Val extends AsyncTask<String, Void, String[]> {
 
 
@@ -321,32 +409,31 @@ public class SecondActivity extends Activity implements
             if(result!=null) {
                 Float[] valF = new Float[string2nbr(result[0]).length];
                 //Log.e(TAG,"result length = "+result.length);
-                if(result.length<=5) {
-                    for (int i = 0; i < result.length; i++) {
-
-                        Number[] val = string2nbr(result[i]);
-                        series_update(val, i);
-                        //Log.e(TAG,"series i "+ series[i]);
-                        for (int j = 0; j < val.length; j++) {
-                            int value = val[j].intValue();
+                for (int i = 0; i < java.lang.Math.min(result.length,5); i++) {
 
 
-                            //val[j] = value;
-                            if (i == 0)
-                                valF[j] = (float) value;
-                        }
+                    Number[] val = string2nbr(result[i]);
+                    series_update(val, i);
+                    Log.e(TAG,"series i "+ series[i]);
+                    for (int j = 0; j < val.length; j++) {
+                        int value = val[j].intValue();
+
+
+                        //val[j] = value;
+                        if (i == 0)
+                            valF[j] = (float) value;
                     }
+                }
+                plotUpdate();
+                setPowerAvgTxtView(valF);
+                if(result.length>5) {
 
+                    Toast.makeText(getApplicationContext(), "Only the first 5 are plotted", Toast.LENGTH_LONG).show();
                     //Number[] val = new Number[result.length];
 
                     //series=result;
                     //series_update(val,id);
-                    plotUpdate();
-                    setPowerAvgTxtView(valF);
-                }
-                else {
-                    Toast.makeText(getApplicationContext(),"Please choose up to 5 servers", Toast.LENGTH_LONG).show();
-                    kill_activity();
+
                 }
             }
             else {
@@ -358,13 +445,14 @@ public class SecondActivity extends Activity implements
         }
 
     }
+    */
 
 
-    void kill_activity(){
+    private void kill_activity(){
         finish();
     }
 
-    String [] decode_list(String list) {
+    private String [] decode_list(String list) {
 
         String [] urls = list.split("#end#");
         return urls;
@@ -453,6 +541,7 @@ public class SecondActivity extends Activity implements
         plot.setRangeStep(StepMode.INCREMENT_BY_VAL,2);
 
 
+
         Log.e(TAG,Arrays.toString(xlabels));
 
         // create a couple arrays of y-values to plot:
@@ -477,7 +566,7 @@ public class SecondActivity extends Activity implements
             legend3=legend[2];
         if(urls.length>=4)
             legend4=legend[3];
-        if(urls.length==5)
+        if(urls.length>=5)
             legend5=legend[4];
 
 
@@ -537,7 +626,7 @@ public class SecondActivity extends Activity implements
             plot.addSeries(series3, series3Format);
         if(urls.length>=4)
             plot.addSeries(series4, series4Format);
-        if(urls.length==5)
+        if(urls.length>=5)
             plot.addSeries(series5, series5Format);
 
         plot.getGraph().getLineLabelStyle(XYGraphWidget.Edge.BOTTOM).setFormat(new Format() {

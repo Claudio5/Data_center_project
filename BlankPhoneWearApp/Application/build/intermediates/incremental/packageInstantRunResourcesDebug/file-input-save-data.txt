@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue Jan 09 00:19:18 CET 2018
+#Tue Jan 09 14:52:09 CET 2018
 210.set=ANDROID_RESOURCE
 14.set=ANDROID_RESOURCE
 180.file=/Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/build/intermediates/res/resources-debug.ap_/res/layout/abc_action_menu_item_layout.xml
