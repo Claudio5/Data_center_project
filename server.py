@@ -48,23 +48,23 @@ class ServerPowerLast5min(Resource):
             if server_name == 's01':
                 result = {'s01': ['10','5','7','15','18']}
             elif server_name == 's02':
-                result = {'s01': ['1','2','3','4','5']}
+                result = {'s02': ['1','2','3','4','5']}
             elif server_name == 's03':
-                result = {'s01': ['5','4','3','2','1']}
+                result = {'s03': ['5','4','3','2','1']}
         if rack_name == 'rack02':
             if server_name == 's01':
                 result = {'s01': ['10','10','10','10','10']}
             elif server_name == 's02':
-                result = {'s01': ['15','15','15','15','15']}
+                result = {'s02': ['15','15','15','15','15']}
         elif rack_name == 'rack03' :
             if server_name == 's01' :
-                result = {'s02':['20','19','18','17','16']}
+                result = {'s01':['20','19','18','17','16']}
             elif server_name == 's02':
-                result = {'s01': ['5','5','5','5','5']}
+                result = {'s02': ['5','5','5','5','5']}
             elif server_name == 's03':
-                result = {'s01': ['10','11','12','11','10']}
-            elif server_name == 's02':
-                result = {'s01': ['0','10','0','10','0']}
+                result = {'s03': ['10','11','12','11','10']}
+            elif server_name == 's04':
+                result = {'s04': ['0','10','0','10','0']}
 
         return jsonify(result)
 class CPUPowerLast5min(Resource):
@@ -84,4 +84,4 @@ api.add_resource(ServerPowerLast5min,'/<rack_name>/<server_name>/power/last5min'
 api.add_resource(CPUPowerLast5min,'/<rack_name>/<server_name>/<cpu_name>')
 
 if __name__ == '__main__':
-     app.run(host='10.19.0.116',port='5002')
+     app.run(host='128.179.198.237',port='5002')
