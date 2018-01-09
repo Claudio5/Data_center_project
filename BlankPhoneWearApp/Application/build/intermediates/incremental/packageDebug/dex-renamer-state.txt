@@ -1,7 +1,7 @@
-#Fri Dec 29 12:40:01 CET 2017
-base.0=C\:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_8775ef1df2326d6a29710de1f6eca48c387610b8
-renamed.1=classes.dex
-renamed.0=classes2.dex
-file.1=C\:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_8eb12f979d66567f50ffcabf544dbe2338a12e03\\classes.dex
-base.1=C\:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_8eb12f979d66567f50ffcabf544dbe2338a12e03
-file.0=C\:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_8775ef1df2326d6a29710de1f6eca48c387610b8\\classes.dex
+#Tue Jan 09 22:56:38 CET 2018
+base.0=C\:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project-Cem2\\BlankPhoneWearApp\\Application\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_18c48129341db11de9426dc416a682ea039b6fbd
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=C\:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project-Cem2\\BlankPhoneWearApp\\Application\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_3c32b5dce355cffd2eef837f719a56a1d1ecfc13\\classes.dex
+base.1=C\:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project-Cem2\\BlankPhoneWearApp\\Application\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_3c32b5dce355cffd2eef837f719a56a1d1ecfc13
+file.0=C\:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project-Cem2\\BlankPhoneWearApp\\Application\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_18c48129341db11de9426dc416a682ea039b6fbd\\classes.dex

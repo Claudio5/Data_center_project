@@ -1,20 +1,44 @@
 package ch.epfl.esl.blankphonewearapp;
-
+import android.Manifest;
 import android.app.Activity;
+import android.app.ActivityManager;
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.content.Context;
 import android.content.Intent;
 import android.content.IntentSender;
+import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.Spinner;
+import android.widget.EditText;
+import android.widget.Spinner;;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
+
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -41,6 +65,7 @@ import com.google.android.gms.wearable.Wearable;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import java.util.ArrayList;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -53,6 +78,8 @@ import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
 import ch.epfl.esl.commons.DataLayerCommons;
+import ch.epfl.esl.blankphonewearapp.rackModel;
+import ch.epfl.esl.blankphonewearapp.serverItem;
 
 public class MainActivity extends Activity implements
         CapabilityApi.CapabilityListener,
@@ -75,6 +102,25 @@ public class MainActivity extends Activity implements
     private ScheduledExecutorService mGeneratorExecutor;
     private ScheduledFuture<?> mDataItemGeneratorFuture;
 
+    private static final int MY_PERMISSIONS_REQUEST_CALL_PHONE = 1234;
+    private String ip = "10.0.2.2";
+
+    private LinearLayout myLayout;
+    private LinearLayout myLayout2;
+
+    // this is an array that holds the IDs of the drawables ...
+    private int[] images ;
+
+    private View serverCell;
+    private View rackCell;
+    private int nbServer[]={3,2,3};
+    private int nbRack=3;
+    private int nbCPU;
+    private TextView text;
+
+    ArrayList<rackModel> rackDataList;
+
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -91,14 +137,18 @@ public class MainActivity extends Activity implements
                 .addOnConnectionFailedListener(this)
                 .build();
 
-        buildSpinner();
+       // buildSpinner();
+       // buildScroll();
+
+        new GetJSON_Param().execute("http://"+ip+":5002");
+        //Log.e(TAG,"nbracks "+nbRack);
 
         FloatingActionButton launchActivityTwoButton = (FloatingActionButton) findViewById(R.id.send_fltbtn);
         launchActivityTwoButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-
+/*
                 Spinner spinnerDC=(Spinner) findViewById(R.id.spinnerDC);
                 String textDC = spinnerDC.getSelectedItem().toString();
 
@@ -112,11 +162,13 @@ public class MainActivity extends Activity implements
                 String textCP = spinnerCP.getSelectedItem().toString();
 
                 String url= urlCreate(textDC,textR,textS,textCP);
-
+*/
                 //Log.e(TAG,"url : "+url);
-
+                String list = listsSelectedServer();
+                //Log.e(TAG,list);
+                //String url="";
                 Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
-                intent.putExtra("url",url);
+                intent.putExtra("url",list);
                 startActivity(intent);
 
             }
@@ -126,30 +178,126 @@ public class MainActivity extends Activity implements
         launchWEB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
+                listsSelectedServer();
+                new GetRacks().execute("http:/"+ip+":5002/rack01/s01/power/last5min");
+            }
+        });
+
+        FloatingActionButton save_phone = (FloatingActionButton) findViewById(R.id.save_nb);
+        save_phone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 //String url = "http://10.0.2.2:5002/racks";
                 //String url = "http://0.0.0.0:5002/racks";
 
 
+                //Context context = getApplicationContext();
+                EditText text = (EditText) findViewById(R.id.hotline_nb);
+                String phone_number = text.getText().toString();
+                SharedPreferences sharedPref = getSharedPreferences("id",0);
+                SharedPreferences.Editor editor = sharedPref.edit();
+                editor.putString("phone", phone_number);
+                editor.commit();
 
-                new GetRacks().execute("http://128.179.195.18:5002/rack01/s01/power/last5min");
 
-                //Intent intent = new Intent(Intent.ACTION_VIEW);
-                //intent.setData(Uri.parse(url));
-                //startActivity(intent);
             }
 
         });
 
-        //Intent servInt = new Intent(this,MyService.class);
-        Intent servInt = new Intent(this,MyService.class);
-        servInt.putExtra("url","http://10.0.2.2:5002/rack01/s01/cpu01");
-        startService(servInt);
+        FloatingActionButton call = (FloatingActionButton) findViewById(R.id.call_fltbtn);
+        call.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                SharedPreferences settings = getSharedPreferences("id",0);
+                String phone = settings.getString("phone", "");
+                EditText edit = (EditText) findViewById(R.id.hotline_nb);
+                if(phone==null){
+                    //Log.e(TAG,"number null");
+                    phone=edit.getText().toString();
+                }
+                //String phone = edit.getText().toString();
+
+                Intent callIntent = new Intent(Intent.ACTION_CALL);
+                String phone_nb = "tel:" + phone;
+                callIntent.setData(Uri.parse(phone_nb));
+                if (ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+
+                    ActivityCompat.requestPermissions(MainActivity.this,
+                            new String[]{Manifest.permission.CALL_PHONE},
+                            MY_PERMISSIONS_REQUEST_CALL_PHONE);
+                    return;
+                }
+                startActivity(callIntent);
+
+            }
+
+        });
+
+
+
+
+        if(!isMyServiceRunning(MyService.class)){
+            Intent servInt = new Intent(this, MyService.class);
+            servInt.putExtra("url", listsAllServer());
+            startService(servInt);
+            Toast.makeText(getBaseContext(), "Service is not already running", Toast.LENGTH_SHORT).show();
+
+
+        }else{
+            Toast.makeText(getBaseContext(), "Service is already running", Toast.LENGTH_SHORT).show();
+
+        }
+
+
+        //servInt.putExtra("url","http://"+ip+":5002/rack01/s01/cpu01");
+        //servInt.putExtra("url",listsAllServer());
+        //startService(servInt);
+
+    }
+
+    private boolean isMyServiceRunning(Class<?> serviceClass) {
+        ActivityManager manager = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
+        for (ActivityManager.RunningServiceInfo service : manager.getRunningServices(Integer.MAX_VALUE)) {
+            if (serviceClass.getName().equals(service.service.getClassName())) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private String listsSelectedServer(){
+        String url="";
+        for (int i=0; i< nbRack;i++)
+            for (int j=0;j<nbServer[i];j++){
+                if(rackDataList.get(i).getAllItemsInSection().get(j).getSelect()) {
+                    Log.v(TAG, "Rack: "+ i +" Server: "+j);
+                    url=url+urlCreate("",Integer.toString(i+1),Integer.toString(j+1),"Power")+"#end#";
+                }
+
+
+            }
+
+        return url;
+
+    }
+
+    private String listsAllServer(){
+        String url="";
+        for (int i=0; i< nbRack;i++)
+            for (int j=0;j<nbServer[i];j++){
+                Log.v(TAG, "Rack: "+ i +" Server: "+j);
+                url=url+urlCreate("",Integer.toString(i+1),Integer.toString(j+1),"Power")+"#end#";
+
+            }
+
+        return url;
 
     }
 
     private String urlCreate(String textDC,String textR,String textS,String textCP) {
         //String baseUrl = "http://128.179.195.18:5002/";
-        String baseUrl = "http://10.0.2.2:5002/";
+        String baseUrl = "http://"+ip+":5002/";
         String strR="rack0"+textR.substring(textR.length() - 1);
         String strS="s0"+textS.substring(textS.length() - 1);
         if(textCP.contains("Power")) {
@@ -174,19 +322,142 @@ public class MainActivity extends Activity implements
 
     }
 
+
+
+    private class GetJSON_Param extends AsyncTask<String, Void, String[]> {
+
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+
+
+        }
+
+
+        @Override
+        protected String[] doInBackground(String... url) {
+            urlHandler sh = new urlHandler();
+
+            String jsonStr = sh.getjsonstring(url[0]+"/racks");
+
+            //Log.e(TAG, "Response from url: " + jsonStr);
+
+            if(jsonStr!=null) {
+                try {
+                    JSONObject jsonObject = new JSONObject(jsonStr);
+
+                    //for (int i = 0; i < jsonObject.length(); i++) {
+
+                    JSONArray racks = jsonObject.getJSONArray("racks");
+                    String [] nb_servers= new String[racks.length()];
+                    for (int j = 0; j < racks.length(); j++) {
+                        String url_srv = url[0]+"/rack0"+Integer.toString(j+1)+"/servers";
+                        urlHandler servers_h = new urlHandler();
+                        String jsonStr_srv = servers_h.getjsonstring(url_srv);
+
+                        if(jsonStr_srv!=null){
+                            try{
+                                JSONObject jsonObject_srv = new JSONObject(jsonStr_srv);
+                                JSONArray servers = jsonObject_srv.getJSONArray("servers");
+
+                                nb_servers[j]= Integer.toString(servers.length());
+                            }
+                            catch(final JSONException e) {
+                                Log.e(TAG, "Json parsing error2: " + e.getMessage());
+                            }
+                        }
+
+                        //Log.e(TAG, "power: " + racks.getString(j));
+                    }
+                    //String racks = jsonObject.getString("racks");
+
+
+
+                    //}
+
+
+                    return nb_servers;
+                }
+                catch (final JSONException e) {
+                    Log.e(TAG, "Json parsing error: " + e.getMessage());
+
+
+
+                }
+            }
+            else {
+                Log.e(TAG, "No response");
+            }
+
+
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(String[] result) {
+
+            //updatePlot(result);
+
+            nbRack=result.length;
+            Log.e(TAG,"this is what I get : "+nbRack);
+            for(int i=0;i<nbRack;i++){
+                nbServer[i]=Integer.parseInt(result[i]);
+            }
+
+            buildServerScroll();
+
+        }
+
+    }
+
+    private void buildServerScroll(){
+
+        serverDataFill();
+
+        RecyclerView my_recycler_view = (RecyclerView) findViewById(R.id.my_recycler_view);
+        my_recycler_view.setHasFixedSize(true);
+
+        rackModelAdapter adapter = new rackModelAdapter(this, rackDataList);
+
+        my_recycler_view.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+
+        my_recycler_view.setAdapter(adapter);
+    }
+
+    private void serverDataFill(){
+        rackDataList = new ArrayList<rackModel>();
+
+        for (int i = 0; i < nbRack; i++) {
+
+            rackModel data = new rackModel();
+
+            data.setHeaderTitle("Rack " + i);
+
+            ArrayList<serverItem> singleItem = new ArrayList<serverItem>();
+            for (int j = 0; j < nbServer[i]; j++) {
+                singleItem.add(new serverItem("Server "+j,nbCPU,"Rack "+(i+1) ));
+            }
+
+            data.setServers(singleItem);
+
+            rackDataList.add(data);
+        }
+    }
+
+
+
+
     // Build the main spinner with the names for the data centers
-    private void buildSpinner(){
+   /* private void buildSpinner(){
 
         //String dataCenters[]= {"test1","test2"};
 
-        Spinner spinner = findViewById(R.id.spinnerDC);
+        //Spinner spinner = findViewById(R.id.spinnerDC);
 
         // Create an ArrayAdapter using the string array and a default spinner layout with strings.xml
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.dataCenter_array, android.R.layout.simple_spinner_item);
-
-        // Optional idea
-        // ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,   android.R.layout.simple_spinner_item, dataCenters);
 
         // Specify the layout to use when the list of choices appears
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -198,9 +469,6 @@ public class MainActivity extends Activity implements
         // Create an ArrayAdapter using the string array and a default spinner layout with strings.xml
         ArrayAdapter<CharSequence> adapterR = ArrayAdapter.createFromResource(this,
                 R.array.Racks_array, android.R.layout.simple_spinner_item);
-
-        // Optional idea
-        // ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,   android.R.layout.simple_spinner_item, dataCenters);
 
         // Specify the layout to use when the list of choices appears
         //adapterR.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -234,6 +502,33 @@ public class MainActivity extends Activity implements
         //adapterCP.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // Apply the adapter to the spinner
         spinnerCP.setAdapter(adapterCP);
+    }
+*/
+
+    public void sendNotificationWear(){
+
+        if (mGoogleApiClient.isConnected()) {
+
+            new SendMessageTask(DataLayerCommons.START_ACTIVITY_PATH).execute();
+            // Stop the fake data generator
+            mDataItemGeneratorFuture.cancel(true);
+
+
+            // Send the notification
+            PutDataMapRequest dataMap = PutDataMapRequest.create(DataLayerCommons.NOTIF_PATH);
+            dataMap.getDataMap().putString(DataLayerCommons.NOTIF_KEY, new Alarm().getServerWarning());
+            dataMap.getDataMap().putLong("time", new Date().getTime());
+            PutDataRequest request = dataMap.asPutDataRequest();
+            request.setUrgent();
+            Wearable.DataApi.putDataItem(mGoogleApiClient, request)
+                    .setResultCallback(new ResultCallback<DataItemResult>() {
+                        @Override
+                        public void onResult(@NonNull DataItemResult dataItemResult) {
+                            Log.v(TAG, "Sending notification was successful: " + dataItemResult.getStatus()
+                                    .isSuccess());
+                        }
+                    });
+        }
     }
 
     @Override
@@ -350,69 +645,7 @@ public class MainActivity extends Activity implements
                 });
     }
 
-    private class GetRacks extends AsyncTask<String, Void, String[]> {
 
-
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-
-
-        }
-
-
-        @Override
-        protected String[] doInBackground(String... url) {
-            urlHandler sh = new urlHandler();
-
-            String jsonStr = sh.getjsonstring(url[0]);
-
-            Log.e(TAG, "Response from url: " + jsonStr);
-
-            if(jsonStr!=null) {
-                try {
-                    JSONObject jsonObject = new JSONObject(jsonStr);
-
-                    //for (int i = 0; i < jsonObject.length(); i++) {
-
-                        JSONArray racks = jsonObject.getJSONArray("s01");
-                        String [] powerArray= new String[racks.length()];
-                        for (int j = 0; j < racks.length(); j++) {
-                            powerArray[j]=racks.getString(j);
-                            Log.e(TAG, "power: " + racks.getString(j));
-                        }
-                        //String racks = jsonObject.getString("racks");
-
-
-                    //}
-
-                    return powerArray;
-                }
-                catch (final JSONException e) {
-                    Log.e(TAG, "Json parsing error: " + e.getMessage());
-
-
-
-                }
-            }
-            else {
-                Log.e(TAG, "No response");
-            }
-
-
-            return null;
-        }
-
-        @Override
-        protected void onPostExecute(String[] result) {
-
-            updatePlot(result);
-
-        }
-
-
-
-    }
 
     private class SendMessageTask extends AsyncTask<Void, Void, Void> {
         // Asynchronous background task to send a message through the Wear API

@@ -7,4 +7,6 @@ public class DataLayerCommons {
     public static final String IMAGE_PATH = "/image";
     public static final String IMAGE_KEY = "photo";
     public static final String COUNT_KEY = "count";
+    public static final String NOTIF_PATH = "/notif";
+    public static final String NOTIF_KEY = "notif";
 }

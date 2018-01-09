@@ -29,11 +29,11 @@ public class MyService extends Service {
         return START_STICKY;
     }
 
-    @Override
+   /* @Override
     public void onStart(Intent intent, int startId)
     {
         alarm.setAlarm(this,intent);
-    }
+    }*/
 
     @Override
     public IBinder onBind(Intent intent) {

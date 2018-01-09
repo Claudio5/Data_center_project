@@ -17,6 +17,7 @@
     <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <meta-data
         android:name="android.support.VERSION"
@@ -30,14 +31,6 @@
         <receiver
             android:name="ch.epfl.esl.blankphonewearapp.Alarm"
             android:process=":remote" />
-
-        <!--
-        <receiver android:name=".AutoStart">
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED"></action>
-            </intent-filter>
-        </receiver>
-        -->
 
         <service
             android:name="ch.epfl.esl.blankphonewearapp.MyService"
@@ -59,7 +52,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="ch.epfl.esl.blankphonewearapp.SecondActivity" >
+        <activity
+            android:name="ch.epfl.esl.blankphonewearapp.SecondActivity"
+            android:parentActivityName="ch.epfl.esl.blankphonewearapp.MainActivity" >
         </activity>
 
         <provider

@@ -1,14 +1,375 @@
 [
     {
-        "outputFile": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\Wearable\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-te-rIN\\values-te-rIN.xml",
+        "outputFile": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project-Cem2\\BlankPhoneWearApp\\Wearable\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-te-rIN\\values-te-rIN.xml",
         "map": [
             {
                 "to": {
                     "startLine": 2,
                     "startColumn": 4,
                     "startOffset": 105,
+                    "endColumn": 113,
+                    "endOffset": 214
+                },
+                "from": {
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\768ae380c656c8ca3e27d51133ab7e13e219bfb2\\output\\res\\values-te-rIN\\values-te-rIN.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 113,
+                        "endOffset": 164
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 219,
+                    "endColumn": 107,
+                    "endOffset": 322
+                },
+                "from": {
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\768ae380c656c8ca3e27d51133ab7e13e219bfb2\\output\\res\\values-te-rIN\\values-te-rIN.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 169,
+                        "endColumn": 107,
+                        "endOffset": 272
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 327,
+                    "endColumn": 122,
+                    "endOffset": 445
+                },
+                "from": {
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\768ae380c656c8ca3e27d51133ab7e13e219bfb2\\output\\res\\values-te-rIN\\values-te-rIN.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 277,
+                        "endColumn": 122,
+                        "endOffset": 395
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 450,
+                    "endColumn": 108,
+                    "endOffset": 554
+                },
+                "from": {
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\768ae380c656c8ca3e27d51133ab7e13e219bfb2\\output\\res\\values-te-rIN\\values-te-rIN.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 400,
+                        "endColumn": 108,
+                        "endOffset": 504
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 559,
+                    "endColumn": 110,
+                    "endOffset": 665
+                },
+                "from": {
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\768ae380c656c8ca3e27d51133ab7e13e219bfb2\\output\\res\\values-te-rIN\\values-te-rIN.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 509,
+                        "endColumn": 110,
+                        "endOffset": 615
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 670,
+                    "endColumn": 89,
+                    "endOffset": 755
+                },
+                "from": {
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\768ae380c656c8ca3e27d51133ab7e13e219bfb2\\output\\res\\values-te-rIN\\values-te-rIN.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 620,
+                        "endColumn": 89,
+                        "endOffset": 705
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 760,
+                    "endColumn": 104,
+                    "endOffset": 860
+                },
+                "from": {
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\768ae380c656c8ca3e27d51133ab7e13e219bfb2\\output\\res\\values-te-rIN\\values-te-rIN.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 710,
+                        "endColumn": 104,
+                        "endOffset": 810
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 865,
+                    "endColumn": 124,
+                    "endOffset": 985
+                },
+                "from": {
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\768ae380c656c8ca3e27d51133ab7e13e219bfb2\\output\\res\\values-te-rIN\\values-te-rIN.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 815,
+                        "endColumn": 124,
+                        "endOffset": 935
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 990,
+                    "endColumn": 81,
+                    "endOffset": 1067
+                },
+                "from": {
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\768ae380c656c8ca3e27d51133ab7e13e219bfb2\\output\\res\\values-te-rIN\\values-te-rIN.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 940,
+                        "endColumn": 81,
+                        "endOffset": 1017
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 1072,
+                    "endColumn": 81,
+                    "endOffset": 1149
+                },
+                "from": {
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\768ae380c656c8ca3e27d51133ab7e13e219bfb2\\output\\res\\values-te-rIN\\values-te-rIN.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 1022,
+                        "endColumn": 81,
+                        "endOffset": 1099
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 1154,
+                    "endColumn": 84,
+                    "endOffset": 1234
+                },
+                "from": {
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\768ae380c656c8ca3e27d51133ab7e13e219bfb2\\output\\res\\values-te-rIN\\values-te-rIN.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 1104,
+                        "endColumn": 84,
+                        "endOffset": 1184
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 1239,
+                    "endColumn": 112,
+                    "endOffset": 1347
+                },
+                "from": {
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\768ae380c656c8ca3e27d51133ab7e13e219bfb2\\output\\res\\values-te-rIN\\values-te-rIN.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 1189,
+                        "endColumn": 112,
+                        "endOffset": 1297
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 1352,
+                    "endColumn": 107,
+                    "endOffset": 1455
+                },
+                "from": {
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\768ae380c656c8ca3e27d51133ab7e13e219bfb2\\output\\res\\values-te-rIN\\values-te-rIN.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 1302,
+                        "endColumn": 107,
+                        "endOffset": 1405
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 1460,
+                    "endColumn": 99,
+                    "endOffset": 1555
+                },
+                "from": {
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\768ae380c656c8ca3e27d51133ab7e13e219bfb2\\output\\res\\values-te-rIN\\values-te-rIN.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 1410,
+                        "endColumn": 99,
+                        "endOffset": 1505
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 1560,
+                    "endColumn": 110,
+                    "endOffset": 1666
+                },
+                "from": {
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\768ae380c656c8ca3e27d51133ab7e13e219bfb2\\output\\res\\values-te-rIN\\values-te-rIN.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 1510,
+                        "endColumn": 110,
+                        "endOffset": 1616
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 1671,
+                    "endColumn": 101,
+                    "endOffset": 1768
+                },
+                "from": {
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\768ae380c656c8ca3e27d51133ab7e13e219bfb2\\output\\res\\values-te-rIN\\values-te-rIN.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 1621,
+                        "endColumn": 101,
+                        "endOffset": 1718
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 1773,
+                    "endColumn": 116,
+                    "endOffset": 1885
+                },
+                "from": {
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\768ae380c656c8ca3e27d51133ab7e13e219bfb2\\output\\res\\values-te-rIN\\values-te-rIN.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 1723,
+                        "endColumn": 116,
+                        "endOffset": 1835
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 19,
+                    "startColumn": 4,
+                    "startOffset": 1890,
+                    "endColumn": 126,
+                    "endOffset": 2012
+                },
+                "from": {
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\768ae380c656c8ca3e27d51133ab7e13e219bfb2\\output\\res\\values-te-rIN\\values-te-rIN.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 1840,
+                        "endColumn": 126,
+                        "endOffset": 1962
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 20,
+                    "startColumn": 4,
+                    "startOffset": 2017,
+                    "endColumn": 100,
+                    "endOffset": 2113
+                },
+                "from": {
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\768ae380c656c8ca3e27d51133ab7e13e219bfb2\\output\\res\\values-te-rIN\\values-te-rIN.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 1967,
+                        "endColumn": 100,
+                        "endOffset": 2063
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 21,
+                    "startColumn": 4,
+                    "startOffset": 2118,
                     "endColumn": 261,
-                    "endOffset": 362
+                    "endOffset": 2375
                 },
                 "from": {
                     "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-te-rIN\\base_strings.xml",
@@ -23,11 +384,11 @@
             },
             {
                 "to": {
-                    "startLine": 3,
+                    "startLine": 22,
                     "startColumn": 4,
-                    "startOffset": 367,
+                    "startOffset": 2380,
                     "endColumn": 130,
-                    "endOffset": 493
+                    "endOffset": 2506
                 },
                 "from": {
                     "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-te-rIN\\base_strings.xml",
@@ -42,11 +403,11 @@
             },
             {
                 "to": {
-                    "startLine": 4,
+                    "startLine": 23,
                     "startColumn": 4,
-                    "startOffset": 498,
+                    "startOffset": 2511,
                     "endColumn": 185,
-                    "endOffset": 679
+                    "endOffset": 2692
                 },
                 "from": {
                     "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-te-rIN\\base_strings.xml",
@@ -61,11 +422,11 @@
             },
             {
                 "to": {
-                    "startLine": 5,
+                    "startLine": 24,
                     "startColumn": 4,
-                    "startOffset": 684,
+                    "startOffset": 2697,
                     "endColumn": 131,
-                    "endOffset": 811
+                    "endOffset": 2824
                 },
                 "from": {
                     "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-te-rIN\\base_strings.xml",
@@ -80,11 +441,11 @@
             },
             {
                 "to": {
-                    "startLine": 6,
+                    "startLine": 25,
                     "startColumn": 4,
-                    "startOffset": 816,
+                    "startOffset": 2829,
                     "endColumn": 127,
-                    "endOffset": 939
+                    "endOffset": 2952
                 },
                 "from": {
                     "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-te-rIN\\base_strings.xml",
@@ -99,11 +460,11 @@
             },
             {
                 "to": {
-                    "startLine": 7,
+                    "startLine": 26,
                     "startColumn": 4,
-                    "startOffset": 944,
+                    "startOffset": 2957,
                     "endColumn": 200,
-                    "endOffset": 1140
+                    "endOffset": 3153
                 },
                 "from": {
                     "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-te-rIN\\base_strings.xml",
@@ -118,11 +479,11 @@
             },
             {
                 "to": {
-                    "startLine": 8,
+                    "startLine": 27,
                     "startColumn": 4,
-                    "startOffset": 1145,
+                    "startOffset": 3158,
                     "endColumn": 205,
-                    "endOffset": 1346
+                    "endOffset": 3359
                 },
                 "from": {
                     "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-te-rIN\\base_strings.xml",
@@ -137,11 +498,11 @@
             },
             {
                 "to": {
-                    "startLine": 9,
+                    "startLine": 28,
                     "startColumn": 4,
-                    "startOffset": 1351,
+                    "startOffset": 3364,
                     "endColumn": 126,
-                    "endOffset": 1473
+                    "endOffset": 3486
                 },
                 "from": {
                     "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-te-rIN\\base_strings.xml",
@@ -156,11 +517,11 @@
             },
             {
                 "to": {
-                    "startLine": 10,
+                    "startLine": 29,
                     "startColumn": 4,
-                    "startOffset": 1478,
+                    "startOffset": 3491,
                     "endColumn": 169,
-                    "endOffset": 1643
+                    "endOffset": 3656
                 },
                 "from": {
                     "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-te-rIN\\base_strings.xml",
@@ -175,11 +536,11 @@
             },
             {
                 "to": {
-                    "startLine": 11,
+                    "startLine": 30,
                     "startColumn": 4,
-                    "startOffset": 1648,
+                    "startOffset": 3661,
                     "endColumn": 117,
-                    "endOffset": 1761
+                    "endOffset": 3774
                 },
                 "from": {
                     "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-te-rIN\\base_strings.xml",
@@ -194,11 +555,11 @@
             },
             {
                 "to": {
-                    "startLine": 12,
+                    "startLine": 31,
                     "startColumn": 4,
-                    "startOffset": 1766,
+                    "startOffset": 3779,
                     "endColumn": 162,
-                    "endOffset": 1924
+                    "endOffset": 3937
                 },
                 "from": {
                     "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-te-rIN\\base_strings.xml",
@@ -213,11 +574,11 @@
             },
             {
                 "to": {
-                    "startLine": 13,
+                    "startLine": 32,
                     "startColumn": 4,
-                    "startOffset": 1929,
+                    "startOffset": 3942,
                     "endColumn": 131,
-                    "endOffset": 2056
+                    "endOffset": 4069
                 },
                 "from": {
                     "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-te-rIN\\base_strings.xml",
@@ -232,11 +593,11 @@
             },
             {
                 "to": {
-                    "startLine": 14,
+                    "startLine": 33,
                     "startColumn": 4,
-                    "startOffset": 2061,
+                    "startOffset": 4074,
                     "endColumn": 137,
-                    "endOffset": 2194
+                    "endOffset": 4207
                 },
                 "from": {
                     "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-te-rIN\\base_strings.xml",
@@ -251,11 +612,11 @@
             },
             {
                 "to": {
-                    "startLine": 15,
+                    "startLine": 34,
                     "startColumn": 4,
-                    "startOffset": 2199,
+                    "startOffset": 4212,
                     "endColumn": 174,
-                    "endOffset": 2369
+                    "endOffset": 4382
                 },
                 "from": {
                     "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-te-rIN\\base_strings.xml",
@@ -270,11 +631,11 @@
             },
             {
                 "to": {
-                    "startLine": 16,
+                    "startLine": 35,
                     "startColumn": 4,
-                    "startOffset": 2374,
+                    "startOffset": 4387,
                     "endColumn": 129,
-                    "endOffset": 2499
+                    "endOffset": 4512
                 },
                 "from": {
                     "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-te-rIN\\base_strings.xml",
@@ -289,11 +650,11 @@
             },
             {
                 "to": {
-                    "startLine": 17,
+                    "startLine": 36,
                     "startColumn": 4,
-                    "startOffset": 2504,
+                    "startOffset": 4517,
                     "endColumn": 183,
-                    "endOffset": 2683
+                    "endOffset": 4696
                 },
                 "from": {
                     "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-te-rIN\\base_strings.xml",
@@ -308,11 +669,11 @@
             },
             {
                 "to": {
-                    "startLine": 18,
+                    "startLine": 37,
                     "startColumn": 4,
-                    "startOffset": 2688,
+                    "startOffset": 4701,
                     "endColumn": 125,
-                    "endOffset": 2809
+                    "endOffset": 4822
                 },
                 "from": {
                     "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-te-rIN\\base_strings.xml",
@@ -327,11 +688,11 @@
             },
             {
                 "to": {
-                    "startLine": 19,
+                    "startLine": 38,
                     "startColumn": 4,
-                    "startOffset": 2814,
+                    "startOffset": 4827,
                     "endColumn": 226,
-                    "endOffset": 3036
+                    "endOffset": 5049
                 },
                 "from": {
                     "file": "C:\\Users\\claud\\.android\\build-cache\\e33b5fc896675d9263c693a0d399bc4a577a90ae\\output\\res\\values-te-rIN\\common_strings.xml",
@@ -346,11 +707,11 @@
             },
             {
                 "to": {
-                    "startLine": 20,
+                    "startLine": 39,
                     "startColumn": 4,
-                    "startOffset": 3041,
+                    "startOffset": 5054,
                     "endColumn": 230,
-                    "endOffset": 3267
+                    "endOffset": 5280
                 },
                 "from": {
                     "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-te-rIN\\base_strings.xml",
@@ -365,11 +726,11 @@
             },
             {
                 "to": {
-                    "startLine": 21,
+                    "startLine": 40,
                     "startColumn": 4,
-                    "startOffset": 3272,
+                    "startOffset": 5285,
                     "endColumn": 120,
-                    "endOffset": 3388
+                    "endOffset": 5401
                 },
                 "from": {
                     "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-te-rIN\\base_strings.xml",
@@ -384,11 +745,11 @@
             },
             {
                 "to": {
-                    "startLine": 22,
+                    "startLine": 41,
                     "startColumn": 4,
-                    "startOffset": 3393,
+                    "startOffset": 5406,
                     "endColumn": 109,
-                    "endOffset": 3498
+                    "endOffset": 5511
                 },
                 "from": {
                     "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-te-rIN\\base_strings.xml",
@@ -403,11 +764,11 @@
             },
             {
                 "to": {
-                    "startLine": 23,
+                    "startLine": 42,
                     "startColumn": 4,
-                    "startOffset": 3503,
+                    "startOffset": 5516,
                     "endColumn": 183,
-                    "endOffset": 3682
+                    "endOffset": 5695
                 },
                 "from": {
                     "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-te-rIN\\base_strings.xml",
@@ -422,11 +783,11 @@
             },
             {
                 "to": {
-                    "startLine": 24,
+                    "startLine": 43,
                     "startColumn": 4,
-                    "startOffset": 3687,
+                    "startOffset": 5700,
                     "endColumn": 129,
-                    "endOffset": 3812
+                    "endOffset": 5825
                 },
                 "from": {
                     "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-te-rIN\\base_strings.xml",
@@ -441,11 +802,11 @@
             },
             {
                 "to": {
-                    "startLine": 25,
+                    "startLine": 44,
                     "startColumn": 4,
-                    "startOffset": 3817,
+                    "startOffset": 5830,
                     "endColumn": 209,
-                    "endOffset": 4022
+                    "endOffset": 6035
                 },
                 "from": {
                     "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-te-rIN\\base_strings.xml",
@@ -460,11 +821,11 @@
             },
             {
                 "to": {
-                    "startLine": 26,
+                    "startLine": 45,
                     "startColumn": 4,
-                    "startOffset": 4027,
+                    "startOffset": 6040,
                     "endColumn": 138,
-                    "endOffset": 4161
+                    "endOffset": 6174
                 },
                 "from": {
                     "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-te-rIN\\base_strings.xml",
@@ -479,11 +840,11 @@
             },
             {
                 "to": {
-                    "startLine": 27,
+                    "startLine": 46,
                     "startColumn": 4,
-                    "startOffset": 4166,
+                    "startOffset": 6179,
                     "endColumn": 188,
-                    "endOffset": 4350
+                    "endOffset": 6363
                 },
                 "from": {
                     "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-te-rIN\\base_strings.xml",
@@ -498,11 +859,11 @@
             },
             {
                 "to": {
-                    "startLine": 28,
+                    "startLine": 47,
                     "startColumn": 4,
-                    "startOffset": 4355,
+                    "startOffset": 6368,
                     "endColumn": 92,
-                    "endOffset": 4443
+                    "endOffset": 6456
                 },
                 "from": {
                     "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-te-rIN\\base_strings.xml",
@@ -517,11 +878,11 @@
             },
             {
                 "to": {
-                    "startLine": 29,
+                    "startLine": 48,
                     "startColumn": 4,
-                    "startOffset": 4448,
+                    "startOffset": 6461,
                     "endColumn": 97,
-                    "endOffset": 4541
+                    "endOffset": 6554
                 },
                 "from": {
                     "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-te-rIN\\base_strings.xml",
@@ -536,11 +897,11 @@
             },
             {
                 "to": {
-                    "startLine": 30,
+                    "startLine": 49,
                     "startColumn": 4,
-                    "startOffset": 4546,
+                    "startOffset": 6559,
                     "endColumn": 111,
-                    "endOffset": 4653
+                    "endOffset": 6666
                 },
                 "from": {
                     "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-te-rIN\\base_strings.xml",
@@ -550,6 +911,44 @@
                         "startOffset": 4412,
                         "endColumn": 111,
                         "endOffset": 4519
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 50,
+                    "startColumn": 4,
+                    "startOffset": 6671,
+                    "endColumn": 82,
+                    "endOffset": 6749
+                },
+                "from": {
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\768ae380c656c8ca3e27d51133ab7e13e219bfb2\\output\\res\\values-te-rIN\\values-te-rIN.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 4,
+                        "startOffset": 2068,
+                        "endColumn": 82,
+                        "endOffset": 2146
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 51,
+                    "startColumn": 4,
+                    "startOffset": 6754,
+                    "endColumn": 100,
+                    "endOffset": 6850
+                },
+                "from": {
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\768ae380c656c8ca3e27d51133ab7e13e219bfb2\\output\\res\\values-te-rIN\\values-te-rIN.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 4,
+                        "startOffset": 2151,
+                        "endColumn": 100,
+                        "endOffset": 2247
                     }
                 }
             }
