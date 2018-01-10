@@ -213,60 +213,54 @@ public class SecondActivity extends Activity implements
 
         Bundle bundle = getIntent().getExtras();
         url = bundle.getString("url");
-        String [] urls = decode_list(url);
-        Log.e(TAG,"the url : "+url);
 
 
         //for(int i=0;i<urls.length;i++){
         //    new GetJSON_Val().execute(urls[i]+Integer.toString(i));
         //}
         //plotUpdate();
-        new GetJSON_val(){
-            @Override
-            protected void onPostExecute(String[] result) {
+        if(url.contains("http")) {
+            Log.e(TAG,"the url : "+url);
+            String [] urls = decode_list(url);
+            new GetJSON_val() {
+                @Override
+                protected void onPostExecute(String[] result) {
 
-                //updatePlot(result);
+                    //updatePlot(result);
+                    if (result != null) {
 
-                if(result!=null) {
-                    Float[] valF = new Float[string2nbr(result[0]).length];
-                    //Log.e(TAG,"result length = "+result.length);
-                    for (int i = 0; i < java.lang.Math.min(result.length,5); i++) {
+                        Float[] valF = new Float[string2nbr(result[0]).length];
+                        //Log.e(TAG,"result length = "+result.length);
+                        for (int i = 0; i < java.lang.Math.min(result.length, 5); i++) {
 
+                            Number[] val = string2nbr(result[i]);
+                            series_update(val, i);
 
-                        Number[] val = string2nbr(result[i]);
-                        series_update(val, i);
-                        Log.e(TAG,"series i "+ series[i]);
-                        for (int j = 0; j < val.length; j++) {
-                            int value = val[j].intValue();
+                            for (int j = 0; j < val.length; j++) {
+                                int value = val[j].intValue();
 
-
-                            //val[j] = value;
-                            if (i == 0)
-                                valF[j] = (float) value;
+                                if (i == 0)
+                                    valF[j] = (float) value;
+                            }
                         }
+                        plotUpdate();
+                        setPowerAvgTxtView(valF);
+                        if (result.length > 5) {
+                            Toast.makeText(getApplicationContext(), "Only the first 5 are plotted", Toast.LENGTH_LONG).show();
+                        }
+                    } else {
+                        Toast.makeText(getApplicationContext(), "False URL, please try other options", Toast.LENGTH_LONG).show();
+                        kill_activity();
                     }
-                    plotUpdate();
-                    setPowerAvgTxtView(valF);
-                    if(result.length>5) {
 
-                        Toast.makeText(getApplicationContext(), "Only the first 5 are plotted", Toast.LENGTH_LONG).show();
-                        //Number[] val = new Number[result.length];
-
-                        //series=result;
-                        //series_update(val,id);
-
-                    }
                 }
-                else {
-                    Toast.makeText(getApplicationContext(),"False URL, please try other options", Toast.LENGTH_LONG).show();
-                    kill_activity();
-                }
-
-
-            }
-        }.execute(url);
-
-
+            }.execute(url);
+        }
+        else {
+            Toast.makeText(getApplicationContext(), "Please choose at least one server", Toast.LENGTH_LONG).show();
+            kill_activity();
+        }
+        
         /*
         new GetRacks(){
             @Override

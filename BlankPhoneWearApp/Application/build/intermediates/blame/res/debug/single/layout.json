@@ -60,6 +60,10 @@
         "source": "/Users/musluoglucem/.android/build-cache/8fcc9193c6f2f0a0c6b81b97f8e0a0bac6fc19f5/output/res/layout/design_navigation_menu_item.xml"
     },
     {
+        "merged": "/Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/build/intermediates/res/merged/debug/layout/dialog_ip.xml",
+        "source": "/Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/src/main/res/layout/dialog_ip.xml"
+    },
+    {
         "merged": "/Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/build/intermediates/res/merged/debug/layout/second_activity.xml",
         "source": "/Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/src/main/res/layout/second_activity.xml"
     },

@@ -1,6 +1,9 @@
 package ch.epfl.esl.blankphonewearapp;
 import android.Manifest;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentSender;
 import android.content.SharedPreferences;
@@ -13,7 +16,9 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.DialogFragment;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -97,7 +102,8 @@ public class MainActivity extends Activity implements
     private ScheduledFuture<?> mDataItemGeneratorFuture;
 
     private static final int MY_PERMISSIONS_REQUEST_CALL_PHONE = 1234;
-    private String ip = "128.179.198.237";
+    private String ip = "10.19.0.116";
+    Context context = this;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -115,12 +121,65 @@ public class MainActivity extends Activity implements
                 .addOnConnectionFailedListener(this)
                 .build();
 
+
+        SharedPreferences settings = getSharedPreferences("id",0);
+
+
+
+        /*
+        LayoutInflater li = LayoutInflater.from(context);
+        View dialog = li.inflate(R.layout.dialog_ip,null);
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
+                context);
+
+        alertDialogBuilder.setView(dialog);
+
+        final EditText userInput = (EditText) dialog
+                .findViewById(R.id.editTextIP);
+
+        alertDialogBuilder
+                .setCancelable(false)
+                .setPositiveButton("OK",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog,int id) {
+                                // get user input and set it to result
+                                // edit text
+                                SharedPreferences settings = getSharedPreferences("id",0);
+                                SharedPreferences.Editor editor = settings.edit();
+                                editor.putString("ip", userInput.getText().toString());
+                                editor.commit();
+
+                            }
+                        })
+                .setNegativeButton("Cancel",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog,int id) {
+                                dialog.cancel();
+                            }
+                        });
+
+
+        AlertDialog alertDialog = alertDialogBuilder.create();
+        alertDialog.show();
+
+
+        //DialogFragment ipdialog = new IPDialogFragment();
+        //ipdialog.show(getFragmentManager(),"dial");
+        ip=settings.getString("ip", "");
+        buildServerScroll();
+        Log.e(TAG,"ip : " + ip);
+        */
+
+
+        ip=settings.getString("ip", "");
+        //new IPDialogFragment().onCreateDialog();
+        //ipdialog.show();
        // buildSpinner();
        // buildScroll();
         new GetJSON_Param().execute("http://"+ip+":5002");
         //Log.e(TAG,"nbracks "+nbRack);
 
-        SharedPreferences settings = getSharedPreferences("id",0);
+
         String phone_nb = settings.getString("phone", "");
         EditText text_phone = (EditText) findViewById(R.id.hotline_nb);
         text_phone.setText("Phone : "+phone_nb);
@@ -162,8 +221,57 @@ public class MainActivity extends Activity implements
         launchWEB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
-                listsSelectedServer();
-                new GetRacks().execute("http:/"+ip+":5002/rack01/s01/power/last5min");
+                //listsSelectedServer();
+                //new GetRacks().execute("http:/"+ip+":5002/rack01/s01/power/last5min");
+                SharedPreferences settings = getSharedPreferences("id",0);
+
+
+                //Context context = this;
+                LayoutInflater li = LayoutInflater.from(context);
+                View dialog = li.inflate(R.layout.dialog_ip,null);
+                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
+                        context);
+
+                alertDialogBuilder.setView(dialog);
+
+                final EditText userInput = (EditText) dialog
+                        .findViewById(R.id.editTextIP);
+
+                alertDialogBuilder
+                        .setCancelable(false)
+                        .setPositiveButton("OK",
+                                new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog,int id) {
+                                        // get user input and set it to result
+                                        // edit text
+                                        SharedPreferences settings = getSharedPreferences("id",0);
+                                        SharedPreferences.Editor editor = settings.edit();
+                                        editor.putString("ip", userInput.getText().toString());
+                                        editor.commit();
+                                        Intent intent = getIntent();
+                                        finish();
+                                        startActivity(intent);
+
+                                    }
+                                })
+                        .setNegativeButton("Cancel",
+                                new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog,int id) {
+                                        dialog.cancel();
+                                    }
+                                });
+
+
+                AlertDialog alertDialog = alertDialogBuilder.create();
+                alertDialog.show();
+
+
+                //DialogFragment ipdialog = new IPDialogFragment();
+                //ipdialog.show(getFragmentManager(),"dial");
+                //ip=settings.getString("ip", "");
+
+                //buildServerScroll();
+                //new GetJSON_Param().execute("http://"+ip+":5002");
             }
         });
 
@@ -227,18 +335,22 @@ public class MainActivity extends Activity implements
 
     }
 
+
+
     private String listsSelectedServer(){
         String url="";
-        for (int i=0; i< nbRack;i++)
-            for (int j=0;j<nbServer[i];j++){
-                if(rackDataList.get(i).getAllItemsInSection().get(j).getSelect()) {
-                    Log.v(TAG, "Rack: "+ i +" Server: "+j);
-                    url=url+urlCreate("",Integer.toString(i+1),Integer.toString(j+1),"Power")+"#end#";
+        if(nbRack>0 && nbServer!=null) {
+            //Log.e(TAG,"abc : " + nbServer[1]);
+            for (int i = 0; i < nbRack; i++)
+                for (int j = 0; j < nbServer[i]; j++) {
+                    if (rackDataList.get(i).getAllItemsInSection().get(j).getSelect()) {
+                        Log.v(TAG, "Rack: " + i + " Server: " + j);
+                        url = url + urlCreate("", Integer.toString(i + 1), Integer.toString(j + 1), "Power") + "#end#";
+                    }
+
+
                 }
-
-
-            }
-
+        }
         return url;
 
     }
@@ -280,6 +392,8 @@ public class MainActivity extends Activity implements
     private View rackCell;
     private int nbServer[]={3,1,5,15};
     private int nbRack=4;
+    //private int nbServer[]={-1};
+    //private int nbRack=0;
     private int nbCPU;
     private TextView text;
 
@@ -359,14 +473,18 @@ public class MainActivity extends Activity implements
         protected void onPostExecute(String[] result) {
 
             //updatePlot(result);
+            if(result!=null) {
+                nbRack = result.length;
+                Log.e(TAG, "this is what I get : " + nbRack);
+                for (int i = 0; i < nbRack; i++) {
+                    nbServer[i] = Integer.parseInt(result[i]);
+                }
 
-            nbRack=result.length;
-            Log.e(TAG,"this is what I get : "+nbRack);
-            for(int i=0;i<nbRack;i++){
-                nbServer[i]=Integer.parseInt(result[i]);
+                buildServerScroll();
             }
+            else {
 
-            buildServerScroll();
+            }
 
         }
 

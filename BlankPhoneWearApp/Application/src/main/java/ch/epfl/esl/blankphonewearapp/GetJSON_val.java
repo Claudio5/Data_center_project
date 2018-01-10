@@ -84,6 +84,7 @@ public class GetJSON_val extends AsyncTask <String, Void, String[]> {
             }
             else {
                 Log.e(TAG, "No response");
+                return null;
             }
 
         }
