@@ -6,22 +6,22 @@
     density="xhdpi"
     format="10"
     plugin-version="2.3.3"
-    timestamp="1515550249920"
+    timestamp="1515580968651"
     token="4097557654714183209"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="169" />
+        duration="198" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="35" />
+        duration="30" />
     <task
         name="verifier"
-        duration="11" />
+        duration="8" />
 
     <artifact
         location="/Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/build/intermediates/split-apk/debug/slices/slice_0.apk"
@@ -29,7 +29,7 @@
 
     <build
         build-mode="FULL"
-        timestamp="1515548424274"
+        timestamp="1515580784231"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/build/intermediates/split-apk/debug/slices/slice_0.apk"
@@ -70,7 +70,7 @@
     </build>
     <build
         build-mode="COLD"
-        timestamp="1515550249920"
+        timestamp="1515580968651"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/Users/musluoglucem/Documents/Master 1/Lab on App Development/project2/Data_center_project/BlankPhoneWearApp/Application/build/intermediates/split-apk/debug/slices/slice_0.apk"

@@ -239,6 +239,7 @@ public class MainActivity extends Activity implements
 
                 alertDialogBuilder
                         .setCancelable(false)
+                        .setMessage("Enter an IP Address")
                         .setPositiveButton("OK",
                                 new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog,int id) {
@@ -339,10 +340,11 @@ public class MainActivity extends Activity implements
 
     private String listsSelectedServer(){
         String url="";
-        if(nbRack>0 && nbServer!=null) {
+
             //Log.e(TAG,"abc : " + nbServer[1]);
             for (int i = 0; i < nbRack; i++)
                 for (int j = 0; j < nbServer[i]; j++) {
+                    //Log.e(TAG, "Rack: " + i + " Server: " + j);
                     if (rackDataList.get(i).getAllItemsInSection().get(j).getSelect()) {
                         Log.v(TAG, "Rack: " + i + " Server: " + j);
                         url = url + urlCreate("", Integer.toString(i + 1), Integer.toString(j + 1), "Power") + "#end#";
@@ -350,7 +352,7 @@ public class MainActivity extends Activity implements
 
 
                 }
-        }
+
         return url;
 
     }
@@ -392,8 +394,8 @@ public class MainActivity extends Activity implements
     private View rackCell;
     private int nbServer[]={3,1,5,15};
     private int nbRack=4;
-    //private int nbServer[]={-1};
-    //private int nbRack=0;
+    //private int nbServer[]= new int[0];
+    //private int nbRack=-1;
     private int nbCPU;
     private TextView text;
 
@@ -447,8 +449,6 @@ public class MainActivity extends Activity implements
                     }
                     //String racks = jsonObject.getString("racks");
 
-
-
                     //}
 
 
@@ -474,6 +474,7 @@ public class MainActivity extends Activity implements
 
             //updatePlot(result);
             if(result!=null) {
+
                 nbRack = result.length;
                 Log.e(TAG, "this is what I get : " + nbRack);
                 for (int i = 0; i < nbRack; i++) {
@@ -483,7 +484,7 @@ public class MainActivity extends Activity implements
                 buildServerScroll();
             }
             else {
-
+                buildServerScroll();
             }
 
         }

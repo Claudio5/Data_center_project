@@ -260,7 +260,7 @@ public class SecondActivity extends Activity implements
             Toast.makeText(getApplicationContext(), "Please choose at least one server", Toast.LENGTH_LONG).show();
             kill_activity();
         }
-        
+
         /*
         new GetRacks(){
             @Override
