@@ -1,0 +1,135 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ap="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.androidplot.xy.XYPlot
+            android:id="@+id/plotxy1"
+            style="@style/APDefacto.Dark"
+            androidplot.renderMode="use_background_thread"
+            android:layout_width="400dp"
+            android:layout_height="420dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/textView2"
+            android:layout_marginTop="0dp"
+            app:graphHeight="30dp"
+            app:graphHeightMode="fill"
+            app:graphWidth="0dp"
+            app:graphWidthMode="fill"
+            app:legendAnchor="right_bottom"
+            app:legendHeight="50dp"
+            app:legendTextSize="15sp"
+            app:lineLabels="left|bottom"
+            app:title="Power" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txt1"
+                android:layout_width="400dp"
+                android:layout_height="100dp"
+                android:text="TextView" />
+        </TableRow>
+        <com.androidplot.xy.XYPlot
+            android:id="@+id/plotxy2"
+            style="@style/APDefacto.Dark"
+            androidplot.renderMode="use_background_thread"
+            android:layout_width="400dp"
+            android:layout_height="420dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/textView2"
+            android:layout_marginTop="0dp"
+            app:graphHeight="30dp"
+            app:graphHeightMode="fill"
+            app:graphWidth="0dp"
+            app:graphWidthMode="fill"
+            app:legendAnchor="right_bottom"
+            app:legendHeight="50dp"
+            app:legendTextSize="15sp"
+            app:lineLabels="left|bottom"
+            app:title="Power" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <EditText
+                android:id="@+id/txt2"
+                android:layout_width="400dp"
+                android:layout_height="100dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Name" />
+        </TableRow>
+
+        <com.androidplot.xy.XYPlot
+            android:id="@+id/plotxy3"
+            style="@style/APDefacto.Dark"
+            androidplot.renderMode="use_background_thread"
+            android:layout_width="400dp"
+            android:layout_height="420dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/textView2"
+            android:layout_marginTop="0dp"
+            app:graphHeight="30dp"
+            app:graphHeightMode="fill"
+            app:graphWidth="0dp"
+            app:graphWidthMode="fill"
+            app:legendAnchor="right_bottom"
+            app:legendHeight="50dp"
+            app:legendTextSize="15sp"
+            app:lineLabels="left|bottom"
+            app:title="Power" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txt3"
+                android:layout_width="400dp"
+                android:layout_height="100dp"
+                android:text="TextView" />
+        </TableRow>
+
+        <com.androidplot.xy.XYPlot
+            android:id="@+id/plotxy4"
+            style="@style/APDefacto.Dark"
+            androidplot.renderMode="use_background_thread"
+            android:layout_width="400dp"
+            android:layout_height="420dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/textView2"
+            android:layout_marginTop="0dp"
+            app:graphHeight="30dp"
+            app:graphHeightMode="fill"
+            app:graphWidth="0dp"
+            app:graphWidthMode="fill"
+            app:legendAnchor="right_bottom"
+            app:legendHeight="50dp"
+            app:legendTextSize="15sp"
+            app:lineLabels="left|bottom"
+            app:title="Power" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txt4"
+                android:layout_width="400dp"
+                android:layout_height="100dp"
+                android:text="TextView" />
+        </TableRow>
+    </TableLayout>
+</ScrollView>

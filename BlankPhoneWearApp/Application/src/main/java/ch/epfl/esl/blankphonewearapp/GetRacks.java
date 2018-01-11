@@ -47,7 +47,7 @@ public class GetRacks extends AsyncTask<String, Void, String[]> {
 
         String jsonStr = sh.getjsonstring(url[0]);
 
-        Log.e(TAG, "Response from url: " + jsonStr);
+        //Log.e(TAG, "Response from url: " + jsonStr);
 
         if(jsonStr!=null) {
             try {
@@ -61,7 +61,7 @@ public class GetRacks extends AsyncTask<String, Void, String[]> {
                 String [] powerArray= new String[racks.length()];
                 for (int j = 0; j < racks.length(); j++) {
                     powerArray[j]=racks.getString(j);
-                    Log.e(TAG, "power: " + racks.getString(j));
+                    //Log.e(TAG, "power: " + racks.getString(j));
                 }
                 //String racks = jsonObject.getString("racks");
 
@@ -77,11 +77,14 @@ public class GetRacks extends AsyncTask<String, Void, String[]> {
         }
         else {
             Log.e(TAG, "No response");
+
         }
 
 
         return null;
     }
+
+
 
 
 }

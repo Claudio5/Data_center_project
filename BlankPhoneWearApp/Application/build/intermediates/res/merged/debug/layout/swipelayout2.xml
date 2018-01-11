@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/power_lay2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentRight="true"
+    android:layout_below="@+id/TableRow"
+    android:background="@drawable/background1"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/pwrAvgview2"
+        android:layout_width="360dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/pwrAvgNmbview1"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/powAvg"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/pwrAvgNmbview1"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="40dp"
+        android:layout_toRightOf="@+id/pwrAvgview1"
+        android:gravity="center"
+        android:text="LAAA"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="45sp"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/pwrAvgNmbview2"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/pwrAvgNmbview1"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/pwrAvgview2"
+        android:gravity="center"
+        android:text="Power"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="45sp"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/pwrAvgNmbview3"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/pwrAvgNmbview2"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/pwrAvgview3"
+        android:gravity="center"
+        android:text="Power"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="45sp"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/pwrAvgNmbview4"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/pwrAvgNmbview3"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/pwrAvgview4"
+        android:gravity="center"
+        android:text="Power"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="45sp"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/pwrAvgNmbview5"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/pwrAvgNmbview4"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/pwrAvgview5"
+        android:gravity="center"
+        android:text="Power"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="45sp"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/pwrAvgview1"
+        android:layout_width="360dp"
+        android:layout_height="60dp"
+        android:layout_above="@+id/pwrAvgview2"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/pwrAvgview2"
+        android:layout_marginTop="40dp"
+        android:text="@string/powAvg"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/pwrAvgview4"
+        android:layout_width="360dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/pwrAvgview3"
+        android:layout_below="@+id/pwrAvgview3"
+        android:layout_marginTop="20dp"
+        android:text="@string/powAvg"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/pwrAvgview5"
+        android:layout_width="360dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/pwrAvgview3"
+        android:layout_below="@+id/pwrAvgview4"
+        android:layout_marginTop="20dp"
+        android:text="@string/powAvg"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/pwrAvgview3"
+        android:layout_width="360dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/pwrAvgview2"
+        android:layout_below="@+id/pwrAvgview2"
+        android:layout_marginTop="20dp"
+        android:text="@string/powAvg"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="40sp" />
+</RelativeLayout>

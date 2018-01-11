@@ -22,7 +22,7 @@ import java.util.concurrent.TimeUnit;
 
 import ch.epfl.esl.commons.DataLayerCommons;
 
-import static ch.epfl.esl.blankphonewearapp.MainActivity.IMAGE_DECODED;
+import static ch.epfl.esl.blankphonewearapp.MainActivity.NOTIFICATION_RECEIVED;
 
 public class DataLayerListenerService extends WearableListenerService {
 
@@ -53,15 +53,14 @@ public class DataLayerListenerService extends WearableListenerService {
 
                 String path = event.getDataItem().getUri().getPath();
                 switch (path) {
-                    case DataLayerCommons.IMAGE_PATH:
-                        Log.v(TAG, "Data Changed for IMAGE_PATH: " + event.getDataItem().toString());
+                    case DataLayerCommons.NOTIF_PATH:
+                        Log.v(TAG, "Data Changed for NOTIF_PATH: " + event.getDataItem().toString());
                         DataMapItem dataMapItem = DataMapItem.fromDataItem(event.getDataItem());
-                        Asset photoAsset = dataMapItem.getDataMap().getAsset(DataLayerCommons.IMAGE_KEY);
-                        Bitmap imageDecoded = bitmapFromAsset(photoAsset);
-                        Log.v(TAG, "Broadcasting message to activity that image is ready");
-                        Intent intent = new Intent(IMAGE_DECODED);
-                        intent.putExtra(IMAGE_DECODED, imageDecoded);
+                        String notif = dataMapItem.getDataMap().getString(DataLayerCommons.NOTIF_KEY);
+                        Intent intent = new Intent(NOTIFICATION_RECEIVED);
+                        intent.putExtra(NOTIFICATION_RECEIVED,notif);
                         LocalBroadcastManager.getInstance(this).sendBroadcast(intent);
+
                         break;
                     case DataLayerCommons.COUNT_PATH:
                         Log.v(TAG, "Data Changed for COUNT_PATH: " + event.getDataItem() + "\n"
@@ -101,26 +100,4 @@ public class DataLayerListenerService extends WearableListenerService {
         }
     }
 
-    public Bitmap bitmapFromAsset(Asset asset) {
-        // Reads an asset from the Wear API and parse it as an image
-        if (asset == null) {
-            throw new IllegalArgumentException("Asset must be non-null");
-        }
-        ConnectionResult result = mGoogleApiClient.blockingConnect(10, TimeUnit.SECONDS);
-        if (!result.isSuccess()) {
-            return null;
-        }
-        // Convert asset into a file descriptor and block until it's ready
-        InputStream assetInputStream = Wearable.DataApi.getFdForAsset(
-                mGoogleApiClient, asset).await().getInputStream();
-        mGoogleApiClient.disconnect();
-
-        if (assetInputStream == null) {
-            Log.w(TAG, "Requested an unknown Asset.");
-            return null;
-        }
-
-        // Decode the stream into a bitmap
-        return BitmapFactory.decodeStream(assetInputStream);
-    }
 }
