@@ -205,7 +205,7 @@ public class Alarm extends BroadcastReceiver {
         Uri alarmSound = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
 
         Intent resultIntent = new Intent(cont, SecondActivity.class);
-        resultIntent.putExtra("url","http://10.0.2.2:5002/rack01/s01/power/last5min#end#http://10.0.2.2:5002/rack01/s02/power/last5min#end#");
+        resultIntent.putExtra("url","http://128.179.161.50:5002/rack01/s01/power/last5min#end#http://128.179.161.50:5002/rack01/s02/power/last5min#end#");
 
 
 

@@ -5,6 +5,7 @@ import android.app.ActivityManager;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentSender;
 import android.content.SharedPreferences;
@@ -18,8 +19,15 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.NotificationCompat;
+import android.support.v4.view.ViewPager;
+import android.support.v7.app.AlertDialog;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -81,7 +89,7 @@ import ch.epfl.esl.commons.DataLayerCommons;
 import ch.epfl.esl.blankphonewearapp.rackModel;
 import ch.epfl.esl.blankphonewearapp.serverItem;
 
-public class MainActivity extends Activity implements
+public class MainActivity extends AppCompatActivity implements
         CapabilityApi.CapabilityListener,
         MessageApi.MessageListener,
         DataApi.DataListener,
@@ -91,8 +99,6 @@ public class MainActivity extends Activity implements
     // Tag for Logcat
     private static final String TAG = "MainActivity";
 
-    //Service
-    //private MyService service = new MyService();
 
     // Members used for the Wear API
     private GoogleApiClient mGoogleApiClient;
@@ -103,10 +109,9 @@ public class MainActivity extends Activity implements
     private ScheduledFuture<?> mDataItemGeneratorFuture;
 
     private static final int MY_PERMISSIONS_REQUEST_CALL_PHONE = 1234;
-    private String ip = "10.0.2.2";
+    private String ip = "128.179.161.50";
+    Context context = this;
 
-    private LinearLayout myLayout;
-    private LinearLayout myLayout2;
 
     // this is an array that holds the IDs of the drawables ...
     private int[] images ;
@@ -119,6 +124,9 @@ public class MainActivity extends Activity implements
     private TextView text;
 
     ArrayList<rackModel> rackDataList;
+
+
+
 
 
     @Override
@@ -137,36 +145,24 @@ public class MainActivity extends Activity implements
                 .addOnConnectionFailedListener(this)
                 .build();
 
-       // buildSpinner();
-       // buildScroll();
+        SharedPreferences settings = getSharedPreferences("id",0);
+        ip=settings.getString("ip", "");
 
         new GetJSON_Param().execute("http://"+ip+":5002");
-        //Log.e(TAG,"nbracks "+nbRack);
+
+        String phone_nb = settings.getString("phone", "");
+        EditText text_phone = (EditText) findViewById(R.id.hotline_nb);
+        text_phone.setText("Phone : "+phone_nb);
+
 
         FloatingActionButton launchActivityTwoButton = (FloatingActionButton) findViewById(R.id.send_fltbtn);
         launchActivityTwoButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-/*
-                Spinner spinnerDC=(Spinner) findViewById(R.id.spinnerDC);
-                String textDC = spinnerDC.getSelectedItem().toString();
 
-                Spinner spinnerR=(Spinner) findViewById(R.id.spinnerR);
-                String textR = spinnerR.getSelectedItem().toString();
-
-                Spinner spinnerS=(Spinner) findViewById(R.id.spinnerS);
-                String textS = spinnerS.getSelectedItem().toString();
-
-                Spinner spinnerCP=(Spinner) findViewById(R.id.spinnerCP);
-                String textCP = spinnerCP.getSelectedItem().toString();
-
-                String url= urlCreate(textDC,textR,textS,textCP);
-*/
-                //Log.e(TAG,"url : "+url);
                 String list = listsSelectedServer();
-                //Log.e(TAG,list);
-                //String url="";
+
                 Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
                 intent.putExtra("url",list);
                 startActivity(intent);
@@ -178,8 +174,56 @@ public class MainActivity extends Activity implements
         launchWEB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
-                listsSelectedServer();
-                new GetRacks().execute("http:/"+ip+":5002/rack01/s01/power/last5min");
+
+                SharedPreferences settings = getSharedPreferences("id",0);
+
+                LayoutInflater li = LayoutInflater.from(context);
+                View dialog = li.inflate(R.layout.dialog_ip,null);
+                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
+                        context);
+
+                alertDialogBuilder.setView(dialog);
+
+                final EditText userInput = (EditText) dialog
+                        .findViewById(R.id.editTextIP);
+
+                alertDialogBuilder
+                        .setCancelable(false)
+                        .setMessage("Enter an IP Address")
+                        .setPositiveButton("OK",
+                                new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog,int id) {
+                                        // get user input and set it to result
+                                        // edit text
+                                        SharedPreferences settings = getSharedPreferences("id",0);
+                                        SharedPreferences.Editor editor = settings.edit();
+                                        editor.putString("ip", userInput.getText().toString());
+                                        editor.commit();
+                                        ip = userInput.getText().toString();
+                                        Intent intent = getIntent();
+                                        finish();
+                                        startActivity(intent);
+
+                                    }
+                                })
+                        .setNegativeButton("Cancel",
+                                new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog,int id) {
+                                        dialog.cancel();
+                                    }
+                                });
+
+
+                AlertDialog alertDialog = alertDialogBuilder.create();
+                alertDialog.show();
+
+
+                //DialogFragment ipdialog = new IPDialogFragment();
+                //ipdialog.show(getFragmentManager(),"dial");
+                //ip=settings.getString("ip", "");
+
+                //buildServerScroll();
+                //new GetJSON_Param().execute("http://"+ip+":5002");
             }
         });
 
@@ -234,10 +278,7 @@ public class MainActivity extends Activity implements
 
         });
 
-
-
-
-        if(!isMyServiceRunning(MyService.class)){
+        if(!isMyServiceRunning(MyService.class) && ip!=""){
             Intent servInt = new Intent(this, MyService.class);
             servInt.putExtra("url", listsAllServer());
             startService(servInt);
@@ -255,6 +296,7 @@ public class MainActivity extends Activity implements
         //startService(servInt);
 
     }
+
 
     private boolean isMyServiceRunning(Class<?> serviceClass) {
         ActivityManager manager = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
@@ -326,14 +368,11 @@ public class MainActivity extends Activity implements
 
     private class GetJSON_Param extends AsyncTask<String, Void, String[]> {
 
-
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
 
-
         }
-
 
         @Override
         protected String[] doInBackground(String... url) {
@@ -372,8 +411,6 @@ public class MainActivity extends Activity implements
                     }
                     //String racks = jsonObject.getString("racks");
 
-
-
                     //}
 
 
@@ -396,16 +433,19 @@ public class MainActivity extends Activity implements
 
         @Override
         protected void onPostExecute(String[] result) {
+            if(result!=null) {
 
-            //updatePlot(result);
+                nbRack = result.length;
+                Log.e(TAG, "this is what I get : " + nbRack);
+                for (int i = 0; i < nbRack; i++) {
+                    nbServer[i] = Integer.parseInt(result[i]);
+                }
 
-            nbRack=result.length;
-            Log.e(TAG,"this is what I get : "+nbRack);
-            for(int i=0;i<nbRack;i++){
-                nbServer[i]=Integer.parseInt(result[i]);
+                buildServerScroll();
             }
-
-            buildServerScroll();
+            else {
+                buildServerScroll();
+            }
 
         }
 
@@ -445,65 +485,6 @@ public class MainActivity extends Activity implements
         }
     }
 
-
-
-
-    // Build the main spinner with the names for the data centers
-   /* private void buildSpinner(){
-
-        //String dataCenters[]= {"test1","test2"};
-
-        //Spinner spinner = findViewById(R.id.spinnerDC);
-
-        // Create an ArrayAdapter using the string array and a default spinner layout with strings.xml
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.dataCenter_array, android.R.layout.simple_spinner_item);
-
-        // Specify the layout to use when the list of choices appears
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        // Apply the adapter to the spinner
-        spinner.setAdapter(adapter);
-
-        Spinner spinnerR = findViewById(R.id.spinnerR);
-
-        // Create an ArrayAdapter using the string array and a default spinner layout with strings.xml
-        ArrayAdapter<CharSequence> adapterR = ArrayAdapter.createFromResource(this,
-                R.array.Racks_array, android.R.layout.simple_spinner_item);
-
-        // Specify the layout to use when the list of choices appears
-        //adapterR.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        // Apply the adapter to the spinner
-        spinnerR.setAdapter(adapterR);
-
-        Spinner spinnerS = findViewById(R.id.spinnerS);
-
-        // Create an ArrayAdapter using the string array and a default spinner layout with strings.xml
-        ArrayAdapter<CharSequence> adapterS = ArrayAdapter.createFromResource(this,
-                R.array.Servers_array, android.R.layout.simple_spinner_item);
-
-        // Optional idea
-        // ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,   android.R.layout.simple_spinner_item, dataCenters);
-
-        // Specify the layout to use when the list of choices appears
-        //adapterS.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        // Apply the adapter to the spinner
-        spinnerS.setAdapter(adapterS);
-
-        Spinner spinnerCP = findViewById(R.id.spinnerCP);
-
-        // Create an ArrayAdapter using the string array and a default spinner layout with strings.xml
-        ArrayAdapter<CharSequence> adapterCP = ArrayAdapter.createFromResource(this,
-                R.array.CP_array, android.R.layout.simple_spinner_item);
-
-        // Optional idea
-        // ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,   android.R.layout.simple_spinner_item, dataCenters);
-
-        // Specify the layout to use when the list of choices appears
-        //adapterCP.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        // Apply the adapter to the spinner
-        spinnerCP.setAdapter(adapterCP);
-    }
-*/
 
     public void sendNotificationWear(){
 

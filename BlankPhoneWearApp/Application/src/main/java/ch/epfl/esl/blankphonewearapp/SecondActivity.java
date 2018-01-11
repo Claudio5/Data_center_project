@@ -21,6 +21,7 @@ import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.ActivityCompat;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
@@ -61,14 +62,12 @@ import java.io.IOException;
 import java.text.FieldPosition;
 import java.text.Format;
 import java.text.ParsePosition;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Collection;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Iterator;
-import java.util.List;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
@@ -80,7 +79,7 @@ import java.util.regex.Pattern;
 import ch.epfl.esl.commons.DataLayerCommons;
 
 
-public class SecondActivity extends Activity implements
+public class SecondActivity extends AppCompatActivity implements
         CapabilityApi.CapabilityListener,
         MessageApi.MessageListener,
         DataApi.DataListener,
@@ -109,34 +108,53 @@ public class SecondActivity extends Activity implements
         public void run() {
 
             Log.e(TAG,"Every 60 seconds");
-            /*
-            new GetRacks(){
+
+            String [] urls = decode_list(url);
+
+            new GetJSON_val(){
                 @Override
                 protected void onPostExecute(String[] result) {
+
+                    //updatePlot(result);
+
                     if(result!=null) {
-                        Float[] valF = new Float[result.length];
-                        Number[] val = new Number[result.length];
-                        for (int i = 0; i < result.length; i++) {
-                            int value = Integer.parseInt(result[i]);
-                            val[i] = value;
-                            valF[i] = (float) value;
+                        Float[] valF = new Float[string2nbr(result[0]).length];
+                        //Log.e(TAG,"result length = "+result.length);
+                        for (int i = 0; i < java.lang.Math.min(result.length,5); i++) {
+
+
+                            Number[] val = string2nbr(result[i]);
+                            series_update(val, i);
+                            Log.e(TAG,"series i "+ series[i]);
+                            for (int j = 0; j < val.length; j++) {
+                                int value = val[j].intValue();
+
+
+                                //val[j] = value;
+                                if (i == 0)
+                                    valF[j] = (float) value;
+                            }
                         }
-                        plotUpdate(val);
+                        plotUpdate();
                         setPowerAvgTxtView(valF);
+                        if(result.length>5) {
+
+                            Toast.makeText(getApplicationContext(), "Only the first 5 are plotted", Toast.LENGTH_LONG).show();
+                            //Number[] val = new Number[result.length];
+
+                            //series=result;
+                            //series_update(val,id);
+
+                        }
                     }
                     else {
-                        Toast.makeText(getApplicationContext(),"URL is obsolete, please start again", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(),"False URL, please try other options", Toast.LENGTH_LONG).show();
+                        kill_activity();
                     }
+
 
                 }
             }.execute(url);
-            */
-            String [] urls = decode_list(url);
-            //for(int i=0;i<urls.length;i++){
-            //    new GetJSON_Val().execute(urls[i]+Integer.toString(i));
-            //}
-            //plotUpdate();
-            new GetJSON_Val().execute(url);
             handler.postDelayed(this, 60000);
         }
     };
@@ -159,43 +177,50 @@ public class SecondActivity extends Activity implements
 
         Bundle bundle = getIntent().getExtras();
         url = bundle.getString("url");
-        Log.e(TAG,url);
-        String [] urls = decode_list(url);
+        //Log.e(TAG,url);
+        //String [] urls = decode_list(url);
 
+        if(url.contains("http")) {
+            Log.e(TAG,"the url : "+url);
+            String [] urls = decode_list(url);
+            new GetJSON_val() {
+                @Override
+                protected void onPostExecute(String[] result) {
 
+                    //updatePlot(result);
+                    if (result != null) {
 
+                        Float[] valF = new Float[string2nbr(result[0]).length];
+                        //Log.e(TAG,"result length = "+result.length);
+                        for (int i = 0; i < java.lang.Math.min(result.length, 5); i++) {
 
-        //for(int i=0;i<urls.length;i++){
-        //    new GetJSON_Val().execute(urls[i]+Integer.toString(i));
-        //}
-        //plotUpdate();
-        new GetJSON_Val().execute(url);
+                            Number[] val = string2nbr(result[i]);
+                            series_update(val, i);
 
+                            for (int j = 0; j < val.length; j++) {
+                                int value = val[j].intValue();
 
-        /*
-        new GetRacks(){
-            @Override
-            protected void onPostExecute(String[] result) {
-                if(result!=null) {
-                    Float[] valF = new Float[result.length];
-                    Number[] val = new Number[result.length];
-                    for (int i = 0; i < result.length; i++) {
-                        int value = Integer.parseInt(result[i]);
-                        val[i] = value;
-                        valF[i] = (float) value;
+                                if (i == 0)
+                                    valF[j] = (float) value;
+                            }
+                        }
+                        plotUpdate();
+                        setPowerAvgTxtView(valF);
+                        if (result.length > 5) {
+                            Toast.makeText(getApplicationContext(), "Only the first 5 are plotted", Toast.LENGTH_LONG).show();
+                        }
+                    } else {
+                        Toast.makeText(getApplicationContext(), "False URL, please try other options", Toast.LENGTH_LONG).show();
+                        kill_activity();
                     }
-                    plotUpdate(val);
-                    setPowerAvgTxtView(valF);
-                }
-                else {
-                    Toast.makeText(getApplicationContext(),"False URL, please try other options", Toast.LENGTH_LONG).show();
-                    kill_activity();
-                }
 
-            }
-        }.execute(urls[0]);
-        */
-
+                }
+            }.execute(url);
+        }
+        else {
+            Toast.makeText(getApplicationContext(), "Please choose at least one server", Toast.LENGTH_LONG).show();
+            kill_activity();
+        }
 
         FloatingActionButton call2 = (FloatingActionButton) findViewById(R.id.call_fltbtn2);
         call2.setOnClickListener(new View.OnClickListener() {
@@ -223,129 +248,8 @@ public class SecondActivity extends Activity implements
 
         });
 
-        //Number[] series1Numbers = {1, 4, 2, 8, 4};
 
-        //plotUpdate(series1Numbers);
-
-        // Update the xyPlot every minute
         handler.postDelayed(runnable, 60000);
-
-    }
-
-
-    private class GetJSON_Val extends AsyncTask<String, Void, String[]> {
-
-
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-
-
-        }
-
-
-        @Override
-        protected String[] doInBackground(String... url) {
-            urlHandler sh = new urlHandler();
-            String [] urls = decode_list(url[0]);
-
-            String [] powerArray= new String[urls.length];
-            for(int i=0;i<urls.length;i++){
-                String jsonStr = sh.getjsonstring(urls[i]);
-
-                //Log.e(TAG, "Response from url: " + jsonStr);
-
-                if(jsonStr!=null) {
-                    try {
-                        JSONObject jsonObject = new JSONObject(jsonStr);
-
-                        //for (int i = 0; i < jsonObject.length(); i++) {
-
-
-
-                        Iterator<String> iterator = jsonObject.keys();
-                        String name = iterator.next();
-
-                        JSONArray racks = jsonObject.getJSONArray(name);
-                        String power="";
-
-                        for (int j = 0; j < racks.length(); j++) {
-                            power=power+racks.getString(j)+";";
-                            //powerArray[j]=racks.getString(j);
-                            //Log.e(TAG, "power: " + racks.getString(j));
-                        }
-
-                        //String racks = jsonObject.getString("racks");
-
-                        powerArray[i]=power;
-                        //return powerArray;
-                    }
-                    catch (final JSONException e) {
-                        Log.e(TAG, "Json parsing error: " + e.getMessage());
-
-
-
-                    }
-
-
-
-                }
-                else {
-                    Log.e(TAG, "No response");
-                }
-
-            }
-
-            return powerArray;
-
-
-            //return null;
-        }
-
-        @Override
-        protected void onPostExecute(String[] result) {
-
-            //updatePlot(result);
-
-            if(result!=null) {
-                Float[] valF = new Float[string2nbr(result[0]).length];
-                //Log.e(TAG,"result length = "+result.length);
-
-                if(result.length<=5) {
-                    for (int i = 0; i < result.length; i++) {
-
-                        Number[] val = string2nbr(result[i]);
-                        series_update(val, i);
-                        //Log.e(TAG,"series i "+ series[i]);
-                        for (int j = 0; j < val.length; j++) {
-                            int value = val[j].intValue();
-
-
-                            //val[j] = value;
-                            if (i == 0)
-                                valF[j] = (float) value;
-                        }
-                    }
-
-                    //Number[] val = new Number[result.length];
-
-                    //series=result;
-                    //series_update(val,id);
-                    plotUpdate();
-                    setPowerAvgTxtView(valF);
-                }
-                else {
-                    Toast.makeText(getApplicationContext(),"Please choose up to 5 servers", Toast.LENGTH_LONG).show();
-                    kill_activity();
-                }
-            }
-            else {
-                Toast.makeText(getApplicationContext(),"False URL, please try other options", Toast.LENGTH_LONG).show();
-                kill_activity();
-            }
-
-
-        }
 
     }
 
@@ -360,11 +264,9 @@ public class SecondActivity extends Activity implements
         return urls;
     }
 
-
-
     // Calculates the average power of the 5 last values
     private void setPowerAvgTxtView(Float[] pwr){
-        TextView pwrAvgView = (TextView)findViewById(R.id.pwrAvgNmbview);
+        TextView pwrAvgView = (TextView)findViewById(R.id.pwrAvgNmbview1);
         float sum=0;
         float avg=0;
         for (int i=0;i<pwr.length;i++){
@@ -375,23 +277,7 @@ public class SecondActivity extends Activity implements
     }
 
 
-    //Generate random data to see if the plot updates
-    private Number[] generateData(){
-        Number[] series1Numbers = new Number[5];
-
-        for (int i=0;i<5;i++){
-            int randomNum = ThreadLocalRandom.current().nextInt(1, 9 + 1);
-            series1Numbers[i]=randomNum;
-        }
-        return series1Numbers;
-    }
-
-
     private String[] series = {"0;0;0;0;0;","0;0;0;0;0;","0;0;0;0;0;","0;0;0;0;0;","0;0;0;0;0;"};
-    private String[][] series2D = new String[5][5];
-    private int nbR01=1;
-    private int nbR02=1;
-    private int nbR03=1;
 
     private void series_update(Number[] nbr,int id){
         String series_id="";
@@ -399,21 +285,6 @@ public class SecondActivity extends Activity implements
             series_id=series_id+Integer.toString(nbr[i].intValue())+";";
         }
         series[id]=series_id;
-    }
-
-    private void series_update2D(Number[] nbr,int id){
-        String series_id="";
-
-        for(int i=0;i<nbr.length;i++){
-            series_id=series_id+Integer.toString(nbr[i].intValue())+";";
-        }
-        if(id >= 0 && id < nbR01)
-            series2D[0][0]=series_id;
-        if(id >= nbR01 && id < nbR02+nbR01)
-            series2D[0][1]=series_id;
-        if(id >= nbR02+nbR01 && id < nbR01+nbR02+nbR03)
-            series2D[0][2]=series_id;
-
     }
 
     private Number[] string2nbr(String series_id){

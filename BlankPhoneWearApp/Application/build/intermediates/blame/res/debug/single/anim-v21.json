@@ -1,10 +1,10 @@
 [
     {
-        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project-Cem2\\BlankPhoneWearApp\\Application\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_bottom_sheet_slide_out.xml",
-        "source": "C:\\Users\\claud\\.android\\build-cache\\28893a0c8bdd7a8aa703f47ed687b35b8477588e\\output\\res\\anim-v21\\design_bottom_sheet_slide_out.xml"
+        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_bottom_sheet_slide_in.xml",
+        "source": "C:\\Users\\claud\\.android\\build-cache\\28893a0c8bdd7a8aa703f47ed687b35b8477588e\\output\\res\\anim-v21\\design_bottom_sheet_slide_in.xml"
     },
     {
-        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project-Cem2\\BlankPhoneWearApp\\Application\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_bottom_sheet_slide_in.xml",
-        "source": "C:\\Users\\claud\\.android\\build-cache\\28893a0c8bdd7a8aa703f47ed687b35b8477588e\\output\\res\\anim-v21\\design_bottom_sheet_slide_in.xml"
+        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_bottom_sheet_slide_out.xml",
+        "source": "C:\\Users\\claud\\.android\\build-cache\\28893a0c8bdd7a8aa703f47ed687b35b8477588e\\output\\res\\anim-v21\\design_bottom_sheet_slide_out.xml"
     }
 ]

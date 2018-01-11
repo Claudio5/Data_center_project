@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Data Center Control</string>
-
+    <string name="powAvg">Average power [W]</string>
 
     <string-array name="dataCenter_array">
         <item>Data Center 1</item>
@@ -49,6 +49,8 @@
 
     </string-array>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>
