@@ -1508,7 +1508,7 @@ containing a value of this type.
 <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
 <tr><td><code>ninety_degrees</code></td><td>0</td><td></td></tr>
 <tr><td><code>negative_ninety_degrees</code></td><td>1</td><td></td></tr>
-<tr><td><code>one_hundred_eighty_degrees</code></td><td>2</td><td></td></tr>
+<tr><td><code>one_hundred_eighty_degrees</code></td><td>2</td><td>NODOC Graph widget is rendered upside-down </td></tr>
 <tr><td><code>none</code></td><td>3</td><td></td></tr>
 </table>
          */
@@ -15687,7 +15687,7 @@ containing a value of this type.
 <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
 <tr><td><code>ninety_degrees</code></td><td>0</td><td></td></tr>
 <tr><td><code>negative_ninety_degrees</code></td><td>1</td><td></td></tr>
-<tr><td><code>one_hundred_eighty_degrees</code></td><td>2</td><td></td></tr>
+<tr><td><code>one_hundred_eighty_degrees</code></td><td>2</td><td>NODOC Graph widget is rendered upside-down </td></tr>
 <tr><td><code>none</code></td><td>3</td><td></td></tr>
 </table>
           @attr name ch.epfl.esl.blankphonewearapp:graphRotation
