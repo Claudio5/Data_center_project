@@ -4,6 +4,7 @@
 
     <uses-feature android:name="android.hardware.type.watch" />
     <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
 
     <application
         android:allowBackup="true"
@@ -27,7 +28,7 @@
                 <!-- but we also want the "/image" path -->
                 <data
                     android:host="*"
-                    android:pathPrefix=""
+                    android:pathPrefix="/notification"
                     android:scheme="wear" />
             </intent-filter>
             <intent-filter>
@@ -51,5 +52,6 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
     </application>
 </manifest>

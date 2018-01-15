@@ -5,15 +5,19 @@ package ch.epfl.esl.blankphonewearapp;
  */
 
 import android.Manifest;
-import android.app.Activity;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.IntentSender;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.DashPathEffect;
+import android.hardware.SensorManager;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -21,12 +25,23 @@ import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.LocalBroadcastManager;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Display;
+import android.view.OrientationEventListener;
 import android.view.View;
+import android.widget.CompoundButton;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.ToggleButton;
 
+import com.androidplot.ui.HorizontalPositioning;
+import com.androidplot.ui.Size;
+import com.androidplot.ui.SizeMode;
+import com.androidplot.ui.VerticalPositioning;
 import com.androidplot.util.PixelUtils;
 import com.androidplot.xy.BoundaryMode;
 import com.androidplot.xy.LineAndPointFormatter;
@@ -53,10 +68,6 @@ import com.google.android.gms.wearable.PutDataMapRequest;
 import com.google.android.gms.wearable.PutDataRequest;
 import com.google.android.gms.wearable.Wearable;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.text.FieldPosition;
@@ -67,11 +78,9 @@ import java.util.Calendar;
 import java.util.Collection;
 import java.util.Date;
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
-import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -88,6 +97,7 @@ public class SecondActivity extends AppCompatActivity implements
 
     // Tag for Logcat
     private static final String TAG = "SecondActivity";
+    private static final int MAX_SERVER = 5;
 
     // Members used for the Wear API
     private GoogleApiClient mGoogleApiClient;
@@ -100,7 +110,19 @@ public class SecondActivity extends AppCompatActivity implements
     private static final int MY_PERMISSIONS_REQUEST_CALL_PHONE = 12345;
 
     private String url;
+    private String[] urls;
     private Handler handler = new Handler();
+    private boolean orientationPortrait;
+
+    private int nbServers;
+
+    private SecondActivitySwipeAdapter adapterViewPager;
+    private ViewPager vpPager;
+    private String date="";
+    private String time="";
+
+    private XYPlot plot;
+
 
     // This will be called every minute
     private Runnable runnable = new Runnable() {
@@ -109,7 +131,7 @@ public class SecondActivity extends AppCompatActivity implements
 
             Log.e(TAG,"Every 60 seconds");
 
-            String [] urls = decode_list(url);
+            urls = decode_list(url);
 
             new GetJSON_val(){
                 @Override
@@ -118,7 +140,10 @@ public class SecondActivity extends AppCompatActivity implements
                     //updatePlot(result);
 
                     if(result!=null) {
-                        Float[] valF = new Float[string2nbr(result[0]).length];
+                        Float[][] values = new Float[MAX_SERVER][nbServers];
+                        Float[] lastValue = new Float[MAX_SERVER];
+                        for (int i=0;i<MAX_SERVER;i++)
+                            lastValue[i]=(float)0;
                         //Log.e(TAG,"result length = "+result.length);
                         for (int i = 0; i < java.lang.Math.min(result.length,5); i++) {
 
@@ -127,23 +152,23 @@ public class SecondActivity extends AppCompatActivity implements
                             series_update(val, i);
                             Log.e(TAG,"series i "+ series[i]);
                             for (int j = 0; j < val.length; j++) {
-                                int value = val[j].intValue();
+                                values[j][i] = val[j].floatValue();
 
 
-                                //val[j] = value;
-                                if (i == 0)
-                                    valF[j] = (float) value;
+                                if (j == val.length-1)
+                                    lastValue[i] = values[j][i];
+
                             }
                         }
                         plotUpdate();
-                        setPowerAvgTxtView(valF);
+                        if(getScreenOrientation()== Configuration.ORIENTATION_PORTRAIT) {
+                            setTextFragments(0, getPowerAvg(values));
+                            setTextFragments(1, lastValue);
+                        }
                         if(result.length>5) {
 
                             Toast.makeText(getApplicationContext(), "Only the first 5 are plotted", Toast.LENGTH_LONG).show();
-                            //Number[] val = new Number[result.length];
 
-                            //series=result;
-                            //series_update(val,id);
 
                         }
                     }
@@ -175,14 +200,41 @@ public class SecondActivity extends AppCompatActivity implements
                 .addOnConnectionFailedListener(this)
                 .build();
 
+        plot = (XYPlot)findViewById(R.id.TableRow);
         Bundle bundle = getIntent().getExtras();
         url = bundle.getString("url");
-        //Log.e(TAG,url);
+        Log.e(TAG,"URL FORMAT   "+url);
         //String [] urls = decode_list(url);
 
+        if(getScreenOrientation()==Configuration.ORIENTATION_PORTRAIT)
+            orientationPortrait = true;
+        else
+            orientationPortrait = false;
+
+        OrientationEventListener mOrientationEventListener = new OrientationEventListener(
+                this, SensorManager.SENSOR_DELAY_NORMAL) {
+
+            @Override
+            public void onOrientationChanged(int orientation) {
+                //checking if device was rotated
+                if (orientationPortrait != isPortrait(orientation)) {
+                    orientationPortrait = !orientationPortrait;
+                    Log.e(TAG, "Device was rotated!");
+                }
+            }
+        };
+        mOrientationEventListener.enable();
+
+        if(getScreenOrientation()== Configuration.ORIENTATION_PORTRAIT) {
+            vpPager = (ViewPager) findViewById(R.id.viewpager);
+            adapterViewPager = new SecondActivitySwipeAdapter(getSupportFragmentManager());
+            vpPager.setAdapter(adapterViewPager);
+        }
         if(url.contains("http")) {
             Log.e(TAG,"the url : "+url);
-            String [] urls = decode_list(url);
+            urls = decode_list(url);
+            nbServers = java.lang.Math.min(urls.length, 5);
+
             new GetJSON_val() {
                 @Override
                 protected void onPostExecute(String[] result) {
@@ -190,7 +242,11 @@ public class SecondActivity extends AppCompatActivity implements
                     //updatePlot(result);
                     if (result != null) {
 
-                        Float[] valF = new Float[string2nbr(result[0]).length];
+                        Float[][] values = new Float[MAX_SERVER][nbServers];
+                        Float[] lastValue = new Float[MAX_SERVER];
+                        for (int i=0;i<MAX_SERVER;i++)
+                            lastValue[i]=(float)0;
+                        //Float[] valF = new Float[string2nbr(result[0]).length];
                         //Log.e(TAG,"result length = "+result.length);
                         for (int i = 0; i < java.lang.Math.min(result.length, 5); i++) {
 
@@ -198,14 +254,18 @@ public class SecondActivity extends AppCompatActivity implements
                             series_update(val, i);
 
                             for (int j = 0; j < val.length; j++) {
-                                int value = val[j].intValue();
+                                values[j][i] = val[j].floatValue();
 
-                                if (i == 0)
-                                    valF[j] = (float) value;
+                                if (j == val.length-1)
+                                    lastValue[i] = values[j][i];
                             }
                         }
+
                         plotUpdate();
-                        setPowerAvgTxtView(valF);
+                        if(getScreenOrientation()== Configuration.ORIENTATION_PORTRAIT) {
+                            setTextFragments(0, getPowerAvg(values));
+                            setTextFragments(1, lastValue);
+                        }
                         if (result.length > 5) {
                             Toast.makeText(getApplicationContext(), "Only the first 5 are plotted", Toast.LENGTH_LONG).show();
                         }
@@ -230,8 +290,6 @@ public class SecondActivity extends AppCompatActivity implements
                 SharedPreferences settings = getSharedPreferences("id",0);
                 String phone = settings.getString("phone", "");
 
-                //String phone = edit.getText().toString();
-                //Log.e(TAG,"phone number"+phone);
                 Intent callIntent = new Intent(Intent.ACTION_CALL);
                 String phone_nb = "tel:" + phone;
                 callIntent.setData(Uri.parse(phone_nb));
@@ -249,8 +307,136 @@ public class SecondActivity extends AppCompatActivity implements
         });
 
 
+
+        ToggleButton tog = (ToggleButton) findViewById(R.id.toggleButton);
+        tog.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+
+                if(isChecked) {
+                    DatePickerFragment dialog = new DatePickerFragment();
+
+
+                    dialog.show(getFragmentManager(),"DatePickerFragment");
+
+                }
+                else {
+
+                    Intent intent = getIntent();
+                    finish();
+                    startActivity(intent);
+                }
+
+            }
+        });
+
+
+
         handler.postDelayed(runnable, 60000);
 
+    }
+
+    private BroadcastReceiver mMessageReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            // Get extra data included in the Intent
+            String message = intent.getStringExtra("message");
+            Log.e("receiver", "Got message: " + message);
+            Toast.makeText(getBaseContext(), "Got message", Toast.LENGTH_SHORT).show();
+            sendNotificationWear();
+        }
+    };
+
+    private void sendNotificationWear(){
+
+        if (mGoogleApiClient.isConnected()) {
+
+            new SecondActivity.SendMessageTask(DataLayerCommons.START_ACTIVITY_PATH).execute();
+            // Stop the fake data generator
+            mDataItemGeneratorFuture.cancel(true);
+
+            // Send the notification
+            PutDataMapRequest dataMap = PutDataMapRequest.create(DataLayerCommons.NOTIFICATION_PATH);
+            dataMap.getDataMap().putString(DataLayerCommons.NOTIFICATION_KEY, "WORK WEAR");
+            dataMap.getDataMap().putLong("time", new Date().getTime());
+            PutDataRequest request = dataMap.asPutDataRequest();
+            request.setUrgent();
+            Wearable.DataApi.putDataItem(mGoogleApiClient, request)
+                    .setResultCallback(new ResultCallback<DataApi.DataItemResult>() {
+                        @Override
+                        public void onResult(@NonNull DataApi.DataItemResult dataItemResult) {
+                            Log.v(TAG, "Sending notification was successful: " + dataItemResult.getStatus()
+                                    .isSuccess());
+                        }
+                    });
+        }else{
+            Log.e(TAG,"No connection available");
+        }
+
+    }
+
+    private class SendMessageTask extends AsyncTask<Void, Void, Void> {
+        // Asynchronous background task to send a message through the Wear API
+        private final String message;
+
+        SendMessageTask(String message) {
+            this.message = message;
+        }
+
+        @Override
+        protected Void doInBackground(Void... args) {
+            // doInBackground is the function executed when running the AsyncTask
+            Collection<String> nodes = getNodes();
+            Log.v(TAG, "Sending '" + message + "' to all " + nodes.size() + " connected nodes");
+            for (String node : nodes) {
+                sendMessage(message, node);
+            }
+            return null;
+        }
+
+        private void sendMessage(final String message, String node) {
+            // Convenience function to send a message through the Wear API
+            Wearable.MessageApi.sendMessage(
+                    mGoogleApiClient, node, message, new byte[0]).setResultCallback(
+                    new ResultCallback<MessageApi.SendMessageResult>() {
+                        @Override
+                        public void onResult(@NonNull MessageApi.SendMessageResult sendMessageResult) {
+                            if (!sendMessageResult.getStatus().isSuccess()) {
+                                Log.e(TAG, "Failed to send message " + message + " with status code: "
+                                        + sendMessageResult.getStatus().getStatusCode());
+                            }
+                        }
+                    }
+            );
+        }
+    }
+
+    private boolean isPortrait(int orientation) {
+        return (orientation >= (360 - 90) && orientation <= 360) || (orientation >= 0 && orientation <= 90);
+    }
+
+    public void setDate(String date_new) {
+        date = date_new;
+    }
+
+    public void setTime(String time_new) {
+        time = time_new;
+    }
+
+    public int getScreenOrientation()
+    {
+        Display getOrient = getWindowManager().getDefaultDisplay();
+        int orientation = Configuration.ORIENTATION_UNDEFINED;
+        if(getOrient.getWidth()==getOrient.getHeight()){
+            orientation = Configuration.ORIENTATION_SQUARE;
+        } else{
+            if(getOrient.getWidth() < getOrient.getHeight()){
+                orientation = Configuration.ORIENTATION_PORTRAIT;
+            }else {
+                orientation = Configuration.ORIENTATION_LANDSCAPE;
+            }
+        }
+        return orientation;
     }
 
 
@@ -264,22 +450,51 @@ public class SecondActivity extends AppCompatActivity implements
         return urls;
     }
 
-    // Calculates the average power of the 5 last values
-    private void setPowerAvgTxtView(Float[] pwr){
-        TextView pwrAvgView = (TextView)findViewById(R.id.pwrAvgNmbview1);
-        float sum=0;
-        float avg=0;
-        for (int i=0;i<pwr.length;i++){
-            sum += pwr[i];
+    private Float[] getPowerAvg(Float[][] pwr){
+
+        Float[] avgTable = new Float[MAX_SERVER];
+        for(int i=0;i<MAX_SERVER;i++){
+            avgTable[i]=(float) 0;
         }
-        avg=sum/pwr.length;
-        pwrAvgView.setText(Float.toString(avg));
+
+        float sum;
+        for (int i=0;i<nbServers;i++){
+            sum=0;
+            for(int j=0;j<5;j++){
+                sum+= pwr[j][i];
+            }
+            avgTable[i]=sum/MAX_SERVER;
+        }
+
+        return avgTable;
+    }
+
+
+    private void setTextFragments(int position,Float[] vals){
+
+        switch(position){
+
+            case 0: FirstFragmentSwipe fragment1 = (FirstFragmentSwipe) adapterViewPager.getRegisteredFragment(position);
+                    fragment1.setTextViewsAvg(vals);
+                    fragment1.setVisibilityTextview(nbServers);
+                    fragment1.setTextViewsTxt(legendCreateBottom(urls));
+                    break;
+
+            case 1: SecondFragmentSwipe fragment2 = (SecondFragmentSwipe) adapterViewPager.getRegisteredFragment(position);
+                    fragment2.setTextViewsLastPow(vals);
+                    fragment2.setVisibilityTextview(nbServers);
+                    fragment2.setTextViewsLastPowTxt(legendCreateBottom(urls));
+                    break;
+
+            default : break;
+        }
+
     }
 
 
     private String[] series = {"0;0;0;0;0;","0;0;0;0;0;","0;0;0;0;0;","0;0;0;0;0;","0;0;0;0;0;"};
 
-    private void series_update(Number[] nbr,int id){
+    public void series_update(Number[] nbr,int id){
         String series_id="";
         for(int i=0;i<nbr.length;i++){
             series_id=series_id+Integer.toString(nbr[i].intValue())+";";
@@ -319,11 +534,35 @@ public class SecondActivity extends AppCompatActivity implements
         return legend;
     }
 
+    private String[] legendCreateBottom(String [] urls){
+        String [] legend = new String[MAX_SERVER];
+
+        for(int i=0;i<nbServers;i++){
+            String rack_nb ="";
+            String srv_nb ="";
+            Pattern pattern = Pattern.compile("rack(.*?)/");
+            Matcher matcher = pattern.matcher(urls[i]);
+            while(matcher.find()){
+                rack_nb=matcher.group(1);
+            }
+            Pattern pattern2 = Pattern.compile("/s(.*?)/");
+            Matcher matcher2 = pattern2.matcher(urls[i]);
+            while(matcher2.find()){
+                srv_nb=matcher2.group(1);
+            }
+
+            legend[i]="Rack "+rack_nb+" Server "+srv_nb;
+
+        }
+
+        return legend;
+    }
+
     /* Enter an array of Number and it updates the plot accordingly the values entered */
     public void plotUpdate() {
-        XYPlot plot = (XYPlot) findViewById(R.id.TableRow);
-        plot.clear();
 
+
+        plot.clear();
 
         //series_update(series_new,id_series);
         final String[] xlabels = generateHourMinute();
@@ -334,7 +573,143 @@ public class SecondActivity extends AppCompatActivity implements
         plot.setRangeBoundaries(0,20,BoundaryMode.FIXED);
         plot.setRangeStep(StepMode.INCREMENT_BY_VAL,2);
 
+        plot.setDomainLabel("Time");
 
+        Log.e(TAG,Arrays.toString(xlabels));
+
+        // create a couple arrays of y-values to plot:
+        Number[] series1Numbers = string2nbr(series[0]);
+        Number[] series2Numbers = string2nbr(series[1]);
+        Number[] series3Numbers = string2nbr(series[2]);
+        Number[] series4Numbers = string2nbr(series[3]);
+        Number[] series5Numbers = string2nbr(series[4]);
+        
+        String [] urls = decode_list(url);
+
+        String [] legend = legendCreate(urls);
+
+        String legend1=legend[0];
+        String legend2="";
+        String legend3="";
+        String legend4="";
+        String legend5="";
+        if(urls.length>=2)
+            legend2=legend[1];
+        if(urls.length>=3)
+            legend3=legend[2];
+        if(urls.length>=4)
+            legend4=legend[3];
+        if(urls.length==5)
+            legend5=legend[4];
+
+        // turn the above arrays into XYSeries':
+        // (Y_VALS_ONLY means use the element index as the x value)
+        XYSeries series1 = new SimpleXYSeries(
+                Arrays.asList(series1Numbers), SimpleXYSeries.ArrayFormat.Y_VALS_ONLY, legend1);
+
+        XYSeries series2 = new SimpleXYSeries(
+                Arrays.asList(series2Numbers), SimpleXYSeries.ArrayFormat.Y_VALS_ONLY, legend2);
+
+        XYSeries series3 = new SimpleXYSeries(
+                Arrays.asList(series3Numbers), SimpleXYSeries.ArrayFormat.Y_VALS_ONLY, legend3);
+
+        XYSeries series4 = new SimpleXYSeries(
+                Arrays.asList(series4Numbers), SimpleXYSeries.ArrayFormat.Y_VALS_ONLY, legend4);
+
+        XYSeries series5 = new SimpleXYSeries(
+                Arrays.asList(series5Numbers), SimpleXYSeries.ArrayFormat.Y_VALS_ONLY, legend5);
+
+        // create formatters to use for drawing a series using LineAndPointRenderer
+        // and configure them from xml:
+        LineAndPointFormatter series1Format = new LineAndPointFormatter(Color.RED, Color.RED, Color.TRANSPARENT, null);
+
+        LineAndPointFormatter series2Format = new LineAndPointFormatter(Color.GREEN, Color.GREEN, Color.TRANSPARENT, null);
+
+        LineAndPointFormatter series3Format = new LineAndPointFormatter(Color.BLUE, Color.BLUE, Color.TRANSPARENT, null);
+
+        LineAndPointFormatter series4Format = new LineAndPointFormatter(Color.YELLOW, Color.YELLOW, Color.TRANSPARENT, null);
+
+        LineAndPointFormatter series5Format = new LineAndPointFormatter(Color.MAGENTA, Color.MAGENTA, Color.TRANSPARENT, null);
+
+        // add an "dash" effect to the series2 line:
+        series2Format.getLinePaint().setPathEffect(new DashPathEffect(new float[] {
+
+                // always use DP when specifying pixel sizes, to keep things consistent across devices:
+                PixelUtils.dpToPix(20),
+                PixelUtils.dpToPix(15)}, 0));
+
+        plot.addSeries(series1, series1Format);
+        if(urls.length>=2)
+            plot.addSeries(series2, series2Format);
+        if(urls.length>=3)
+            plot.addSeries(series3, series3Format);
+        if(urls.length>=4)
+            plot.addSeries(series4, series4Format);
+        if(urls.length==5)
+            plot.addSeries(series5, series5Format);
+
+        plot.getGraph().getLineLabelStyle(XYGraphWidget.Edge.BOTTOM).setFormat(new Format() {
+            @Override
+            public StringBuffer format(Object obj, StringBuffer toAppendTo, FieldPosition pos) {
+                int i = Math.round(Float.parseFloat(obj.toString()));
+                return toAppendTo.append(xlabels[i]);
+            }
+            @Override
+            public Object parseObject(String source, ParsePosition pos) {
+                return null;
+            }
+        });
+
+        plot.redraw();
+    }
+
+
+    private String[] generateHourMinute(){
+        Calendar rightNow = Calendar.getInstance();
+        int currentHour = rightNow.get(Calendar.HOUR_OF_DAY);
+        int currentMinutes = rightNow.get(Calendar.MINUTE);
+        String[] labels = new String[5];
+        for(int i=0;i<5;i++){
+            labels[4-i] = Integer.toString(currentHour) + ":" + Integer.toString(currentMinutes);
+            if(currentMinutes<10){
+                labels[4-i] = Integer.toString(currentHour) + ":" + "0"+Integer.toString(currentMinutes);
+            }
+            if(currentHour<10){
+                labels[4-i] = "0"+Integer.toString(currentHour) + ":" +Integer.toString(currentMinutes);
+            }
+            if(currentHour<10 && currentMinutes<10){
+                labels[4-i] = "0"+Integer.toString(currentHour) + ":" +"0"+Integer.toString(currentMinutes);
+            }
+
+            currentMinutes--;
+            if(currentMinutes < 0){
+                currentHour--;
+                currentMinutes = 59;
+                if(currentHour < 0){
+                    currentHour = 23;
+                }
+            }
+        }
+        return labels;
+    }
+
+    public void plotUpdate(String [] x) {
+        XYPlot plot = (XYPlot) findViewById(R.id.TableRow);
+        plot.clear();
+        Log.e("TAG","JE SUIS PASSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSER");
+        final String [] xlabels=x;
+
+        //series_update(series_new,id_series);
+        //final String[] xlabels = generateHourMinute();
+
+        //Fix the divisions of the X-Axis
+        plot.setDomainStep(StepMode.SUBDIVIDE, 5);
+        // Fix the range of the Y-Axis
+        plot.setRangeBoundaries(0,20,BoundaryMode.FIXED);
+        plot.setRangeStep(StepMode.INCREMENT_BY_VAL,2);
+
+
+        plot.setDomainLabel("Time");
         Log.e(TAG,Arrays.toString(xlabels));
 
         // create a couple arrays of y-values to plot:
@@ -359,7 +734,7 @@ public class SecondActivity extends AppCompatActivity implements
             legend3=legend[2];
         if(urls.length>=4)
             legend4=legend[3];
-        if(urls.length==5)
+        if(urls.length>=5)
             legend5=legend[4];
 
 
@@ -419,7 +794,7 @@ public class SecondActivity extends AppCompatActivity implements
             plot.addSeries(series3, series3Format);
         if(urls.length>=4)
             plot.addSeries(series4, series4Format);
-        if(urls.length==5)
+        if(urls.length>=5)
             plot.addSeries(series5, series5Format);
 
         plot.getGraph().getLineLabelStyle(XYGraphWidget.Edge.BOTTOM).setFormat(new Format() {
@@ -435,36 +810,6 @@ public class SecondActivity extends AppCompatActivity implements
         });
 
         plot.redraw();
-    }
-
-
-    private String[] generateHourMinute(){
-        Calendar rightNow = Calendar.getInstance();
-        int currentHour = rightNow.get(Calendar.HOUR_OF_DAY);
-        int currentMinutes = rightNow.get(Calendar.MINUTE);
-        String[] labels = new String[5];
-        for(int i=0;i<5;i++){
-            labels[4-i] = Integer.toString(currentHour) + ":" + Integer.toString(currentMinutes);
-            if(currentMinutes<10){
-                labels[4-i] = Integer.toString(currentHour) + ":" + "0"+Integer.toString(currentMinutes);
-            }
-            if(currentHour<10){
-                labels[4-i] = "0"+Integer.toString(currentHour) + ":" +Integer.toString(currentMinutes);
-            }
-            if(currentHour<10 && currentMinutes<10){
-                labels[4-i] = "0"+Integer.toString(currentHour) + ":" +"0"+Integer.toString(currentMinutes);
-            }
-
-            currentMinutes--;
-            if(currentMinutes < 0){
-                currentHour--;
-                currentMinutes = 59;
-                if(currentHour < 0){
-                    currentHour = 23;
-                }
-            }
-        }
-        return labels;
     }
 
 
@@ -486,6 +831,9 @@ public class SecondActivity extends AppCompatActivity implements
         if(mGoogleApiClient.isConnected()) {
             new SendMessageTask(DataLayerCommons.START_ACTIVITY_PATH).execute();
         }
+        LocalBroadcastManager.getInstance(this).registerReceiver(mMessageReceiver,
+                new IntentFilter("custom-event-name"));
+
 
     }
 
@@ -495,6 +843,7 @@ public class SecondActivity extends AppCompatActivity implements
         super.onPause();
         // User is leaving the app, stop the fake data generator
         mDataItemGeneratorFuture.cancel(true /* mayInterruptIfRunning */);
+        LocalBroadcastManager.getInstance(this).unregisterReceiver(mMessageReceiver);
     }
 
     @Override
@@ -585,41 +934,6 @@ public class SecondActivity extends AppCompatActivity implements
                 });
     }
 
-    private class SendMessageTask extends AsyncTask<Void, Void, Void> {
-        // Asynchronous background task to send a message through the Wear API
-        private final String message;
-        SendMessageTask(String message) {
-            this.message = message;
-        }
-
-        @Override
-        protected Void doInBackground(Void... args) {
-            // doInBackground is the function executed when running the AsyncTask
-            Collection<String> nodes = getNodes();
-            Log.v(TAG, "Sending '" + message + "' to all " + nodes.size() + " connected nodes");
-            for (String node : nodes) {
-                sendMessage(message, node);
-            }
-            return null;
-        }
-
-        private void sendMessage(final String message, String node) {
-            // Convenience function to send a message through the Wear API
-            Wearable.MessageApi.sendMessage(
-                    mGoogleApiClient, node, message, new byte[0]).setResultCallback(
-                    new ResultCallback<MessageApi.SendMessageResult>() {
-                        @Override
-                        public void onResult(@NonNull MessageApi.SendMessageResult sendMessageResult) {
-                            if (!sendMessageResult.getStatus().isSuccess()) {
-                                Log.e(TAG, "Failed to send message " + message + " with status code: "
-                                        + sendMessageResult.getStatus().getStatusCode());
-                            }
-                        }
-                    }
-            );
-        }
-    }
-
     private Collection<String> getNodes() {
         // Lists all the nodes (devices) connected to the Wear API
         HashSet<String> results = new HashSet<>();
@@ -637,10 +951,10 @@ public class SecondActivity extends AppCompatActivity implements
         @Override
         public void run() {
             // Send the image 50% of the time, otherwise send the counter's value
-            if(Math.random() > .5) {
+            /*if(Math.random() > .5) {
                 createAndSendBitmap();
                 return;
-            }
+            }*/
 
             PutDataMapRequest putDataMapRequest = PutDataMapRequest.create(DataLayerCommons.COUNT_PATH);
             putDataMapRequest.getDataMap().putInt(DataLayerCommons.COUNT_KEY, count++);

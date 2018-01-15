@@ -1,5 +1,6 @@
 package ch.epfl.esl.blankphonewearapp;
 
+import android.graphics.Color;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -20,7 +21,13 @@ public class SecondFragmentSwipe extends Fragment {
     private TextView lastPow4;
     private TextView lastPow5;
 
-    public SecondFragmentSwipe newInstance(){
+    private TextView txtLastPow1;
+    private TextView txtLastPow2;
+    private TextView txtLastPow3;
+    private TextView txtLastPow4;
+    private TextView txtLastPow5;
+
+    public static SecondFragmentSwipe newInstance(){
         return new SecondFragmentSwipe();
     }
 
@@ -28,20 +35,64 @@ public class SecondFragmentSwipe extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.swipelayout2, container, false);
 
-        lastPow1 = view.findViewById(R.id.pwrAvgNmbview1);
-        lastPow2 = view.findViewById(R.id.pwrAvgNmbview2);
-        lastPow3 = view.findViewById(R.id.pwrAvgNmbview3);
-        lastPow4 = view.findViewById(R.id.pwrAvgNmbview4);
-        lastPow5 = view.findViewById(R.id.pwrAvgNmbview5);
+        lastPow1 = view.findViewById(R.id.lastPow1);
+        lastPow2 = view.findViewById(R.id.lastPow2);
+        lastPow3 = view.findViewById(R.id.lastPow3);
+        lastPow4 = view.findViewById(R.id.lastPow4);
+        lastPow5 = view.findViewById(R.id.lastPow5);
+
+        txtLastPow1 = view.findViewById(R.id.lastPowTxt1);
+        txtLastPow2 = view.findViewById(R.id.lastPowTxt2);
+        txtLastPow3 = view.findViewById(R.id.lastPowTxt3);
+        txtLastPow4 = view.findViewById(R.id.lastPowTxt4);
+        txtLastPow5 = view.findViewById(R.id.lastPowTxt5);
+
+        lastPow1.setTextColor(Color.RED);
+        lastPow2.setTextColor(Color.GREEN);
+        lastPow3.setTextColor(Color.BLUE);
+        lastPow4.setTextColor(Color.YELLOW);
+        lastPow5.setTextColor(Color.MAGENTA);
+
+        txtLastPow1.setTextColor(Color.RED);
+        txtLastPow2.setTextColor(Color.GREEN);
+        txtLastPow3.setTextColor(Color.BLUE);
+        txtLastPow4.setTextColor(Color.YELLOW);
+        txtLastPow5.setTextColor(Color.MAGENTA);
+
 
         return view;
     }
 
-    public void setTextViews(int pow1, int pow2, int pow3, int pow4, int pow5){
-        this.lastPow1.setText("dwa");
-        this.lastPow2.setText("dwa");
-        this.lastPow3.setText("dadw");
-        this.lastPow4.setText("dawdad");
-        this.lastPow5.setText("dawda");
+    public void setTextViewsLastPow(Float[] avgs){
+        this.lastPow1.setText(Float.toString(avgs[0]));
+        this.lastPow2.setText(Float.toString(avgs[1]));
+        this.lastPow3.setText(Float.toString(avgs[2]));
+        this.lastPow4.setText(Float.toString(avgs[3]));
+        this.lastPow5.setText(Float.toString(avgs[4]));
     }
+
+    public void setTextViewsLastPowTxt(String[] text){
+        this.txtLastPow1.setText(text[0]);
+        this.txtLastPow2.setText(text[1]);
+        this.txtLastPow3.setText(text[2]);
+        this.txtLastPow4.setText(text[3]);
+        this.txtLastPow5.setText(text[4]);
+    }
+
+    public void setVisibilityTextview(int visibleItems){
+
+
+        TextView[] textViewArrayLastPow = {lastPow1,lastPow2,lastPow3,lastPow4,lastPow5};
+        TextView[] textViewArrayLastPowTxt = {txtLastPow1,txtLastPow2,txtLastPow3,txtLastPow4,txtLastPow5};
+
+
+        for(int i=0;i<visibleItems;i++){
+            textViewArrayLastPow[i].setVisibility(View.VISIBLE);
+            textViewArrayLastPowTxt[i].setVisibility(View.VISIBLE);
+        }
+
+
+    }
+
+
 }

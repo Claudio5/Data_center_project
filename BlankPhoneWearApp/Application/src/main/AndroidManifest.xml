@@ -17,6 +17,7 @@
         android:label="@string/app_name"
         android:theme="@style/Base.V23.Theme.AppCompat.Light">
 
+        <service android:name=".MyIntentService"></service>
         <receiver android:process=":remote" android:name=".Alarm"/>
 
         <service

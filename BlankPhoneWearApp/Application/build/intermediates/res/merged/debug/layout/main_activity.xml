@@ -127,8 +127,7 @@
         android:layout_above="@+id/add_button"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="30dp"
-        android:layout_marginBottom="150dp"
-        android:layout_toStartOf="@+id/send_fltbtn"
+        android:layout_centerInParent="true"
         android:scrollbars="none" />
 
     <!--
@@ -242,11 +241,11 @@
         android:clickable="true"
         app:elevation="0dp"
         app:fabSize="normal"
-        android:layout_alignLeft="@id/my_recycler_view"
-        android:layout_marginLeft="631dp"
-        android:layout_marginTop="450dp"
-        app:srcCompat="@android:drawable/ic_input_add"
-        android:layout_below="@+id/send_fltbtn" />
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="20dp"
+        app:srcCompat="@android:drawable/ic_input_add" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/send_fltbtn"
@@ -254,7 +253,7 @@
         android:layout_height="100dp"
         android:layout_alignParentRight="true"
         android:layout_below="@+id/titleview"
-        android:layout_marginRight="30dp"
+        android:layout_marginRight="15dp"
         app:fabSize="normal"
         android:layout_marginTop="280dp"
         android:backgroundTint="@android:color/holo_purple"
@@ -269,28 +268,30 @@
         app:fabSize="mini"
         app:srcCompat="@android:drawable/ic_menu_call"
         android:layout_alignTop="@+id/hotline"
-        android:layout_alignStart="@+id/save_nb" />
+        android:layout_alignStart="@+id/hotline"
+        android:layout_marginStart="150dp"/>
 
     <TextView
         android:id="@+id/hotline"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:textSize="25dp"
-        android:text="Call Hotline"
-        android:layout_above="@+id/save_nb"
+        android:layout_width="140dp"
+        android:layout_height="40dp"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="17dp" />
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="100dp"
+        android:text="Call Hotline"
+        android:textColor="@color/ap_black"
+        android:textSize="25dp" />
 
     <EditText
         android:id="@+id/hotline_nb"
-        android:layout_width="130dp"
-        android:layout_height="wrap_content"
+        android:layout_width="140dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/hotline"
+        android:layout_marginTop="20dp"
         android:ems="10"
         android:inputType="phone"
-        android:layout_marginEnd="200dp"
-        android:layout_marginTop="850dp"
         android:text="Phone Number"
-        android:textSize="15sp"/>
+        android:textSize="15sp" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/save_nb"
@@ -298,12 +299,48 @@
         android:layout_height="wrap_content"
         android:clickable="true"
         app:fabSize="mini"
-        android:layout_alignTop="@+id/hotline_nb"
-        android:layout_alignEnd="@+id/hotline_nb"
-        android:layout_marginEnd="-50dp"
-        android:layout_marginTop="0dp"
+        android:layout_below="@+id/call_fltbtn"
+        android:layout_alignStart="@+id/hotline_nb"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="20dp"
         android:backgroundTint="@android:color/holo_blue_light"
         app:srcCompat="@android:drawable/ic_menu_save" />
+
+    <TextView
+        android:id="@+id/textViewIP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/parent"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        android:textSize="25sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="36dp"
+        android:text="TextView" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/wearButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:fabSize="mini"
+        app:srcCompat="@mipmap/ic_launcher"
+
+        android:layout_below="@id/hotline"
+        android:layout_marginTop="80dp"
+
+        android:layout_alignParentStart="true" />
+
+    <Switch
+        android:id="@+id/alarmSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textViewIP"
+        android:layout_below="@+id/textViewIP"
+        android:checked="true"
+        android:textSize="30sp"
+        android:text="Alarm" />
 
 
 </android.widget.RelativeLayout>

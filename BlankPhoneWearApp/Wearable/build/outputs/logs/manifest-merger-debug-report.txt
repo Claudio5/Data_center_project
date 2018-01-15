@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:2:1-55:12
+ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:2:1-57:12
 	package
 		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:3:5-44
 	android:versionName
@@ -19,8 +19,12 @@ uses-permission#android.permission.CALL_PHONE
 ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:6:5-68
 	android:name
 		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:6:22-66
+uses-permission#android.permission.VIBRATE
+ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:7:5-65
+	android:name
+		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:7:22-63
 application
-ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:8:5-54:19
+ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:9:5-56:19
 MERGED from [BlankPhoneWearApp:commons:unspecified] C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\commons\build\intermediates\bundles\default\AndroidManifest.xml:11:5-20
 MERGED from [com.google.android.gms:play-services-wearable:8.4.0] C:\Users\claud\.android\build-cache\8427475f8c5426d34ce9611b4916e7031db4c41f\output\AndroidManifest.xml:19:5-20
 MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\claud\.android\build-cache\e33b5fc896675d9263c693a0d399bc4a577a90ae\output\AndroidManifest.xml:20:5-24:19
@@ -36,76 +40,76 @@ MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\claud\.android
 MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\claud\.android\build-cache\a833165182693ab2b4480cabdc2c21e042b0d679\output\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-compat:25.3.1] C:\Users\claud\.android\build-cache\190741dfc7afeabfc8560571d51122eb959464e7\output\AndroidManifest.xml:29:5-20
 	android:label
-		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:11:9-41
+		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:12:9-41
 	android:allowBackup
-		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:9:9-35
+		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:10:9-35
 	android:icon
-		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:10:9-43
+		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:11:9-43
 	android:theme
-		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:12:9-47
+		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:13:9-47
 meta-data#com.google.android.wearable.standalone
-ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:15:9-17:37
+ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:16:9-18:37
 	android:value
-		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:17:13-34
+		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:18:13-34
 	android:name
-		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:16:13-66
+		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:17:13-66
 meta-data#com.google.android.gms.version
-ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:19:9-21:65
+ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:20:9-22:65
 MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\claud\.android\build-cache\e33b5fc896675d9263c693a0d399bc4a577a90ae\output\AndroidManifest.xml:21:9-23:69
 	android:value
-		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:21:9-62
+		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:22:9-62
 	android:name
-		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:20:9-54
+		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:21:9-54
 service#ch.epfl.esl.blankphonewearapp.DataLayerListenerService
-ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:23:9-40:19
+ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:24:9-41:19
 	android:name
-		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:23:18-58
+		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:24:18-58
 intent-filter#com.google.android.gms.wearable.DATA_CHANGED
-ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:24:13-32:29
+ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:25:13-33:29
 action#com.google.android.gms.wearable.DATA_CHANGED
-ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:25:17-87
+ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:26:17-87
 	android:name
-		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:25:25-84
+		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:26:25-84
 data
-ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:28:17-31:45
+ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:29:17-32:45
 	android:host
-		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:29:21-37
+		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:30:21-37
 	android:scheme
-		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:31:21-42
+		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:32:21-42
 	android:pathPrefix
-		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:30:21-42
+		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:31:21-55
 intent-filter#com.google.android.gms.wearable.MESSAGE_RECEIVED
-ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:33:13-39:29
+ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:34:13-40:29
 action#com.google.android.gms.wearable.MESSAGE_RECEIVED
-ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:34:17-91
+ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:35:17-91
 	android:name
-		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:34:25-88
+		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:35:25-88
 activity#ch.epfl.esl.blankphonewearapp.MainActivity
-ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:42:9-53:20
+ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:43:9-54:20
 	android:label
-		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:44:13-45
+		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:45:13-45
 	android:name
-		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:43:13-41
+		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:44:13-41
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:45:13-48:29
+ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:46:13-49:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:46:17-69
+ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:47:17-69
 	android:name
-		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:46:25-66
+		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:47:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:47:17-77
+ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:48:17-77
 	android:name
-		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:47:27-74
+		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:48:27-74
 intent-filter#android.intent.category.DEFAULT+com.example.android.wearable.datalayer.EXAMPLE
-ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:49:13-52:29
+ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:50:13-53:29
 action#com.example.android.wearable.datalayer.EXAMPLE
-ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:50:17-89
+ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:51:17-89
 	android:name
-		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:50:25-86
+		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:51:25-86
 category#android.intent.category.DEFAULT
-ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:51:17-76
+ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:52:17-76
 	android:name
-		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:51:27-73
+		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml:52:27-73
 uses-sdk
 INJECTED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [BlankPhoneWearApp:commons:unspecified] C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\commons\build\intermediates\bundles\default\AndroidManifest.xml:7:5-9:41
