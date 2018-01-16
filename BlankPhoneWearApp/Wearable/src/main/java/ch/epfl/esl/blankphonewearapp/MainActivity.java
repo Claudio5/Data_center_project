@@ -1,7 +1,9 @@
 package ch.epfl.esl.blankphonewearapp;
 
 import android.app.Activity;
+import android.app.Notification;
 import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -11,35 +13,40 @@ import android.graphics.Color;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Vibrator;
+import android.preference.PreferenceManager;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.NotificationCompat;
+import android.support.v4.app.NotificationManagerCompat;
 import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.AlphaAnimation;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import org.w3c.dom.Text;
+
+import java.util.concurrent.TimeUnit;
+
+import ch.epfl.esl.commons.DataLayerCommons;
 
 public class MainActivity extends Activity {
 
     private static final String TAG = "MainActivity";
     public static final String NOTIFICATION_RECEIVED = "NOTIFICATION_RECEIVED";
+    private String notif="";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.e(TAG,"ONCREATTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTE");
         setContentView(R.layout.main_activity);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
-        // Register to receive messages from the service handling the Wear API connection
-        // We are registering an observer (mMessageReceiver) to receive Intents
-        // with actions named as IMAGE_DECODED
-        LocalBroadcastManager.getInstance(this).registerReceiver(mMessageReceiver,
-                new IntentFilter(NOTIFICATION_RECEIVED));
-
-
-        FloatingActionButton callButton = findViewById(R.id.callButton);
+        /*FloatingActionButton callButton = findViewById(R.id.callButton);
         callButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -47,8 +54,37 @@ public class MainActivity extends Activity {
                 callIntent.setData(Uri.parse("tel:123456789"));
                 startActivity(callIntent);
             }
+        });*/
+        //LocalBroadcastManager.getInstance(this).registerReceiver(mMessageReceiver,
+        //        new IntentFilter(NOTIFICATION_RECEIVED));
+
+
+
+        if(getIntent().getExtras()!=null) {
+            TextView warnView = findViewById(R.id.warningView);
+            warnView.setText(getIntent().getExtras().getString("warning"));
+        }
+
+        Button buttonClear = (Button) findViewById(R.id.buttonClear);
+        buttonClear.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                TextView warnView = findViewById(R.id.warningView);
+                warnView.setText("Nothing");
+            }
         });
 
+
+
+
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        LocalBroadcastManager.getInstance(this).registerReceiver(mMessageReceiver,
+                new IntentFilter(NOTIFICATION_RECEIVED));
 
     }
 
@@ -60,35 +96,35 @@ public class MainActivity extends Activity {
     }
 
 
-    public void sendNotification(String text, String title){
-        Uri alarmSound = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
-
-        NotificationManager mNotifyMgr = (NotificationManager) getApplicationContext().getSystemService(Context.NOTIFICATION_SERVICE);
-        NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(getApplicationContext())
-                .setSmallIcon(android.R.drawable.ic_dialog_email)
-                .setContentTitle(title)
-                .setContentText(text)
-                .setSound(alarmSound)
-                .setOngoing(false)
-                .setPriority(NotificationCompat.PRIORITY_DEFAULT)
-                .setAutoCancel(true);
-
-        mBuilder.setLights(Color.BLUE, 500, 500);
-        mNotifyMgr.notify(12345, mBuilder.build());
-
-    }
-
-
 
     private BroadcastReceiver mMessageReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-            // Get the image, display it and fade out
-            Log.d(TAG, "Got message!");
-            String notif = intent.getStringExtra(NOTIFICATION_RECEIVED);
+
+            Log.e(TAG, "Got message!");
+            notif = intent.getStringExtra(NOTIFICATION_RECEIVED);
             TextView warnView = findViewById(R.id.warningView);
             warnView.setText(notif);
-            sendNotification(notif,"HELLO");
+
         }
     };
+
+    /*@Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        TextView warnView = findViewById(R.id.warningView);
+        outState.putString("savText", warnView.getText().toString() );
+        Log.e(TAG,"onSAVEEEEEEEEE "+warnView.getText().toString());
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        TextView warnView = findViewById(R.id.warningView);
+        warnView.setText(savedInstanceState.getString("savText"));
+        Log.e(TAG,"ONRESTORRRRRRRRRRRRRRRRRRRRRRE "+savedInstanceState.getString("savText"));
+
+    }*/
+
+
 }

@@ -2,50 +2,38 @@ package ch.epfl.esl.blankphonewearapp;
 import android.Manifest;
 import android.app.Activity;
 import android.app.ActivityManager;
-import android.app.Notification;
-import android.app.NotificationManager;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.IntentSender;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v4.app.NotificationCompat;
+import android.support.v4.content.LocalBroadcastManager;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
+;
+import android.widget.CompoundButton;
 import android.widget.EditText;
-import android.widget.Spinner;;
-import android.os.Bundle;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
+import android.widget.Switch;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
+import android.widget.Toast;
 
 
 import com.google.android.gms.common.ConnectionResult;
@@ -73,6 +61,8 @@ import com.google.android.gms.wearable.Wearable;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 
 import java.io.ByteArrayOutputStream;
@@ -86,8 +76,6 @@ import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
 import ch.epfl.esl.commons.DataLayerCommons;
-import ch.epfl.esl.blankphonewearapp.rackModel;
-import ch.epfl.esl.blankphonewearapp.serverItem;
 
 public class MainActivity extends AppCompatActivity implements
         CapabilityApi.CapabilityListener,
@@ -109,24 +97,22 @@ public class MainActivity extends AppCompatActivity implements
     private ScheduledFuture<?> mDataItemGeneratorFuture;
 
     private static final int MY_PERMISSIONS_REQUEST_CALL_PHONE = 1234;
-    private String ip = "128.179.161.50";
+    private String ip = "128.179.167.194";
     Context context = this;
-
+    public static DatabaseHandler db=null;
+    public static ServerDAO server;
+    ArrayList<rackModel> rackDataList;
 
     // this is an array that holds the IDs of the drawables ...
-    private int[] images ;
+    private int[] images;
 
     private View serverCell;
     private View rackCell;
-    private int nbServer[]={3,2,3};
-    private int nbRack=3;
+    private int nbServer[]={3,15};
+    private int nbRack=2;
     private int nbCPU;
     private TextView text;
-
-    ArrayList<rackModel> rackDataList;
-
-
-
+    private static Intent servInt;
 
 
     @Override
@@ -134,6 +120,8 @@ public class MainActivity extends AppCompatActivity implements
         super.onCreate(savedInstanceState);
         Log.v(TAG, "onCreate");
         setContentView(R.layout.main_activity);
+
+        //buildServerScroll();
 
         // Initialize the fake data generator
         mGeneratorExecutor = new ScheduledThreadPoolExecutor(1);
@@ -148,7 +136,10 @@ public class MainActivity extends AppCompatActivity implements
         SharedPreferences settings = getSharedPreferences("id",0);
         ip=settings.getString("ip", "");
 
-        new GetJSON_Param().execute("http://"+ip+":5002");
+        TextView ipTextView = (TextView) findViewById(R.id.textViewIP);
+        ipTextView.setText("Current IP: "+ip);
+
+        new GetJSON_Param().execute("http://"+ip);
 
         String phone_nb = settings.getString("phone", "");
         EditText text_phone = (EditText) findViewById(R.id.hotline_nb);
@@ -163,17 +154,29 @@ public class MainActivity extends AppCompatActivity implements
 
                 String list = listsSelectedServer();
 
+                server.addSampling(db,ip,urlAllInside(),nbServer);
                 Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
                 intent.putExtra("url",list);
+                //Bundle bundle= new Bundle();
+                //bundle.putSerializable("database", db);
+                //bundle.putSerializable("server", server);
+                intent.putExtra("nbR",nbRack);
+                intent.putExtra("nbS",nbServer);
+                intent.putExtra("ip",ip);
+                //intent.putExtras(bundle);
+
                 startActivity(intent);
 
             }
         });
 
-        FloatingActionButton launchWEB = (FloatingActionButton) findViewById(R.id.add_button);
-        launchWEB.setOnClickListener(new View.OnClickListener() {
+        db = new DatabaseHandler(this);
+        server = new ServerDAO();
+
+        FloatingActionButton chooseIP = (FloatingActionButton) findViewById(R.id.add_button);
+        chooseIP.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
+            public void onClick(View v) {
 
                 SharedPreferences settings = getSharedPreferences("id",0);
 
@@ -231,11 +234,7 @@ public class MainActivity extends AppCompatActivity implements
         save_phone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //String url = "http://10.0.2.2:5002/racks";
-                //String url = "http://0.0.0.0:5002/racks";
 
-
-                //Context context = getApplicationContext();
                 EditText text = (EditText) findViewById(R.id.hotline_nb);
                 String phone_number = text.getText().toString();
                 SharedPreferences sharedPref = getSharedPreferences("id",0);
@@ -278,25 +277,66 @@ public class MainActivity extends AppCompatActivity implements
 
         });
 
-        if(!isMyServiceRunning(MyService.class) && ip!=""){
-            Intent servInt = new Intent(this, MyService.class);
+        FloatingActionButton wearWear = (FloatingActionButton) findViewById(R.id.wearButton);
+        wearWear.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                sendNotificationWear("Warning sent by user");
+            }
+        });
+
+
+        /*if (!isMyServiceRunning(MyService.class)) {
+            servInt = new Intent(this, MyService.class);
             servInt.putExtra("url", listsAllServer());
             startService(servInt);
-            Toast.makeText(getBaseContext(), "Service is not already running", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(getBaseContext(), "Service is not running yet", Toast.LENGTH_SHORT).show();
+            Log.e(TAG,"Service is running");
 
+        } else {
+            //Toast.makeText(getBaseContext(), "Service is already running", Toast.LENGTH_SHORT).show();
+            Log.e(TAG,"Service is already running");
 
-        }else{
-            Toast.makeText(getBaseContext(), "Service is already running", Toast.LENGTH_SHORT).show();
+        }*/
 
-        }
+        Switch alarmSwitch = (Switch) findViewById(R.id.alarmSwitch);
+        alarmSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    if (!isMyServiceRunning(MyService.class)) {
+                        //Intent servInt = new Intent(this, MyService.class);
+                        servInt.putExtra("url", listsAllServer());
+                        servInt.putExtra("nbServer",nbServer);
+                        startService(servInt);
+                        Log.v(TAG,"Service is started");
+                        //Toast.makeText(getBaseContext(), "Service is not running yet", Toast.LENGTH_SHORT).show();
+                    } else {
+                        //Toast.makeText(getBaseContext(), "Service is already running", Toast.LENGTH_SHORT).show();
+                        Log.d(TAG,"Service is already running");
 
+                    }
 
-        //servInt.putExtra("url","http://"+ip+":5002/rack01/s01/cpu01");
-        //servInt.putExtra("url",listsAllServer());
-        //startService(servInt);
+                }else{
+                    if(isMyServiceRunning(MyService.class)) {
+                        stopService(servInt);
+                        Log.d(TAG, "Service is stopped");
+                    }
+                }
+            }
+        });
 
     }
 
+    private BroadcastReceiver mMessageReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            // Get extra data included in the Intent
+            String notif = intent.getStringExtra("notif");
+            Log.e("receiver", "Got message: " + notif);
+            //Toast.makeText(getBaseContext(), "Got message", Toast.LENGTH_SHORT).show();
+            sendNotificationWear(notif);
+        }
+    };
 
     private boolean isMyServiceRunning(Class<?> serviceClass) {
         ActivityManager manager = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
@@ -324,9 +364,18 @@ public class MainActivity extends AppCompatActivity implements
 
     }
 
-    private String listsAllServer(){
+    private String urlAllInside(){
         String url="";
         for (int i=0; i< nbRack;i++)
+            for (int j=0;j<nbServer[i];j++)
+                url=url+urlCreate("",Integer.toString(i+1),Integer.toString(j+1),"Power")+"#end#";
+
+        return url;
+    }
+
+    private String listsAllServer(){
+        String url="";
+        for (int i=0; i<nbRack;i++)
             for (int j=0;j<nbServer[i];j++){
                 Log.v(TAG, "Rack: "+ i +" Server: "+j);
                 url=url+urlCreate("",Integer.toString(i+1),Integer.toString(j+1),"Power")+"#end#";
@@ -339,7 +388,7 @@ public class MainActivity extends AppCompatActivity implements
 
     private String urlCreate(String textDC,String textR,String textS,String textCP) {
         //String baseUrl = "http://128.179.195.18:5002/";
-        String baseUrl = "http://"+ip+":5002/";
+        String baseUrl = "http://"+ip+"/";
         String strR="rack0"+textR.substring(textR.length() - 1);
         String strS="s0"+textS.substring(textS.length() - 1);
         if(textCP.contains("Power")) {
@@ -364,6 +413,21 @@ public class MainActivity extends AppCompatActivity implements
 
     }
 
+    public void startAlarm(){
+        if (!isMyServiceRunning(MyService.class)) {
+            servInt = new Intent(this, MyService.class);
+            servInt.putExtra("url", listsAllServer());
+            servInt.putExtra("nbServer",nbServer);
+            startService(servInt);
+            //Toast.makeText(getBaseContext(), "Service is not running yet", Toast.LENGTH_SHORT).show();
+            Log.e(TAG,"Service is running");
+
+        } else {
+            //Toast.makeText(getBaseContext(), "Service is already running", Toast.LENGTH_SHORT).show();
+            Log.e(TAG,"Service is already running");
+
+        }
+    }
 
 
     private class GetJSON_Param extends AsyncTask<String, Void, String[]> {
@@ -420,10 +484,8 @@ public class MainActivity extends AppCompatActivity implements
                     Log.e(TAG, "Json parsing error: " + e.getMessage());
 
 
-
                 }
-            }
-            else {
+            } else {
                 Log.e(TAG, "No response");
             }
 
@@ -433,19 +495,25 @@ public class MainActivity extends AppCompatActivity implements
 
         @Override
         protected void onPostExecute(String[] result) {
+
             if(result!=null) {
 
                 nbRack = result.length;
+                nbServer=null;
+                nbServer = new int[nbRack];
                 Log.e(TAG, "this is what I get : " + nbRack);
                 for (int i = 0; i < nbRack; i++) {
                     nbServer[i] = Integer.parseInt(result[i]);
                 }
 
                 buildServerScroll();
+                server.createDatabase(db,ip,nbRack,nbServer);
             }
             else {
                 buildServerScroll();
             }
+
+            startAlarm();
 
         }
 
@@ -486,7 +554,7 @@ public class MainActivity extends AppCompatActivity implements
     }
 
 
-    public void sendNotificationWear(){
+    private void sendNotificationWear(String notif) {
 
         if (mGoogleApiClient.isConnected()) {
 
@@ -494,10 +562,9 @@ public class MainActivity extends AppCompatActivity implements
             // Stop the fake data generator
             mDataItemGeneratorFuture.cancel(true);
 
-
             // Send the notification
-            PutDataMapRequest dataMap = PutDataMapRequest.create(DataLayerCommons.NOTIF_PATH);
-            dataMap.getDataMap().putString(DataLayerCommons.NOTIF_KEY, new Alarm().getServerWarning());
+            PutDataMapRequest dataMap = PutDataMapRequest.create(DataLayerCommons.NOTIFICATION_PATH);
+            dataMap.getDataMap().putString(DataLayerCommons.NOTIFICATION_KEY, notif);
             dataMap.getDataMap().putLong("time", new Date().getTime());
             PutDataRequest request = dataMap.asPutDataRequest();
             request.setUrgent();
@@ -509,7 +576,10 @@ public class MainActivity extends AppCompatActivity implements
                                     .isSuccess());
                         }
                     });
+        }else{
+            Log.e(TAG,"No connection available");
         }
+
     }
 
     @Override
@@ -530,6 +600,9 @@ public class MainActivity extends AppCompatActivity implements
         if(mGoogleApiClient.isConnected()) {
             new SendMessageTask(DataLayerCommons.START_ACTIVITY_PATH).execute();
         }
+        LocalBroadcastManager.getInstance(this).registerReceiver(mMessageReceiver,
+                new IntentFilter("custom-event-name"));
+
     }
 
     @Override
@@ -537,6 +610,7 @@ public class MainActivity extends AppCompatActivity implements
         super.onPause();
         // User is leaving the app, stop the fake data generator
         mDataItemGeneratorFuture.cancel(true /* mayInterruptIfRunning */);
+        LocalBroadcastManager.getInstance(this).unregisterReceiver(mMessageReceiver);
     }
 
     @Override
@@ -627,7 +701,6 @@ public class MainActivity extends AppCompatActivity implements
     }
 
 
-
     private class SendMessageTask extends AsyncTask<Void, Void, Void> {
         // Asynchronous background task to send a message through the Wear API
         private final String message;
@@ -680,10 +753,10 @@ public class MainActivity extends AppCompatActivity implements
         @Override
         public void run() {
             // Send the image 50% of the time, otherwise send the counter's value
-            if(Math.random() > .5) {
+            /*if (Math.random() > .5) {
                 createAndSendBitmap();
                 return;
-            }
+            }*/
 
             PutDataMapRequest putDataMapRequest = PutDataMapRequest.create(DataLayerCommons.COUNT_PATH);
             putDataMapRequest.getDataMap().putInt(DataLayerCommons.COUNT_KEY, count++);

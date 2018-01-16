@@ -10,12 +10,12 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="38dp"
+        android:layout_marginTop="28dp"
         android:text="Data Center Control"
         android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:id="@+id/warningView"
@@ -24,10 +24,10 @@
         android:layout_below="@+id/textView2"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:text="Data Center Control"
+        android:text="Nothing"
         android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
         android:textStyle="bold"
-        android:visibility="invisible" />
+        android:visibility="visible" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/callButton"
@@ -40,5 +40,14 @@
         app:backgroundTint="@color/common_google_signin_btn_text_dark_focused"
         app:fabSize="mini"
         app:srcCompat="@android:drawable/stat_sys_phone_call" />
+
+    <Button
+        android:id="@+id/buttonClear"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_above="@+id/callButton"
+        android:layout_centerHorizontal="true"
+        android:text="Clear"
+        android:textSize="8sp" />
 
 </RelativeLayout>

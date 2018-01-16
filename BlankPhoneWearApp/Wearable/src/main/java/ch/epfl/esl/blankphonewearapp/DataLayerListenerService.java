@@ -1,15 +1,25 @@
 package ch.epfl.esl.blankphonewearapp;
 
+import android.app.Notification;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
+import android.os.Bundle;
+import android.os.Vibrator;
+import android.provider.SyncStateContract;
+import android.support.v4.app.NotificationCompat;
+import android.support.v4.app.NotificationManagerCompat;
 import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.wearable.Asset;
+import com.google.android.gms.wearable.DataApi;
 import com.google.android.gms.wearable.DataEvent;
 import com.google.android.gms.wearable.DataEventBuffer;
 import com.google.android.gms.wearable.DataMapItem;
@@ -23,14 +33,28 @@ import java.util.concurrent.TimeUnit;
 import ch.epfl.esl.commons.DataLayerCommons;
 
 import static ch.epfl.esl.blankphonewearapp.MainActivity.NOTIFICATION_RECEIVED;
+import static com.google.android.gms.wearable.PutDataRequest.WEAR_URI_SCHEME;
 
 public class DataLayerListenerService extends WearableListenerService {
 
     // Tag for Logcat
     private static final String TAG = "DataLayerService";
+    private int notificationId = 001;
+    private String notif;
 
     // Member for the Wear API handle
     GoogleApiClient mGoogleApiClient;
+
+    @Override
+    public int onStartCommand(Intent intent, int flags, int startId) {
+        if (null != intent) {
+            String action = intent.getAction();
+            if (DataLayerCommons.ACTION_DISMISS.equals(action)) {
+                dismissNotification();
+            }
+        }
+        return super.onStartCommand(intent, flags, startId);
+    }
 
     @Override
     public void onCreate() {
@@ -43,23 +67,27 @@ public class DataLayerListenerService extends WearableListenerService {
         mGoogleApiClient.connect();
     }
 
-    @Override
+    //@Override
     public void onDataChanged(DataEventBuffer dataEvents) {
         Log.v(TAG, "onDataChanged: " + dataEvents);
         for (DataEvent event : dataEvents) {
             if (event.getType() == DataEvent.TYPE_CHANGED) {
-                Log.v(TAG, "DataItem Changed: " + event.getDataItem().toString() + "\n"
+
+                Log.e(TAG, "DataItem Changed: " + event.getDataItem().toString() + "\n"
                         + DataMapItem.fromDataItem(event.getDataItem()).getDataMap());
 
                 String path = event.getDataItem().getUri().getPath();
+
                 switch (path) {
-                    case DataLayerCommons.NOTIF_PATH:
+                    case DataLayerCommons.NOTIFICATION_PATH:
                         Log.v(TAG, "Data Changed for NOTIF_PATH: " + event.getDataItem().toString());
                         DataMapItem dataMapItem = DataMapItem.fromDataItem(event.getDataItem());
-                        String notif = dataMapItem.getDataMap().getString(DataLayerCommons.NOTIF_KEY);
+                        notif = dataMapItem.getDataMap().getString(DataLayerCommons.NOTIFICATION_KEY);
                         Intent intent = new Intent(NOTIFICATION_RECEIVED);
-                        intent.putExtra(NOTIFICATION_RECEIVED,notif);
-                        LocalBroadcastManager.getInstance(this).sendBroadcast(intent);
+                        intent.putExtra(NOTIFICATION_RECEIVED, notif);
+                        //LocalBroadcastManager.getInstance(this).sendBroadcast(intent);
+                        sendNotification("Data Center Control",notif);
+
 
                         break;
                     case DataLayerCommons.COUNT_PATH:
@@ -75,7 +103,6 @@ public class DataLayerListenerService extends WearableListenerService {
                 Log.v(TAG, "DataItem Deleted: " + event.getDataItem().toString());
             }
 
-            // For demo, send a message back to the node that created the data item
             Uri uri = event.getDataItem().getUri();
             String path = uri.getPath();
             if (path.equals(DataLayerCommons.COUNT_PATH)) {
@@ -86,6 +113,7 @@ public class DataLayerListenerService extends WearableListenerService {
             }
         }
     }
+
 
     @Override
     public void onMessageReceived(MessageEvent messageEvent) {
@@ -100,4 +128,87 @@ public class DataLayerListenerService extends WearableListenerService {
         }
     }
 
+    private void sendNotification(String title, String content) {
+
+        // this intent will open the activity when the user taps the "open" action on the notification
+        Intent viewIntent = new Intent(this, MainActivity.class);
+        viewIntent.putExtra("warning",content);
+        PendingIntent pendingViewIntent = PendingIntent.getActivity(this, 0, viewIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+
+        // this intent will be sent when the user swipes the notification to dismiss it
+        Intent dismissIntent = new Intent(DataLayerCommons.ACTION_DISMISS);
+        PendingIntent pendingDeleteIntent = PendingIntent.getService(this, 0, dismissIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(this)
+                .setSmallIcon(android.R.drawable.ic_dialog_alert)
+                .setContentTitle(title)
+                .setContentText(content)
+                .setDeleteIntent(pendingDeleteIntent)
+                .setContentIntent(pendingViewIntent);
+
+        Vibrator vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
+        long[] vibrationPattern = {0, 500, 50, 300};
+        //-1 - don't repeat
+        final int indexInPatternToRepeat = -1;
+        vibrator.vibrate(vibrationPattern, indexInPatternToRepeat);
+
+        Notification notification = builder.build();
+
+        NotificationManagerCompat notificationManagerCompat = NotificationManagerCompat.from(this);
+        notificationManagerCompat.notify(notificationId++, notification);
+    }
+
+
+    private void dismissNotification() {
+        new DismissNotificationCommand(this).execute();
+    }
+
+
+    private class DismissNotificationCommand implements GoogleApiClient.ConnectionCallbacks, ResultCallback<DataApi.DeleteDataItemsResult>, GoogleApiClient.OnConnectionFailedListener {
+
+        private static final String TAG = "DismissNotification";
+
+        private final GoogleApiClient mGoogleApiClient;
+
+        public DismissNotificationCommand(Context context) {
+            mGoogleApiClient = new GoogleApiClient.Builder(context)
+                    .addApi(Wearable.API)
+                    .addConnectionCallbacks(this)
+                    .addOnConnectionFailedListener(this)
+                    .build();
+        }
+
+        public void execute() {
+            mGoogleApiClient.connect();
+        }
+
+        @Override
+        public void onConnected(Bundle bundle) {
+            final Uri dataItemUri =
+                    new Uri.Builder().scheme(WEAR_URI_SCHEME).path(DataLayerCommons.NOTIFICATION_PATH).build();
+            if (Log.isLoggable(TAG, Log.DEBUG)) {
+                Log.d(TAG, "Deleting Uri: " + dataItemUri.toString());
+            }
+            Wearable.DataApi.deleteDataItems(
+                    mGoogleApiClient, dataItemUri).setResultCallback(this);
+        }
+
+        @Override
+        public void onConnectionSuspended(int i) {
+            Log.d(TAG, "onConnectionSuspended");
+        }
+
+        @Override
+        public void onResult(DataApi.DeleteDataItemsResult deleteDataItemsResult) {
+            if (!deleteDataItemsResult.getStatus().isSuccess()) {
+                Log.e(TAG, "dismissWearableNotification(): failed to delete DataItem");
+            }
+            mGoogleApiClient.disconnect();
+        }
+
+        @Override
+        public void onConnectionFailed(ConnectionResult connectionResult) {
+            Log.d(TAG, "onConnectionFailed");
+        }
+    }
 }

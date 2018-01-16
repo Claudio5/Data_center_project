@@ -1,4 +1,4 @@
-#Wed Jan 10 22:51:44 CET 2018
+#Sat Jan 13 16:59:42 CET 2018
 file.2=C\:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_eac94e5c25128bebc7037e9f5be594c0f3f499b7\\classes.dex
 base.2=C\:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_eac94e5c25128bebc7037e9f5be594c0f3f499b7
 file.1=C\:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_19e25835f33514208ee99052d2875ea03c5d9314\\classes.dex

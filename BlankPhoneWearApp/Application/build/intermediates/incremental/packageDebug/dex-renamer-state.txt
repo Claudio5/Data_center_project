@@ -1,4 +1,4 @@
-#Thu Jan 11 16:27:49 CET 2018
+#Tue Jan 16 17:32:46 CET 2018
 base.0=C\:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_8775ef1df2326d6a29710de1f6eca48c387610b8
 renamed.1=classes.dex
 renamed.0=classes2.dex

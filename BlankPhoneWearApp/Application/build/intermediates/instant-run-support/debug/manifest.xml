@@ -28,6 +28,8 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/Base.V23.Theme.AppCompat.Light" >
+        <service android:name="ch.epfl.esl.blankphonewearapp.MyIntentService" />
+
         <receiver
             android:name="ch.epfl.esl.blankphonewearapp.Alarm"
             android:process=":remote" />
@@ -46,6 +48,7 @@
             android:name="ch.epfl.esl.blankphonewearapp.MainActivity"
             android:label="@string/app_name"
             android:launchMode="singleTask"
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

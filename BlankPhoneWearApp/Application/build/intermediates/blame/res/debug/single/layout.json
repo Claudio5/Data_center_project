@@ -108,10 +108,6 @@
         "source": "C:\\Users\\claud\\.android\\build-cache\\28893a0c8bdd7a8aa703f47ed687b35b8477588e\\output\\res\\layout\\design_layout_tab_icon.xml"
     },
     {
-        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\second_activity_test.xml",
-        "source": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\Application\\src\\main\\res\\layout\\second_activity_test.xml"
-    },
-    {
         "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\design_menu_item_action_area.xml",
         "source": "C:\\Users\\claud\\.android\\build-cache\\28893a0c8bdd7a8aa703f47ed687b35b8477588e\\output\\res\\layout\\design_menu_item_action_area.xml"
     },
@@ -124,12 +120,12 @@
         "source": "C:\\Users\\claud\\.android\\build-cache\\768ae380c656c8ca3e27d51133ab7e13e219bfb2\\output\\res\\layout\\abc_list_menu_item_checkbox.xml"
     },
     {
-        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\main_activity.xml",
-        "source": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\Application\\src\\main\\res\\layout\\main_activity.xml"
-    },
-    {
         "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_ip.xml",
         "source": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\Application\\src\\main\\res\\layout\\dialog_ip.xml"
+    },
+    {
+        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\main_activity.xml",
+        "source": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\Application\\src\\main\\res\\layout\\main_activity.xml"
     },
     {
         "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_list_item.xml",
@@ -230,6 +226,10 @@
     {
         "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_singlechoice_material.xml",
         "source": "C:\\Users\\claud\\.android\\build-cache\\768ae380c656c8ca3e27d51133ab7e13e219bfb2\\output\\res\\layout\\select_dialog_singlechoice_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\second_activity_first.xml",
+        "source": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\Application\\src\\main\\res\\layout\\second_activity_first.xml"
     },
     {
         "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_time.xml",
