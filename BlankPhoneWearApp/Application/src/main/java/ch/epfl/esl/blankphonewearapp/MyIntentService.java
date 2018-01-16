@@ -38,6 +38,7 @@ public class MyIntentService extends IntentService {
     private ArrayList<String> serverWarnings = new ArrayList<>();
     private String[] IDServer;
     private String servWarn;
+    private int[] nbServer;
     private Context cont;
     private ArrayList<Integer> indexWarning;
     private String url;
@@ -53,12 +54,15 @@ public class MyIntentService extends IntentService {
 
         cont = this;
         url = intent.getExtras().getString("url");
+        nbServer = intent.getExtras().getIntArray("nbServer");
+
         indexWarning = new ArrayList<>();
         indexWarning.clear();
         urlHandler sh = new urlHandler();
         String[] urls = decode_list(url);
         Log.e(TAG,"onHandleIntent "+ url);
         String[] powerArray = new String[urls.length];
+        Log.e(TAG,"HELLO "+Integer.toString(urls.length));
         for (int i = 0; i < urls.length; i++) {
             String jsonStr = sh.getjsonstring(urls[i]);
 
@@ -76,7 +80,11 @@ public class MyIntentService extends IntentService {
                         power = power + racks.getString(j) + ";";
                     }
 
-                    powerArray[i] = power;
+                    if(powerArray[i]==null){
+                        powerArray[i] = power;
+                    }else{
+                        Log.e(TAG,"Error getting data");
+                    }
 
                 } catch (final JSONException e) {
                     Log.e(TAG, "Json parsing error: " + e.getMessage());
@@ -123,6 +131,10 @@ public class MyIntentService extends IntentService {
             }
 
         }
+
+        String IP=getIPAddress(url);
+        MainActivity.server.addSampling(MainActivity.db,IP,url,nbServer);
+        Log.e(TAG,"Added to database");
 
     }
 
@@ -211,6 +223,11 @@ public class MyIntentService extends IntentService {
             vals_nbr[i]=Integer.parseInt(vals[i]);
         }
         return vals_nbr;
+    }
+
+    private static String getIPAddress(String url){
+        String[] url_split = url.split("/");
+        return url_split[2];
     }
 
 }

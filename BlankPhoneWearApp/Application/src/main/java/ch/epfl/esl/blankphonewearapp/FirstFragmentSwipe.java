@@ -49,17 +49,19 @@ public class FirstFragmentSwipe extends Fragment {
         txtAvg4 = view.findViewById(R.id.pwrAvgView4);
         txtAvg5 = view.findViewById(R.id.pwrAvgView5);
 
-        avg1.setTextColor(Color.RED);
-        avg2.setTextColor(Color.GREEN);
-        avg3.setTextColor(Color.BLUE);
-        avg4.setTextColor(Color.YELLOW);
-        avg5.setTextColor(Color.MAGENTA);
 
-        txtAvg1.setTextColor(Color.RED);
-        txtAvg2.setTextColor(Color.GREEN);
-        txtAvg3.setTextColor(Color.BLUE);
-        txtAvg4.setTextColor(Color.YELLOW);
-        txtAvg5.setTextColor(Color.MAGENTA);
+        avg1.setTextColor(0xFF9B59B6);
+        avg2.setTextColor(0xFFE67E22);
+        avg3.setTextColor(0xFF3498DB);
+        avg4.setTextColor(0xFF34495E);
+        avg5.setTextColor(0xFFE74C3C);
+
+        txtAvg1.setTextColor(0xFF9B59B6);
+        txtAvg2.setTextColor(0xFFE67E22);
+        txtAvg3.setTextColor(0xFF3498DB);
+        txtAvg4.setTextColor(0xFF34495E);
+        txtAvg5.setTextColor(0xFFE74C3C);
+
 
         return view;
     }

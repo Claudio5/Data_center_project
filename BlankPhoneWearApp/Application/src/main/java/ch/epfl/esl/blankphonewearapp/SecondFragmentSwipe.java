@@ -47,17 +47,18 @@ public class SecondFragmentSwipe extends Fragment {
         txtLastPow4 = view.findViewById(R.id.lastPowTxt4);
         txtLastPow5 = view.findViewById(R.id.lastPowTxt5);
 
-        lastPow1.setTextColor(Color.RED);
-        lastPow2.setTextColor(Color.GREEN);
-        lastPow3.setTextColor(Color.BLUE);
-        lastPow4.setTextColor(Color.YELLOW);
-        lastPow5.setTextColor(Color.MAGENTA);
+        lastPow1.setTextColor(0xFF9B59B6);
+        lastPow2.setTextColor(0xFFE67E22);
+        lastPow3.setTextColor(0xFF3498DB);
+        lastPow4.setTextColor(0xFF34495E);
+        lastPow5.setTextColor(0xFFE74C3C);
 
-        txtLastPow1.setTextColor(Color.RED);
-        txtLastPow2.setTextColor(Color.GREEN);
-        txtLastPow3.setTextColor(Color.BLUE);
-        txtLastPow4.setTextColor(Color.YELLOW);
-        txtLastPow5.setTextColor(Color.MAGENTA);
+        txtLastPow1.setTextColor(0xFF9B59B6);
+        txtLastPow2.setTextColor(0xFFE67E22);
+        txtLastPow3.setTextColor(0xFF3498DB);
+        txtLastPow4.setTextColor(0xFF34495E);
+        txtLastPow5.setTextColor(0xFFE74C3C);
+
 
 
         return view;

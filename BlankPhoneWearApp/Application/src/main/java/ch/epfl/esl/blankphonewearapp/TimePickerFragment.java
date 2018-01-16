@@ -17,7 +17,7 @@ import java.util.Calendar;
  */
 
 
-public class TimePickerFragment extends DialogFragment
+/*public class TimePickerFragment extends DialogFragment
         implements TimePickerDialog.OnTimeSetListener, DialogInterface.OnCancelListener {
 
     @Override
@@ -130,5 +130,5 @@ public class TimePickerFragment extends DialogFragment
 
 
     }
-}
+}*/
 

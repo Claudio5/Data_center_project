@@ -84,4 +84,4 @@ api.add_resource(ServerPowerLast5min,'/<rack_name>/<server_name>/power/last5min'
 api.add_resource(CPUPowerLast5min,'/<rack_name>/<server_name>/<cpu_name>')
 
 if __name__ == '__main__':
-     app.run(host='10.101.5.24',port='5002')
+     app.run(host='128.179.167.194',port='5002')

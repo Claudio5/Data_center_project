@@ -12,30 +12,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project-Cem2\BlankPhoneWearApp\Application\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.2"
-        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
-        <dex dex="C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project-Cem2\BlankPhoneWearApp\Application\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_3c32b5dce355cffd2eef837f719a56a1d1ecfc13\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Application\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="26.0.2"
-        sha1="214ba71bf5df4da6d50fea16cf5a1303b950ce95">
+        sha1="b7784e8010ca3302b74d8445d2f88ec2145d2c48">
         <dex dex="C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Application\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_8eb12f979d66567f50ffcabf544dbe2338a12e03\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project-Cem2\BlankPhoneWearApp\Application\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.2"
-        sha1="84dc548923e00b8aa63e347cff61036d163d6d2c">
-        <dex dex="C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project-Cem2\BlankPhoneWearApp\Application\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_18c48129341db11de9426dc416a682ea039b6fbd\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -54,15 +36,6 @@
         revision="26.0.2"
         sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
         <dex dex="C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project\BlankPhoneWearApp\Wearable\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_a1366db677dae077ea4ebe95e9b7f8d9dd79e6d7\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\claud\.android\build-cache\538eecd3a97a630d2717b93129aea2786e0cfce6\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.2"
-        sha1="914f5d3e3ace66080e59613708f06d129a222e25">
-        <dex dex="C:\Users\claud\OneDrive\Documents\EPFL\Master\Android\Data_center_project-Cem2\BlankPhoneWearApp\Application\build\intermediates\transforms\dex\debug\folders\1000\10\classes_6094d3ac4f4756f53daa26b55a8f07e06c14747b\classes.dex" />
     </item>
 
 </items>

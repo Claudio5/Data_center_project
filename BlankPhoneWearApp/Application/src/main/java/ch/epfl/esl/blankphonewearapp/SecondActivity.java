@@ -5,8 +5,12 @@ package ch.epfl.esl.blankphonewearapp;
  */
 
 import android.Manifest;
+import android.app.DatePickerDialog;
+import android.app.Dialog;
+import android.app.TimePickerDialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.IntentSender;
@@ -25,16 +29,20 @@ import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.DialogFragment;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.text.format.DateFormat;
 import android.util.Log;
 import android.view.Display;
 import android.view.OrientationEventListener;
 import android.view.View;
 import android.widget.CompoundButton;
+import android.widget.DatePicker;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.TimePicker;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
@@ -111,10 +119,15 @@ public class SecondActivity extends AppCompatActivity implements
 
     private String url;
     private String[] urls;
+    private String ip;
+    private int nbRack;
+    private int nbServer[];
     private Handler handler = new Handler();
     private boolean orientationPortrait;
 
     private int nbServers;
+    private DatabaseHandler db=null;
+    private ServerDAO server;
 
     private SecondActivitySwipeAdapter adapterViewPager;
     private ViewPager vpPager;
@@ -203,6 +216,13 @@ public class SecondActivity extends AppCompatActivity implements
         plot = (XYPlot)findViewById(R.id.TableRow);
         Bundle bundle = getIntent().getExtras();
         url = bundle.getString("url");
+        ip=bundle.getString("ip");
+        nbRack=bundle.getInt("nbR");
+        nbServer=bundle.getIntArray("nbS");
+        server=MainActivity.server;
+        db=MainActivity.db;
+        if(server==null)
+            Log.e(TAG,"the server is null");
         Log.e(TAG,"URL FORMAT   "+url);
         //String [] urls = decode_list(url);
 
@@ -246,7 +266,6 @@ public class SecondActivity extends AppCompatActivity implements
                         Float[] lastValue = new Float[MAX_SERVER];
                         for (int i=0;i<MAX_SERVER;i++)
                             lastValue[i]=(float)0;
-                        //Float[] valF = new Float[string2nbr(result[0]).length];
                         //Log.e(TAG,"result length = "+result.length);
                         for (int i = 0; i < java.lang.Math.min(result.length, 5); i++) {
 
@@ -260,7 +279,6 @@ public class SecondActivity extends AppCompatActivity implements
                                     lastValue[i] = values[j][i];
                             }
                         }
-
                         plotUpdate();
                         if(getScreenOrientation()== Configuration.ORIENTATION_PORTRAIT) {
                             setTextFragments(0, getPowerAvg(values));
@@ -281,6 +299,27 @@ public class SecondActivity extends AppCompatActivity implements
             Toast.makeText(getApplicationContext(), "Please choose at least one server", Toast.LENGTH_LONG).show();
             kill_activity();
         }
+
+        ToggleButton tog = (ToggleButton) findViewById(R.id.toggleButton);
+        tog.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked) {
+                    DatePickerFragment dialog = new DatePickerFragment();
+
+
+                    dialog.show(getSupportFragmentManager(),"DatePickerFragment");
+
+                }
+                else {
+
+                    Intent intent = getIntent();
+                    finish();
+                    startActivity(intent);
+                }
+
+            }
+        });
 
         FloatingActionButton call2 = (FloatingActionButton) findViewById(R.id.call_fltbtn2);
         call2.setOnClickListener(new View.OnClickListener() {
@@ -307,41 +346,85 @@ public class SecondActivity extends AppCompatActivity implements
         });
 
 
-
-        ToggleButton tog = (ToggleButton) findViewById(R.id.toggleButton);
-        tog.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-
-                if(isChecked) {
-                    DatePickerFragment dialog = new DatePickerFragment();
-
-
-                    dialog.show(getFragmentManager(),"DatePickerFragment");
-
-                }
-                else {
-
-                    Intent intent = getIntent();
-                    finish();
-                    startActivity(intent);
-                }
-
-            }
-        });
-
-
-
         handler.postDelayed(runnable, 60000);
 
+    }
+
+    public void NoData() {
+
+        Toast.makeText(getApplicationContext(), "No data on that date", Toast.LENGTH_LONG).show();
+
+        Intent intent = getIntent();
+        kill_activity();
+        startActivity(intent);
+    }
+
+    private int [] getRacks() {
+        int i=0;
+        int [] racks=new int[urls.length];
+        //Log.e(TAG,"hello: "+racks.length);
+        //for(int i=0;i<urls.length;i++) {
+
+        String str = url;
+        Log.e(TAG,"the url :" + str);
+            Pattern pattern = Pattern.compile("/rack0(.*?)/s");
+            Matcher matcher = pattern.matcher(str);
+            while (matcher.find()) {
+                //Log.e(TAG,"this is the string we found : "+matcher.group(1));
+                racks[i]=Integer.parseInt(matcher.group(1))-1;
+                i++;
+            }
+
+       // }
+        return racks;
+    }
+
+    private int [] getServers() {
+        int i=0;
+        int [] servers=new int[nbServers];
+        //for(int i=0;i<urls.length;i++) {
+
+        String str = url;
+        Pattern pattern = Pattern.compile("/s0(.*?)/");
+        Matcher matcher = pattern.matcher(str);
+        while (matcher.find()) {
+            servers[i]=Integer.parseInt(matcher.group(1))-1;
+            i++;
+        }
+
+        // }
+        return servers;
+    }
+
+    private String urlAllInside(){
+        String url="";
+        for (int i=0; i< nbRack;i++)
+            for (int j=0;j<nbServer[i];j++)
+                url=url+urlCreate("",Integer.toString(i+1),Integer.toString(j+1),"Power")+"#end#";
+
+        return url;
+    }
+
+    private String urlCreate(String textDC,String textR,String textS,String textCP) {
+        //String baseUrl = "http://128.179.195.18:5002/";
+        String baseUrl = "http://"+ip+":5002/";
+        String strR="rack0"+textR.substring(textR.length() - 1);
+        String strS="s0"+textS.substring(textS.length() - 1);
+        if(textCP.contains("Power")) {
+            return baseUrl + strR + "/" + strS + "/power/last5min";
+        }else {
+            String strCP = "cpu0" + textS.substring(textS.length() - 1);
+            return baseUrl + strR + "/" + strS + "/" + strCP;
+
+        }
     }
 
     private BroadcastReceiver mMessageReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
             // Get extra data included in the Intent
-            String message = intent.getStringExtra("message");
-            Log.e("receiver", "Got message: " + message);
+            String notif = intent.getStringExtra("notif");
+            Log.e("receiver", "Got message: " + notif);
             Toast.makeText(getBaseContext(), "Got message", Toast.LENGTH_SHORT).show();
             sendNotificationWear();
         }
@@ -415,13 +498,6 @@ public class SecondActivity extends AppCompatActivity implements
         return (orientation >= (360 - 90) && orientation <= 360) || (orientation >= 0 && orientation <= 90);
     }
 
-    public void setDate(String date_new) {
-        date = date_new;
-    }
-
-    public void setTime(String time_new) {
-        time = time_new;
-    }
 
     public int getScreenOrientation()
     {
@@ -439,6 +515,207 @@ public class SecondActivity extends AppCompatActivity implements
         return orientation;
     }
 
+
+    public static class DatePickerFragment extends DialogFragment
+            implements DatePickerDialog.OnDateSetListener, DialogInterface.OnCancelListener {
+
+        //private String date="";
+        //private boolean cancelled=false;
+
+        @Override
+        public Dialog onCreateDialog(Bundle savedInstanceState) {
+
+            final Calendar c = Calendar.getInstance();
+
+            int year = c.get(Calendar.YEAR);
+            int month = c.get(Calendar.MONTH);
+            int day = c.get(Calendar.DAY_OF_MONTH);
+
+            DatePickerDialog dp=new DatePickerDialog(getActivity(), this, year, month, day);
+            dp.getDatePicker().setMaxDate(System.currentTimeMillis());
+
+
+            //return new DatePickerDialog(getActivity(), this, year, month, day);
+            return dp;
+
+        }
+
+        public void onDateSet(DatePicker view, int year, int month, int day) {
+            //cancelled=false;
+            TimePickerFragment dialog = new TimePickerFragment();
+            dialog.show(getFragmentManager(),"Time");
+            String date = "";
+            String monthStr = "";
+            String dayStr="";
+            if(month>=9) {
+                monthStr=Integer.toString(month+1);
+            }
+            else {
+                monthStr="0"+Integer.toString(month+1);
+            }
+
+            if(day>=10) {
+                dayStr=Integer.toString(day);
+            }
+            else {
+                dayStr="0"+Integer.toString(day);
+            }
+            date = Integer.toString(year)+monthStr+dayStr;
+
+            ((SecondActivity) getActivity()).setDate(date);
+
+        }
+
+        public void onCancel(DialogInterface dialog) {
+
+            ((SecondActivity) getActivity()).setDate("");
+            Intent intent = ((SecondActivity) getActivity()).getIntent();
+            ((SecondActivity) getActivity()).finish();
+            startActivity(intent);
+
+        }
+
+    }
+
+    public void setDate(String date_new) {
+        date = date_new;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public static class TimePickerFragment extends DialogFragment
+            implements TimePickerDialog.OnTimeSetListener, DialogInterface.OnCancelListener {
+
+        @Override
+        public Dialog onCreateDialog(Bundle savedInstanceState) {
+
+
+            final Calendar c = Calendar.getInstance();
+            int hour = c.get(Calendar.HOUR_OF_DAY);
+            int minute = c.get(Calendar.MINUTE);
+
+
+            return new TimePickerDialog(getActivity(), this, hour, minute,
+                    DateFormat.is24HourFormat(getActivity()));
+        }
+
+        public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+
+            String min="";
+            String h="";
+
+            int new_hour = hourOfDay;
+            if(minute>=30){
+                new_hour = hourOfDay+1;
+            }
+
+            h= Integer.toString(new_hour);
+            min = "00";
+            if(new_hour==24){
+                h="00";
+            }else if(new_hour<10){
+                h="0"+Integer.toString(new_hour);
+
+            }
+
+            String time=h+min;
+
+            String [] xlabels = obtainRange(Integer.parseInt(h),Integer.parseInt(min));
+
+            Log.e(TAG,"The time : "+time);
+
+            ((SecondActivity) getActivity()).setTime(time);
+
+
+            int [] askedRack=((SecondActivity) getActivity()).getRacks();
+
+
+            int [] askedServer=((SecondActivity) getActivity()).getServers();
+            //(SecondActivity) getActivity()).getDate()+time
+            String[] samples = ((SecondActivity) getActivity()).getSample("201801151515",askedRack,askedServer);
+
+            boolean no_data=false;
+            for(int k=0;k<samples.length;k++) {
+
+                if(samples[k]!=null) {
+                    ((SecondActivity) getActivity()).series_update(samples[k], k);
+                }
+                else {
+                    no_data=true;
+                }
+
+            }
+
+            if(no_data){
+                ((SecondActivity) getActivity()).NoData();
+            }
+
+            ((SecondActivity) getActivity()).plotUpdate(xlabels);
+
+        }
+
+        private String [] obtainRange(int init_h,int init_min){
+
+            String [] xlabels = new String[5];
+            String min="";
+            String h="";
+            for(int i=0;i<5;i++) {
+                //int min_new=init_min+5*i;
+                int min_new=init_min-i;
+                int h_new=init_h;
+                /*
+                if(min_new>=60) {
+                    min_new=min_new % 60;
+                    h_new=h_new+1;
+                    if(h_new+1==24){
+                        h_new=0;
+                    }
+                }*/
+                if(min_new<0) {
+                    min_new=60+min_new;
+                    h_new=h_new-1;
+                    if(h_new==-1){
+                        h_new=23;
+                    }
+                }
+                if(min_new<10){
+                    min="0"+Integer.toString(min_new);
+                }
+                else {
+                    min=Integer.toString(min_new);
+                }
+                if(h_new<10) {
+                    h="0"+Integer.toString(h_new);
+                }
+                else {
+                    h = Integer.toString(h_new);
+                }
+                xlabels[4-i]=h+":"+min;
+            }
+
+            return xlabels;
+        }
+
+            public void onCancel(DialogInterface dialog) {
+
+            ((SecondActivity) getActivity()).setTime("");
+            Intent intent = ((SecondActivity) getActivity()).getIntent();
+            ((SecondActivity) getActivity()).finish();
+            startActivity(intent);
+
+
+        }
+    }
+
+    public String [] getSample(String time,int [] askedRack, int [] askedServer) {
+        return server.getSampling(db, ip, time, askedRack, askedServer);
+    }
+
+    public void setTime(String time_new) {
+        time = time_new;
+    }
 
     void kill_activity(){
         finish();
@@ -500,6 +777,12 @@ public class SecondActivity extends AppCompatActivity implements
             series_id=series_id+Integer.toString(nbr[i].intValue())+";";
         }
         series[id]=series_id;
+    }
+
+    private void series_update(String nbr,int id){
+
+
+        series[id]=nbr;
     }
 
     private Number[] string2nbr(String series_id){
@@ -599,7 +882,7 @@ public class SecondActivity extends AppCompatActivity implements
             legend3=legend[2];
         if(urls.length>=4)
             legend4=legend[3];
-        if(urls.length==5)
+        if(urls.length>=5)
             legend5=legend[4];
 
         // turn the above arrays into XYSeries':
@@ -621,22 +904,28 @@ public class SecondActivity extends AppCompatActivity implements
 
         // create formatters to use for drawing a series using LineAndPointRenderer
         // and configure them from xml:
-        LineAndPointFormatter series1Format = new LineAndPointFormatter(Color.RED, Color.RED, Color.TRANSPARENT, null);
+        LineAndPointFormatter series1Format = new LineAndPointFormatter(0xFF9B59B6, 0xFF9B59B6, Color.TRANSPARENT, null);
 
-        LineAndPointFormatter series2Format = new LineAndPointFormatter(Color.GREEN, Color.GREEN, Color.TRANSPARENT, null);
+        LineAndPointFormatter series2Format = new LineAndPointFormatter(0xFFE67E22, 0xFFE67E22, Color.TRANSPARENT, null);
 
-        LineAndPointFormatter series3Format = new LineAndPointFormatter(Color.BLUE, Color.BLUE, Color.TRANSPARENT, null);
+        LineAndPointFormatter series3Format = new LineAndPointFormatter(0xFF3498DB, 0xFF3498DB, Color.TRANSPARENT, null);
 
-        LineAndPointFormatter series4Format = new LineAndPointFormatter(Color.YELLOW, Color.YELLOW, Color.TRANSPARENT, null);
+        LineAndPointFormatter series4Format = new LineAndPointFormatter(0xFF34495E, 0xFF34495E, Color.TRANSPARENT, null);
 
-        LineAndPointFormatter series5Format = new LineAndPointFormatter(Color.MAGENTA, Color.MAGENTA, Color.TRANSPARENT, null);
+        LineAndPointFormatter series5Format = new LineAndPointFormatter(0xFFE74C3C, 0xFFE74C3C, Color.TRANSPARENT, null);
+
+        series1Format.getLinePaint().setStrokeWidth(10);
+        series2Format.getLinePaint().setStrokeWidth(10);
+        series3Format.getLinePaint().setStrokeWidth(10);
+        series4Format.getLinePaint().setStrokeWidth(10);
+        series5Format.getLinePaint().setStrokeWidth(10);
 
         // add an "dash" effect to the series2 line:
-        series2Format.getLinePaint().setPathEffect(new DashPathEffect(new float[] {
+        /*series2Format.getLinePaint().setPathEffect(new DashPathEffect(new float[] {
 
                 // always use DP when specifying pixel sizes, to keep things consistent across devices:
                 PixelUtils.dpToPix(20),
-                PixelUtils.dpToPix(15)}, 0));
+                PixelUtils.dpToPix(15)}, 0));*/
 
         plot.addSeries(series1, series1Format);
         if(urls.length>=2)
@@ -645,7 +934,7 @@ public class SecondActivity extends AppCompatActivity implements
             plot.addSeries(series3, series3Format);
         if(urls.length>=4)
             plot.addSeries(series4, series4Format);
-        if(urls.length==5)
+        if(urls.length>=5)
             plot.addSeries(series5, series5Format);
 
         plot.getGraph().getLineLabelStyle(XYGraphWidget.Edge.BOTTOM).setFormat(new Format() {
@@ -696,7 +985,7 @@ public class SecondActivity extends AppCompatActivity implements
     public void plotUpdate(String [] x) {
         XYPlot plot = (XYPlot) findViewById(R.id.TableRow);
         plot.clear();
-        Log.e("TAG","JE SUIS PASSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSER");
+
         final String [] xlabels=x;
 
         //series_update(series_new,id_series);
@@ -709,7 +998,7 @@ public class SecondActivity extends AppCompatActivity implements
         plot.setRangeStep(StepMode.INCREMENT_BY_VAL,2);
 
 
-        plot.setDomainLabel("Time");
+
         Log.e(TAG,Arrays.toString(xlabels));
 
         // create a couple arrays of y-values to plot:
@@ -758,33 +1047,21 @@ public class SecondActivity extends AppCompatActivity implements
 
         // create formatters to use for drawing a series using LineAndPointRenderer
         // and configure them from xml:
-        LineAndPointFormatter series1Format = new LineAndPointFormatter(Color.RED, Color.RED, Color.TRANSPARENT, null);
+        LineAndPointFormatter series1Format = new LineAndPointFormatter(0xFF9B59B6, 0xFF9B59B6, Color.TRANSPARENT, null);
 
-        LineAndPointFormatter series2Format = new LineAndPointFormatter(Color.GREEN, Color.GREEN, Color.TRANSPARENT, null);
+        LineAndPointFormatter series2Format = new LineAndPointFormatter(0xFFE67E22, 0xFFE67E22, Color.TRANSPARENT, null);
 
-        LineAndPointFormatter series3Format = new LineAndPointFormatter(Color.BLUE, Color.BLUE, Color.TRANSPARENT, null);
+        LineAndPointFormatter series3Format = new LineAndPointFormatter(0xFF3498DB, 0xFF3498DB, Color.TRANSPARENT, null);
 
-        LineAndPointFormatter series4Format = new LineAndPointFormatter(Color.YELLOW, Color.YELLOW, Color.TRANSPARENT, null);
+        LineAndPointFormatter series4Format = new LineAndPointFormatter(0xFF34495E, 0xFF34495E, Color.TRANSPARENT, null);
 
-        LineAndPointFormatter series5Format = new LineAndPointFormatter(Color.WHITE, Color.WHITE, Color.TRANSPARENT, null);
+        LineAndPointFormatter series5Format = new LineAndPointFormatter(0xFFE74C3C, 0xFFE74C3C, Color.TRANSPARENT, null);
 
-        // add an "dash" effect to the series2 line:
-        series2Format.getLinePaint().setPathEffect(new DashPathEffect(new float[] {
-
-                // always use DP when specifying pixel sizes, to keep things consistent across devices:
-                PixelUtils.dpToPix(20),
-                PixelUtils.dpToPix(15)}, 0));
-
-        // just for fun, add some smoothing to the lines:
-        // see: http://androidplot.com/smooth-curves-and-androidplot/
-        //series1Format.setInterpolationParams(
-        //        new CatmullRomInterpolator.Params(10, CatmullRomInterpolator.Type.Centripetal));
-
-        //series2Format.setInterpolationParams(
-        //        new CatmullRomInterpolator.Params(10, CatmullRomInterpolator.Type.Centripetal));
-
-        // add a new series' to the xyplot:
-
+        series1Format.getLinePaint().setStrokeWidth(10);
+        series2Format.getLinePaint().setStrokeWidth(10);
+        series3Format.getLinePaint().setStrokeWidth(10);
+        series4Format.getLinePaint().setStrokeWidth(10);
+        series5Format.getLinePaint().setStrokeWidth(10);
 
 
         plot.addSeries(series1, series1Format);

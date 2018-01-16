@@ -8,7 +8,7 @@
 
     <com.androidplot.xy.XYPlot
         android:id="@+id/TableRow"
-        style="@style/APDefacto.Dark"
+        style="@style/APDefacto.Light"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentLeft="true"

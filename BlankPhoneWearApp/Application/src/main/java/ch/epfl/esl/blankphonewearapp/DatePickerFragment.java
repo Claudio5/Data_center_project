@@ -14,7 +14,7 @@ import java.util.Calendar;
  * Created by Claudio on 13.01.2018.
  */
 
-public class DatePickerFragment extends DialogFragment
+/*public class DatePickerFragment extends DialogFragment
         implements DatePickerDialog.OnDateSetListener, DialogInterface.OnCancelListener {
 
 
@@ -72,11 +72,8 @@ public class DatePickerFragment extends DialogFragment
         Intent intent = ((SecondActivity) getActivity()).getIntent();
         ((SecondActivity) getActivity()).finish();
         startActivity(intent);
-            /*
-            cancelled=true;
-            ((SecondActivity) getActivity()).setCancelled(cancelled);
-            */
+
 
     }
 
-}
+}*/

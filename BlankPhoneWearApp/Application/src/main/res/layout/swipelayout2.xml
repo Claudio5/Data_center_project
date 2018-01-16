@@ -3,13 +3,14 @@
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/power_lay1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_alignParentBottom="true"
     android:layout_alignParentRight="true"
     android:layout_below="@+id/TableRow"
-    android:background="@color/ap_black"
+    android:background="@color/ap_white"
     android:orientation="vertical">
 
 
@@ -166,7 +167,7 @@
         android:gravity="center"
         android:text="Last Power value [W]"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="@color/ap_white"
+        android:textColor="@color/ap_black"
         android:textSize="35sp" />
 
 

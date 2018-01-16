@@ -78,6 +78,7 @@ public class Alarm extends BroadcastReceiver {
 
         Intent in = new Intent(context,MyIntentService.class);
         in.putExtra("url",url);
+        in.putExtra("nbServer",intent.getExtras().getIntArray("nbServer"));
         context.startService(in);
 
         // End of alarm code
@@ -91,6 +92,7 @@ public class Alarm extends BroadcastReceiver {
         AlarmManager am = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
         Intent i = new Intent(context, Alarm.class);
         i.putExtra("url", intent.getExtras().getString("url"));
+        i.putExtra("nbServer",intent.getExtras().getIntArray("nbServer"));
         PendingIntent pi = PendingIntent.getBroadcast(context, 0, i, PendingIntent.FLAG_UPDATE_CURRENT);
         am.setInexactRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP,
                 SystemClock.elapsedRealtime() + AlarmManager.INTERVAL_FIFTEEN_MINUTES/15,

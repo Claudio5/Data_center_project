@@ -9,7 +9,7 @@
     android:layout_alignParentBottom="true"
     android:layout_alignParentRight="true"
     android:layout_below="@+id/TableRow"
-    android:background="@color/ap_black"
+    android:background="@color/ap_white"
     android:orientation="vertical">
 
 
@@ -25,6 +25,7 @@
         android:text="@string/powAvg"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@color/ap_white"
+        android:textColorLink="@color/ap_black"
         android:textSize="35sp"
         android:visibility="invisible" />
 
@@ -40,6 +41,7 @@
         android:text="Power"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@color/ap_white"
+        android:textColorLink="@color/ap_black"
         android:textSize="40sp"
         android:visibility="invisible" />
 
@@ -55,6 +57,7 @@
         android:text="Power"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@color/ap_white"
+        android:textColorLink="@color/ap_black"
         android:textSize="40sp"
         android:visibility="invisible" />
 
@@ -70,6 +73,7 @@
         android:text="Power"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@color/ap_white"
+        android:textColorLink="@color/ap_black"
         android:textSize="40sp"
         android:visibility="invisible" />
 
@@ -83,6 +87,7 @@
         android:text="Power"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@color/ap_white"
+        android:textColorLink="@color/ap_black"
         android:textSize="40sp"
         android:visibility="invisible" />
 
@@ -96,6 +101,7 @@
         android:text="Power"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@color/ap_white"
+        android:textColorLink="@color/ap_black"
         android:textSize="40sp"
         android:visibility="invisible" />
 
@@ -110,6 +116,7 @@
         android:text="@string/powAvg"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@color/ap_white"
+        android:textColorLink="@color/ap_black"
         android:textSize="35sp"
         android:visibility="invisible" />
 
@@ -124,6 +131,7 @@
         android:text="@string/powAvg"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@color/ap_white"
+        android:textColorLink="@color/ap_black"
         android:textSize="35sp"
         android:visibility="invisible" />
 
@@ -138,6 +146,7 @@
         android:text="@string/powAvg"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@color/ap_white"
+        android:textColorLink="@color/ap_black"
         android:textSize="35sp"
         android:visibility="invisible" />
 
@@ -152,6 +161,7 @@
         android:text="@string/powAvg"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@color/ap_white"
+        android:textColorLink="@color/ap_black"
         android:textSize="35sp"
         android:visibility="invisible" />
 
@@ -166,7 +176,8 @@
         android:gravity="center"
         android:text="Power Average [W]"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="@color/ap_white"
+        android:textColor="@color/ap_black"
+        android:textColorLink="@color/ap_black"
         android:textSize="35sp" />
 
 

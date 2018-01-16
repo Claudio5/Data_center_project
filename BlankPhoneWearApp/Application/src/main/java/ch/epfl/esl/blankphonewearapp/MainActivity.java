@@ -97,39 +97,31 @@ public class MainActivity extends AppCompatActivity implements
     private ScheduledFuture<?> mDataItemGeneratorFuture;
 
     private static final int MY_PERMISSIONS_REQUEST_CALL_PHONE = 1234;
-    private String ip = "130.223.147.239";
+    private String ip = "128.179.167.194";
     Context context = this;
-    static MainActivity activityA;
-
+    public static DatabaseHandler db=null;
+    public static ServerDAO server;
+    ArrayList<rackModel> rackDataList;
 
     // this is an array that holds the IDs of the drawables ...
     private int[] images;
 
     private View serverCell;
     private View rackCell;
-    private int nbServer[] = {3, 2, 3};
-    private int nbRack = 3;
+    private int nbServer[]={3,15};
+    private int nbRack=2;
     private int nbCPU;
     private TextView text;
     private static Intent servInt;
 
-    ArrayList<rackModel> rackDataList;
-
-    public static MainActivity getAppContext() {
-        return activityA;
-    }
-
-    public void setttt(){
-        TextView t = (TextView) findViewById(R.id.textViewIP);
-        t.setText("TEST");
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        activityA = this;
         Log.v(TAG, "onCreate");
         setContentView(R.layout.main_activity);
+
+        //buildServerScroll();
 
         // Initialize the fake data generator
         mGeneratorExecutor = new ScheduledThreadPoolExecutor(1);
@@ -141,18 +133,17 @@ public class MainActivity extends AppCompatActivity implements
                 .addOnConnectionFailedListener(this)
                 .build();
 
-
-        SharedPreferences settings = getSharedPreferences("id", 0);
-        ip = settings.getString("ip", "");
+        SharedPreferences settings = getSharedPreferences("id",0);
+        ip=settings.getString("ip", "");
 
         TextView ipTextView = (TextView) findViewById(R.id.textViewIP);
         ipTextView.setText("Current IP: "+ip);
 
-        new GetJSON_Param().execute("http://" + ip + ":5002");
+        new GetJSON_Param().execute("http://"+ip);
 
         String phone_nb = settings.getString("phone", "");
         EditText text_phone = (EditText) findViewById(R.id.hotline_nb);
-        text_phone.setText("Phone : " + phone_nb);
+        text_phone.setText("Phone : "+phone_nb);
 
 
         FloatingActionButton launchActivityTwoButton = (FloatingActionButton) findViewById(R.id.send_fltbtn);
@@ -163,22 +154,34 @@ public class MainActivity extends AppCompatActivity implements
 
                 String list = listsSelectedServer();
 
+                server.addSampling(db,ip,urlAllInside(),nbServer);
                 Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
-                intent.putExtra("url", list);
+                intent.putExtra("url",list);
+                //Bundle bundle= new Bundle();
+                //bundle.putSerializable("database", db);
+                //bundle.putSerializable("server", server);
+                intent.putExtra("nbR",nbRack);
+                intent.putExtra("nbS",nbServer);
+                intent.putExtra("ip",ip);
+                //intent.putExtras(bundle);
+
                 startActivity(intent);
 
             }
         });
 
-        FloatingActionButton launchWEB = (FloatingActionButton) findViewById(R.id.add_button);
-        launchWEB.setOnClickListener(new View.OnClickListener() {
+        db = new DatabaseHandler(this);
+        server = new ServerDAO();
+
+        FloatingActionButton chooseIP = (FloatingActionButton) findViewById(R.id.add_button);
+        chooseIP.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                SharedPreferences settings = getSharedPreferences("id", 0);
+                SharedPreferences settings = getSharedPreferences("id",0);
 
                 LayoutInflater li = LayoutInflater.from(context);
-                View dialog = li.inflate(R.layout.dialog_ip, null);
+                View dialog = li.inflate(R.layout.dialog_ip,null);
                 AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
                         context);
 
@@ -192,10 +195,10 @@ public class MainActivity extends AppCompatActivity implements
                         .setMessage("Enter an IP Address")
                         .setPositiveButton("OK",
                                 new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int id) {
+                                    public void onClick(DialogInterface dialog,int id) {
                                         // get user input and set it to result
                                         // edit text
-                                        SharedPreferences settings = getSharedPreferences("id", 0);
+                                        SharedPreferences settings = getSharedPreferences("id",0);
                                         SharedPreferences.Editor editor = settings.edit();
                                         editor.putString("ip", userInput.getText().toString());
                                         editor.commit();
@@ -208,7 +211,7 @@ public class MainActivity extends AppCompatActivity implements
                                 })
                         .setNegativeButton("Cancel",
                                 new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int id) {
+                                    public void onClick(DialogInterface dialog,int id) {
                                         dialog.cancel();
                                     }
                                 });
@@ -231,14 +234,10 @@ public class MainActivity extends AppCompatActivity implements
         save_phone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //String url = "http://10.0.2.2:5002/racks";
-                //String url = "http://0.0.0.0:5002/racks";
 
-
-                //Context context = getApplicationContext();
                 EditText text = (EditText) findViewById(R.id.hotline_nb);
                 String phone_number = text.getText().toString();
-                SharedPreferences sharedPref = getSharedPreferences("id", 0);
+                SharedPreferences sharedPref = getSharedPreferences("id",0);
                 SharedPreferences.Editor editor = sharedPref.edit();
                 editor.putString("phone", phone_number);
                 editor.commit();
@@ -253,12 +252,12 @@ public class MainActivity extends AppCompatActivity implements
             @Override
             public void onClick(View v) {
 
-                SharedPreferences settings = getSharedPreferences("id", 0);
+                SharedPreferences settings = getSharedPreferences("id",0);
                 String phone = settings.getString("phone", "");
                 EditText edit = (EditText) findViewById(R.id.hotline_nb);
-                if (phone == null) {
+                if(phone==null){
                     //Log.e(TAG,"number null");
-                    phone = edit.getText().toString();
+                    phone=edit.getText().toString();
                 }
                 //String phone = edit.getText().toString();
 
@@ -286,25 +285,28 @@ public class MainActivity extends AppCompatActivity implements
             }
         });
 
-        if (!isMyServiceRunning(MyService.class) && ip != "") {
+
+        /*if (!isMyServiceRunning(MyService.class)) {
             servInt = new Intent(this, MyService.class);
             servInt.putExtra("url", listsAllServer());
             startService(servInt);
             //Toast.makeText(getBaseContext(), "Service is not running yet", Toast.LENGTH_SHORT).show();
-
+            Log.e(TAG,"Service is running");
 
         } else {
             //Toast.makeText(getBaseContext(), "Service is already running", Toast.LENGTH_SHORT).show();
+            Log.e(TAG,"Service is already running");
 
-        }
+        }*/
 
         Switch alarmSwitch = (Switch) findViewById(R.id.alarmSwitch);
         alarmSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
-                    if (!isMyServiceRunning(MyService.class) && ip != "") {
+                    if (!isMyServiceRunning(MyService.class)) {
                         //Intent servInt = new Intent(this, MyService.class);
                         servInt.putExtra("url", listsAllServer());
+                        servInt.putExtra("nbServer",nbServer);
                         startService(servInt);
                         Log.v(TAG,"Service is started");
                         //Toast.makeText(getBaseContext(), "Service is not running yet", Toast.LENGTH_SHORT).show();
@@ -323,13 +325,6 @@ public class MainActivity extends AppCompatActivity implements
             }
         });
 
-
-
-
-        //servInt.putExtra("url","http://"+ip+":5002/rack01/s01/cpu01");
-        //servInt.putExtra("url",listsAllServer());
-        //startService(servInt);
-
     }
 
     private BroadcastReceiver mMessageReceiver = new BroadcastReceiver() {
@@ -343,8 +338,6 @@ public class MainActivity extends AppCompatActivity implements
         }
     };
 
-
-
     private boolean isMyServiceRunning(Class<?> serviceClass) {
         ActivityManager manager = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
         for (ActivityManager.RunningServiceInfo service : manager.getRunningServices(Integer.MAX_VALUE)) {
@@ -355,13 +348,13 @@ public class MainActivity extends AppCompatActivity implements
         return false;
     }
 
-    private String listsSelectedServer() {
-        String url = "";
-        for (int i = 0; i < nbRack; i++)
-            for (int j = 0; j < nbServer[i]; j++) {
-                if (rackDataList.get(i).getAllItemsInSection().get(j).getSelect()) {
-                    Log.v(TAG, "Rack: " + i + " Server: " + j);
-                    url = url + urlCreate("", Integer.toString(i + 1), Integer.toString(j + 1), "Power") + "#end#";
+    private String listsSelectedServer(){
+        String url="";
+        for (int i=0; i< nbRack;i++)
+            for (int j=0;j<nbServer[i];j++){
+                if(rackDataList.get(i).getAllItemsInSection().get(j).getSelect()) {
+                    Log.v(TAG, "Rack: "+ i +" Server: "+j);
+                    url=url+urlCreate("",Integer.toString(i+1),Integer.toString(j+1),"Power")+"#end#";
                 }
 
 
@@ -371,12 +364,21 @@ public class MainActivity extends AppCompatActivity implements
 
     }
 
-    private String listsAllServer() {
-        String url = "";
-        for (int i = 0; i < nbRack; i++)
-            for (int j = 0; j < nbServer[i]; j++) {
-                Log.v(TAG, "Rack: " + i + " Server: " + j);
-                url = url + urlCreate("", Integer.toString(i + 1), Integer.toString(j + 1), "Power") + "#end#";
+    private String urlAllInside(){
+        String url="";
+        for (int i=0; i< nbRack;i++)
+            for (int j=0;j<nbServer[i];j++)
+                url=url+urlCreate("",Integer.toString(i+1),Integer.toString(j+1),"Power")+"#end#";
+
+        return url;
+    }
+
+    private String listsAllServer(){
+        String url="";
+        for (int i=0; i<nbRack;i++)
+            for (int j=0;j<nbServer[i];j++){
+                Log.v(TAG, "Rack: "+ i +" Server: "+j);
+                url=url+urlCreate("",Integer.toString(i+1),Integer.toString(j+1),"Power")+"#end#";
 
             }
 
@@ -384,14 +386,14 @@ public class MainActivity extends AppCompatActivity implements
 
     }
 
-    private String urlCreate(String textDC, String textR, String textS, String textCP) {
+    private String urlCreate(String textDC,String textR,String textS,String textCP) {
         //String baseUrl = "http://128.179.195.18:5002/";
-        String baseUrl = "http://" + ip + ":5002/";
-        String strR = "rack0" + textR.substring(textR.length() - 1);
-        String strS = "s0" + textS.substring(textS.length() - 1);
-        if (textCP.contains("Power")) {
+        String baseUrl = "http://"+ip+"/";
+        String strR="rack0"+textR.substring(textR.length() - 1);
+        String strS="s0"+textS.substring(textS.length() - 1);
+        if(textCP.contains("Power")) {
             return baseUrl + strR + "/" + strS + "/power/last5min";
-        } else {
+        }else {
             String strCP = "cpu0" + textS.substring(textS.length() - 1);
             return baseUrl + strR + "/" + strS + "/" + strCP;
 
@@ -400,15 +402,31 @@ public class MainActivity extends AppCompatActivity implements
 
     private void updatePlot(String[] array) {
 
-        Log.e(TAG, array[0]);
+        Log.e(TAG,array[0]);
 
         Number[] val = new Number[array.length];
-        for (int i = 0; i < array.length; i++) {
+        for(int i=0;i<array.length;i++) {
             int value = Integer.parseInt(array[i]);
-            val[i] = value;
+            val[i]=value;
         }
         Number[] series2Numbers = {5, 2, 10, 5, 20};
 
+    }
+
+    public void startAlarm(){
+        if (!isMyServiceRunning(MyService.class)) {
+            servInt = new Intent(this, MyService.class);
+            servInt.putExtra("url", listsAllServer());
+            servInt.putExtra("nbServer",nbServer);
+            startService(servInt);
+            //Toast.makeText(getBaseContext(), "Service is not running yet", Toast.LENGTH_SHORT).show();
+            Log.e(TAG,"Service is running");
+
+        } else {
+            //Toast.makeText(getBaseContext(), "Service is already running", Toast.LENGTH_SHORT).show();
+            Log.e(TAG,"Service is already running");
+
+        }
     }
 
 
@@ -424,30 +442,31 @@ public class MainActivity extends AppCompatActivity implements
         protected String[] doInBackground(String... url) {
             urlHandler sh = new urlHandler();
 
-            String jsonStr = sh.getjsonstring(url[0] + "/racks");
+            String jsonStr = sh.getjsonstring(url[0]+"/racks");
 
             //Log.e(TAG, "Response from url: " + jsonStr);
 
-            if (jsonStr != null) {
+            if(jsonStr!=null) {
                 try {
                     JSONObject jsonObject = new JSONObject(jsonStr);
 
                     //for (int i = 0; i < jsonObject.length(); i++) {
 
                     JSONArray racks = jsonObject.getJSONArray("racks");
-                    String[] nb_servers = new String[racks.length()];
+                    String [] nb_servers= new String[racks.length()];
                     for (int j = 0; j < racks.length(); j++) {
-                        String url_srv = url[0] + "/rack0" + Integer.toString(j + 1) + "/servers";
+                        String url_srv = url[0]+"/rack0"+Integer.toString(j+1)+"/servers";
                         urlHandler servers_h = new urlHandler();
                         String jsonStr_srv = servers_h.getjsonstring(url_srv);
 
-                        if (jsonStr_srv != null) {
-                            try {
+                        if(jsonStr_srv!=null){
+                            try{
                                 JSONObject jsonObject_srv = new JSONObject(jsonStr_srv);
                                 JSONArray servers = jsonObject_srv.getJSONArray("servers");
 
-                                nb_servers[j] = Integer.toString(servers.length());
-                            } catch (final JSONException e) {
+                                nb_servers[j]= Integer.toString(servers.length());
+                            }
+                            catch(final JSONException e) {
                                 Log.e(TAG, "Json parsing error2: " + e.getMessage());
                             }
                         }
@@ -460,7 +479,8 @@ public class MainActivity extends AppCompatActivity implements
 
 
                     return nb_servers;
-                } catch (final JSONException e) {
+                }
+                catch (final JSONException e) {
                     Log.e(TAG, "Json parsing error: " + e.getMessage());
 
 
@@ -475,24 +495,31 @@ public class MainActivity extends AppCompatActivity implements
 
         @Override
         protected void onPostExecute(String[] result) {
-            if (result != null) {
+
+            if(result!=null) {
 
                 nbRack = result.length;
+                nbServer=null;
+                nbServer = new int[nbRack];
                 Log.e(TAG, "this is what I get : " + nbRack);
                 for (int i = 0; i < nbRack; i++) {
                     nbServer[i] = Integer.parseInt(result[i]);
                 }
 
                 buildServerScroll();
-            } else {
+                server.createDatabase(db,ip,nbRack,nbServer);
+            }
+            else {
                 buildServerScroll();
             }
+
+            startAlarm();
 
         }
 
     }
 
-    private void buildServerScroll() {
+    private void buildServerScroll(){
 
         serverDataFill();
 
@@ -506,7 +533,7 @@ public class MainActivity extends AppCompatActivity implements
         my_recycler_view.setAdapter(adapter);
     }
 
-    private void serverDataFill() {
+    private void serverDataFill(){
         rackDataList = new ArrayList<rackModel>();
 
         for (int i = 0; i < nbRack; i++) {
@@ -517,7 +544,7 @@ public class MainActivity extends AppCompatActivity implements
 
             ArrayList<serverItem> singleItem = new ArrayList<serverItem>();
             for (int j = 0; j < nbServer[i]; j++) {
-                singleItem.add(new serverItem("Server " + j, nbCPU, "Rack " + (i + 1)));
+                singleItem.add(new serverItem("Server "+j,nbCPU,"Rack "+(i+1) ));
             }
 
             data.setServers(singleItem);
@@ -570,7 +597,7 @@ public class MainActivity extends AppCompatActivity implements
         mDataItemGeneratorFuture = mGeneratorExecutor.scheduleWithFixedDelay(
                 new DataItemGenerator(), 1, 3, TimeUnit.SECONDS);
         // If we are connected to the Wear API, force open the app
-        if (mGoogleApiClient.isConnected()) {
+        if(mGoogleApiClient.isConnected()) {
             new SendMessageTask(DataLayerCommons.START_ACTIVITY_PATH).execute();
         }
         LocalBroadcastManager.getInstance(this).registerReceiver(mMessageReceiver,
@@ -628,7 +655,6 @@ public class MainActivity extends AppCompatActivity implements
     }
 
     private int current = R.drawable.panels_swt;
-
     public void createAndSendBitmap() {
         // Alternate between the two given image to send through the Wear API
         Bitmap bitmap = BitmapFactory.decodeResource(getResources(), current);
@@ -678,7 +704,6 @@ public class MainActivity extends AppCompatActivity implements
     private class SendMessageTask extends AsyncTask<Void, Void, Void> {
         // Asynchronous background task to send a message through the Wear API
         private final String message;
-
         SendMessageTask(String message) {
             this.message = message;
         }
@@ -725,7 +750,6 @@ public class MainActivity extends AppCompatActivity implements
     private class DataItemGenerator implements Runnable {
         // Fake data generator to have things to send through the Wear API
         private int count = 0;
-
         @Override
         public void run() {
             // Send the image 50% of the time, otherwise send the counter's value
