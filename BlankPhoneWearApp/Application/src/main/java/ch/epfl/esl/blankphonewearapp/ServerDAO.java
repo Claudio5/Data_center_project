@@ -67,7 +67,7 @@ public class ServerDAO implements Serializable{
 
         String date = sdf.format(cal.getTime());
 
-        values.put(SAMPLING_TIME, "201801151515");
+        values.put(SAMPLING_TIME, date);
         Log.e(TAG,"the asked date :" + date);
 
         new GetJSON_val() {

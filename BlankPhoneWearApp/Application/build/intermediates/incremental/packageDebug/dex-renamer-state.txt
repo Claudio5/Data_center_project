@@ -1,7 +1,7 @@
-#Tue Jan 16 17:32:46 CET 2018
-base.0=C\:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_8775ef1df2326d6a29710de1f6eca48c387610b8
+#Wed Jan 17 11:38:04 CET 2018
+base.0=/Users/musluoglucem/Documents/Master 1/Lab on App Development/project4/Data_center_project/BlankPhoneWearApp/Application/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_161a3b40af763d32c78f7500879baf3aaa622c93
 renamed.1=classes.dex
 renamed.0=classes2.dex
-file.1=C\:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_8eb12f979d66567f50ffcabf544dbe2338a12e03\\classes.dex
-base.1=C\:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_8eb12f979d66567f50ffcabf544dbe2338a12e03
-file.0=C\:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Android\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_8775ef1df2326d6a29710de1f6eca48c387610b8\\classes.dex
+file.1=/Users/musluoglucem/Documents/Master 1/Lab on App Development/project4/Data_center_project/BlankPhoneWearApp/Application/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_43abdc180e9b3027e55f545c92ccf9a5dfa0492e/classes.dex
+base.1=/Users/musluoglucem/Documents/Master 1/Lab on App Development/project4/Data_center_project/BlankPhoneWearApp/Application/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_43abdc180e9b3027e55f545c92ccf9a5dfa0492e
+file.0=/Users/musluoglucem/Documents/Master 1/Lab on App Development/project4/Data_center_project/BlankPhoneWearApp/Application/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_161a3b40af763d32c78f7500879baf3aaa622c93/classes.dex

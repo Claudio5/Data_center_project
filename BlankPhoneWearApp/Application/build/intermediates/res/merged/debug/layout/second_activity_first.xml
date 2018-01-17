@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ch.epfl.esl.blankphonewearapp.MainActivity" >
+
+
+    <com.androidplot.xy.XYPlot
+        android:id="@+id/TableRow"
+        style="@style/APDefacto.Dark"
+        androidplot.renderMode="use_background_thread"
+        android:layout_width="400dp"
+        android:layout_height="420dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="0dp"
+        app:graphHeight="30dp"
+        app:graphHeightMode="fill"
+        app:graphWidth="0dp"
+        app:graphWidthMode="fill"
+        app:legendAnchor="right_bottom"
+        app:legendHeight="50dp"
+        app:legendTextSize="15sp"
+        app:lineLabels="left|bottom"
+        app:title="Power" />
+
+    <RelativeLayout
+        android:id="@+id/power_lay"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/TableRow"
+        android:background="@drawable/background1">
+
+        <TextView
+            android:id="@+id/lastPowTxt2"
+            android:layout_width="360dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/powAvg"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="40sp"
+            android:layout_below="@+id/lastPow1"
+            android:layout_alignStart="@+id/hotline2" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/call_fltbtn2"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:clickable="true"
+            app:fabSize="normal"
+            app:srcCompat="@android:drawable/ic_menu_call"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:id="@+id/hotline2"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="700dp"
+            android:text="Call Hotline"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/lastPow1"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="52dp"
+            android:layout_marginTop="40dp"
+            android:layout_toRightOf="@+id/lastPowTxt1"
+            android:gravity="center"
+            android:text="Power"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="45sp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/lastPow2"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="52dp"
+            android:gravity="center"
+            android:text="Power"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="45sp"
+            android:visibility="visible"
+            android:layout_below="@id/lastPow1"
+            android:layout_toRightOf="@+id/lastPowTxt2" />
+
+        <TextView
+            android:id="@+id/lastPow3"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="52dp"
+            android:gravity="center"
+            android:text="Power"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="45sp"
+            android:visibility="visible"
+            android:layout_below="@id/lastPow2"
+            android:layout_toRightOf="@+id/lastPowTxt3" />
+
+        <TextView
+            android:id="@+id/lastPow4"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="52dp"
+            android:gravity="center"
+            android:text="Power"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="45sp"
+            android:visibility="visible"
+            android:layout_below="@id/lastPow3"
+            android:layout_toRightOf="@+id/lastPowTxt4" />
+
+        <TextView
+            android:id="@+id/pwrAvgNmbview5"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="52dp"
+            android:gravity="center"
+            android:text="Power"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="45sp"
+            android:visibility="visible"
+            android:layout_below="@id/lastPow4"
+            android:layout_toRightOf="@+id/lastPowTxt5" />
+
+        <TextView
+            android:id="@+id/lastPowTxt1"
+            android:layout_width="360dp"
+            android:layout_height="60dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="40dp"
+            android:text="@string/powAvg"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="40sp"
+            android:layout_above="@+id/lastPowTxt2"
+            android:layout_alignStart="@+id/lastPowTxt2" />
+
+        <TextView
+            android:id="@+id/lastPowTxt4"
+            android:layout_width="360dp"
+            android:layout_height="60dp"
+            android:layout_alignStart="@+id/lastPowTxt3"
+            android:layout_below="@+id/lastPowTxt3"
+            android:layout_marginTop="20dp"
+            android:text="@string/powAvg"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/lastPowTxt5"
+            android:layout_width="360dp"
+            android:layout_height="60dp"
+            android:layout_alignStart="@+id/lastPowTxt3"
+            android:layout_below="@+id/lastPowTxt4"
+            android:layout_marginTop="20dp"
+            android:text="@string/powAvg"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/lastPowTxt3"
+            android:layout_width="360dp"
+            android:layout_height="60dp"
+            android:text="@string/powAvg"
+            android:layout_marginTop="20dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="40sp"
+            android:layout_below="@+id/lastPowTxt2"
+            android:layout_alignStart="@+id/lastPowTxt2" />
+    </RelativeLayout>
+
+</android.widget.RelativeLayout>

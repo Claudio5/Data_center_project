@@ -634,7 +634,7 @@ public class SecondActivity extends AppCompatActivity implements
 
             int [] askedServer=((SecondActivity) getActivity()).getServers();
             //(SecondActivity) getActivity()).getDate()+time
-            String[] samples = ((SecondActivity) getActivity()).getSample("201801151515",askedRack,askedServer);
+            String[] samples = ((SecondActivity) getActivity()).getSample(((SecondActivity) getActivity()).getDate()+time,askedRack,askedServer);
 
             boolean no_data=false;
             for(int k=0;k<samples.length;k++) {
