@@ -606,17 +606,14 @@ public class SecondActivity extends AppCompatActivity implements
             String min="";
             String h="";
 
-            int new_hour = hourOfDay;
-            if(minute>=30){
-                new_hour = hourOfDay+1;
-            }
 
-            h= Integer.toString(new_hour);
+
+            h= Integer.toString(hourOfDay);
             min = "00";
-            if(new_hour==24){
+            if(hourOfDay==24){
                 h="00";
-            }else if(new_hour<10){
-                h="0"+Integer.toString(new_hour);
+            }else if(hourOfDay<10){
+                h="0"+Integer.toString(hourOfDay);
 
             }
 
