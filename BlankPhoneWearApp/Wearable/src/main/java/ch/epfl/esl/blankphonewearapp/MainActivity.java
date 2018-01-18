@@ -76,10 +76,10 @@ public class MainActivity extends Activity {
 
 
 
-        if(getIntent().getExtras()!=null) {
+        /*if(getIntent().getExtras()!=null) {
             warnView = findViewById(R.id.warningView);
             warnView.setText(getIntent().getExtras().getString("warning"));
-        }
+        }*/
 
         Button buttonClear = (Button) findViewById(R.id.buttonClear);
         buttonClear.setOnClickListener(new View.OnClickListener(){

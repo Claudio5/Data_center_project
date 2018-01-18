@@ -62,7 +62,7 @@ public class MyIntentService extends IntentService {
         String[] urls = decode_list(url);
         Log.e(TAG,"onHandleIntent "+ url);
         String[] powerArray = new String[urls.length];
-        Log.e(TAG,"HELLO "+Integer.toString(urls.length));
+        
         for (int i = 0; i < urls.length; i++) {
             String jsonStr = sh.getjsonstring(urls[i]);
 
