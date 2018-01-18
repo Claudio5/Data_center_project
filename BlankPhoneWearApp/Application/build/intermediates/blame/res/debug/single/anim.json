@@ -1,58 +1,58 @@
 [
     {
-        "merged": "/Users/musluoglucem/Documents/Master 1/Lab on App Development/project4/Data_center_project/BlankPhoneWearApp/Application/build/intermediates/res/merged/debug/anim/abc_slide_in_bottom.xml",
-        "source": "/Users/musluoglucem/.android/build-cache/1ad4b6bfd150bc212fd655184f580b4739b82aa1/output/res/anim/abc_slide_in_bottom.xml"
+        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_top.xml",
+        "source": "C:\\Users\\claud\\.android\\build-cache\\768ae380c656c8ca3e27d51133ab7e13e219bfb2\\output\\res\\anim\\abc_slide_in_top.xml"
     },
     {
-        "merged": "/Users/musluoglucem/Documents/Master 1/Lab on App Development/project4/Data_center_project/BlankPhoneWearApp/Application/build/intermediates/res/merged/debug/anim/abc_fade_in.xml",
-        "source": "/Users/musluoglucem/.android/build-cache/1ad4b6bfd150bc212fd655184f580b4739b82aa1/output/res/anim/abc_fade_in.xml"
+        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\res\\merged\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
+        "source": "C:\\Users\\claud\\.android\\build-cache\\768ae380c656c8ca3e27d51133ab7e13e219bfb2\\output\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
     },
     {
-        "merged": "/Users/musluoglucem/Documents/Master 1/Lab on App Development/project4/Data_center_project/BlankPhoneWearApp/Application/build/intermediates/res/merged/debug/anim/design_fab_out.xml",
-        "source": "/Users/musluoglucem/.android/build-cache/8fcc9193c6f2f0a0c6b81b97f8e0a0bac6fc19f5/output/res/anim/design_fab_out.xml"
+        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_in.xml",
+        "source": "C:\\Users\\claud\\.android\\build-cache\\28893a0c8bdd7a8aa703f47ed687b35b8477588e\\output\\res\\anim\\design_snackbar_in.xml"
     },
     {
-        "merged": "/Users/musluoglucem/Documents/Master 1/Lab on App Development/project4/Data_center_project/BlankPhoneWearApp/Application/build/intermediates/res/merged/debug/anim/abc_slide_out_top.xml",
-        "source": "/Users/musluoglucem/.android/build-cache/1ad4b6bfd150bc212fd655184f580b4739b82aa1/output/res/anim/abc_slide_out_top.xml"
+        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_exit.xml",
+        "source": "C:\\Users\\claud\\.android\\build-cache\\768ae380c656c8ca3e27d51133ab7e13e219bfb2\\output\\res\\anim\\abc_popup_exit.xml"
     },
     {
-        "merged": "/Users/musluoglucem/Documents/Master 1/Lab on App Development/project4/Data_center_project/BlankPhoneWearApp/Application/build/intermediates/res/merged/debug/anim/abc_grow_fade_in_from_bottom.xml",
-        "source": "/Users/musluoglucem/.android/build-cache/1ad4b6bfd150bc212fd655184f580b4739b82aa1/output/res/anim/abc_grow_fade_in_from_bottom.xml"
+        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
+        "source": "C:\\Users\\claud\\.android\\build-cache\\768ae380c656c8ca3e27d51133ab7e13e219bfb2\\output\\res\\anim\\abc_slide_in_bottom.xml"
     },
     {
-        "merged": "/Users/musluoglucem/Documents/Master 1/Lab on App Development/project4/Data_center_project/BlankPhoneWearApp/Application/build/intermediates/res/merged/debug/anim/abc_popup_exit.xml",
-        "source": "/Users/musluoglucem/.android/build-cache/1ad4b6bfd150bc212fd655184f580b4739b82aa1/output/res/anim/abc_popup_exit.xml"
+        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_bottom.xml",
+        "source": "C:\\Users\\claud\\.android\\build-cache\\768ae380c656c8ca3e27d51133ab7e13e219bfb2\\output\\res\\anim\\abc_slide_out_bottom.xml"
     },
     {
-        "merged": "/Users/musluoglucem/Documents/Master 1/Lab on App Development/project4/Data_center_project/BlankPhoneWearApp/Application/build/intermediates/res/merged/debug/anim/abc_fade_out.xml",
-        "source": "/Users/musluoglucem/.android/build-cache/1ad4b6bfd150bc212fd655184f580b4739b82aa1/output/res/anim/abc_fade_out.xml"
+        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
+        "source": "C:\\Users\\claud\\.android\\build-cache\\768ae380c656c8ca3e27d51133ab7e13e219bfb2\\output\\res\\anim\\abc_fade_in.xml"
     },
     {
-        "merged": "/Users/musluoglucem/Documents/Master 1/Lab on App Development/project4/Data_center_project/BlankPhoneWearApp/Application/build/intermediates/res/merged/debug/anim/abc_slide_out_bottom.xml",
-        "source": "/Users/musluoglucem/.android/build-cache/1ad4b6bfd150bc212fd655184f580b4739b82aa1/output/res/anim/abc_slide_out_bottom.xml"
+        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_enter.xml",
+        "source": "C:\\Users\\claud\\.android\\build-cache\\768ae380c656c8ca3e27d51133ab7e13e219bfb2\\output\\res\\anim\\abc_popup_enter.xml"
     },
     {
-        "merged": "/Users/musluoglucem/Documents/Master 1/Lab on App Development/project4/Data_center_project/BlankPhoneWearApp/Application/build/intermediates/res/merged/debug/anim/abc_slide_in_top.xml",
-        "source": "/Users/musluoglucem/.android/build-cache/1ad4b6bfd150bc212fd655184f580b4739b82aa1/output/res/anim/abc_slide_in_top.xml"
+        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\res\\merged\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
+        "source": "C:\\Users\\claud\\.android\\build-cache\\768ae380c656c8ca3e27d51133ab7e13e219bfb2\\output\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
     },
     {
-        "merged": "/Users/musluoglucem/Documents/Master 1/Lab on App Development/project4/Data_center_project/BlankPhoneWearApp/Application/build/intermediates/res/merged/debug/anim/design_fab_in.xml",
-        "source": "/Users/musluoglucem/.android/build-cache/8fcc9193c6f2f0a0c6b81b97f8e0a0bac6fc19f5/output/res/anim/design_fab_in.xml"
+        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_in.xml",
+        "source": "C:\\Users\\claud\\.android\\build-cache\\28893a0c8bdd7a8aa703f47ed687b35b8477588e\\output\\res\\anim\\design_fab_in.xml"
     },
     {
-        "merged": "/Users/musluoglucem/Documents/Master 1/Lab on App Development/project4/Data_center_project/BlankPhoneWearApp/Application/build/intermediates/res/merged/debug/anim/abc_popup_enter.xml",
-        "source": "/Users/musluoglucem/.android/build-cache/1ad4b6bfd150bc212fd655184f580b4739b82aa1/output/res/anim/abc_popup_enter.xml"
+        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_out.xml",
+        "source": "C:\\Users\\claud\\.android\\build-cache\\28893a0c8bdd7a8aa703f47ed687b35b8477588e\\output\\res\\anim\\design_snackbar_out.xml"
     },
     {
-        "merged": "/Users/musluoglucem/Documents/Master 1/Lab on App Development/project4/Data_center_project/BlankPhoneWearApp/Application/build/intermediates/res/merged/debug/anim/design_snackbar_out.xml",
-        "source": "/Users/musluoglucem/.android/build-cache/8fcc9193c6f2f0a0c6b81b97f8e0a0bac6fc19f5/output/res/anim/design_snackbar_out.xml"
+        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
+        "source": "C:\\Users\\claud\\.android\\build-cache\\768ae380c656c8ca3e27d51133ab7e13e219bfb2\\output\\res\\anim\\abc_fade_out.xml"
     },
     {
-        "merged": "/Users/musluoglucem/Documents/Master 1/Lab on App Development/project4/Data_center_project/BlankPhoneWearApp/Application/build/intermediates/res/merged/debug/anim/abc_shrink_fade_out_from_bottom.xml",
-        "source": "/Users/musluoglucem/.android/build-cache/1ad4b6bfd150bc212fd655184f580b4739b82aa1/output/res/anim/abc_shrink_fade_out_from_bottom.xml"
+        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_top.xml",
+        "source": "C:\\Users\\claud\\.android\\build-cache\\768ae380c656c8ca3e27d51133ab7e13e219bfb2\\output\\res\\anim\\abc_slide_out_top.xml"
     },
     {
-        "merged": "/Users/musluoglucem/Documents/Master 1/Lab on App Development/project4/Data_center_project/BlankPhoneWearApp/Application/build/intermediates/res/merged/debug/anim/design_snackbar_in.xml",
-        "source": "/Users/musluoglucem/.android/build-cache/8fcc9193c6f2f0a0c6b81b97f8e0a0bac6fc19f5/output/res/anim/design_snackbar_in.xml"
+        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Data_center_project\\BlankPhoneWearApp\\Application\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_out.xml",
+        "source": "C:\\Users\\claud\\.android\\build-cache\\28893a0c8bdd7a8aa703f47ed687b35b8477588e\\output\\res\\anim\\design_fab_out.xml"
     }
 ]

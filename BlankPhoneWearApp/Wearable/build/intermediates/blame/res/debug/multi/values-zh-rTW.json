@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/Users/musluoglucem/Documents/Master 1/Lab on App Development/project4/Data_center_project/BlankPhoneWearApp/Wearable/build/intermediates/incremental/mergeDebugResources/merged.dir/values-zh-rTW/values-zh-rTW.xml",
+        "outputFile": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Data_center_project\\BlankPhoneWearApp\\Wearable\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-zh-rTW\\values-zh-rTW.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 195
                 },
                 "from": {
-                    "file": "/Users/musluoglucem/.android/build-cache/1ad4b6bfd150bc212fd655184f580b4739b82aa1/output/res/values-zh-rTW/values-zh-rTW.xml",
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\768ae380c656c8ca3e27d51133ab7e13e219bfb2\\output\\res\\values-zh-rTW\\values-zh-rTW.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -30,7 +30,7 @@
                     "endOffset": 302
                 },
                 "from": {
-                    "file": "/Users/musluoglucem/.android/build-cache/1ad4b6bfd150bc212fd655184f580b4739b82aa1/output/res/values-zh-rTW/values-zh-rTW.xml",
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\768ae380c656c8ca3e27d51133ab7e13e219bfb2\\output\\res\\values-zh-rTW\\values-zh-rTW.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -49,7 +49,7 @@
                     "endOffset": 425
                 },
                 "from": {
-                    "file": "/Users/musluoglucem/.android/build-cache/1ad4b6bfd150bc212fd655184f580b4739b82aa1/output/res/values-zh-rTW/values-zh-rTW.xml",
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\768ae380c656c8ca3e27d51133ab7e13e219bfb2\\output\\res\\values-zh-rTW\\values-zh-rTW.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -68,7 +68,7 @@
                     "endOffset": 518
                 },
                 "from": {
-                    "file": "/Users/musluoglucem/.android/build-cache/1ad4b6bfd150bc212fd655184f580b4739b82aa1/output/res/values-zh-rTW/values-zh-rTW.xml",
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\768ae380c656c8ca3e27d51133ab7e13e219bfb2\\output\\res\\values-zh-rTW\\values-zh-rTW.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -87,7 +87,7 @@
                     "endOffset": 618
                 },
                 "from": {
-                    "file": "/Users/musluoglucem/.android/build-cache/1ad4b6bfd150bc212fd655184f580b4739b82aa1/output/res/values-zh-rTW/values-zh-rTW.xml",
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\768ae380c656c8ca3e27d51133ab7e13e219bfb2\\output\\res\\values-zh-rTW\\values-zh-rTW.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -106,7 +106,7 @@
                     "endOffset": 700
                 },
                 "from": {
-                    "file": "/Users/musluoglucem/.android/build-cache/1ad4b6bfd150bc212fd655184f580b4739b82aa1/output/res/values-zh-rTW/values-zh-rTW.xml",
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\768ae380c656c8ca3e27d51133ab7e13e219bfb2\\output\\res\\values-zh-rTW\\values-zh-rTW.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -125,7 +125,7 @@
                     "endOffset": 797
                 },
                 "from": {
-                    "file": "/Users/musluoglucem/.android/build-cache/1ad4b6bfd150bc212fd655184f580b4739b82aa1/output/res/values-zh-rTW/values-zh-rTW.xml",
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\768ae380c656c8ca3e27d51133ab7e13e219bfb2\\output\\res\\values-zh-rTW\\values-zh-rTW.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -144,7 +144,7 @@
                     "endOffset": 905
                 },
                 "from": {
-                    "file": "/Users/musluoglucem/.android/build-cache/1ad4b6bfd150bc212fd655184f580b4739b82aa1/output/res/values-zh-rTW/values-zh-rTW.xml",
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\768ae380c656c8ca3e27d51133ab7e13e219bfb2\\output\\res\\values-zh-rTW\\values-zh-rTW.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
@@ -163,7 +163,7 @@
                     "endOffset": 981
                 },
                 "from": {
-                    "file": "/Users/musluoglucem/.android/build-cache/1ad4b6bfd150bc212fd655184f580b4739b82aa1/output/res/values-zh-rTW/values-zh-rTW.xml",
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\768ae380c656c8ca3e27d51133ab7e13e219bfb2\\output\\res\\values-zh-rTW\\values-zh-rTW.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
@@ -182,7 +182,7 @@
                     "endOffset": 1057
                 },
                 "from": {
-                    "file": "/Users/musluoglucem/.android/build-cache/1ad4b6bfd150bc212fd655184f580b4739b82aa1/output/res/values-zh-rTW/values-zh-rTW.xml",
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\768ae380c656c8ca3e27d51133ab7e13e219bfb2\\output\\res\\values-zh-rTW\\values-zh-rTW.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
@@ -201,7 +201,7 @@
                     "endOffset": 1135
                 },
                 "from": {
-                    "file": "/Users/musluoglucem/.android/build-cache/1ad4b6bfd150bc212fd655184f580b4739b82aa1/output/res/values-zh-rTW/values-zh-rTW.xml",
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\768ae380c656c8ca3e27d51133ab7e13e219bfb2\\output\\res\\values-zh-rTW\\values-zh-rTW.xml",
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,
@@ -220,7 +220,7 @@
                     "endOffset": 1231
                 },
                 "from": {
-                    "file": "/Users/musluoglucem/.android/build-cache/1ad4b6bfd150bc212fd655184f580b4739b82aa1/output/res/values-zh-rTW/values-zh-rTW.xml",
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\768ae380c656c8ca3e27d51133ab7e13e219bfb2\\output\\res\\values-zh-rTW\\values-zh-rTW.xml",
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,
@@ -239,7 +239,7 @@
                     "endOffset": 1327
                 },
                 "from": {
-                    "file": "/Users/musluoglucem/.android/build-cache/1ad4b6bfd150bc212fd655184f580b4739b82aa1/output/res/values-zh-rTW/values-zh-rTW.xml",
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\768ae380c656c8ca3e27d51133ab7e13e219bfb2\\output\\res\\values-zh-rTW\\values-zh-rTW.xml",
                     "position": {
                         "startLine": 14,
                         "startColumn": 4,
@@ -258,7 +258,7 @@
                     "endOffset": 1422
                 },
                 "from": {
-                    "file": "/Users/musluoglucem/.android/build-cache/1ad4b6bfd150bc212fd655184f580b4739b82aa1/output/res/values-zh-rTW/values-zh-rTW.xml",
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\768ae380c656c8ca3e27d51133ab7e13e219bfb2\\output\\res\\values-zh-rTW\\values-zh-rTW.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
@@ -277,7 +277,7 @@
                     "endOffset": 1519
                 },
                 "from": {
-                    "file": "/Users/musluoglucem/.android/build-cache/1ad4b6bfd150bc212fd655184f580b4739b82aa1/output/res/values-zh-rTW/values-zh-rTW.xml",
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\768ae380c656c8ca3e27d51133ab7e13e219bfb2\\output\\res\\values-zh-rTW\\values-zh-rTW.xml",
                     "position": {
                         "startLine": 16,
                         "startColumn": 4,
@@ -296,7 +296,7 @@
                     "endOffset": 1614
                 },
                 "from": {
-                    "file": "/Users/musluoglucem/.android/build-cache/1ad4b6bfd150bc212fd655184f580b4739b82aa1/output/res/values-zh-rTW/values-zh-rTW.xml",
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\768ae380c656c8ca3e27d51133ab7e13e219bfb2\\output\\res\\values-zh-rTW\\values-zh-rTW.xml",
                     "position": {
                         "startLine": 17,
                         "startColumn": 4,
@@ -315,7 +315,7 @@
                     "endOffset": 1714
                 },
                 "from": {
-                    "file": "/Users/musluoglucem/.android/build-cache/1ad4b6bfd150bc212fd655184f580b4739b82aa1/output/res/values-zh-rTW/values-zh-rTW.xml",
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\768ae380c656c8ca3e27d51133ab7e13e219bfb2\\output\\res\\values-zh-rTW\\values-zh-rTW.xml",
                     "position": {
                         "startLine": 18,
                         "startColumn": 4,
@@ -334,7 +334,7 @@
                     "endOffset": 1827
                 },
                 "from": {
-                    "file": "/Users/musluoglucem/.android/build-cache/1ad4b6bfd150bc212fd655184f580b4739b82aa1/output/res/values-zh-rTW/values-zh-rTW.xml",
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\768ae380c656c8ca3e27d51133ab7e13e219bfb2\\output\\res\\values-zh-rTW\\values-zh-rTW.xml",
                     "position": {
                         "startLine": 19,
                         "startColumn": 4,
@@ -353,7 +353,7 @@
                     "endOffset": 1921
                 },
                 "from": {
-                    "file": "/Users/musluoglucem/.android/build-cache/1ad4b6bfd150bc212fd655184f580b4739b82aa1/output/res/values-zh-rTW/values-zh-rTW.xml",
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\768ae380c656c8ca3e27d51133ab7e13e219bfb2\\output\\res\\values-zh-rTW\\values-zh-rTW.xml",
                     "position": {
                         "startLine": 20,
                         "startColumn": 4,
@@ -372,7 +372,7 @@
                     "endOffset": 2114
                 },
                 "from": {
-                    "file": "/Users/musluoglucem/.android/build-cache/8677393234856d76a22ece98c7329a834c2564cb/output/res/values-zh-rTW/base_strings.xml",
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-zh-rTW\\base_strings.xml",
                     "position": {
                         "startLine": 24,
                         "startColumn": 4,
@@ -391,7 +391,7 @@
                     "endOffset": 2232
                 },
                 "from": {
-                    "file": "/Users/musluoglucem/.android/build-cache/8677393234856d76a22ece98c7329a834c2564cb/output/res/values-zh-rTW/base_strings.xml",
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-zh-rTW\\base_strings.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
@@ -410,7 +410,7 @@
                     "endOffset": 2392
                 },
                 "from": {
-                    "file": "/Users/musluoglucem/.android/build-cache/8677393234856d76a22ece98c7329a834c2564cb/output/res/values-zh-rTW/base_strings.xml",
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-zh-rTW\\base_strings.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
@@ -429,7 +429,7 @@
                     "endOffset": 2509
                 },
                 "from": {
-                    "file": "/Users/musluoglucem/.android/build-cache/8677393234856d76a22ece98c7329a834c2564cb/output/res/values-zh-rTW/base_strings.xml",
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-zh-rTW\\base_strings.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -448,7 +448,7 @@
                     "endOffset": 2628
                 },
                 "from": {
-                    "file": "/Users/musluoglucem/.android/build-cache/8677393234856d76a22ece98c7329a834c2564cb/output/res/values-zh-rTW/base_strings.xml",
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-zh-rTW\\base_strings.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -467,7 +467,7 @@
                     "endOffset": 2800
                 },
                 "from": {
-                    "file": "/Users/musluoglucem/.android/build-cache/8677393234856d76a22ece98c7329a834c2564cb/output/res/values-zh-rTW/base_strings.xml",
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-zh-rTW\\base_strings.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -486,7 +486,7 @@
                     "endOffset": 2975
                 },
                 "from": {
-                    "file": "/Users/musluoglucem/.android/build-cache/8677393234856d76a22ece98c7329a834c2564cb/output/res/values-zh-rTW/base_strings.xml",
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-zh-rTW\\base_strings.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -505,7 +505,7 @@
                     "endOffset": 3093
                 },
                 "from": {
-                    "file": "/Users/musluoglucem/.android/build-cache/8677393234856d76a22ece98c7329a834c2564cb/output/res/values-zh-rTW/base_strings.xml",
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-zh-rTW\\base_strings.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -524,7 +524,7 @@
                     "endOffset": 3224
                 },
                 "from": {
-                    "file": "/Users/musluoglucem/.android/build-cache/8677393234856d76a22ece98c7329a834c2564cb/output/res/values-zh-rTW/base_strings.xml",
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-zh-rTW\\base_strings.xml",
                     "position": {
                         "startLine": 19,
                         "startColumn": 4,
@@ -543,7 +543,7 @@
                     "endOffset": 3334
                 },
                 "from": {
-                    "file": "/Users/musluoglucem/.android/build-cache/8677393234856d76a22ece98c7329a834c2564cb/output/res/values-zh-rTW/base_strings.xml",
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-zh-rTW\\base_strings.xml",
                     "position": {
                         "startLine": 18,
                         "startColumn": 4,
@@ -562,7 +562,7 @@
                     "endOffset": 3466
                 },
                 "from": {
-                    "file": "/Users/musluoglucem/.android/build-cache/8677393234856d76a22ece98c7329a834c2564cb/output/res/values-zh-rTW/base_strings.xml",
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-zh-rTW\\base_strings.xml",
                     "position": {
                         "startLine": 17,
                         "startColumn": 4,
@@ -581,7 +581,7 @@
                     "endOffset": 3577
                 },
                 "from": {
-                    "file": "/Users/musluoglucem/.android/build-cache/8677393234856d76a22ece98c7329a834c2564cb/output/res/values-zh-rTW/base_strings.xml",
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-zh-rTW\\base_strings.xml",
                     "position": {
                         "startLine": 16,
                         "startColumn": 4,
@@ -600,7 +600,7 @@
                     "endOffset": 3700
                 },
                 "from": {
-                    "file": "/Users/musluoglucem/.android/build-cache/8677393234856d76a22ece98c7329a834c2564cb/output/res/values-zh-rTW/base_strings.xml",
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-zh-rTW\\base_strings.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -619,7 +619,7 @@
                     "endOffset": 3830
                 },
                 "from": {
-                    "file": "/Users/musluoglucem/.android/build-cache/8677393234856d76a22ece98c7329a834c2564cb/output/res/values-zh-rTW/base_strings.xml",
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-zh-rTW\\base_strings.xml",
                     "position": {
                         "startLine": 28,
                         "startColumn": 4,
@@ -638,7 +638,7 @@
                     "endOffset": 3951
                 },
                 "from": {
-                    "file": "/Users/musluoglucem/.android/build-cache/8677393234856d76a22ece98c7329a834c2564cb/output/res/values-zh-rTW/base_strings.xml",
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-zh-rTW\\base_strings.xml",
                     "position": {
                         "startLine": 27,
                         "startColumn": 4,
@@ -657,7 +657,7 @@
                     "endOffset": 4076
                 },
                 "from": {
-                    "file": "/Users/musluoglucem/.android/build-cache/8677393234856d76a22ece98c7329a834c2564cb/output/res/values-zh-rTW/base_strings.xml",
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-zh-rTW\\base_strings.xml",
                     "position": {
                         "startLine": 26,
                         "startColumn": 4,
@@ -676,7 +676,7 @@
                     "endOffset": 4188
                 },
                 "from": {
-                    "file": "/Users/musluoglucem/.android/build-cache/8677393234856d76a22ece98c7329a834c2564cb/output/res/values-zh-rTW/base_strings.xml",
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-zh-rTW\\base_strings.xml",
                     "position": {
                         "startLine": 25,
                         "startColumn": 4,
@@ -695,7 +695,7 @@
                     "endOffset": 4370
                 },
                 "from": {
-                    "file": "/Users/musluoglucem/.android/build-cache/dd751d9fab1928a48403c8efd7996092e3c53b54/output/res/values-zh-rTW/common_strings.xml",
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\e33b5fc896675d9263c693a0d399bc4a577a90ae\\output\\res\\values-zh-rTW\\common_strings.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -714,7 +714,7 @@
                     "endOffset": 4564
                 },
                 "from": {
-                    "file": "/Users/musluoglucem/.android/build-cache/8677393234856d76a22ece98c7329a834c2564cb/output/res/values-zh-rTW/base_strings.xml",
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-zh-rTW\\base_strings.xml",
                     "position": {
                         "startLine": 21,
                         "startColumn": 4,
@@ -733,7 +733,7 @@
                     "endOffset": 4682
                 },
                 "from": {
-                    "file": "/Users/musluoglucem/.android/build-cache/8677393234856d76a22ece98c7329a834c2564cb/output/res/values-zh-rTW/base_strings.xml",
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-zh-rTW\\base_strings.xml",
                     "position": {
                         "startLine": 20,
                         "startColumn": 4,
@@ -752,7 +752,7 @@
                     "endOffset": 4785
                 },
                 "from": {
-                    "file": "/Users/musluoglucem/.android/build-cache/8677393234856d76a22ece98c7329a834c2564cb/output/res/values-zh-rTW/base_strings.xml",
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-zh-rTW\\base_strings.xml",
                     "position": {
                         "startLine": 22,
                         "startColumn": 4,
@@ -771,7 +771,7 @@
                     "endOffset": 4945
                 },
                 "from": {
-                    "file": "/Users/musluoglucem/.android/build-cache/8677393234856d76a22ece98c7329a834c2564cb/output/res/values-zh-rTW/base_strings.xml",
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-zh-rTW\\base_strings.xml",
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,
@@ -790,7 +790,7 @@
                     "endOffset": 5062
                 },
                 "from": {
-                    "file": "/Users/musluoglucem/.android/build-cache/8677393234856d76a22ece98c7329a834c2564cb/output/res/values-zh-rTW/base_strings.xml",
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-zh-rTW\\base_strings.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
@@ -809,7 +809,7 @@
                     "endOffset": 5223
                 },
                 "from": {
-                    "file": "/Users/musluoglucem/.android/build-cache/8677393234856d76a22ece98c7329a834c2564cb/output/res/values-zh-rTW/base_strings.xml",
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-zh-rTW\\base_strings.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
@@ -828,7 +828,7 @@
                     "endOffset": 5342
                 },
                 "from": {
-                    "file": "/Users/musluoglucem/.android/build-cache/8677393234856d76a22ece98c7329a834c2564cb/output/res/values-zh-rTW/base_strings.xml",
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-zh-rTW\\base_strings.xml",
                     "position": {
                         "startLine": 14,
                         "startColumn": 4,
@@ -847,7 +847,7 @@
                     "endOffset": 5480
                 },
                 "from": {
-                    "file": "/Users/musluoglucem/.android/build-cache/8677393234856d76a22ece98c7329a834c2564cb/output/res/values-zh-rTW/base_strings.xml",
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-zh-rTW\\base_strings.xml",
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,
@@ -866,7 +866,7 @@
                     "endOffset": 5565
                 },
                 "from": {
-                    "file": "/Users/musluoglucem/.android/build-cache/8677393234856d76a22ece98c7329a834c2564cb/output/res/values-zh-rTW/base_strings.xml",
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-zh-rTW\\base_strings.xml",
                     "position": {
                         "startLine": 23,
                         "startColumn": 4,
@@ -885,7 +885,7 @@
                     "endOffset": 5652
                 },
                 "from": {
-                    "file": "/Users/musluoglucem/.android/build-cache/8677393234856d76a22ece98c7329a834c2564cb/output/res/values-zh-rTW/base_strings.xml",
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-zh-rTW\\base_strings.xml",
                     "position": {
                         "startLine": 29,
                         "startColumn": 4,
@@ -904,7 +904,7 @@
                     "endOffset": 5756
                 },
                 "from": {
-                    "file": "/Users/musluoglucem/.android/build-cache/8677393234856d76a22ece98c7329a834c2564cb/output/res/values-zh-rTW/base_strings.xml",
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\values-zh-rTW\\base_strings.xml",
                     "position": {
                         "startLine": 30,
                         "startColumn": 4,
@@ -923,7 +923,7 @@
                     "endOffset": 5834
                 },
                 "from": {
-                    "file": "/Users/musluoglucem/.android/build-cache/1ad4b6bfd150bc212fd655184f580b4739b82aa1/output/res/values-zh-rTW/values-zh-rTW.xml",
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\768ae380c656c8ca3e27d51133ab7e13e219bfb2\\output\\res\\values-zh-rTW\\values-zh-rTW.xml",
                     "position": {
                         "startLine": 21,
                         "startColumn": 4,
@@ -942,7 +942,7 @@
                     "endOffset": 5935
                 },
                 "from": {
-                    "file": "/Users/musluoglucem/.android/build-cache/1ad4b6bfd150bc212fd655184f580b4739b82aa1/output/res/values-zh-rTW/values-zh-rTW.xml",
+                    "file": "C:\\Users\\claud\\.android\\build-cache\\768ae380c656c8ca3e27d51133ab7e13e219bfb2\\output\\res\\values-zh-rTW\\values-zh-rTW.xml",
                     "position": {
                         "startLine": 22,
                         "startColumn": 4,

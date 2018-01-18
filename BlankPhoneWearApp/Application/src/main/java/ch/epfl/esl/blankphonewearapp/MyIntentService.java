@@ -33,7 +33,7 @@ import java.util.regex.Pattern;
 public class MyIntentService extends IntentService {
 
     private final static String TAG = "MyIntentService";
-    private final int threshold = 12;
+    private final int threshold = 10;
     private boolean alarmOn = false;
     private ArrayList<String> serverWarnings = new ArrayList<>();
     private String[] IDServer;
@@ -92,10 +92,16 @@ public class MyIntentService extends IntentService {
             } else {
                 Log.e(TAG, "No response");
                 powerArray=null;
+                break;
             }
+
+
         }
 
-        if(powerArray!=null) {
+
+        boolean checkNull = checkArrayNull(powerArray);
+
+        if(!checkNull) {
 
             for (int i = 0; i < powerArray.length; i++) {
 
@@ -130,6 +136,8 @@ public class MyIntentService extends IntentService {
                 LocalBroadcastManager.getInstance(cont).sendBroadcast(intentMain);
             }
 
+        }else{
+            Log.e(TAG, "One or more elements in the array are null");
         }
 
         String IP=getIPAddress(url);
@@ -228,6 +236,22 @@ public class MyIntentService extends IntentService {
     private static String getIPAddress(String url){
         String[] url_split = url.split("/");
         return url_split[2];
+    }
+
+    public boolean checkArrayNull(String[] array){
+        boolean checkNull=false;
+
+        for (int i=0; i<array.length; i++) {
+            if (array[i] != null) {
+                Log.e(TAG, "Array not null");
+                checkNull = false;
+            } else {
+                checkNull = true;
+                Log.e(TAG,"Array null element");
+                break;
+            }
+        }
+        return checkNull;
     }
 
 }

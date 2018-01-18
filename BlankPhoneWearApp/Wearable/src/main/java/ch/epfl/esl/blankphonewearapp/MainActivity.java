@@ -8,6 +8,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.media.RingtoneManager;
@@ -19,6 +20,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.NotificationManagerCompat;
 import android.support.v4.content.LocalBroadcastManager;
+import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
@@ -37,14 +39,28 @@ public class MainActivity extends Activity {
 
     private static final String TAG = "MainActivity";
     public static final String NOTIFICATION_RECEIVED = "NOTIFICATION_RECEIVED";
-    private String notif="";
+    private String notif;
+    private final String MY_PREFERENCES = "PREFERENCES_TEXT";
+    private TextView warnView;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.e(TAG,"ONCREATTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTE");
+        MyApp.mainActivity = this;
+        Log.e(TAG,"onCreate");
         setContentView(R.layout.main_activity);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+
+        final SharedPreferences prefs = getSharedPreferences(MY_PREFERENCES, MODE_PRIVATE);
+        String restoredText = prefs.getString("warning", null);
+
+        if (restoredText == null) {
+           restoredText = "No alert";
+        }
+        Log.e(TAG, "Restored String "+ restoredText);
+        TextView warnView = findViewById(R.id.warningView);
+        warnView.setMovementMethod(new ScrollingMovementMethod());
+        warnView.setText(restoredText);
 
         /*FloatingActionButton callButton = findViewById(R.id.callButton);
         callButton.setOnClickListener(new View.OnClickListener() {
@@ -61,7 +77,7 @@ public class MainActivity extends Activity {
 
 
         if(getIntent().getExtras()!=null) {
-            TextView warnView = findViewById(R.id.warningView);
+            warnView = findViewById(R.id.warningView);
             warnView.setText(getIntent().getExtras().getString("warning"));
         }
 
@@ -70,13 +86,30 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v){
                 TextView warnView = findViewById(R.id.warningView);
-                warnView.setText("Nothing");
+                warnView.setText("No Alert");
+                SharedPreferences.Editor editor = prefs.edit();
+                editor.putString("warning", "No Alert");
+                editor.apply();
+
             }
         });
 
 
 
 
+    }
+
+    public void setWarningTextView(String notif){
+        SharedPreferences prefs = this.getSharedPreferences(MY_PREFERENCES, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString("warning", notif);
+        editor.apply();
+    }
+
+    @Override
+    public void onDestroy(){
+        super.onDestroy();
+        MyApp.mainActivity=null;
     }
 
     @Override

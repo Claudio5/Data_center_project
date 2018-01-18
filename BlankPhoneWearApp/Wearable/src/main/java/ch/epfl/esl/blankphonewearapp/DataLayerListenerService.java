@@ -85,8 +85,10 @@ public class DataLayerListenerService extends WearableListenerService {
                         notif = dataMapItem.getDataMap().getString(DataLayerCommons.NOTIFICATION_KEY);
                         Intent intent = new Intent(NOTIFICATION_RECEIVED);
                         intent.putExtra(NOTIFICATION_RECEIVED, notif);
+                        notif = simplifyNotif(notif);
                         //LocalBroadcastManager.getInstance(this).sendBroadcast(intent);
                         sendNotification("Data Center Control",notif);
+                        MyApp.mainActivity.setWarningTextView(notif);
 
 
                         break;
@@ -112,6 +114,19 @@ public class DataLayerListenerService extends WearableListenerService {
                         DataLayerCommons.DATA_ITEM_RECEIVED_PATH, payload);
             }
         }
+    }
+
+    private String simplifyNotif(String notif){
+        String numbers = notif.replaceAll("\\D+","");
+        String tmp="Alert \n";
+        if(!notif.equals("Warning sent by user")) {
+            for (int i = 0; i < numbers.length(); i += 4) {
+                tmp += "Rack" + numbers.charAt(i) + numbers.charAt(i + 1) + " " + "Server" + numbers.charAt(i + 2) + numbers.charAt(i + 3) + "\n";
+            }
+            notif = tmp;
+        }
+
+        return notif;
     }
 
 

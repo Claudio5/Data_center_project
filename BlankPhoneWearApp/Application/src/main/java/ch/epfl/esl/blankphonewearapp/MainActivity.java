@@ -255,6 +255,7 @@ public class MainActivity extends AppCompatActivity implements
                 SharedPreferences settings = getSharedPreferences("id",0);
                 String phone = settings.getString("phone", "");
                 EditText edit = (EditText) findViewById(R.id.hotline_nb);
+
                 if(phone==null){
                     //Log.e(TAG,"number null");
                     phone=edit.getText().toString();

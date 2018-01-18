@@ -278,20 +278,35 @@
         android:layout_height="40dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="10dp"
         android:text="Call Hotline"
         android:textColor="@color/ap_black"
-        android:textSize="25dp" />
+        android:gravity="center"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/wearText"
+        android:layout_width="140dp"
+        android:layout_height="40dp"
+        android:text="Send alert to watch"
+        android:textColor="@color/ap_black"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:layout_marginTop="60dp"
+        android:layout_alignTop="@+id/hotline_nb"
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:id="@+id/hotline_nb"
         android:layout_width="140dp"
         android:layout_height="40dp"
         android:layout_below="@+id/hotline"
+        android:gravity="center"
         android:layout_marginTop="20dp"
         android:ems="10"
         android:inputType="phone"
-        android:text="Phone Number"
+        android:text=""
+        android:hint="Phone Number"
         android:textSize="15sp" />
 
     <android.support.design.widget.FloatingActionButton
@@ -324,14 +339,15 @@
         android:id="@+id/wearButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:clickable="true"
-        app:fabSize="mini"
-        app:srcCompat="@mipmap/ic_launcher"
-
+        android:layout_alignParentStart="true"
         android:layout_below="@id/hotline"
         android:layout_marginTop="80dp"
+        android:layout_marginStart="150dp"
+        android:clickable="true"
+        app:backgroundTint="@android:color/holo_blue_light"
 
-        android:layout_alignParentStart="true" />
+        app:fabSize="mini"
+        app:srcCompat="@drawable/watch" />
 
     <Switch
         android:id="@+id/alarmSwitch"

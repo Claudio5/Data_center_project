@@ -4,6 +4,8 @@ package ch.epfl.esl.blankphonewearapp;
  * Created by Claudio on 05.12.2017.
  */
 
+//TODO CEM add overridePendingTransition(0, 0); // this is important for seamless transition
+
 import android.Manifest;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
@@ -316,6 +318,7 @@ public class SecondActivity extends AppCompatActivity implements
                     Intent intent = getIntent();
                     finish();
                     startActivity(intent);
+                    overridePendingTransition(0, 0);
                 }
 
             }
@@ -357,6 +360,8 @@ public class SecondActivity extends AppCompatActivity implements
         Intent intent = getIntent();
         kill_activity();
         startActivity(intent);
+        overridePendingTransition(0, 0);
+
     }
 
     private int [] getRacks() {
@@ -425,12 +430,11 @@ public class SecondActivity extends AppCompatActivity implements
             // Get extra data included in the Intent
             String notif = intent.getStringExtra("notif");
             Log.e("receiver", "Got message: " + notif);
-            Toast.makeText(getBaseContext(), "Got message", Toast.LENGTH_SHORT).show();
-            sendNotificationWear();
+            sendNotificationWear(notif);
         }
     };
 
-    private void sendNotificationWear(){
+    private void sendNotificationWear(String notif){
 
         if (mGoogleApiClient.isConnected()) {
 
@@ -440,7 +444,7 @@ public class SecondActivity extends AppCompatActivity implements
 
             // Send the notification
             PutDataMapRequest dataMap = PutDataMapRequest.create(DataLayerCommons.NOTIFICATION_PATH);
-            dataMap.getDataMap().putString(DataLayerCommons.NOTIFICATION_KEY, "WORK WEAR");
+            dataMap.getDataMap().putString(DataLayerCommons.NOTIFICATION_KEY, notif);
             dataMap.getDataMap().putLong("time", new Date().getTime());
             PutDataRequest request = dataMap.asPutDataRequest();
             request.setUrgent();
@@ -572,7 +576,7 @@ public class SecondActivity extends AppCompatActivity implements
             Intent intent = ((SecondActivity) getActivity()).getIntent();
             ((SecondActivity) getActivity()).finish();
             startActivity(intent);
-
+            getActivity().overridePendingTransition(0, 0);
         }
 
     }
@@ -628,7 +632,7 @@ public class SecondActivity extends AppCompatActivity implements
             Log.e(TAG,"The time : "+time);
 
             ((SecondActivity) getActivity()).setTime(time);
-
+            boolean no_data=false;
 
             int [] askedRack=((SecondActivity) getActivity()).getRacks();
 
@@ -637,7 +641,7 @@ public class SecondActivity extends AppCompatActivity implements
             //(SecondActivity) getActivity()).getDate()+time
             String[] samples = ((SecondActivity) getActivity()).getSample(((SecondActivity) getActivity()).getDate()+time,askedRack,askedServer);
 
-            boolean no_data=false;
+
             for(int k=0;k<samples.length;k++) {
 
                 if(samples[k]!=null) {
@@ -645,6 +649,8 @@ public class SecondActivity extends AppCompatActivity implements
                 }
                 else {
                     no_data=true;
+                    //TODO check with Cem
+                    //break;
                 }
 
             }
@@ -701,10 +707,11 @@ public class SecondActivity extends AppCompatActivity implements
 
             public void onCancel(DialogInterface dialog) {
 
-            ((SecondActivity) getActivity()).setTime("");
-            Intent intent = ((SecondActivity) getActivity()).getIntent();
-            ((SecondActivity) getActivity()).finish();
-            startActivity(intent);
+                ((SecondActivity) getActivity()).setTime("");
+                Intent intent = ((SecondActivity) getActivity()).getIntent();
+                ((SecondActivity) getActivity()).finish();
+                startActivity(intent);
+                getActivity().overridePendingTransition(0, 0);
 
 
         }

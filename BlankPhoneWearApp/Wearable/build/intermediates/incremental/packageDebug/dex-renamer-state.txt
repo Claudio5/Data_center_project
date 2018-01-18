@@ -1,0 +1,7 @@
+#Thu Jan 18 11:43:13 CET 2018
+base.0=C\:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Data_center_project\\BlankPhoneWearApp\\Wearable\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_4f33aae363aaa50e3961f1f39e10580fb6ee752f
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=C\:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Data_center_project\\BlankPhoneWearApp\\Wearable\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_05e47d0b8604d739fceb23eac3ad7bd5a2ba2141\\classes.dex
+base.1=C\:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Data_center_project\\BlankPhoneWearApp\\Wearable\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_05e47d0b8604d739fceb23eac3ad7bd5a2ba2141
+file.0=C\:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Data_center_project\\BlankPhoneWearApp\\Wearable\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_4f33aae363aaa50e3961f1f39e10580fb6ee752f\\classes.dex
