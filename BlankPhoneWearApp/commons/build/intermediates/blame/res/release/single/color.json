@@ -1,18 +1,18 @@
 [
     {
-        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Data_center_project\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\release\\color\\common_plus_signin_btn_text_light.xml",
-        "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\color\\common_plus_signin_btn_text_light.xml"
+        "merged": "/home/claudio/Data_center_project/BlankPhoneWearApp/commons/build/intermediates/res/merged/release/color/common_plus_signin_btn_text_light.xml",
+        "source": "/home/claudio/.gradle/caches/transforms-2/files-2.1/0f873496fd3cccbdf708c7f657b42207/play-services-base-8.4.0/res/color/common_plus_signin_btn_text_light.xml"
     },
     {
-        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Data_center_project\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\release\\color\\common_google_signin_btn_text_dark.xml",
-        "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\color\\common_google_signin_btn_text_dark.xml"
+        "merged": "/home/claudio/Data_center_project/BlankPhoneWearApp/commons/build/intermediates/res/merged/release/color/common_google_signin_btn_text_light.xml",
+        "source": "/home/claudio/.gradle/caches/transforms-2/files-2.1/0f873496fd3cccbdf708c7f657b42207/play-services-base-8.4.0/res/color/common_google_signin_btn_text_light.xml"
     },
     {
-        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Data_center_project\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\release\\color\\common_google_signin_btn_text_light.xml",
-        "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\color\\common_google_signin_btn_text_light.xml"
+        "merged": "/home/claudio/Data_center_project/BlankPhoneWearApp/commons/build/intermediates/res/merged/release/color/common_plus_signin_btn_text_dark.xml",
+        "source": "/home/claudio/.gradle/caches/transforms-2/files-2.1/0f873496fd3cccbdf708c7f657b42207/play-services-base-8.4.0/res/color/common_plus_signin_btn_text_dark.xml"
     },
     {
-        "merged": "C:\\Users\\claud\\OneDrive\\Documents\\EPFL\\Master\\Data_center_project\\BlankPhoneWearApp\\commons\\build\\intermediates\\res\\merged\\release\\color\\common_plus_signin_btn_text_dark.xml",
-        "source": "C:\\Users\\claud\\.android\\build-cache\\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\\output\\res\\color\\common_plus_signin_btn_text_dark.xml"
+        "merged": "/home/claudio/Data_center_project/BlankPhoneWearApp/commons/build/intermediates/res/merged/release/color/common_google_signin_btn_text_dark.xml",
+        "source": "/home/claudio/.gradle/caches/transforms-2/files-2.1/0f873496fd3cccbdf708c7f657b42207/play-services-base-8.4.0/res/color/common_google_signin_btn_text_dark.xml"
     }
 ]
