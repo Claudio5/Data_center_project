@@ -1,176 +1,261 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:2:1-51:12
+ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:2:1-51:12
+INJECTED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:2:1-51:12
+INJECTED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:2:1-51:12
+INJECTED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:2:1-51:12
+MERGED from [com.android.support:cardview-v7:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/de8151ec3fe72d72ea46981e0a83f895/cardview-v7-25.3.1/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:design:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/d78339c91369b48fc97729e1416ca77e/design-25.3.1/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:recyclerview-v7:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/e8762581ed6818542922bf98c630f286/recyclerview-v7-25.3.1/AndroidManifest.xml:17:1-26:12
+MERGED from [:commons] /home/claudio/Data_center_project/BlankPhoneWearApp/commons/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-13:12
+MERGED from [com.google.android.gms:play-services-wearable:8.4.0] /home/claudio/.gradle/caches/transforms-2/files-2.1/4b83124e88d28f5443aaece8fd0b006e/play-services-wearable-8.4.0/AndroidManifest.xml:16:1-20:12
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/claudio/.gradle/caches/transforms-2/files-2.1/cb1f032b0771b9d1e03133233a8ea1f3/constraint-layout-1.0.2/AndroidManifest.xml:2:1-11:12
+MERGED from [com.androidplot:androidplot-core:1.5.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/847e04a7392020cad07a0af4a3ec0d5b/androidplot-core-1.5.1/AndroidManifest.xml:21:1-30:12
+MERGED from [com.android.support:appcompat-v7:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/b91c652b19088566cb2dd971b06059e4/appcompat-v7-25.3.1/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:transition:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/9e1807a803c90f667eadd14dcefa45be/transition-25.3.1/AndroidManifest.xml:17:1-28:12
+MERGED from [com.google.android.gms:play-services-base:8.4.0] /home/claudio/.gradle/caches/transforms-2/files-2.1/0f873496fd3cccbdf708c7f657b42207/play-services-base-8.4.0/AndroidManifest.xml:16:1-19:12
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] /home/claudio/.gradle/caches/transforms-2/files-2.1/55873286a1453871245af2670dd8d01b/play-services-basement-8.4.0/AndroidManifest.xml:16:1-26:12
+MERGED from [com.android.support:support-v4:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/900d2a03629cd8c50a71c3ee398f416a/support-v4-25.3.1/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-fragment:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/2491d74024d0409fe3cb80499edf5c40/support-fragment-25.3.1/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-media-compat:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/3d9a78ded3c58b5559bcbcb71e38a0ad/support-media-compat-25.3.1/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/7b634a65c516ac505d1b68f4f4dd46fa/support-core-utils-25.3.1/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-ui:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/c1f1c8074dbbd9079df5ab2cc65e0d6f/support-core-ui-25.3.1/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/f36fb1037851f88cdcb10f442ee8f371/animated-vector-drawable-25.3.1/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/c76dcb8cd9c1505982d0bf14a62df2e2/support-vector-drawable-25.3.1/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-compat:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/dfafd343758903d35850a7b96ce39e64/support-compat-25.3.1/AndroidManifest.xml:17:1-31:12
+MERGED from [com.halfhp.fig:figlib:1.0.3] /home/claudio/.gradle/caches/transforms-2/files-2.1/e456a7898376ad56b3ba7f2a4da96cce/figlib-1.0.3/AndroidManifest.xml:2:1-11:12
+INJECTED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:2:1-51:12
+INJECTED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:2:1-51:12
+INJECTED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:2:1-51:12
 	package
-		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:3:5-44
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:3:5-44
+		INJECTED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml
+		INJECTED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml
-	xmlns:android
-		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:2:11-69
+		INJECTED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:2:1-51:12
+		INJECTED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml
 	android:versionCode
-		INJECTED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml
+		INJECTED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:2:1-51:12
+		INJECTED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:2:11-69
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:4:5-67
+ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:4:5-67
 	android:name
-		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:4:22-64
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:4:22-64
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:5:5-80
+ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:5:5-80
 	android:name
-		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:5:22-78
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:5:22-78
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:6:5-79
+ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:6:5-79
 	android:name
-		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:6:22-77
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:6:22-77
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:8:5-78
+ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:8:5-78
 	android:name
-		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:8:22-76
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:8:22-76
 uses-permission#android.permission.READ_PHONE_STATE
-ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:9:5-74
+ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:9:5-74
 	android:name
-		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:9:22-72
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:9:22-72
 uses-permission#android.permission.DOWNLOAD_WITHOUT_NOTIFICATION
-ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:10:5-88
+ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:10:5-88
 	android:name
-		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:10:22-85
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:10:22-85
 uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
-ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:11:5-81
+ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:11:5-81
 	android:name
-		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:11:22-78
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:11:22-78
 uses-permission#android.permission.WAKE_LOCK
-ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:12:5-67
+ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:12:5-67
 	android:name
-		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:12:22-65
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:12:22-65
 uses-permission#android.permission.CALL_PHONE
-ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:13:5-69
+ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:13:5-69
 	android:name
-		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:13:22-66
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:13:22-66
 application
-ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:14:5-50:19
-MERGED from [com.android.support:cardview-v7:25.3.1] C:\Users\claud\.android\build-cache\538eecd3a97a630d2717b93129aea2786e0cfce6\output\AndroidManifest.xml:26:5-20
-MERGED from [BlankPhoneWearApp:commons:unspecified] C:\Users\claud\OneDrive\Documents\EPFL\Master\Data_center_project\BlankPhoneWearApp\commons\build\intermediates\bundles\default\AndroidManifest.xml:11:5-20
-MERGED from [com.google.android.gms:play-services-wearable:8.4.0] C:\Users\claud\.android\build-cache\8427475f8c5426d34ce9611b4916e7031db4c41f\output\AndroidManifest.xml:19:5-20
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\claud\.android\build-cache\e33b5fc896675d9263c693a0d399bc4a577a90ae\output\AndroidManifest.xml:20:5-24:19
-MERGED from [com.android.support:design:25.3.1] C:\Users\claud\.android\build-cache\28893a0c8bdd7a8aa703f47ed687b35b8477588e\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\claud\.android\build-cache\768ae380c656c8ca3e27d51133ab7e13e219bfb2\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\claud\.android\build-cache\64fbeb125921a400db577402c47c7936922f5549\output\AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\claud\.android\build-cache\08a924be6b4a4d018af95c387c267ecc9feb9ea0\output\AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:transition:25.3.1] C:\Users\claud\.android\build-cache\e557e39dbd83314ea77147ad5298745e8956f9ab\output\AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:support-v4:25.3.1] C:\Users\claud\.android\build-cache\f9cc4beff4e132a121a1645a9f25f6b25376dfd2\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\claud\.android\build-cache\fab517ff592e4bf15f5cbd19fd0e4d26ecba730d\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\claud\.android\build-cache\359e4312d1017a665fa53eb4fbfa50acb25819e8\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\claud\.android\build-cache\f0664c8f23b75c199366c8e7d780fe7b7bc3b12f\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\claud\.android\build-cache\a833165182693ab2b4480cabdc2c21e042b0d679\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-compat:25.3.1] C:\Users\claud\.android\build-cache\190741dfc7afeabfc8560571d51122eb959464e7\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\claud\.android\build-cache\c4b2de3e7e224dd71d3924c2ca0d4b0a1d061ae8\output\AndroidManifest.xml:9:5-20
+ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:14:5-50:19
+MERGED from [com.android.support:cardview-v7:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/de8151ec3fe72d72ea46981e0a83f895/cardview-v7-25.3.1/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:cardview-v7:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/de8151ec3fe72d72ea46981e0a83f895/cardview-v7-25.3.1/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:design:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/d78339c91369b48fc97729e1416ca77e/design-25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:design:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/d78339c91369b48fc97729e1416ca77e/design-25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [:commons] /home/claudio/Data_center_project/BlankPhoneWearApp/commons/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-20
+MERGED from [:commons] /home/claudio/Data_center_project/BlankPhoneWearApp/commons/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-20
+MERGED from [com.google.android.gms:play-services-wearable:8.4.0] /home/claudio/.gradle/caches/transforms-2/files-2.1/4b83124e88d28f5443aaece8fd0b006e/play-services-wearable-8.4.0/AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-wearable:8.4.0] /home/claudio/.gradle/caches/transforms-2/files-2.1/4b83124e88d28f5443aaece8fd0b006e/play-services-wearable-8.4.0/AndroidManifest.xml:19:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/claudio/.gradle/caches/transforms-2/files-2.1/cb1f032b0771b9d1e03133233a8ea1f3/constraint-layout-1.0.2/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/claudio/.gradle/caches/transforms-2/files-2.1/cb1f032b0771b9d1e03133233a8ea1f3/constraint-layout-1.0.2/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:appcompat-v7:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/b91c652b19088566cb2dd971b06059e4/appcompat-v7-25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:appcompat-v7:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/b91c652b19088566cb2dd971b06059e4/appcompat-v7-25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:transition:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/9e1807a803c90f667eadd14dcefa45be/transition-25.3.1/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:transition:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/9e1807a803c90f667eadd14dcefa45be/transition-25.3.1/AndroidManifest.xml:26:5-20
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] /home/claudio/.gradle/caches/transforms-2/files-2.1/55873286a1453871245af2670dd8d01b/play-services-basement-8.4.0/AndroidManifest.xml:20:5-24:19
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] /home/claudio/.gradle/caches/transforms-2/files-2.1/55873286a1453871245af2670dd8d01b/play-services-basement-8.4.0/AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/900d2a03629cd8c50a71c3ee398f416a/support-v4-25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-v4:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/900d2a03629cd8c50a71c3ee398f416a/support-v4-25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/2491d74024d0409fe3cb80499edf5c40/support-fragment-25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/2491d74024d0409fe3cb80499edf5c40/support-fragment-25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/3d9a78ded3c58b5559bcbcb71e38a0ad/support-media-compat-25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/3d9a78ded3c58b5559bcbcb71e38a0ad/support-media-compat-25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/7b634a65c516ac505d1b68f4f4dd46fa/support-core-utils-25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/7b634a65c516ac505d1b68f4f4dd46fa/support-core-utils-25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/c1f1c8074dbbd9079df5ab2cc65e0d6f/support-core-ui-25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/c1f1c8074dbbd9079df5ab2cc65e0d6f/support-core-ui-25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/f36fb1037851f88cdcb10f442ee8f371/animated-vector-drawable-25.3.1/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/f36fb1037851f88cdcb10f442ee8f371/animated-vector-drawable-25.3.1/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/c76dcb8cd9c1505982d0bf14a62df2e2/support-vector-drawable-25.3.1/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/c76dcb8cd9c1505982d0bf14a62df2e2/support-vector-drawable-25.3.1/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-compat:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/dfafd343758903d35850a7b96ce39e64/support-compat-25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/dfafd343758903d35850a7b96ce39e64/support-compat-25.3.1/AndroidManifest.xml:29:5-20
 	android:label
-		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:17:9-41
-	android:allowBackup
-		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:15:9-35
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:17:9-41
 	android:icon
-		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:16:9-43
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:16:9-43
+	android:allowBackup
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:15:9-35
 	android:theme
-		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:18:9-62
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:18:9-62
 service#ch.epfl.esl.blankphonewearapp.MyIntentService
-ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:20:9-60
+ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:20:9-60
 	android:name
-		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:20:18-49
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:20:18-49
 receiver#ch.epfl.esl.blankphonewearapp.Alarm
-ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:21:9-68
+ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:21:9-68
 	android:process
-		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:21:19-44
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:21:19-44
 	android:name
-		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:21:45-66
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:21:45-66
 service#ch.epfl.esl.blankphonewearapp.MyService
-ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:23:9-27:19
-	android:enabled
-		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:25:13-35
+ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:23:9-27:19
 	android:process
-		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:26:13-42
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:26:13-42
+	android:enabled
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:25:13-35
 	android:name
-		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:24:13-38
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:24:13-38
 meta-data#com.google.android.gms.version
-ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:29:9-31:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\claud\.android\build-cache\e33b5fc896675d9263c693a0d399bc4a577a90ae\output\AndroidManifest.xml:21:9-23:69
+ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:29:9-31:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] /home/claudio/.gradle/caches/transforms-2/files-2.1/55873286a1453871245af2670dd8d01b/play-services-basement-8.4.0/AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] /home/claudio/.gradle/caches/transforms-2/files-2.1/55873286a1453871245af2670dd8d01b/play-services-basement-8.4.0/AndroidManifest.xml:21:9-23:69
 	android:value
-		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:31:13-66
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:31:13-66
 	android:name
-		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:30:13-58
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:30:13-58
 activity#ch.epfl.esl.blankphonewearapp.MainActivity
-ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:33:9-43:20
+ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:33:9-43:20
 	android:screenOrientation
-		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:36:13-49
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:36:13-49
 	android:label
-		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:35:13-45
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:35:13-45
 	android:launchMode
-		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:38:13-44
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:38:13-44
 	android:windowSoftInputMode
-		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:37:13-56
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:37:13-56
 	android:name
-		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:34:13-41
-intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:39:13-42:29
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:34:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:39:13-42:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:40:17-69
+ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:40:17-69
 	android:name
-		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:40:25-66
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:40:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:41:17-77
+ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:41:17-77
 	android:name
-		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:41:27-74
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:41:27-74
 activity#ch.epfl.esl.blankphonewearapp.SecondActivity
-ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:46:9-49:20
+ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:46:9-49:20
 	android:parentActivityName
-		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:48:13-55
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:48:13-55
 	android:name
-		ADDED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml:47:13-43
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml:47:13-43
 uses-sdk
-INJECTED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.android.support:cardview-v7:25.3.1] C:\Users\claud\.android\build-cache\538eecd3a97a630d2717b93129aea2786e0cfce6\output\AndroidManifest.xml:20:5-43
-MERGED from [BlankPhoneWearApp:commons:unspecified] C:\Users\claud\OneDrive\Documents\EPFL\Master\Data_center_project\BlankPhoneWearApp\commons\build\intermediates\bundles\default\AndroidManifest.xml:7:5-9:41
-MERGED from [com.google.android.gms:play-services-wearable:8.4.0] C:\Users\claud\.android\build-cache\8427475f8c5426d34ce9611b4916e7031db4c41f\output\AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-base:8.4.0] C:\Users\claud\.android\build-cache\4de599ad0ac0dd2d175e4c9a7ca1b6b7f738690c\output\AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\claud\.android\build-cache\e33b5fc896675d9263c693a0d399bc4a577a90ae\output\AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:design:25.3.1] C:\Users\claud\.android\build-cache\28893a0c8bdd7a8aa703f47ed687b35b8477588e\output\AndroidManifest.xml:21:5-23:62
-MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\claud\.android\build-cache\768ae380c656c8ca3e27d51133ab7e13e219bfb2\output\AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\claud\.android\build-cache\64fbeb125921a400db577402c47c7936922f5549\output\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\claud\.android\build-cache\08a924be6b4a4d018af95c387c267ecc9feb9ea0\output\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\claud\.android\build-cache\f014b1b393dc82877cced8a7203564f8a709afda\output\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:transition:25.3.1] C:\Users\claud\.android\build-cache\e557e39dbd83314ea77147ad5298745e8956f9ab\output\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:25.3.1] C:\Users\claud\.android\build-cache\f9cc4beff4e132a121a1645a9f25f6b25376dfd2\output\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\claud\.android\build-cache\fab517ff592e4bf15f5cbd19fd0e4d26ecba730d\output\AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\claud\.android\build-cache\359e4312d1017a665fa53eb4fbfa50acb25819e8\output\AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\claud\.android\build-cache\f0664c8f23b75c199366c8e7d780fe7b7bc3b12f\output\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\claud\.android\build-cache\a833165182693ab2b4480cabdc2c21e042b0d679\output\AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-compat:25.3.1] C:\Users\claud\.android\build-cache\190741dfc7afeabfc8560571d51122eb959464e7\output\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\claud\.android\build-cache\c4b2de3e7e224dd71d3924c2ca0d4b0a1d061ae8\output\AndroidManifest.xml:5:5-7:41
-MERGED from [com.androidplot:androidplot-core:1.5.1] C:\Users\claud\.android\build-cache\a39f7c14806fdf9a31cbb302174ac04224f53b0a\output\AndroidManifest.xml:26:5-28:41
-MERGED from [com.halfhp.fig:figlib:1.0.3] C:\Users\claud\.android\build-cache\11621769f8675f62fdef1aab8e931c0ce54cc4a9\output\AndroidManifest.xml:7:5-9:41
+INJECTED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml
+INJECTED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml
+MERGED from [com.android.support:cardview-v7:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/de8151ec3fe72d72ea46981e0a83f895/cardview-v7-25.3.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:cardview-v7:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/de8151ec3fe72d72ea46981e0a83f895/cardview-v7-25.3.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:design:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/d78339c91369b48fc97729e1416ca77e/design-25.3.1/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:design:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/d78339c91369b48fc97729e1416ca77e/design-25.3.1/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:recyclerview-v7:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/e8762581ed6818542922bf98c630f286/recyclerview-v7-25.3.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/e8762581ed6818542922bf98c630f286/recyclerview-v7-25.3.1/AndroidManifest.xml:20:5-43
+MERGED from [:commons] /home/claudio/Data_center_project/BlankPhoneWearApp/commons/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:commons] /home/claudio/Data_center_project/BlankPhoneWearApp/commons/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.android.gms:play-services-wearable:8.4.0] /home/claudio/.gradle/caches/transforms-2/files-2.1/4b83124e88d28f5443aaece8fd0b006e/play-services-wearable-8.4.0/AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-wearable:8.4.0] /home/claudio/.gradle/caches/transforms-2/files-2.1/4b83124e88d28f5443aaece8fd0b006e/play-services-wearable-8.4.0/AndroidManifest.xml:18:5-42
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/claudio/.gradle/caches/transforms-2/files-2.1/cb1f032b0771b9d1e03133233a8ea1f3/constraint-layout-1.0.2/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/claudio/.gradle/caches/transforms-2/files-2.1/cb1f032b0771b9d1e03133233a8ea1f3/constraint-layout-1.0.2/AndroidManifest.xml:5:5-7:41
+MERGED from [com.androidplot:androidplot-core:1.5.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/847e04a7392020cad07a0af4a3ec0d5b/androidplot-core-1.5.1/AndroidManifest.xml:26:5-28:41
+MERGED from [com.androidplot:androidplot-core:1.5.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/847e04a7392020cad07a0af4a3ec0d5b/androidplot-core-1.5.1/AndroidManifest.xml:26:5-28:41
+MERGED from [com.android.support:appcompat-v7:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/b91c652b19088566cb2dd971b06059e4/appcompat-v7-25.3.1/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/b91c652b19088566cb2dd971b06059e4/appcompat-v7-25.3.1/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:transition:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/9e1807a803c90f667eadd14dcefa45be/transition-25.3.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/9e1807a803c90f667eadd14dcefa45be/transition-25.3.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:8.4.0] /home/claudio/.gradle/caches/transforms-2/files-2.1/0f873496fd3cccbdf708c7f657b42207/play-services-base-8.4.0/AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-base:8.4.0] /home/claudio/.gradle/caches/transforms-2/files-2.1/0f873496fd3cccbdf708c7f657b42207/play-services-base-8.4.0/AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] /home/claudio/.gradle/caches/transforms-2/files-2.1/55873286a1453871245af2670dd8d01b/play-services-basement-8.4.0/AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] /home/claudio/.gradle/caches/transforms-2/files-2.1/55873286a1453871245af2670dd8d01b/play-services-basement-8.4.0/AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:support-v4:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/900d2a03629cd8c50a71c3ee398f416a/support-v4-25.3.1/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/900d2a03629cd8c50a71c3ee398f416a/support-v4-25.3.1/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/2491d74024d0409fe3cb80499edf5c40/support-fragment-25.3.1/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/2491d74024d0409fe3cb80499edf5c40/support-fragment-25.3.1/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/3d9a78ded3c58b5559bcbcb71e38a0ad/support-media-compat-25.3.1/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/3d9a78ded3c58b5559bcbcb71e38a0ad/support-media-compat-25.3.1/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-utils:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/7b634a65c516ac505d1b68f4f4dd46fa/support-core-utils-25.3.1/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/7b634a65c516ac505d1b68f4f4dd46fa/support-core-utils-25.3.1/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-ui:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/c1f1c8074dbbd9079df5ab2cc65e0d6f/support-core-ui-25.3.1/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/c1f1c8074dbbd9079df5ab2cc65e0d6f/support-core-ui-25.3.1/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/f36fb1037851f88cdcb10f442ee8f371/animated-vector-drawable-25.3.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/f36fb1037851f88cdcb10f442ee8f371/animated-vector-drawable-25.3.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/c76dcb8cd9c1505982d0bf14a62df2e2/support-vector-drawable-25.3.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/c76dcb8cd9c1505982d0bf14a62df2e2/support-vector-drawable-25.3.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-compat:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/dfafd343758903d35850a7b96ce39e64/support-compat-25.3.1/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/dfafd343758903d35850a7b96ce39e64/support-compat-25.3.1/AndroidManifest.xml:21:5-23:58
+MERGED from [com.halfhp.fig:figlib:1.0.3] /home/claudio/.gradle/caches/transforms-2/files-2.1/e456a7898376ad56b3ba7f2a4da96cce/figlib-1.0.3/AndroidManifest.xml:7:5-9:41
+MERGED from [com.halfhp.fig:figlib:1.0.3] /home/claudio/.gradle/caches/transforms-2/files-2.1/e456a7898376ad56b3ba7f2a4da96cce/figlib-1.0.3/AndroidManifest.xml:7:5-9:41
+INJECTED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml
+INJECTED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml
 	tools:overrideLibrary
-		ADDED from [com.android.support:design:25.3.1] C:\Users\claud\.android\build-cache\28893a0c8bdd7a8aa703f47ed687b35b8477588e\output\AndroidManifest.xml:23:9-59
+		ADDED from [com.android.support:design:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/d78339c91369b48fc97729e1416ca77e/design-25.3.1/AndroidManifest.xml:23:9-59
 	android:targetSdkVersion
-		INJECTED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml
+		INJECTED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml
+		INJECTED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\claud\OneDrive\Documents\EPFL\Master\Data_center_project\BlankPhoneWearApp\Application\src\main\AndroidManifest.xml
+		INJECTED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml
+		INJECTED from /home/claudio/Data_center_project/BlankPhoneWearApp/Application/src/main/AndroidManifest.xml
 meta-data#android.support.VERSION
-ADDED from [com.android.support:cardview-v7:25.3.1] C:\Users\claud\.android\build-cache\538eecd3a97a630d2717b93129aea2786e0cfce6\output\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:design:25.3.1] C:\Users\claud\.android\build-cache\28893a0c8bdd7a8aa703f47ed687b35b8477588e\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\claud\.android\build-cache\768ae380c656c8ca3e27d51133ab7e13e219bfb2\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\claud\.android\build-cache\64fbeb125921a400db577402c47c7936922f5549\output\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\claud\.android\build-cache\08a924be6b4a4d018af95c387c267ecc9feb9ea0\output\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\claud\.android\build-cache\f014b1b393dc82877cced8a7203564f8a709afda\output\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:transition:25.3.1] C:\Users\claud\.android\build-cache\e557e39dbd83314ea77147ad5298745e8956f9ab\output\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:support-v4:25.3.1] C:\Users\claud\.android\build-cache\f9cc4beff4e132a121a1645a9f25f6b25376dfd2\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\claud\.android\build-cache\fab517ff592e4bf15f5cbd19fd0e4d26ecba730d\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\claud\.android\build-cache\359e4312d1017a665fa53eb4fbfa50acb25819e8\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\claud\.android\build-cache\f0664c8f23b75c199366c8e7d780fe7b7bc3b12f\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\claud\.android\build-cache\a833165182693ab2b4480cabdc2c21e042b0d679\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-compat:25.3.1] C:\Users\claud\.android\build-cache\190741dfc7afeabfc8560571d51122eb959464e7\output\AndroidManifest.xml:25:5-27:34
+ADDED from [com.android.support:cardview-v7:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/de8151ec3fe72d72ea46981e0a83f895/cardview-v7-25.3.1/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:design:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/d78339c91369b48fc97729e1416ca77e/design-25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:design:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/d78339c91369b48fc97729e1416ca77e/design-25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:recyclerview-v7:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/e8762581ed6818542922bf98c630f286/recyclerview-v7-25.3.1/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:recyclerview-v7:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/e8762581ed6818542922bf98c630f286/recyclerview-v7-25.3.1/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:appcompat-v7:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/b91c652b19088566cb2dd971b06059e4/appcompat-v7-25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:appcompat-v7:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/b91c652b19088566cb2dd971b06059e4/appcompat-v7-25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:transition:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/9e1807a803c90f667eadd14dcefa45be/transition-25.3.1/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:transition:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/9e1807a803c90f667eadd14dcefa45be/transition-25.3.1/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-v4:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/900d2a03629cd8c50a71c3ee398f416a/support-v4-25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-v4:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/900d2a03629cd8c50a71c3ee398f416a/support-v4-25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/2491d74024d0409fe3cb80499edf5c40/support-fragment-25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/2491d74024d0409fe3cb80499edf5c40/support-fragment-25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/3d9a78ded3c58b5559bcbcb71e38a0ad/support-media-compat-25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/3d9a78ded3c58b5559bcbcb71e38a0ad/support-media-compat-25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/7b634a65c516ac505d1b68f4f4dd46fa/support-core-utils-25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/7b634a65c516ac505d1b68f4f4dd46fa/support-core-utils-25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/c1f1c8074dbbd9079df5ab2cc65e0d6f/support-core-ui-25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/c1f1c8074dbbd9079df5ab2cc65e0d6f/support-core-ui-25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/f36fb1037851f88cdcb10f442ee8f371/animated-vector-drawable-25.3.1/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/f36fb1037851f88cdcb10f442ee8f371/animated-vector-drawable-25.3.1/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/c76dcb8cd9c1505982d0bf14a62df2e2/support-vector-drawable-25.3.1/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/c76dcb8cd9c1505982d0bf14a62df2e2/support-vector-drawable-25.3.1/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-compat:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/dfafd343758903d35850a7b96ce39e64/support-compat-25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/dfafd343758903d35850a7b96ce39e64/support-compat-25.3.1/AndroidManifest.xml:25:5-27:34
 	android:value
-		ADDED from [com.android.support:cardview-v7:25.3.1] C:\Users\claud\.android\build-cache\538eecd3a97a630d2717b93129aea2786e0cfce6\output\AndroidManifest.xml:24:9-31
+		ADDED from [com.android.support:cardview-v7:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/de8151ec3fe72d72ea46981e0a83f895/cardview-v7-25.3.1/AndroidManifest.xml:24:9-31
 	android:name
-		ADDED from [com.android.support:cardview-v7:25.3.1] C:\Users\claud\.android\build-cache\538eecd3a97a630d2717b93129aea2786e0cfce6\output\AndroidManifest.xml:23:9-47
+		ADDED from [com.android.support:cardview-v7:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/de8151ec3fe72d72ea46981e0a83f895/cardview-v7-25.3.1/AndroidManifest.xml:23:9-47
