@@ -1,0 +1,110 @@
+[
+    {
+        "merged": "/home/claudio/Data_center_project/Application/build/intermediates/res/merged/debug/drawable_watch.png.flat",
+        "source": "/home/claudio/Data_center_project/Application/src/main/res/drawable/watch.png"
+    },
+    {
+        "merged": "/home/claudio/Data_center_project/Application/build/intermediates/res/merged/debug/drawable_background1.png.flat",
+        "source": "/home/claudio/Data_center_project/Application/src/main/res/drawable/background1.png"
+    },
+    {
+        "merged": "/home/claudio/Data_center_project/Application/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "/home/claudio/Data_center_project/Application/src/main/res/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/claudio/Data_center_project/Application/build/intermediates/res/merged/debug/drawable_rack_black.png.flat",
+        "source": "/home/claudio/Data_center_project/Application/src/main/res/drawable/rack_black.png"
+    },
+    {
+        "merged": "/home/claudio/Data_center_project/Application/build/intermediates/res/merged/debug/layout_swipelayout2.xml.flat",
+        "source": "/home/claudio/Data_center_project/Application/src/main/res/layout/swipelayout2.xml"
+    },
+    {
+        "merged": "/home/claudio/Data_center_project/Application/build/intermediates/res/merged/debug/drawable_panels_swt.png.flat",
+        "source": "/home/claudio/Data_center_project/Application/src/main/res/drawable/panels_swt.png"
+    },
+    {
+        "merged": "/home/claudio/Data_center_project/Application/build/intermediates/res/merged/debug/drawable_rack_full.png.flat",
+        "source": "/home/claudio/Data_center_project/Application/src/main/res/drawable/rack_full.png"
+    },
+    {
+        "merged": "/home/claudio/Data_center_project/Application/build/intermediates/res/merged/debug/layout_rackitem.xml.flat",
+        "source": "/home/claudio/Data_center_project/Application/src/main/res/layout/rackitem.xml"
+    },
+    {
+        "merged": "/home/claudio/Data_center_project/Application/build/intermediates/res/merged/debug/layout_dialog_ip.xml.flat",
+        "source": "/home/claudio/Data_center_project/Application/src/main/res/layout/dialog_ip.xml"
+    },
+    {
+        "merged": "/home/claudio/Data_center_project/Application/build/intermediates/res/merged/debug/drawable_data_center1.png.flat",
+        "source": "/home/claudio/Data_center_project/Application/src/main/res/drawable/data_center1.png"
+    },
+    {
+        "merged": "/home/claudio/Data_center_project/Application/build/intermediates/res/merged/debug/drawable_rack_green.png.flat",
+        "source": "/home/claudio/Data_center_project/Application/src/main/res/drawable/rack_green.png"
+    },
+    {
+        "merged": "/home/claudio/Data_center_project/Application/build/intermediates/res/merged/debug/drawable_clock.png.flat",
+        "source": "/home/claudio/Data_center_project/Application/src/main/res/drawable/clock.png"
+    },
+    {
+        "merged": "/home/claudio/Data_center_project/Application/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "/home/claudio/Data_center_project/Application/src/main/res/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/claudio/Data_center_project/Application/build/intermediates/res/merged/debug/layout_serveritem.xml.flat",
+        "source": "/home/claudio/Data_center_project/Application/src/main/res/layout/serveritem.xml"
+    },
+    {
+        "merged": "/home/claudio/Data_center_project/Application/build/intermediates/res/merged/debug/drawable_data_center_blank.png.flat",
+        "source": "/home/claudio/Data_center_project/Application/src/main/res/drawable/data_center_blank.png"
+    },
+    {
+        "merged": "/home/claudio/Data_center_project/Application/build/intermediates/res/merged/debug/layout_main_activity.xml.flat",
+        "source": "/home/claudio/Data_center_project/Application/src/main/res/layout/main_activity.xml"
+    },
+    {
+        "merged": "/home/claudio/Data_center_project/Application/build/intermediates/res/merged/debug/layout_swipelayout1.xml.flat",
+        "source": "/home/claudio/Data_center_project/Application/src/main/res/layout/swipelayout1.xml"
+    },
+    {
+        "merged": "/home/claudio/Data_center_project/Application/build/intermediates/res/merged/debug/drawable_data_center.png.flat",
+        "source": "/home/claudio/Data_center_project/Application/src/main/res/drawable/data_center.png"
+    },
+    {
+        "merged": "/home/claudio/Data_center_project/Application/build/intermediates/res/merged/debug/drawable_rlc_grass.png.flat",
+        "source": "/home/claudio/Data_center_project/Application/src/main/res/drawable/rlc_grass.png"
+    },
+    {
+        "merged": "/home/claudio/Data_center_project/Application/build/intermediates/res/merged/debug/drawable_calendar.png.flat",
+        "source": "/home/claudio/Data_center_project/Application/src/main/res/drawable/calendar.png"
+    },
+    {
+        "merged": "/home/claudio/Data_center_project/Application/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "/home/claudio/Data_center_project/Application/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/claudio/Data_center_project/Application/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "/home/claudio/Data_center_project/Application/src/main/res/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/claudio/Data_center_project/Application/build/intermediates/res/merged/debug/layout_second_activity.xml.flat",
+        "source": "/home/claudio/Data_center_project/Application/src/main/res/layout/second_activity.xml"
+    },
+    {
+        "merged": "/home/claudio/Data_center_project/Application/build/intermediates/res/merged/debug/layout-land_second_activity.xml.flat",
+        "source": "/home/claudio/Data_center_project/Application/src/main/res/layout-land/second_activity.xml"
+    },
+    {
+        "merged": "/home/claudio/Data_center_project/Application/build/intermediates/res/merged/debug/layout_second_activity_first.xml.flat",
+        "source": "/home/claudio/Data_center_project/Application/src/main/res/layout/second_activity_first.xml"
+    },
+    {
+        "merged": "/home/claudio/Data_center_project/Application/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "/home/claudio/Data_center_project/Application/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/claudio/Data_center_project/Application/build/intermediates/res/merged/debug/layout_test.xml.flat",
+        "source": "/home/claudio/Data_center_project/Application/src/main/res/layout/test.xml"
+    }
+]

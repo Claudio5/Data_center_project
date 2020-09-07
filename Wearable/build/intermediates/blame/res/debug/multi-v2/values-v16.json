@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
+            "map": [
+                {
+                    "source": "/home/claudio/.gradle/caches/transforms-2/files-2.1/b91c652b19088566cb2dd971b06059e4/appcompat-v7-25.3.1/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,124 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="ch.epfl.esl.blankphonewearapp"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="23"
+8-->/home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="26" />
+9-->/home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml
+10
+11    <uses-feature android:name="android.hardware.type.watch" />
+11-->/home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:5:5-64
+11-->/home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:5:19-61
+12
+13    <uses-permission android:name="android.permission.CALL_PHONE" />
+13-->/home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:6:5-68
+13-->/home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:6:22-66
+14    <uses-permission android:name="android.permission.VIBRATE" />
+14-->/home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:7:5-65
+14-->/home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:7:22-63
+15
+16    <meta-data
+16-->[com.android.support:design:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/d78339c91369b48fc97729e1416ca77e/design-25.3.1/AndroidManifest.xml:25:5-27:34
+17        android:name="android.support.VERSION"
+17-->[com.android.support:design:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/d78339c91369b48fc97729e1416ca77e/design-25.3.1/AndroidManifest.xml:26:9-47
+18        android:value="25.3.1" />
+18-->[com.android.support:design:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/d78339c91369b48fc97729e1416ca77e/design-25.3.1/AndroidManifest.xml:27:9-31
+19
+20    <application
+20-->/home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:9:5-57:19
+21        android:name="ch.epfl.esl.blankphonewearapp.MyApp"
+21-->/home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:10:9-30
+22        android:allowBackup="true"
+22-->/home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:11:9-35
+23        android:debuggable="true"
+24        android:extractNativeLibs="false"
+25        android:icon="@mipmap/ic_launcher"
+25-->/home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:12:9-43
+26        android:label="@string/app_name"
+26-->/home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:13:9-41
+27        android:testOnly="true"
+28        android:theme="@style/Theme.AppCompat" >
+28-->/home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:14:9-47
+29        <meta-data
+29-->/home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:17:9-19:37
+30            android:name="com.google.android.wearable.standalone"
+30-->/home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:18:13-66
+31            android:value="false" />
+31-->/home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:19:13-34
+32        <meta-data
+32-->/home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:21:9-23:65
+33            android:name="com.google.android.gms.version"
+33-->/home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:22:9-54
+34            android:value="@integer/google_play_services_version" />
+34-->/home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:23:9-62
+35
+36        <service android:name="ch.epfl.esl.blankphonewearapp.DataLayerListenerService" >
+36-->/home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:25:9-42:19
+36-->/home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:25:18-58
+37            <intent-filter>
+37-->/home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:26:13-34:29
+38                <action android:name="com.google.android.gms.wearable.DATA_CHANGED" />
+38-->/home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:27:17-87
+38-->/home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:27:25-84
+39                <!-- Below, use android:pathPrefix="/count" to only have messages with count -->
+40                <!-- but we also want the "/image" path -->
+41                <data
+41-->/home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:30:17-33:45
+42                    android:host="*"
+42-->/home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:31:21-37
+43                    android:pathPrefix="/notification"
+43-->/home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:32:21-55
+44                    android:scheme="wear" />
+44-->/home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:33:21-42
+45            </intent-filter>
+46            <intent-filter>
+46-->/home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:35:13-41:29
+47                <action android:name="com.google.android.gms.wearable.MESSAGE_RECEIVED" />
+47-->/home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:36:17-91
+47-->/home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:36:25-88
+48
+49                <data
+49-->/home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:30:17-33:45
+50                    android:host="*"
+50-->/home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:31:21-37
+51                    android:pathPrefix="/start-activity"
+51-->/home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:32:21-55
+52                    android:scheme="wear" />
+52-->/home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:33:21-42
+53            </intent-filter>
+54        </service>
+55
+56        <activity
+56-->/home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:44:9-55:20
+57            android:name="ch.epfl.esl.blankphonewearapp.MainActivity"
+57-->/home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:45:13-41
+58            android:label="@string/app_name" >
+58-->/home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:46:13-45
+59            <intent-filter>
+59-->/home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:47:13-50:29
+60                <action android:name="android.intent.action.MAIN" />
+60-->/home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:48:17-69
+60-->/home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:48:25-66
+61
+62                <category android:name="android.intent.category.LAUNCHER" />
+62-->/home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:49:17-77
+62-->/home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:49:27-74
+63            </intent-filter>
+64            <intent-filter>
+64-->/home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:51:13-54:29
+65                <action android:name="com.example.android.wearable.datalayer.EXAMPLE" />
+65-->/home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:52:17-89
+65-->/home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:52:25-86
+66
+67                <category android:name="android.intent.category.DEFAULT" />
+67-->/home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:53:17-76
+67-->/home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:53:27-73
+68            </intent-filter>
+69        </activity>
+70    </application>
+71
+72</manifest>

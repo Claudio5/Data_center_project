@@ -1,0 +1,231 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:2:1-58:12
+INJECTED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:2:1-58:12
+INJECTED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:2:1-58:12
+INJECTED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:2:1-58:12
+MERGED from [:commons] /home/claudio/Data_center_project/BlankPhoneWearApp/commons/build/intermediates/library_manifest/release/AndroidManifest.xml:2:1-13:12
+MERGED from [com.google.android.gms:play-services-wearable:8.4.0] /home/claudio/.gradle/caches/transforms-2/files-2.1/4b83124e88d28f5443aaece8fd0b006e/play-services-wearable-8.4.0/AndroidManifest.xml:16:1-20:12
+MERGED from [com.android.support:design:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/d78339c91369b48fc97729e1416ca77e/design-25.3.1/AndroidManifest.xml:17:1-31:12
+MERGED from [com.google.android.gms:play-services-base:8.4.0] /home/claudio/.gradle/caches/transforms-2/files-2.1/0f873496fd3cccbdf708c7f657b42207/play-services-base-8.4.0/AndroidManifest.xml:16:1-19:12
+MERGED from [com.android.support:appcompat-v7:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/b91c652b19088566cb2dd971b06059e4/appcompat-v7-25.3.1/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:transition:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/9e1807a803c90f667eadd14dcefa45be/transition-25.3.1/AndroidManifest.xml:17:1-28:12
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] /home/claudio/.gradle/caches/transforms-2/files-2.1/55873286a1453871245af2670dd8d01b/play-services-basement-8.4.0/AndroidManifest.xml:16:1-26:12
+MERGED from [com.android.support:support-v4:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/900d2a03629cd8c50a71c3ee398f416a/support-v4-25.3.1/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:recyclerview-v7:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/e8762581ed6818542922bf98c630f286/recyclerview-v7-25.3.1/AndroidManifest.xml:17:1-26:12
+MERGED from [com.android.support:support-fragment:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/2491d74024d0409fe3cb80499edf5c40/support-fragment-25.3.1/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-media-compat:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/3d9a78ded3c58b5559bcbcb71e38a0ad/support-media-compat-25.3.1/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/7b634a65c516ac505d1b68f4f4dd46fa/support-core-utils-25.3.1/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-ui:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/c1f1c8074dbbd9079df5ab2cc65e0d6f/support-core-ui-25.3.1/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/f36fb1037851f88cdcb10f442ee8f371/animated-vector-drawable-25.3.1/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/c76dcb8cd9c1505982d0bf14a62df2e2/support-vector-drawable-25.3.1/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-compat:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/dfafd343758903d35850a7b96ce39e64/support-compat-25.3.1/AndroidManifest.xml:17:1-31:12
+INJECTED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:2:1-58:12
+INJECTED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:2:1-58:12
+INJECTED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:2:1-58:12
+	package
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:3:5-44
+		INJECTED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml
+		INJECTED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:2:1-58:12
+		INJECTED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:2:1-58:12
+		INJECTED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:2:11-69
+uses-feature#android.hardware.type.watch
+ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:5:5-64
+	android:name
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:5:19-61
+uses-permission#android.permission.CALL_PHONE
+ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:6:5-68
+	android:name
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:6:22-66
+uses-permission#android.permission.VIBRATE
+ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:7:5-65
+	android:name
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:7:22-63
+application
+ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:9:5-57:19
+MERGED from [:commons] /home/claudio/Data_center_project/BlankPhoneWearApp/commons/build/intermediates/library_manifest/release/AndroidManifest.xml:11:5-20
+MERGED from [:commons] /home/claudio/Data_center_project/BlankPhoneWearApp/commons/build/intermediates/library_manifest/release/AndroidManifest.xml:11:5-20
+MERGED from [com.google.android.gms:play-services-wearable:8.4.0] /home/claudio/.gradle/caches/transforms-2/files-2.1/4b83124e88d28f5443aaece8fd0b006e/play-services-wearable-8.4.0/AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-wearable:8.4.0] /home/claudio/.gradle/caches/transforms-2/files-2.1/4b83124e88d28f5443aaece8fd0b006e/play-services-wearable-8.4.0/AndroidManifest.xml:19:5-20
+MERGED from [com.android.support:design:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/d78339c91369b48fc97729e1416ca77e/design-25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:design:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/d78339c91369b48fc97729e1416ca77e/design-25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:appcompat-v7:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/b91c652b19088566cb2dd971b06059e4/appcompat-v7-25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:appcompat-v7:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/b91c652b19088566cb2dd971b06059e4/appcompat-v7-25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:transition:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/9e1807a803c90f667eadd14dcefa45be/transition-25.3.1/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:transition:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/9e1807a803c90f667eadd14dcefa45be/transition-25.3.1/AndroidManifest.xml:26:5-20
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] /home/claudio/.gradle/caches/transforms-2/files-2.1/55873286a1453871245af2670dd8d01b/play-services-basement-8.4.0/AndroidManifest.xml:20:5-24:19
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] /home/claudio/.gradle/caches/transforms-2/files-2.1/55873286a1453871245af2670dd8d01b/play-services-basement-8.4.0/AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/900d2a03629cd8c50a71c3ee398f416a/support-v4-25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-v4:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/900d2a03629cd8c50a71c3ee398f416a/support-v4-25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/2491d74024d0409fe3cb80499edf5c40/support-fragment-25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/2491d74024d0409fe3cb80499edf5c40/support-fragment-25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/3d9a78ded3c58b5559bcbcb71e38a0ad/support-media-compat-25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/3d9a78ded3c58b5559bcbcb71e38a0ad/support-media-compat-25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/7b634a65c516ac505d1b68f4f4dd46fa/support-core-utils-25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/7b634a65c516ac505d1b68f4f4dd46fa/support-core-utils-25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/c1f1c8074dbbd9079df5ab2cc65e0d6f/support-core-ui-25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/c1f1c8074dbbd9079df5ab2cc65e0d6f/support-core-ui-25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/f36fb1037851f88cdcb10f442ee8f371/animated-vector-drawable-25.3.1/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/f36fb1037851f88cdcb10f442ee8f371/animated-vector-drawable-25.3.1/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/c76dcb8cd9c1505982d0bf14a62df2e2/support-vector-drawable-25.3.1/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/c76dcb8cd9c1505982d0bf14a62df2e2/support-vector-drawable-25.3.1/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-compat:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/dfafd343758903d35850a7b96ce39e64/support-compat-25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/dfafd343758903d35850a7b96ce39e64/support-compat-25.3.1/AndroidManifest.xml:29:5-20
+	android:label
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:13:9-41
+	android:icon
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:12:9-43
+	android:allowBackup
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:11:9-35
+	android:theme
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:14:9-47
+	android:name
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:10:9-30
+meta-data#com.google.android.wearable.standalone
+ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:17:9-19:37
+	android:value
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:19:13-34
+	android:name
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:18:13-66
+meta-data#com.google.android.gms.version
+ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:21:9-23:65
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] /home/claudio/.gradle/caches/transforms-2/files-2.1/55873286a1453871245af2670dd8d01b/play-services-basement-8.4.0/AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] /home/claudio/.gradle/caches/transforms-2/files-2.1/55873286a1453871245af2670dd8d01b/play-services-basement-8.4.0/AndroidManifest.xml:21:9-23:69
+	android:value
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:23:9-62
+	android:name
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:22:9-54
+service#ch.epfl.esl.blankphonewearapp.DataLayerListenerService
+ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:25:9-42:19
+	android:name
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:25:18-58
+intent-filter#action:name:com.google.android.gms.wearable.DATA_CHANGED+data:host:*+data:pathPrefix:/notification+data:scheme:wear
+ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:26:13-34:29
+action#com.google.android.gms.wearable.DATA_CHANGED
+ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:27:17-87
+	android:name
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:27:25-84
+data
+ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:30:17-33:45
+	android:host
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:31:21-37
+	android:scheme
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:33:21-42
+	android:pathPrefix
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:32:21-55
+intent-filter#action:name:com.google.android.gms.wearable.MESSAGE_RECEIVED+data:host:*+data:pathPrefix:/start-activity+data:scheme:wear
+ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:35:13-41:29
+action#com.google.android.gms.wearable.MESSAGE_RECEIVED
+ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:36:17-91
+	android:name
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:36:25-88
+activity#ch.epfl.esl.blankphonewearapp.MainActivity
+ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:44:9-55:20
+	android:label
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:46:13-45
+	android:name
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:45:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:47:13-50:29
+action#android.intent.action.MAIN
+ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:48:17-69
+	android:name
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:48:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:49:17-77
+	android:name
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:49:27-74
+intent-filter#action:name:com.example.android.wearable.datalayer.EXAMPLE+category:name:android.intent.category.DEFAULT
+ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:51:13-54:29
+action#com.example.android.wearable.datalayer.EXAMPLE
+ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:52:17-89
+	android:name
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:52:25-86
+category#android.intent.category.DEFAULT
+ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:53:17-76
+	android:name
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml:53:27-73
+uses-sdk
+INJECTED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml
+INJECTED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml
+MERGED from [:commons] /home/claudio/Data_center_project/BlankPhoneWearApp/commons/build/intermediates/library_manifest/release/AndroidManifest.xml:7:5-9:41
+MERGED from [:commons] /home/claudio/Data_center_project/BlankPhoneWearApp/commons/build/intermediates/library_manifest/release/AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.android.gms:play-services-wearable:8.4.0] /home/claudio/.gradle/caches/transforms-2/files-2.1/4b83124e88d28f5443aaece8fd0b006e/play-services-wearable-8.4.0/AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-wearable:8.4.0] /home/claudio/.gradle/caches/transforms-2/files-2.1/4b83124e88d28f5443aaece8fd0b006e/play-services-wearable-8.4.0/AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:design:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/d78339c91369b48fc97729e1416ca77e/design-25.3.1/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:design:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/d78339c91369b48fc97729e1416ca77e/design-25.3.1/AndroidManifest.xml:21:5-23:62
+MERGED from [com.google.android.gms:play-services-base:8.4.0] /home/claudio/.gradle/caches/transforms-2/files-2.1/0f873496fd3cccbdf708c7f657b42207/play-services-base-8.4.0/AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-base:8.4.0] /home/claudio/.gradle/caches/transforms-2/files-2.1/0f873496fd3cccbdf708c7f657b42207/play-services-base-8.4.0/AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:appcompat-v7:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/b91c652b19088566cb2dd971b06059e4/appcompat-v7-25.3.1/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/b91c652b19088566cb2dd971b06059e4/appcompat-v7-25.3.1/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:transition:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/9e1807a803c90f667eadd14dcefa45be/transition-25.3.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/9e1807a803c90f667eadd14dcefa45be/transition-25.3.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] /home/claudio/.gradle/caches/transforms-2/files-2.1/55873286a1453871245af2670dd8d01b/play-services-basement-8.4.0/AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] /home/claudio/.gradle/caches/transforms-2/files-2.1/55873286a1453871245af2670dd8d01b/play-services-basement-8.4.0/AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:support-v4:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/900d2a03629cd8c50a71c3ee398f416a/support-v4-25.3.1/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/900d2a03629cd8c50a71c3ee398f416a/support-v4-25.3.1/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:recyclerview-v7:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/e8762581ed6818542922bf98c630f286/recyclerview-v7-25.3.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/e8762581ed6818542922bf98c630f286/recyclerview-v7-25.3.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-fragment:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/2491d74024d0409fe3cb80499edf5c40/support-fragment-25.3.1/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/2491d74024d0409fe3cb80499edf5c40/support-fragment-25.3.1/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/3d9a78ded3c58b5559bcbcb71e38a0ad/support-media-compat-25.3.1/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/3d9a78ded3c58b5559bcbcb71e38a0ad/support-media-compat-25.3.1/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-utils:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/7b634a65c516ac505d1b68f4f4dd46fa/support-core-utils-25.3.1/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/7b634a65c516ac505d1b68f4f4dd46fa/support-core-utils-25.3.1/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-ui:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/c1f1c8074dbbd9079df5ab2cc65e0d6f/support-core-ui-25.3.1/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/c1f1c8074dbbd9079df5ab2cc65e0d6f/support-core-ui-25.3.1/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/f36fb1037851f88cdcb10f442ee8f371/animated-vector-drawable-25.3.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/f36fb1037851f88cdcb10f442ee8f371/animated-vector-drawable-25.3.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/c76dcb8cd9c1505982d0bf14a62df2e2/support-vector-drawable-25.3.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/c76dcb8cd9c1505982d0bf14a62df2e2/support-vector-drawable-25.3.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-compat:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/dfafd343758903d35850a7b96ce39e64/support-compat-25.3.1/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/dfafd343758903d35850a7b96ce39e64/support-compat-25.3.1/AndroidManifest.xml:21:5-23:58
+INJECTED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml
+INJECTED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [com.android.support:design:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/d78339c91369b48fc97729e1416ca77e/design-25.3.1/AndroidManifest.xml:23:9-59
+	android:targetSdkVersion
+		INJECTED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml
+		INJECTED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml
+		ADDED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml
+		INJECTED from /home/claudio/Data_center_project/BlankPhoneWearApp/Wearable/src/main/AndroidManifest.xml
+meta-data#android.support.VERSION
+ADDED from [com.android.support:design:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/d78339c91369b48fc97729e1416ca77e/design-25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:appcompat-v7:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/b91c652b19088566cb2dd971b06059e4/appcompat-v7-25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:appcompat-v7:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/b91c652b19088566cb2dd971b06059e4/appcompat-v7-25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:transition:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/9e1807a803c90f667eadd14dcefa45be/transition-25.3.1/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:transition:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/9e1807a803c90f667eadd14dcefa45be/transition-25.3.1/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-v4:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/900d2a03629cd8c50a71c3ee398f416a/support-v4-25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-v4:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/900d2a03629cd8c50a71c3ee398f416a/support-v4-25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:recyclerview-v7:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/e8762581ed6818542922bf98c630f286/recyclerview-v7-25.3.1/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:recyclerview-v7:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/e8762581ed6818542922bf98c630f286/recyclerview-v7-25.3.1/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-fragment:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/2491d74024d0409fe3cb80499edf5c40/support-fragment-25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/2491d74024d0409fe3cb80499edf5c40/support-fragment-25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/3d9a78ded3c58b5559bcbcb71e38a0ad/support-media-compat-25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/3d9a78ded3c58b5559bcbcb71e38a0ad/support-media-compat-25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/7b634a65c516ac505d1b68f4f4dd46fa/support-core-utils-25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/7b634a65c516ac505d1b68f4f4dd46fa/support-core-utils-25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/c1f1c8074dbbd9079df5ab2cc65e0d6f/support-core-ui-25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/c1f1c8074dbbd9079df5ab2cc65e0d6f/support-core-ui-25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/f36fb1037851f88cdcb10f442ee8f371/animated-vector-drawable-25.3.1/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/f36fb1037851f88cdcb10f442ee8f371/animated-vector-drawable-25.3.1/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/c76dcb8cd9c1505982d0bf14a62df2e2/support-vector-drawable-25.3.1/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/c76dcb8cd9c1505982d0bf14a62df2e2/support-vector-drawable-25.3.1/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-compat:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/dfafd343758903d35850a7b96ce39e64/support-compat-25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/dfafd343758903d35850a7b96ce39e64/support-compat-25.3.1/AndroidManifest.xml:25:5-27:34
+	android:value
+		ADDED from [com.android.support:design:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/d78339c91369b48fc97729e1416ca77e/design-25.3.1/AndroidManifest.xml:27:9-31
+	android:name
+		ADDED from [com.android.support:design:25.3.1] /home/claudio/.gradle/caches/transforms-2/files-2.1/d78339c91369b48fc97729e1416ca77e/design-25.3.1/AndroidManifest.xml:26:9-47
