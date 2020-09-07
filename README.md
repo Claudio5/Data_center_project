@@ -1,6 +1,3 @@
-# Projet Android
-# Data center
+# Data center project app
 
-Si jamais ça compile pas il faut faire un clean et rebuild 
-
-CL7
+Android app which helps monitoring a data center
