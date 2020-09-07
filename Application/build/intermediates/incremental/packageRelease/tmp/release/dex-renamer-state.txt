@@ -1,4 +1,0 @@
-#Mon Sep 07 15:00:18 CEST 2020
-base.0=/home/claudio/Data_center_project/BlankPhoneWearApp/Application/build/intermediates/dex/release/mergeDexRelease/classes.dex
-path.0=classes.dex
-renamed.0=classes.dex

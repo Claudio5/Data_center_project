@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="ch.epfl.esl.blankphonewearapp">
+    package="ch.epfl.esl.datacenter">
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
@@ -17,11 +17,11 @@
         android:label="@string/app_name"
         android:theme="@style/Base.V23.Theme.AppCompat.Light">
 
-        <service android:name=".MyIntentService"></service>
-        <receiver android:process=":remote" android:name=".Alarm"/>
+        <service android:name="ch.epfl.esl.datacenter.MyIntentService"></service>
+        <receiver android:process=":remote" android:name="ch.epfl.esl.datacenter.Alarm"/>
 
         <service
-            android:name=".MyService"
+            android:name="ch.epfl.esl.datacenter.MyService"
             android:enabled="true"
             android:process=":my_service" >
         </service>
@@ -31,7 +31,7 @@
             android:value="@integer/google_play_services_version" />
 
         <activity
-            android:name=".MainActivity"
+            android:name="ch.epfl.esl.datacenter.MainActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustNothing"
@@ -44,8 +44,8 @@
 
 
         <activity
-            android:name=".SecondActivity"
-            android:parentActivityName=".MainActivity">
+            android:name="ch.epfl.esl.datacenter.SecondActivity"
+            android:parentActivityName="ch.epfl.esl.datacenter.MainActivity">
         </activity>
     </application>
 </manifest>
